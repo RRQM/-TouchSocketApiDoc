@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html ><html lang="zh-CN"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" href="../css/bulma.css" /><link rel="stylesheet" href="../css/font-awesome.min.css" /><link rel="stylesheet" href="../css/presentationStyle.css" /><link rel="stylesheet" href="../css/vs.min.css" /><link rel="stylesheet" href="../css/zh-CN.css" /><script src="../scripts/jquery-3.5.1.min.js"></script><script src="../scripts/clipboard.min.js"></script><script src="../scripts/highlight.min.js"></script><script src="../scripts/presentationStyle.js"></script><title>IHttpDmtpService 接口</title><meta name="Title" content="IHttpDmtpService" /><meta name="Help.Id" content="T:TouchSocket.Dmtp.IHttpDmtpService" /><meta name="Help.ContentType" content="Reference" /><meta name="container" content="TouchSocket.Dmtp" /><meta name="guid" content="241dcd9f-9a6a-56af-87fd-13ea50fe98b9" /><meta name="Description" content="IHttpDmtpService" /><meta name="tocFile" content="../toc/IDE.xml" /></head><body><div class="fixedLayout"><div id="Header" class="fixedHeader"><div class="pageHeader level mb-0 py-2 px-4"><div id="TitleContainer" class="level-left"><div id="DocumentationTitle" class="level-item">A Sandcastle Documented Class Library</div></div><div id="LangFilterSearchContainer" class="level-right"><div class="level-item"><div class="dropdown is-hoverable"><div class="dropdown-trigger"><button class="button" aria-haspopup="true" aria-controls="dropdown-menu"><span id="CurrentLanguage"></span><span class="icon is-small"><i class="fa fa-angle-down" aria-hidden="true"></i></span></button></div><div class="dropdown-menu" role="menu"><div id="LanguageSelections" class="dropdown-content"><a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a><a class="dropdown-item languageFilterItem" data-languageId="vb">VB</a><a class="dropdown-item languageFilterItem" data-languageId="fs">F#</a></div></div></div></div><div class="level-item"><form id="SearchForm" action="#" onsubmit="TransferToSearchPage(); return false;"><div class="field"><div class="control has-icons-left"><input id="SearchTerms" class="input" type="text" maxlength="200" placeholder="Search" /><span class="icon is-small is-left"><i class="fa fa-search"></i></span><button id="SearchButton" type="submit" class="is-hidden"></button></div></div></form></div></div></div></div><div class="fixedContent"><nav class="breadcrumb my-1 px-2 border-bottom" role="navigation"><ul id="TopicBreadcrumbs" /></nav><div id="ContentContainer" class="columns pl-5 pr-5 fixedContent"><div id="ShowHideTOCColumn" class="column is-hidden-tablet"><a id="ShowHideTOC">Show/Hide TOC</a></div><div id="TOCColumn" class="column is-hidden-mobile"><nav class="toc"><ul id="TableOfContents" class="toc-menu" /></nav></div><div id="Resizer" class="is-hidden"></div><div id="TopicContent" class="column content is-7"><h1>IHttp<wbr />Dmtp<wbr />Service 接口</h1><div class="summary">
+            IHttpDmtpService
+            </div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Definition</h2><div id="IDBSection"><strong>命名空间：</strong> <a href="efc93c14-3d45-c826-b03a-3a54da781746.htm">TouchSocket.Dmtp</a><br /><strong>程序集：</strong> TouchSocket.Dmtp (在 TouchSocket.Dmtp.dll 中) 版本：2.0.0-beta.270+78c6852f7ef501b7f66c7ecafde4229aee156a87<div class="codeSnippet" data-codeSnippetLanguage="cs"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="复制"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>复制</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="identifier">IHttpDmtpService</span> : <span class="identifier">IHttpDmtpService</span>&lt;<span class="identifier">HttpDmtpSocketClient</span>&gt;, 
+	<span class="identifier">IHttpDmtpServiceBase</span>, <span class="identifier">IHttpServiceBase</span>, <span class="identifier">ITcpServiceBase</span>, <span class="identifier">IService</span>, <span class="identifier">ISetupConfigObject</span>, 
+	<span class="identifier">IConfigObject</span>, <span class="identifier">IDependencyObject</span>, <span class="identifier">IDisposable</span>, <span class="identifier">ILoggerObject</span>, <span class="identifier">IPluginObject</span>, 
+	<span class="identifier">IResolverObject</span>, <span class="identifier">IIdSender</span>, <span class="identifier">IIdRequsetInfoSender</span>, <span class="identifier">IDmtpService</span>, <span class="identifier">IHttpService</span>&lt;<span class="identifier">HttpDmtpSocketClient</span>&gt;, 
+	<span class="identifier">ITcpService</span>&lt;<span class="identifier">HttpDmtpSocketClient</span>&gt;</code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="vb"><div class="codeHeader"><span class="codeHeaderTitle">VB</span><span class="buttons"><button class="button is-small is-light copyCode" title="复制"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>复制</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-vb"><span class="keyword">Public</span> <span class="keyword">Interface</span> <span class="identifier">IHttpDmtpService</span>
+	<span class="keyword">Inherits</span> <span class="identifier">IHttpDmtpService</span>(<span class="keyword">Of</span> <span class="identifier">HttpDmtpSocketClient</span>), <span class="identifier">IHttpDmtpServiceBase</span>, <span class="identifier">IHttpServiceBase</span>, 
+	<span class="identifier">ITcpServiceBase</span>, <span class="identifier">IService</span>, <span class="identifier">ISetupConfigObject</span>, <span class="identifier">IConfigObject</span>, <span class="identifier">IDependencyObject</span>, 
+	<span class="identifier">IDisposable</span>, <span class="identifier">ILoggerObject</span>, <span class="identifier">IPluginObject</span>, <span class="identifier">IResolverObject</span>, <span class="identifier">IIdSender</span>, 
+	<span class="identifier">IIdRequsetInfoSender</span>, <span class="identifier">IDmtpService</span>, <span class="identifier">IHttpService</span>(<span class="keyword">Of</span> <span class="identifier">HttpDmtpSocketClient</span>), <span class="identifier">ITcpService</span>(<span class="keyword">Of</span> <span class="identifier">HttpDmtpSocketClient</span>)</code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="fs"><div class="codeHeader"><span class="codeHeaderTitle">F#</span><span class="buttons"><button class="button is-small is-light copyCode" title="复制"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>复制</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-fs"><span class="keyword">type</span> <span class="identifier">IHttpDmtpService</span> = 
+    <span class="keyword">interface</span>
+        <span class="keyword">interface</span> <span class="identifier">IHttpDmtpService</span>&lt;<span class="identifier">HttpDmtpSocketClient</span>&gt;
+        <span class="keyword">interface</span> <span class="identifier">IHttpDmtpServiceBase</span>
+        <span class="keyword">interface</span> <span class="identifier">IHttpServiceBase</span>
+        <span class="keyword">interface</span> <span class="identifier">ITcpServiceBase</span>
+        <span class="keyword">interface</span> <span class="identifier">IService</span>
+        <span class="keyword">interface</span> <span class="identifier">ISetupConfigObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IConfigObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IDependencyObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IDisposable</span>
+        <span class="keyword">interface</span> <span class="identifier">ILoggerObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IPluginObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IResolverObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IIdSender</span>
+        <span class="keyword">interface</span> <span class="identifier">IIdRequsetInfoSender</span>
+        <span class="keyword">interface</span> <span class="identifier">IDmtpService</span>
+        <span class="keyword">interface</span> <span class="identifier">IHttpService</span>&lt;<span class="identifier">HttpDmtpSocketClient</span>&gt;
+        <span class="keyword">interface</span> <span class="identifier">ITcpService</span>&lt;<span class="identifier">HttpDmtpSocketClient</span>&gt;
+    <span class="keyword">end</span></code></pre></div></div><dl class="implementsList"><dt>Implements</dt><dd><span class="noLink">IDisposable</span>, <a href="8b02ea30-8198-eb93-029c-5e4b09de2838.htm">IConfigObject</a>, <a href="c064d0ed-eda7-ccca-3c2f-2f645deb4f77.htm">IDependencyObject</a>, <a href="a6bc5cc2-3970-6f17-1a9f-3c92ae18ab28.htm">ILoggerObject</a>, <a href="1791eead-c0e1-5a23-2445-22cf05cbfd39.htm">IPluginObject</a>, <a href="72920cfc-581b-ecf9-f899-5ce7ba8556ec.htm">IResolverObject</a>, <a href="d6aed578-b16f-2c57-1423-d1a4718b56de.htm">ISetupConfigObject</a>, <a href="5174cda8-109f-cc8c-a333-43919f1703e9.htm">IDmtpService</a>, <a href="9b75bb7f-a969-b5a7-f8de-35c51ad5969a.htm">IHttpDmtpService</a><span id="LST3545AF32_0" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="f98d9fbf-e12e-144d-645a-ea1ebff639be.htm">HttpDmtpSocketClient</a><span id="LST3545AF32_1" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>, <a href="0c68064b-9d0d-6727-8f25-4ca6176a1b83.htm">IHttpDmtpServiceBase</a>, <a href="805519d7-4248-bc15-bec8-ac8983488c28.htm">IHttpService</a><span id="LST3545AF32_2" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="f98d9fbf-e12e-144d-645a-ea1ebff639be.htm">HttpDmtpSocketClient</a><span id="LST3545AF32_3" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>, <a href="a4cdf4ec-8d68-fb6e-0f9d-a325f431c537.htm">IHttpServiceBase</a>, <a href="92a7e02e-c493-c7f0-6ff1-f47c0f98a4ae.htm">IIdRequsetInfoSender</a>, <a href="f9cd09f6-8f5f-44d3-92aa-e6bb7613edc9.htm">IIdSender</a>, <a href="0647cb31-d011-7a68-a249-9b205616b6f1.htm">IService</a>, <a href="02dff3f4-eddc-ad86-b680-cb79cd385225.htm">ITcpService</a><span id="LST3545AF32_4" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="f98d9fbf-e12e-144d-645a-ea1ebff639be.htm">HttpDmtpSocketClient</a><span id="LST3545AF32_5" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>, <a href="050fe37a-d774-4df9-a08d-893384c0d000.htm">ITcpServiceBase</a></dd></dl></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>属性</h2><div id="IDVFASection"><table id="PropertyList" class="table is-hoverable"><tr><td><a href="621f2e33-6511-55b0-9ab8-1e962d13ed1a.htm">Config</a></td><td>
+            设置项
+            <br />(继承自 <a href="8b02ea30-8198-eb93-029c-5e4b09de2838.htm">IConfigObject</a>。)</td></tr><tr><td><a href="1ca011fd-f970-0268-8b87-ecc29c3dbd45.htm">Connected</a></td><td>
+            用户连接完成
+            <br />(继承自 <a href="02dff3f4-eddc-ad86-b680-cb79cd385225.htm">ITcpService<span id="LST3545AF32_6" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|nu=(|fs=&lt;'"></span>TClient<span id="LST3545AF32_7" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|nu=)|fs=&gt;"></span></a>。)</td></tr><tr><td><a href="2d60981c-1165-55d7-3a6d-bf0b96ab7175.htm">Connecting</a></td><td>
+            有用户连接的时候
+            <br />(继承自 <a href="02dff3f4-eddc-ad86-b680-cb79cd385225.htm">ITcpService<span id="LST3545AF32_8" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|nu=(|fs=&lt;'"></span>TClient<span id="LST3545AF32_9" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|nu=)|fs=&gt;"></span></a>。)</td></tr><tr><td><a href="a5715c38-acd3-818f-b185-3b1f780b3926.htm">Count</a></td><td>
+            当前在线客户端数量
+            <br />(继承自 <a href="050fe37a-d774-4df9-a08d-893384c0d000.htm">ITcpServiceBase</a>。)</td></tr><tr><td><a href="2c151c56-e345-c1d5-bf5e-b167127ae832.htm">Disconnected</a></td><td>
+            有用户断开连接
+            <br />(继承自 <a href="02dff3f4-eddc-ad86-b680-cb79cd385225.htm">ITcpService<span id="LST3545AF32_10" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|nu=(|fs=&lt;'"></span>TClient<span id="LST3545AF32_11" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|nu=)|fs=&gt;"></span></a>。)</td></tr><tr><td><a href="22aa8d00-22a9-66e5-486d-46cb11a63467.htm">Disconnecting</a></td><td>
+            即将断开连接(仅主动断开时有效)。
+            <br />(继承自 <a href="02dff3f4-eddc-ad86-b680-cb79cd385225.htm">ITcpService<span id="LST3545AF32_12" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|nu=(|fs=&lt;'"></span>TClient<span id="LST3545AF32_13" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|nu=)|fs=&gt;"></span></a>。)</td></tr><tr><td><a href="966b66f9-5635-9231-c211-b9a50f31fbee.htm">Logger</a></td><td>
+            日志记录器
+            <br />(继承自 <a href="a6bc5cc2-3970-6f17-1a9f-3c92ae18ab28.htm">ILoggerObject</a>。)</td></tr><tr><td><a href="9e0de69f-2fb9-fc70-e037-78fff7825d16.htm">MaxCount</a></td><td>
+            获取最大可连接数
+            <br />(继承自 <a href="050fe37a-d774-4df9-a08d-893384c0d000.htm">ITcpServiceBase</a>。)</td></tr><tr><td><a href="c461c232-415d-6e8a-bdfa-5719ed93aff4.htm">Monitors</a></td><td>
+            网络监听集合
+            <br />(继承自 <a href="050fe37a-d774-4df9-a08d-893384c0d000.htm">ITcpServiceBase</a>。)</td></tr><tr><td><a href="b652766e-5b59-83a6-2821-e65d1882c3ac.htm">PluginManager</a></td><td>
+            插件管理器
+            <br />(继承自 <a href="1791eead-c0e1-5a23-2445-22cf05cbfd39.htm">IPluginObject</a>。)</td></tr><tr><td><a href="ba056371-1113-9bf5-6fb8-a91e982f7ee5.htm">Resolver</a></td><td>
+            Resolver
+            <br />(继承自 <a href="72920cfc-581b-ecf9-f899-5ce7ba8556ec.htm">IResolverObject</a>。)</td></tr><tr><td><a href="881ba901-be35-2a9f-b1ef-f683e7ad5188.htm">ServerName</a></td><td>
+            名称
+            <br />(继承自 <a href="0647cb31-d011-7a68-a249-9b205616b6f1.htm">IService</a>。)</td></tr><tr><td><a href="8d1c8bbb-7a14-0f48-7505-8d62badfafe9.htm">ServerState</a></td><td>
+            服务器状态
+            <br />(继承自 <a href="0647cb31-d011-7a68-a249-9b205616b6f1.htm">IService</a>。)</td></tr><tr><td><a href="edc96ab0-c14f-988c-dd7c-0928ba7fa6c4.htm">SocketClients</a></td><td>
+            获取当前连接的所有客户端
+            <br />(继承自 <a href="050fe37a-d774-4df9-a08d-893384c0d000.htm">ITcpServiceBase</a>。)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>方法</h2><div id="IDBFASection"><table id="MethodList" class="table is-hoverable"><tr><td><a href="8be2b1c6-9b83-3cf2-7c13-8ae523a2d40e.htm">Clear</a></td><td>
+            清理当前已连接的所有客户端
+            <br />(继承自 <a href="050fe37a-d774-4df9-a08d-893384c0d000.htm">ITcpServiceBase</a>。)</td></tr><tr><td><span class="noLink">Dispose</span></td><td>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.<br />(继承自 <span class="noLink">IDisposable</span>。)</td></tr><tr><td><a href="cc787f38-bffa-065a-fdb0-96b0ce1dc45f.htm">GetIds</a></td><td>
+            获取当前在线的所有Id集合
+            <br />(继承自 <a href="050fe37a-d774-4df9-a08d-893384c0d000.htm">ITcpServiceBase</a>。)</td></tr><tr><td><a href="c24feaa0-cea2-2a81-d52a-76d619f42243.htm">GetValue<span id="LST3545AF32_14" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST3545AF32_15" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            获取依赖注入的值，当没有注入时，会返回默认值。
+            <br />(继承自 <a href="c064d0ed-eda7-ccca-3c2f-2f645deb4f77.htm">IDependencyObject</a>。)</td></tr><tr><td><a href="bac53d81-fe02-3add-4698-334b5e48d5dc.htm">HasValue<span id="LST3545AF32_16" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST3545AF32_17" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            是否有值。
+            <br />(继承自 <a href="c064d0ed-eda7-ccca-3c2f-2f645deb4f77.htm">IDependencyObject</a>。)</td></tr><tr><td><a href="c15557b4-950b-ace1-0d47-f2c34a0faf24.htm">RemoveValue<span id="LST3545AF32_18" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST3545AF32_19" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            重置属性值。
+            <br />(继承自 <a href="c064d0ed-eda7-ccca-3c2f-2f645deb4f77.htm">IDependencyObject</a>。)</td></tr><tr><td><a href="7ba88951-6eec-9214-04fd-404cde00f95b.htm">ResetId</a></td><td>
+            重置Id
+            <br />(继承自 <a href="050fe37a-d774-4df9-a08d-893384c0d000.htm">ITcpServiceBase</a>。)</td></tr><tr><td><a href="4f0afc78-c642-9c92-7a3b-799953b97ebc.htm">Send(String, IRequestInfo)</a></td><td>
+            向对应Id的客户端发送
+            <br />(继承自 <a href="f9cd09f6-8f5f-44d3-92aa-e6bb7613edc9.htm">IIdSender</a>。)</td></tr><tr><td><a href="ff6c3c87-72d4-580a-0664-0e8bd9b97ad8.htm">Send(String, <span id="LST3545AF32_20" data-languageSpecificText="cpp=array&lt;"></span>Byte<span id="LST3545AF32_21" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>, Int32, Int32)</a></td><td>
+            向对应Id的客户端发送
+            <br />(继承自 <a href="f9cd09f6-8f5f-44d3-92aa-e6bb7613edc9.htm">IIdSender</a>。)</td></tr><tr><td><a href="31bc70fe-5863-b91c-23ee-25215de5f5ac.htm">SendAsync(String, IRequestInfo)</a></td><td>
+            向对应Id的客户端发送
+            <br />(继承自 <a href="f9cd09f6-8f5f-44d3-92aa-e6bb7613edc9.htm">IIdSender</a>。)</td></tr><tr><td><a href="7a5e0d16-5a2a-fcb5-3794-e491d5ded12a.htm">SendAsync(String, <span id="LST3545AF32_22" data-languageSpecificText="cpp=array&lt;"></span>Byte<span id="LST3545AF32_23" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>, Int32, Int32)</a></td><td>
+            向对应Id的客户端发送
+            <br />(继承自 <a href="f9cd09f6-8f5f-44d3-92aa-e6bb7613edc9.htm">IIdSender</a>。)</td></tr><tr><td><a href="70619687-5b87-50c8-687f-c705948e8669.htm">Setup</a></td><td>
+            配置设置项
+            <br />(继承自 <a href="d6aed578-b16f-2c57-1423-d1a4718b56de.htm">ISetupConfigObject</a>。)</td></tr><tr><td><a href="ca4541fa-b74b-68f2-9b65-bb1cb0bedd78.htm">SetupAsync</a></td><td>
+            异步配置设置项
+            <br />(继承自 <a href="d6aed578-b16f-2c57-1423-d1a4718b56de.htm">ISetupConfigObject</a>。)</td></tr><tr><td><a href="bb5ad2af-7662-23c6-1961-5eabae77de52.htm">SetValue<span id="LST3545AF32_24" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST3545AF32_25" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            设置依赖注入的值
+            <br />(继承自 <a href="c064d0ed-eda7-ccca-3c2f-2f645deb4f77.htm">IDependencyObject</a>。)</td></tr><tr><td><a href="54609f26-b102-c7ca-acab-6c431ff5ca79.htm">SocketClientExist</a></td><td>
+            根据Id判断SocketClient是否存在
+            <br />(继承自 <a href="050fe37a-d774-4df9-a08d-893384c0d000.htm">ITcpServiceBase</a>。)</td></tr><tr><td><a href="72c8b9f8-391f-4c97-8d81-b568bbcf95b9.htm">Start</a></td><td>
+            启动
+            <br />(继承自 <a href="0647cb31-d011-7a68-a249-9b205616b6f1.htm">IService</a>。)</td></tr><tr><td><a href="d79d5712-2314-02cc-a746-9a40c6c6154d.htm">StartAsync</a></td><td>
+            异步启动
+            <br />(继承自 <a href="0647cb31-d011-7a68-a249-9b205616b6f1.htm">IService</a>。)</td></tr><tr><td><a href="eea7e569-9dca-cdd2-f5e8-e07fac3cbc9f.htm">Stop</a></td><td>
+            停止
+            <br />(继承自 <a href="0647cb31-d011-7a68-a249-9b205616b6f1.htm">IService</a>。)</td></tr><tr><td><a href="2cb1a537-40a5-7a70-3b49-dd34810df2b0.htm">StopAsync</a></td><td>
+            异步停止
+            <br />(继承自 <a href="0647cb31-d011-7a68-a249-9b205616b6f1.htm">IService</a>。)</td></tr><tr><td><a href="8171e97b-d049-0d85-d5e2-5c793911c4aa.htm">TryGetSocketClient</a></td><td>
+            尝试获取TClient
+            <br />(继承自 <a href="02dff3f4-eddc-ad86-b680-cb79cd385225.htm">ITcpService<span id="LST3545AF32_26" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|nu=(|fs=&lt;'"></span>TClient<span id="LST3545AF32_27" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|nu=)|fs=&gt;"></span></a>。)</td></tr><tr><td><a href="da045e0e-9b1b-ee0f-d645-d59848dfc6f4.htm">TryGetValue<span id="LST3545AF32_28" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST3545AF32_29" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            尝试获取依赖注入的值，当没有注入时，会返回<span class="keyword"><span id="LST3545AF32_30" data-languageSpecificText="vb=False|nu=false"></span></span>。
+            <br />(继承自 <a href="c064d0ed-eda7-ccca-3c2f-2f645deb4f77.htm">IDependencyObject</a>。)</td></tr><tr><td><a href="23db4d0d-292a-5592-064c-461ac58a38a5.htm">TryRemoveValue<span id="LST3545AF32_31" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST3545AF32_32" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            重置属性值。
+            <br />(继承自 <a href="c064d0ed-eda7-ccca-3c2f-2f645deb4f77.htm">IDependencyObject</a>。)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>扩展方法</h2><div id="IDAFASection"><table id="ExtensionList" class="table is-hoverable"><tr><td><a href="42561b0b-8ddf-b261-08a5-1b07b9de94b4.htm">SafeDispose</a></td><td>
+            安全性释放（不用判断对象是否为空）。不会抛出任何异常。
+            <br />(由 <a href="08dccf0a-072b-52b7-b602-1958417b7198.htm">SystemExtensions</a> 定义。)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>参见</h2><div id="seeAlsoSection"><h4>引用</h4><div><a href="efc93c14-3d45-c826-b03a-3a54da781746.htm">TouchSocket.Dmtp 命名空间</a></div></div></div><div id="InThisArticleColumn" class="column is-hidden-mobile"><nav class="menu sticky is-hidden"><p class="menu-label"><strong>In This Article</strong></p><ul id="InThisArticleMenu" class="menu-list"><li><a class="quickLink">Definition</a></li><li><a class="quickLink">属性</a></li><li><a class="quickLink">方法</a></li><li><a class="quickLink">扩展方法</a></li><li><a class="quickLink">参见</a></li></ul></nav></div></div></div><footer id="PageFooter" class="footer border-top py-3 fixedFooter"><div class="columns"><div class="column"> 
+				</div><div class="column"> 
+				</div></div></footer></div><script>$(function(){
+SetDefaultLanguage("cs");
+LoadTocFile(null, null);
+InitializeQuickLinks();
+
+$(".toggleSection" ).click(function () {
+    SectionExpandCollapse(this);
+});
+
+$(".toggleSection").keypress(function () {
+    SectionExpandCollapseCheckKey(this, event)
+});
+hljs.highlightAll();
+});</script></body></html>

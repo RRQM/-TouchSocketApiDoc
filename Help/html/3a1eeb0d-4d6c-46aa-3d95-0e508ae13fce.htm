@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html ><html lang="zh-CN"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" href="../css/bulma.css" /><link rel="stylesheet" href="../css/font-awesome.min.css" /><link rel="stylesheet" href="../css/presentationStyle.css" /><link rel="stylesheet" href="../css/vs.min.css" /><link rel="stylesheet" href="../css/zh-CN.css" /><script src="../scripts/jquery-3.5.1.min.js"></script><script src="../scripts/clipboard.min.js"></script><script src="../scripts/highlight.min.js"></script><script src="../scripts/presentationStyle.js"></script><title>HttpBase 方法</title><meta name="Title" content="方法" /><meta name="Help.Id" content="Methods.T:TouchSocket.Http.HttpBase" /><meta name="Help.ContentType" content="Reference" /><meta name="container" content="TouchSocket.Http" /><meta name="guid" content="3a1eeb0d-4d6c-46aa-3d95-0e508ae13fce" /><meta name="tocFile" content="../toc/IDJK.xml" /></head><body><div class="fixedLayout"><div id="Header" class="fixedHeader"><div class="pageHeader level mb-0 py-2 px-4"><div id="TitleContainer" class="level-left"><div id="DocumentationTitle" class="level-item">A Sandcastle Documented Class Library</div></div><div id="LangFilterSearchContainer" class="level-right"><div class="level-item"><div class="dropdown is-hoverable"><div class="dropdown-trigger"><button class="button" aria-haspopup="true" aria-controls="dropdown-menu"><span id="CurrentLanguage"></span><span class="icon is-small"><i class="fa fa-angle-down" aria-hidden="true"></i></span></button></div><div class="dropdown-menu" role="menu"><div id="LanguageSelections" class="dropdown-content"><a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a><a class="dropdown-item languageFilterItem" data-languageId="vb">VB</a><a class="dropdown-item languageFilterItem" data-languageId="fs">F#</a></div></div></div></div><div class="level-item"><form id="SearchForm" action="#" onsubmit="TransferToSearchPage(); return false;"><div class="field"><div class="control has-icons-left"><input id="SearchTerms" class="input" type="text" maxlength="200" placeholder="Search" /><span class="icon is-small is-left"><i class="fa fa-search"></i></span><button id="SearchButton" type="submit" class="is-hidden"></button></div></div></form></div></div></div></div><div class="fixedContent"><nav class="breadcrumb my-1 px-2 border-bottom" role="navigation"><ul id="TopicBreadcrumbs" /></nav><div id="ContentContainer" class="columns pl-5 pr-5 fixedContent"><div id="ShowHideTOCColumn" class="column is-hidden-tablet"><a id="ShowHideTOC">Show/Hide TOC</a></div><div id="TOCColumn" class="column is-hidden-mobile"><nav class="toc"><ul id="TableOfContents" class="toc-menu" /></nav></div><div id="Resizer" class="is-hidden"></div><div id="TopicContent" class="column content is-7"><h1>Http<wbr />Base 方法</h1><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>方法</h2><div id="IDGDASection"><table id="MethodList" class="table is-hoverable"><tr><td><a href="e55366a7-567d-9b9d-7eda-80fb4d5d4b0e.htm">Dispose<span id="LSTBD8DDAD_0" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            释放资源。内部已经处理了<span class="noLink">SuppressFinalize(Object)</span><br />(继承自 <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>。)</td></tr><tr><td><a href="69fb22bc-146c-4f11-9baf-69d961c59f10.htm">Dispose(Boolean)</a></td><td>
+    
+    
+            调用释放，切换释放状态。
+            
+  
+  <br />(重写 <a href="e2cf6e35-3861-006c-001b-3743e2d31ffa.htm">BlockReader<span id="LSTBD8DDAD_1" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>Dispose(Boolean)</a>)</td></tr><tr><td><a href="61a01c7e-031f-099a-2236-85af6bf0f7c8.htm">DisposeAsync</a></td><td>
+            异步释放资源。内部已经处理了<span class="noLink">SuppressFinalize(Object)</span><br />(继承自 <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>。)</td></tr><tr><td><a href="4757f0b4-6370-cf9c-8466-c0182d831342.htm">DisposeAsyncCore</a></td><td>
+            异步释放资源。注意：此方法仅在调用<span class="noLink">DisposeAsync<span id="LSTBD8DDAD_2" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></span>时有效。
+            <br />(继承自 <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>。)</td></tr><tr><td><span class="noLink">Equals</span></td><td>Determines whether the specified object is equal to the current object.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><a href="65fe72f1-98f4-2af1-e146-979ce2d895c9.htm">Finalize</a></td><td>
+            析构函数
+            <br />(继承自 <a href="02738163-5da5-d33b-a62a-d6f09bebe4d5.htm">BlockReader</a>。)</td></tr><tr><td><span class="noLink">GetHashCode</span></td><td>Serves as the default hash function.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><span class="noLink">GetType</span></td><td>Gets the <span class="noLink">Type</span> of the current instance.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><a href="8337e707-7ac2-60ef-d88f-5170bf193b2d.htm">Input</a></td><td>
+            传输输入.
+            当以length为0结束。
+            否则读取端会超时。
+            <br />(继承自 <a href="02738163-5da5-d33b-a62a-d6f09bebe4d5.htm">BlockReader</a>。)</td></tr><tr><td><a href="dab2ae10-88a5-595d-076c-ce9ecafaa5f0.htm">InputComplate</a></td><td>
+            输入完成
+            <br />(继承自 <a href="02738163-5da5-d33b-a62a-d6f09bebe4d5.htm">BlockReader</a>。)</td></tr><tr><td><a href="dbc7928a-5ea5-4465-7d6d-463e0ef94e7c.htm">LoadHeaderProterties</a></td><td>
+            读取信息
+            </td></tr><tr><td><span class="noLink">MemberwiseClone</span></td><td>Creates a shallow copy of the current <span class="noLink">Object</span>.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><a href="81557515-a03e-cc88-d90c-b73c7be984cf.htm">ParsingHeader</a></td><td> </td></tr><tr><td><a href="c53e38ad-2b12-8894-7f3a-dd5c0882ebd8.htm">PeekRead</a></td><td>
+            阻塞读取，但不会移动游标。
+            <br />(继承自 <a href="02738163-5da5-d33b-a62a-d6f09bebe4d5.htm">BlockReader</a>。)</td></tr><tr><td><a href="d11c2174-5530-3f66-9355-af98aec9c9c8.htm">Read</a></td><td>
+            从Request中持续读取数据。
+            <br />(重写 <a href="3380211a-e372-0926-46b5-d23a7cb4493a.htm">BlockReader<span id="LSTBD8DDAD_3" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>Read(<span id="LSTBD8DDAD_4" data-languageSpecificText="cpp=array&lt;"></span>Byte<span id="LSTBD8DDAD_5" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>, Int32, Int32)</a>)</td></tr><tr><td><a href="db490e9a-fad3-f64f-c06e-f03595809cf4.htm">ReadHeaders</a></td><td>
+            从内存中读取
+            </td></tr><tr><td><a href="a30694c6-2a48-003d-df8b-4e7627c9ab2f.htm">ResetBlock</a></td><td>
+            重置阻塞
+            <br />(继承自 <a href="02738163-5da5-d33b-a62a-d6f09bebe4d5.htm">BlockReader</a>。)</td></tr><tr><td><a href="1d0735e9-107e-e476-c8b9-0971a95ad7ef.htm">SetContent</a></td><td>
+            设置一次性内容
+            </td></tr><tr><td><a href="b822d86e-7ba1-f472-e7bf-b0e3c060d1b9.htm">ThrowIfDisposed</a></td><td>
+            判断是否已经被释放，如果是，则抛出异常。
+            <br />(继承自 <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>。)</td></tr><tr><td><span class="noLink">ToString</span></td><td>Returns a string that represents the current object.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><a href="b87fe26d-62ac-ee4f-0b53-11098147c938.htm">TryGetContent</a></td><td>
+            获取一次性内容。
+            </td></tr><tr><td><a href="99926456-64c6-0f2e-0837-0fd118260c02.htm">WriteContent</a></td><td>
+            持续写入内容。
+            </td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>扩展方法</h2><div id="IDADASection"><table id="ExtensionList" class="table is-hoverable"><tr><td><a href="88ed1307-89a8-cea2-f4d7-39d4fa537d36.htm">GetBody</a></td><td>
+            获取Body的字符串
+            <br />(由 <a href="f8743525-0439-fd0e-178e-95f562aab505.htm">HttpExtensions</a> 定义。)</td></tr><tr><td><a href="bbea0638-5743-4b74-61e5-a3eec0fed5a5.htm">GetBoundary</a></td><td>
+            当数据类型为multipart/form-data时，获取boundary
+            <br />(由 <a href="f8743525-0439-fd0e-178e-95f562aab505.htm">HttpExtensions</a> 定义。)</td></tr><tr><td><a href="878403cd-f12c-edde-588e-08269fc9e04c.htm">Map</a></td><td>
+            简单对象映射
+            <br />(由 <a href="02bbd272-534f-46ef-2987-02490a9e41e9.htm">Mapper</a> 定义。)</td></tr><tr><td><a href="fb7e6dd3-8e3a-2831-644a-c77d3c5d6d6e.htm">Map</a></td><td>
+            简单对象映射
+            <br />(由 <a href="02bbd272-534f-46ef-2987-02490a9e41e9.htm">Mapper</a> 定义。)</td></tr><tr><td><a href="9a18a592-c63b-7ce8-f2d6-6d9ac6e2d62e.htm">Map<span id="LSTBD8DDAD_6" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TTarget<span id="LSTBD8DDAD_7" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            简单映射
+            <br />(由 <a href="02bbd272-534f-46ef-2987-02490a9e41e9.htm">Mapper</a> 定义。)</td></tr><tr><td><a href="0c8d4cc8-38de-cbf6-43ac-d65d145fe130.htm">ToJsonString</a></td><td>
+            转换为Json
+            <br />(由 <a href="8552a33c-c4bb-54b7-1888-08ff2740edab.htm">SerializeConvert</a> 定义。)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>参见</h2><div id="seeAlsoSection"><h4>引用</h4><div><a href="83d42074-c584-fc02-6eae-f83617c7f400.htm">HttpBase 类</a></div><div><a href="27f4faff-0bc9-f52a-7360-9fd578fe97a9.htm">TouchSocket.Http 命名空间</a></div></div></div><div id="InThisArticleColumn" class="column is-hidden-mobile"><nav class="menu sticky is-hidden"><p class="menu-label"><strong>In This Article</strong></p><ul id="InThisArticleMenu" class="menu-list"><li><a class="quickLink">方法</a></li><li><a class="quickLink">扩展方法</a></li><li><a class="quickLink">参见</a></li></ul></nav></div></div></div><footer id="PageFooter" class="footer border-top py-3 fixedFooter"><div class="columns"><div class="column"> 
+				</div><div class="column"> 
+				</div></div></footer></div><script>$(function(){
+SetDefaultLanguage("cs");
+LoadTocFile(null, null);
+InitializeQuickLinks();
+
+$(".toggleSection" ).click(function () {
+    SectionExpandCollapse(this);
+});
+
+$(".toggleSection").keypress(function () {
+    SectionExpandCollapseCheckKey(this, event)
+});
+});</script></body></html>

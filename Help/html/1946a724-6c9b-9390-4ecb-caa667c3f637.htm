@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html ><html lang="zh-CN"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" href="../css/bulma.css" /><link rel="stylesheet" href="../css/font-awesome.min.css" /><link rel="stylesheet" href="../css/presentationStyle.css" /><link rel="stylesheet" href="../css/vs.min.css" /><link rel="stylesheet" href="../css/zh-CN.css" /><script src="../scripts/jquery-3.5.1.min.js"></script><script src="../scripts/clipboard.min.js"></script><script src="../scripts/highlight.min.js"></script><script src="../scripts/presentationStyle.js"></script><title>TcpService&lt;TClient&gt; 类</title><meta name="Title" content="TcpService&lt;TClient&gt;" /><meta name="Help.Id" content="T:TouchSocket.Sockets.TcpService`1" /><meta name="Help.ContentType" content="Reference" /><meta name="container" content="TouchSocket.Sockets" /><meta name="guid" content="1946a724-6c9b-9390-4ecb-caa667c3f637" /><meta name="Description" content="Tcp泛型服务器，由使用者自己指定类型。" /><meta name="tocFile" content="../toc/IDN.xml" /></head><body><div class="fixedLayout"><div id="Header" class="fixedHeader"><div class="pageHeader level mb-0 py-2 px-4"><div id="TitleContainer" class="level-left"><div id="DocumentationTitle" class="level-item">A Sandcastle Documented Class Library</div></div><div id="LangFilterSearchContainer" class="level-right"><div class="level-item"><div class="dropdown is-hoverable"><div class="dropdown-trigger"><button class="button" aria-haspopup="true" aria-controls="dropdown-menu"><span id="CurrentLanguage"></span><span class="icon is-small"><i class="fa fa-angle-down" aria-hidden="true"></i></span></button></div><div class="dropdown-menu" role="menu"><div id="LanguageSelections" class="dropdown-content"><a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a><a class="dropdown-item languageFilterItem" data-languageId="vb">VB</a><a class="dropdown-item languageFilterItem" data-languageId="fs">F#</a></div></div></div></div><div class="level-item"><form id="SearchForm" action="#" onsubmit="TransferToSearchPage(); return false;"><div class="field"><div class="control has-icons-left"><input id="SearchTerms" class="input" type="text" maxlength="200" placeholder="Search" /><span class="icon is-small is-left"><i class="fa fa-search"></i></span><button id="SearchButton" type="submit" class="is-hidden"></button></div></div></form></div></div></div></div><div class="fixedContent"><nav class="breadcrumb my-1 px-2 border-bottom" role="navigation"><ul id="TopicBreadcrumbs" /></nav><div id="ContentContainer" class="columns pl-5 pr-5 fixedContent"><div id="ShowHideTOCColumn" class="column is-hidden-tablet"><a id="ShowHideTOC">Show/Hide TOC</a></div><div id="TOCColumn" class="column is-hidden-mobile"><nav class="toc"><ul id="TableOfContents" class="toc-menu" /></nav></div><div id="Resizer" class="is-hidden"></div><div id="TopicContent" class="column content is-7"><h1>Tcp<wbr />Service<span id="LST176DBBB3_0" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><span class="typeparameter">TClient</span><span id="LST176DBBB3_1" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span> 类</h1><div class="summary">
+            Tcp泛型服务器，由使用者自己指定<a href="276a9112-ef90-fcd5-d08d-6aa994e24001.htm">SocketClient</a>类型。
+            </div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Definition</h2><div id="IDBSection"><strong>命名空间：</strong> <a href="5bf6331c-a218-658a-a3bd-7bcd489609e1.htm">TouchSocket.Sockets</a><br /><strong>程序集：</strong> TouchSocket (在 TouchSocket.dll 中) 版本：2.0.0-beta.270+78c6852f7ef501b7f66c7ecafde4229aee156a87<div class="codeSnippet" data-codeSnippetLanguage="cs"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="复制"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>复制</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">TcpService</span>&lt;TClient&gt; : <span class="identifier">TcpServiceBase</span>, 
+	<span class="identifier">ITcpService</span>&lt;TClient&gt;, <span class="identifier">ITcpServiceBase</span>, <span class="identifier">IService</span>, <span class="identifier">ISetupConfigObject</span>, <span class="identifier">IConfigObject</span>, 
+	<span class="identifier">IDependencyObject</span>, <span class="identifier">IDisposable</span>, <span class="identifier">ILoggerObject</span>, <span class="identifier">IPluginObject</span>, <span class="identifier">IResolverObject</span>, 
+	<span class="identifier">IIdSender</span>, <span class="identifier">IIdRequsetInfoSender</span>
+<span class="keyword">where</span> TClient : <span class="keyword">new</span>(), <span class="identifier">SocketClient</span>
+</code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="vb"><div class="codeHeader"><span class="codeHeaderTitle">VB</span><span class="buttons"><button class="button is-small is-light copyCode" title="复制"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>复制</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-vb"><span class="keyword">Public</span> <span class="keyword">Class</span> <span class="identifier">TcpService</span>(<span class="keyword">Of</span> TClient <span class="keyword">As</span> {<span class="keyword">New</span>, <span class="identifier">SocketClient</span>})
+	<span class="keyword">Inherits</span> <span class="identifier">TcpServiceBase</span>
+	<span class="keyword">Implements</span> <span class="identifier">ITcpService</span>(<span class="keyword">Of</span> TClient), <span class="identifier">ITcpServiceBase</span>, <span class="identifier">IService</span>, 
+	<span class="identifier">ISetupConfigObject</span>, <span class="identifier">IConfigObject</span>, <span class="identifier">IDependencyObject</span>, <span class="identifier">IDisposable</span>, <span class="identifier">ILoggerObject</span>, 
+	<span class="identifier">IPluginObject</span>, <span class="identifier">IResolverObject</span>, <span class="identifier">IIdSender</span>, <span class="identifier">IIdRequsetInfoSender</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="fs"><div class="codeHeader"><span class="codeHeaderTitle">F#</span><span class="buttons"><button class="button is-small is-light copyCode" title="复制"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>复制</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-fs"><span class="keyword">type</span> <span class="identifier">TcpService</span>&lt;'TClient <span class="keyword">when</span> 'TClient : <span class="keyword">new</span>() and <span class="identifier">SocketClient</span>&gt; = 
+    <span class="keyword">class</span>
+        <span class="keyword">inherit</span> <span class="identifier">TcpServiceBase</span>
+        <span class="keyword">interface</span> <span class="identifier">ITcpService</span>&lt;'TClient&gt;
+        <span class="keyword">interface</span> <span class="identifier">ITcpServiceBase</span>
+        <span class="keyword">interface</span> <span class="identifier">IService</span>
+        <span class="keyword">interface</span> <span class="identifier">ISetupConfigObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IConfigObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IDependencyObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IDisposable</span>
+        <span class="keyword">interface</span> <span class="identifier">ILoggerObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IPluginObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IResolverObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IIdSender</span>
+        <span class="keyword">interface</span> <span class="identifier">IIdRequsetInfoSender</span>
+    <span class="keyword">end</span></code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><span class="noLink">Object</span>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <a href="a0613d96-896e-904e-e56e-cea5d9180d46.htm">ConfigObject</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <a href="61f037b2-14e9-cf31-d727-ac8a6b7e9005.htm">ServiceBase</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <a href="077c3d3c-9dc2-695e-5288-7aca692678ca.htm">TcpServiceBase</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">TcpService<span id="LST176DBBB3_2" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|nu=(|fs=&lt;'"></span>TClient<span id="LST176DBBB3_3" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|nu=)|fs=&gt;"></span></span></dd></dl><dl class="inheritanceHierarchy"><dt>Derived</dt><dd><div><a href="5acfc03e-fbd9-1aaa-b2f8-81c503af862a.htm">TouchSocket.Dmtp<span id="LST176DBBB3_4" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>TcpDmtpService<span id="LST176DBBB3_5" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|nu=(|fs=&lt;'"></span>TClient<span id="LST176DBBB3_6" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|nu=)|fs=&gt;"></span></a></div><div><a href="04daa6e7-219d-120c-da6c-14440dcbb11d.htm">TouchSocket.Http<span id="LST176DBBB3_7" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>HttpService<span id="LST176DBBB3_8" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|nu=(|fs=&lt;'"></span>TClient<span id="LST176DBBB3_9" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|nu=)|fs=&gt;"></span></a></div><div><a href="dbd011a6-240d-a991-7725-eb9fa4e69ecb.htm">TouchSocket.Sockets<span id="LST176DBBB3_10" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>NATService</a></div><div><a href="5b9bb596-f0af-ac89-c1dd-a77796bf2ef7.htm">TouchSocket.Sockets<span id="LST176DBBB3_11" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>TcpService</a></div></dd></dl><dl class="implementsList"><dt>Implements</dt><dd><span class="noLink">IDisposable</span>, <a href="8b02ea30-8198-eb93-029c-5e4b09de2838.htm">IConfigObject</a>, <a href="c064d0ed-eda7-ccca-3c2f-2f645deb4f77.htm">IDependencyObject</a>, <a href="a6bc5cc2-3970-6f17-1a9f-3c92ae18ab28.htm">ILoggerObject</a>, <a href="1791eead-c0e1-5a23-2445-22cf05cbfd39.htm">IPluginObject</a>, <a href="72920cfc-581b-ecf9-f899-5ce7ba8556ec.htm">IResolverObject</a>, <a href="d6aed578-b16f-2c57-1423-d1a4718b56de.htm">ISetupConfigObject</a>, <a href="92a7e02e-c493-c7f0-6ff1-f47c0f98a4ae.htm">IIdRequsetInfoSender</a>, <a href="f9cd09f6-8f5f-44d3-92aa-e6bb7613edc9.htm">IIdSender</a>, <a href="0647cb31-d011-7a68-a249-9b205616b6f1.htm">IService</a>, <a href="02dff3f4-eddc-ad86-b680-cb79cd385225.htm">ITcpService</a><span id="LST176DBBB3_12" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><span class="selflink"><span class="typeparameter">TClient</span></span><span id="LST176DBBB3_13" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>, <a href="050fe37a-d774-4df9-a08d-893384c0d000.htm">ITcpServiceBase</a></dd></dl><h4>类型参数</h4><dl><dt class="has-text-weight-normal"><span class="parameter">TClient</span></dt><dd><p class="missing">[缺少 "T:TouchSocket.Sockets.TcpService`1" 的 &lt;typeparam name="TClient"/&gt; 文档]</p></dd></dl></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>构造函数</h2><div id="IDXGASection"><table id="ConstructorList" class="table is-hoverable"><tr><td><a href="a7a6bfdd-2a6e-f8c4-5364-0e566f7e21e7.htm">TcpService<span id="LST176DBBB3_14" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|nu=(|fs=&lt;'"></span>TClient<span id="LST176DBBB3_15" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|nu=)|fs=&gt;"></span></a></td><td>
+            Tcp泛型服务器，由使用者自己指定<a href="276a9112-ef90-fcd5-d08d-6aa994e24001.htm">SocketClient</a>类型。
+            </td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>属性</h2><div id="ID0YB0GASection"><table id="PropertyList" class="table is-hoverable"><tr><td><a href="cdf0907b-aa1c-80b1-70ec-2a5cab8d4793.htm">Config</a></td><td>
+            设置项
+            <br />(继承自 <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>。)</td></tr><tr><td><a href="953911cc-745c-670d-e1e7-d26d43afff40.htm">Connected</a></td><td>
+            用户连接完成
+            </td></tr><tr><td><a href="c41b4c63-7c0f-3c67-488e-21cfd91c310c.htm">Connecting</a></td><td>
+            有用户连接的时候
+            </td></tr><tr><td><a href="9963d88e-bb13-592c-b443-0448977fe235.htm">Count</a></td><td>
+    
+            当前在线客户端数量
+            
+  <br />(继承自 <a href="077c3d3c-9dc2-695e-5288-7aca692678ca.htm">TcpServiceBase</a>。)</td></tr><tr><td><a href="9f55f482-42e5-b3d5-6d01-2718046c6dbc.htm">Disconnected</a></td><td>
+            有用户断开连接
+            </td></tr><tr><td><a href="d9498d7c-1dc7-9e29-d9a0-f03a5406b208.htm">Disconnecting</a></td><td>
+            即将断开连接(仅主动断开时有效)。
+            </td></tr><tr><td><a href="22e3748a-13bf-513c-292d-ae214df7cc93.htm">DisposedValue</a></td><td>
+    
+            标识该对象是否已被释放
+            
+  <br />(继承自 <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>。)</td></tr><tr><td><a href="39c691ec-f0c6-f657-7319-198b3bda5889.htm">Logger</a></td><td>
+            日志记录器
+            <br />(继承自 <a href="a0613d96-896e-904e-e56e-cea5d9180d46.htm">ConfigObject</a>。)</td></tr><tr><td><a href="553de1f8-f1d8-398b-ba9c-c82360846526.htm">MaxCount</a></td><td>
+    
+            获取最大可连接数
+            
+  <br />(重写 <a href="fb1da8fc-84bb-baa5-4e9d-49e6c42ae490.htm">TcpServiceBase<span id="LST176DBBB3_16" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>MaxCount</a>)</td></tr><tr><td><a href="6956eedd-7357-d884-4609-f4e9b5550db5.htm">Monitors</a></td><td>
+    
+            网络监听集合
+            
+  <br />(重写 <a href="c7480090-afd2-61ff-a323-581c37e8a238.htm">TcpServiceBase<span id="LST176DBBB3_17" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>Monitors</a>)</td></tr><tr><td><a href="5607c4f0-1871-2e9a-c3b5-a1d97aae80cd.htm">PluginManager</a></td><td>
+            插件管理器
+            <br />(继承自 <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>。)</td></tr><tr><td><a href="6e6f681e-b268-f26e-d6e0-9c26f09f8834.htm">Resolver</a></td><td>
+            Resolver
+            <br />(继承自 <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>。)</td></tr><tr><td><a href="06a7d547-25e4-0371-a3fa-bebc6c1dc3c9.htm">ServerName</a></td><td>
+            名称
+            <br />(重写 <a href="3d0a8132-462a-3004-351c-f6e4d349ad4e.htm">ServiceBase<span id="LST176DBBB3_18" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ServerName</a>)</td></tr><tr><td><a href="2569f85c-228b-c867-ba3c-101fea2e6da4.htm">ServerState</a></td><td>
+            服务器状态
+            <br />(重写 <a href="c26d1994-423a-8b50-8746-484f100c3c23.htm">ServiceBase<span id="LST176DBBB3_19" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ServerState</a>)</td></tr><tr><td><a href="050cf8cf-555c-625b-0a16-504221a6e51d.htm">SocketClients</a></td><td>
+    
+            获取当前连接的所有客户端
+            
+  <br />(重写 <a href="6e575c32-4195-a36b-ce66-c0f9effe21b0.htm">TcpServiceBase<span id="LST176DBBB3_20" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>SocketClients</a>)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>方法</h2><div id="IDFGASection"><table id="MethodList" class="table is-hoverable"><tr><td><a href="0c875653-434f-8a65-83ba-b5188848743a.htm">AddListen</a></td><td>
+            添加一个地址监听。支持在服务器运行过程中动态添加。
+            <br />(重写 <a href="662f77e7-5925-2a96-6eca-78bb4e90af79.htm">TcpServiceBase<span id="LST176DBBB3_21" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>AddListen(TcpListenOption)</a>)</td></tr><tr><td><a href="07a66c26-73c2-5628-fdfe-359388a5c1dd.htm">Clear</a></td><td>
+    
+            清理当前已连接的所有客户端
+            
+  <br />(重写 <a href="9f671835-c723-a207-65e6-66799e1ebba7.htm">TcpServiceBase<span id="LST176DBBB3_22" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>Clear<span id="LST176DBBB3_23" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a>)</td></tr><tr><td><a href="4265f4f9-7adb-8415-940b-7b22beab7e4b.htm">CloneTo</a></td><td>
+            将当前对象的依赖项克隆到目标对象中
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr><tr><td><a href="e55366a7-567d-9b9d-7eda-80fb4d5d4b0e.htm">Dispose<span id="LST176DBBB3_24" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            释放资源。内部已经处理了<span class="noLink">SuppressFinalize(Object)</span><br />(继承自 <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>。)</td></tr><tr><td><a href="553d84f5-508e-281b-a52e-02c30a26f403.htm">Dispose(Boolean)</a></td><td>
+    
+    
+            调用释放，切换释放状态。
+            
+  
+  <br />(重写 <a href="7894d9bd-73bf-3a04-382e-253312b038f1.htm">TcpServiceBase<span id="LST176DBBB3_25" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>Dispose(Boolean)</a>)</td></tr><tr><td><a href="61a01c7e-031f-099a-2236-85af6bf0f7c8.htm">DisposeAsync</a></td><td>
+            异步释放资源。内部已经处理了<span class="noLink">SuppressFinalize(Object)</span><br />(继承自 <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>。)</td></tr><tr><td><a href="f7daf5e3-c800-b046-7301-40f7bba1fca1.htm">DisposeAsyncCore</a></td><td>
+            异步释放资源。注意：此方法仅在调用<span class="noLink">DisposeAsync<span id="LST176DBBB3_26" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></span>时有效。
+            <br />(继承自 <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>。)</td></tr><tr><td><span class="noLink">Equals</span></td><td>Determines whether the specified object is equal to the current object.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><span class="noLink">Finalize</span></td><td>Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><a href="cf6e42d1-542c-8204-3954-64506fc91db4.htm">GetClientInstence</a></td><td>
+            初始化客户端实例。
+            </td></tr><tr><td><a href="d49c44fb-07f5-96d6-c23e-759cba279497.htm">GetClients</a></td><td>
+            获取当前在线的所有客户端
+            </td></tr><tr><td><span class="noLink">GetHashCode</span></td><td>Serves as the default hash function.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><a href="115cb8e6-6f5d-9850-22f3-9fd8a9dcb4e4.htm">GetIds</a></td><td>
+    
+            获取当前在线的所有Id集合
+            
+  <br />(继承自 <a href="077c3d3c-9dc2-695e-5288-7aca692678ca.htm">TcpServiceBase</a>。)</td></tr><tr><td><a href="a9cfc82f-3b5d-b6fb-56ca-59c2fb4a201a.htm">GetNextNewId</a></td><td>
+            获取下一个新Id
+            </td></tr><tr><td><span class="noLink">GetType</span></td><td>Gets the <span class="noLink">Type</span> of the current instance.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><a href="ea521899-5cfc-ffb4-b0ce-54ccab0c8dfe.htm">GetValue<span id="LST176DBBB3_27" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST176DBBB3_28" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            获取依赖注入的值，当没有注入时，会返回默认值。
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr><tr><td><a href="087be592-2e9e-aa78-e80c-efab210a09bb.htm">HasValue<span id="LST176DBBB3_29" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST176DBBB3_30" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            是否有值。
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr><tr><td><a href="4e6adb8b-64ec-4807-6437-8eb24ddb78d6.htm">LoadConfig</a></td><td>
+            加载配置
+            <br />(重写 <a href="697cc67d-276d-1e5e-0fc0-d4608b0dbf6a.htm">SetupConfigObject<span id="LST176DBBB3_31" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>LoadConfig(TouchSocketConfig)</a>)</td></tr><tr><td><span class="noLink">MemberwiseClone</span></td><td>Creates a shallow copy of the current <span class="noLink">Object</span>.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><a href="bf47a4e2-3dcb-3bdb-7a54-06b486d71df3.htm">OnAuthenticatingError</a></td><td>
+            在验证Ssl发送错误时。
+            </td></tr><tr><td><a href="5324d9a6-c934-1f6b-997e-bc372c3420dc.htm">OnClientConnected</a></td><td>
+    
+            客户端连接完成
+            
+  <br />(重写 <a href="c7dd1979-d4f5-e99e-74d7-1743bcb03b4f.htm">TcpServiceBase<span id="LST176DBBB3_32" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>OnClientConnected(ISocketClient, ConnectedEventArgs)</a>)</td></tr><tr><td><a href="e76b89c4-9fff-83f6-0104-3f580b5383ce.htm">OnClientConnecting</a></td><td>
+    
+            客户端请求连接
+            
+  <br />(重写 <a href="68e3e3a8-6102-c026-7a4f-e50861f68d71.htm">TcpServiceBase<span id="LST176DBBB3_33" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>OnClientConnecting(ISocketClient, ConnectingEventArgs)</a>)</td></tr><tr><td><a href="56f51593-924e-8b66-e3ae-625956cfd44e.htm">OnClientDisconnected</a></td><td>
+    
+            客户端断开连接
+            
+  <br />(重写 <a href="5d1789d4-689c-ce64-bda8-c37de0aeb7ee.htm">TcpServiceBase<span id="LST176DBBB3_34" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>OnClientDisconnected(ISocketClient, DisconnectEventArgs)</a>)</td></tr><tr><td><a href="28f17ffa-dd48-4881-cb5a-a6ed369db189.htm">OnClientDisconnecting</a></td><td>
+    
+            即将断开连接(仅主动断开时有效)。
+            
+  <br />(重写 <a href="f8cc5027-c46e-0997-3b4f-f8ef639226b2.htm">TcpServiceBase<span id="LST176DBBB3_35" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>OnClientDisconnecting(ISocketClient, DisconnectEventArgs)</a>)</td></tr><tr><td><a href="fa4c27a0-6367-7b32-f57d-f667de2de7eb.htm">OnClientReceivedData</a></td><td>
+    
+            收到数据时
+            
+  <br />(重写 <a href="468c07f2-fc4d-cd6b-7219-383fa157dbcb.htm">TcpServiceBase<span id="LST176DBBB3_36" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>OnClientReceivedData(ISocketClient, ReceivedDataEventArgs)</a>)</td></tr><tr><td><a href="a6385dd9-c01d-eebf-cdde-47ea2677af9f.htm">OnConnected</a></td><td>
+            客户端连接完成，覆盖父类方法将不会触发事件。
+            </td></tr><tr><td><a href="1892c4da-7bf1-5670-9831-e29bba032e97.htm">OnConnecting</a></td><td>
+            客户端请求连接，覆盖父类方法将不会触发事件。
+            </td></tr><tr><td><a href="60c16d37-7a21-4eeb-3585-597d98ed851c.htm">OnDisconnected</a></td><td>
+            客户端断开连接，覆盖父类方法将不会触发事件。
+            </td></tr><tr><td><a href="52a47c26-b271-06f4-ca26-c2e6c6414ff0.htm">OnDisconnecting</a></td><td>
+            即将断开连接(仅主动断开时有效)。
+            </td></tr><tr><td><a href="74500950-b2b4-2ece-bd90-519e9ce8de51.htm">OnReceived</a></td><td>
+            当收到适配器数据。
+            </td></tr><tr><td><a href="b42a559b-f74a-cd63-54ef-71c97256cc5d.htm">PreviewBind</a></td><td> </td></tr><tr><td><a href="342698e7-470a-4990-1014-8d98abcfb044.htm">RemoveListen</a></td><td>
+            移除一个地址监听。支持在服务器运行过程中动态移除。
+            <br />(重写 <a href="865c0bce-bf5a-f53a-97ca-57d4fe7829a3.htm">TcpServiceBase<span id="LST176DBBB3_37" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>RemoveListen(TcpNetworkMonitor)</a>)</td></tr><tr><td><a href="b7833a91-06f3-b415-d30b-17d5c779accb.htm">RemoveValue<span id="LST176DBBB3_38" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST176DBBB3_39" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            重置属性值。
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr><tr><td><a href="1728715e-e4e5-2c22-56f1-2dcd3aa4aac9.htm">RentTcpCore</a></td><td>
+            租用TcpCore
+            <br />(继承自 <a href="077c3d3c-9dc2-695e-5288-7aca692678ca.htm">TcpServiceBase</a>。)</td></tr><tr><td><a href="2d1bc6c7-387a-80f9-3b4a-4ff12b811c1f.htm">ResetId</a></td><td>
+    
+    
+            重置Id
+            
+  
+  <br />(重写 <a href="31cba454-3828-13cb-c8da-dda41e04cd86.htm">TcpServiceBase<span id="LST176DBBB3_40" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ResetId(String, String)</a>)</td></tr><tr><td><a href="9ce3d545-4831-1004-c22a-da49d466d665.htm">ReturnTcpCore</a></td><td>
+            归还TcpCore
+            <br />(继承自 <a href="077c3d3c-9dc2-695e-5288-7aca692678ca.htm">TcpServiceBase</a>。)</td></tr><tr><td><a href="ba485755-c4ca-a24d-27f1-32c1d6f919a9.htm">Send(String, IRequestInfo)</a></td><td>
+    
+            向对应Id的客户端发送
+            
+  <br />(继承自 <a href="077c3d3c-9dc2-695e-5288-7aca692678ca.htm">TcpServiceBase</a>。)</td></tr><tr><td><a href="9cccffb2-90ed-f7f9-7ceb-02a7ac3ba2d8.htm">Send(String, <span id="LST176DBBB3_41" data-languageSpecificText="cpp=array&lt;"></span>Byte<span id="LST176DBBB3_42" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>, Int32, Int32)</a></td><td>
+            发送字节流
+            <br />(继承自 <a href="077c3d3c-9dc2-695e-5288-7aca692678ca.htm">TcpServiceBase</a>。)</td></tr><tr><td><a href="8bd0b969-05e9-b9e1-5dd5-6c52ce22e19b.htm">SendAsync(String, IRequestInfo)</a></td><td>
+    
+            向对应Id的客户端发送
+            
+  <br />(继承自 <a href="077c3d3c-9dc2-695e-5288-7aca692678ca.htm">TcpServiceBase</a>。)</td></tr><tr><td><a href="6041b05f-abad-8988-6492-af347580ff26.htm">SendAsync(String, <span id="LST176DBBB3_43" data-languageSpecificText="cpp=array&lt;"></span>Byte<span id="LST176DBBB3_44" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>, Int32, Int32)</a></td><td>
+            发送字节流
+            <br />(继承自 <a href="077c3d3c-9dc2-695e-5288-7aca692678ca.htm">TcpServiceBase</a>。)</td></tr><tr><td><a href="355e46bc-ae5c-38ec-6217-f62197eb9627.htm">Setup</a></td><td>
+            配置设置项
+            <br />(继承自 <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>。)</td></tr><tr><td><a href="c4758365-1cb5-1dc2-ccdb-2df4e1859a9e.htm">SetupAsync</a></td><td>
+            异步配置设置项
+            <br />(继承自 <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>。)</td></tr><tr><td><a href="2dcd25bd-0898-6fa8-1315-a2c545c9c288.htm">SetValue<span id="LST176DBBB3_45" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST176DBBB3_46" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            设置依赖注入的值
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr><tr><td><a href="f4b0ad03-0f50-1365-79fd-623b49687186.htm">SocketClientExist</a></td><td>
+    
+    
+            根据Id判断SocketClient是否存在
+            
+  
+  <br />(重写 <a href="f85c3fbc-c36f-2f9c-4caa-bf39675e3201.htm">TcpServiceBase<span id="LST176DBBB3_47" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>SocketClientExist(String)</a>)</td></tr><tr><td><a href="50db86b0-3fb7-9732-3a8f-538db9ae4099.htm">Start</a></td><td>
+            启动
+            <br />(重写 <a href="d5b024c3-55c5-e651-7bc0-d942d84873b6.htm">ServiceBase<span id="LST176DBBB3_48" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>Start<span id="LST176DBBB3_49" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a>)</td></tr><tr><td><a href="d7fabc9f-6983-c8d8-5d2f-d0ad3c38f6ed.htm">StartAsync</a></td><td>
+            异步启动
+            <br />(重写 <a href="80f72d05-0082-4e84-f251-7f876c243772.htm">ServiceBase<span id="LST176DBBB3_50" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>StartAsync<span id="LST176DBBB3_51" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a>)</td></tr><tr><td><a href="7484efff-6133-536e-59a6-52f2aeb12587.htm">Stop</a></td><td>
+            停止
+            <br />(重写 <a href="5f0f7498-1a66-dc89-675b-41b0977f8914.htm">ServiceBase<span id="LST176DBBB3_52" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>Stop<span id="LST176DBBB3_53" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a>)</td></tr><tr><td><a href="3820df15-32ab-fff2-383a-07a1ae5d4a3b.htm">StopAsync</a></td><td>
+            异步停止
+            <br />(重写 <a href="cb2313e9-8691-eafe-f93e-fa7f91cd7d23.htm">ServiceBase<span id="LST176DBBB3_54" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>StopAsync<span id="LST176DBBB3_55" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a>)</td></tr><tr><td><a href="b822d86e-7ba1-f472-e7bf-b0e3c060d1b9.htm">ThrowIfDisposed</a></td><td>
+            判断是否已经被释放，如果是，则抛出异常。
+            <br />(继承自 <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>。)</td></tr><tr><td><span class="noLink">ToString</span></td><td>Returns a string that represents the current object.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><a href="a6a4a70e-c6b5-bbad-60ce-6397cb98ee1a.htm">TryGetSocketClient</a></td><td>
+            尝试获取TClient
+            </td></tr><tr><td><a href="19363dd0-de68-196d-9905-2969cf26f79c.htm">TryGetValue<span id="LST176DBBB3_56" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST176DBBB3_57" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            尝试获取依赖注入的值，当没有注入时，会返回<span class="keyword"><span id="LST176DBBB3_58" data-languageSpecificText="vb=False|nu=false"></span></span>。
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr><tr><td><a href="cd5af0b4-281f-7b7c-0e64-d44c5940e467.htm">TryRemoveValue<span id="LST176DBBB3_59" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST176DBBB3_60" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            重置属性值。
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>扩展方法</h2><div id="IDAGASection"><table id="ExtensionList" class="table is-hoverable"><tr><td><a href="878403cd-f12c-edde-588e-08269fc9e04c.htm">Map</a></td><td>
+            简单对象映射
+            <br />(由 <a href="02bbd272-534f-46ef-2987-02490a9e41e9.htm">Mapper</a> 定义。)</td></tr><tr><td><a href="fb7e6dd3-8e3a-2831-644a-c77d3c5d6d6e.htm">Map</a></td><td>
+            简单对象映射
+            <br />(由 <a href="02bbd272-534f-46ef-2987-02490a9e41e9.htm">Mapper</a> 定义。)</td></tr><tr><td><a href="9a18a592-c63b-7ce8-f2d6-6d9ac6e2d62e.htm">Map<span id="LST176DBBB3_61" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TTarget<span id="LST176DBBB3_62" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            简单映射
+            <br />(由 <a href="02bbd272-534f-46ef-2987-02490a9e41e9.htm">Mapper</a> 定义。)</td></tr><tr><td><a href="42561b0b-8ddf-b261-08a5-1b07b9de94b4.htm">SafeDispose</a></td><td>
+            安全性释放（不用判断对象是否为空）。不会抛出任何异常。
+            <br />(由 <a href="08dccf0a-072b-52b7-b602-1958417b7198.htm">SystemExtensions</a> 定义。)</td></tr><tr><td><a href="0c8d4cc8-38de-cbf6-43ac-d65d145fe130.htm">ToJsonString</a></td><td>
+            转换为Json
+            <br />(由 <a href="8552a33c-c4bb-54b7-1888-08ff2740edab.htm">SerializeConvert</a> 定义。)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>参见</h2><div id="seeAlsoSection"><h4>引用</h4><div><a href="5bf6331c-a218-658a-a3bd-7bcd489609e1.htm">TouchSocket.Sockets 命名空间</a></div></div></div><div id="InThisArticleColumn" class="column is-hidden-mobile"><nav class="menu sticky is-hidden"><p class="menu-label"><strong>In This Article</strong></p><ul id="InThisArticleMenu" class="menu-list"><li><a class="quickLink">Definition</a></li><li><a class="quickLink">构造函数</a></li><li><a class="quickLink">属性</a></li><li><a class="quickLink">方法</a></li><li><a class="quickLink">扩展方法</a></li><li><a class="quickLink">参见</a></li></ul></nav></div></div></div><footer id="PageFooter" class="footer border-top py-3 fixedFooter"><div class="columns"><div class="column"> 
+				</div><div class="column"> 
+				</div></div></footer></div><script>$(function(){
+SetDefaultLanguage("cs");
+LoadTocFile(null, null);
+InitializeQuickLinks();
+
+$(".toggleSection" ).click(function () {
+    SectionExpandCollapse(this);
+});
+
+$(".toggleSection").keypress(function () {
+    SectionExpandCollapseCheckKey(this, event)
+});
+hljs.highlightAll();
+});</script></body></html>

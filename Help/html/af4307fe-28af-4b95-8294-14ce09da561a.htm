@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html ><html lang="zh-CN"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" href="../css/bulma.css" /><link rel="stylesheet" href="../css/font-awesome.min.css" /><link rel="stylesheet" href="../css/presentationStyle.css" /><link rel="stylesheet" href="../css/vs.min.css" /><link rel="stylesheet" href="../css/zh-CN.css" /><script src="../scripts/jquery-3.5.1.min.js"></script><script src="../scripts/clipboard.min.js"></script><script src="../scripts/highlight.min.js"></script><script src="../scripts/presentationStyle.js"></script><title>UdpDmtp 类</title><meta name="Title" content="UdpDmtp" /><meta name="Help.Id" content="T:TouchSocket.Dmtp.UdpDmtp" /><meta name="Help.ContentType" content="Reference" /><meta name="container" content="TouchSocket.Dmtp" /><meta name="guid" content="af4307fe-28af-4b95-8294-14ce09da561a" /><meta name="Description" content="UdpDmtpService" /><meta name="tocFile" content="../toc/IDE.xml" /></head><body><div class="fixedLayout"><div id="Header" class="fixedHeader"><div class="pageHeader level mb-0 py-2 px-4"><div id="TitleContainer" class="level-left"><div id="DocumentationTitle" class="level-item">A Sandcastle Documented Class Library</div></div><div id="LangFilterSearchContainer" class="level-right"><div class="level-item"><div class="dropdown is-hoverable"><div class="dropdown-trigger"><button class="button" aria-haspopup="true" aria-controls="dropdown-menu"><span id="CurrentLanguage"></span><span class="icon is-small"><i class="fa fa-angle-down" aria-hidden="true"></i></span></button></div><div class="dropdown-menu" role="menu"><div id="LanguageSelections" class="dropdown-content"><a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a><a class="dropdown-item languageFilterItem" data-languageId="vb">VB</a><a class="dropdown-item languageFilterItem" data-languageId="fs">F#</a></div></div></div></div><div class="level-item"><form id="SearchForm" action="#" onsubmit="TransferToSearchPage(); return false;"><div class="field"><div class="control has-icons-left"><input id="SearchTerms" class="input" type="text" maxlength="200" placeholder="Search" /><span class="icon is-small is-left"><i class="fa fa-search"></i></span><button id="SearchButton" type="submit" class="is-hidden"></button></div></div></form></div></div></div></div><div class="fixedContent"><nav class="breadcrumb my-1 px-2 border-bottom" role="navigation"><ul id="TopicBreadcrumbs" /></nav><div id="ContentContainer" class="columns pl-5 pr-5 fixedContent"><div id="ShowHideTOCColumn" class="column is-hidden-tablet"><a id="ShowHideTOC">Show/Hide TOC</a></div><div id="TOCColumn" class="column is-hidden-mobile"><nav class="toc"><ul id="TableOfContents" class="toc-menu" /></nav></div><div id="Resizer" class="is-hidden"></div><div id="TopicContent" class="column content is-7"><h1>Udp<wbr />Dmtp 类</h1><div class="summary">
+            UdpDmtpService
+            </div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Definition</h2><div id="IDBSection"><strong>命名空间：</strong> <a href="efc93c14-3d45-c826-b03a-3a54da781746.htm">TouchSocket.Dmtp</a><br /><strong>程序集：</strong> TouchSocket.Dmtp (在 TouchSocket.Dmtp.dll 中) 版本：2.0.0-beta.270+78c6852f7ef501b7f66c7ecafde4229aee156a87<div class="codeSnippet" data-codeSnippetLanguage="cs"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="复制"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>复制</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">UdpDmtp</span> : <span class="identifier">UdpSessionBase</span>, <span class="identifier">IUdpDmtp</span>, 
+	<span class="identifier">IUdpSession</span>, <span class="identifier">IService</span>, <span class="identifier">ISetupConfigObject</span>, <span class="identifier">IConfigObject</span>, <span class="identifier">IDependencyObject</span>, 
+	<span class="identifier">IDisposable</span>, <span class="identifier">ILoggerObject</span>, <span class="identifier">IPluginObject</span>, <span class="identifier">IResolverObject</span>, <span class="identifier">IClient</span>, 
+	<span class="identifier">IClientSender</span>, <span class="identifier">ISender</span>, <span class="identifier">ISenderBase</span>, <span class="identifier">IRequsetInfoSender</span>, <span class="identifier">IUdpClientSender</span>, 
+	<span class="identifier">IUdpRequsetInfoSender</span>, <span class="identifier">IDefaultSender</span>, <span class="identifier">IUdpDefaultSender</span>, <span class="identifier">IDmtpActorObject</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="vb"><div class="codeHeader"><span class="codeHeaderTitle">VB</span><span class="buttons"><button class="button is-small is-light copyCode" title="复制"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>复制</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-vb"><span class="keyword">Public</span> <span class="keyword">Class</span> <span class="identifier">UdpDmtp</span>
+	<span class="keyword">Inherits</span> <span class="identifier">UdpSessionBase</span>
+	<span class="keyword">Implements</span> <span class="identifier">IUdpDmtp</span>, <span class="identifier">IUdpSession</span>, <span class="identifier">IService</span>, <span class="identifier">ISetupConfigObject</span>, 
+	<span class="identifier">IConfigObject</span>, <span class="identifier">IDependencyObject</span>, <span class="identifier">IDisposable</span>, <span class="identifier">ILoggerObject</span>, <span class="identifier">IPluginObject</span>, 
+	<span class="identifier">IResolverObject</span>, <span class="identifier">IClient</span>, <span class="identifier">IClientSender</span>, <span class="identifier">ISender</span>, <span class="identifier">ISenderBase</span>, 
+	<span class="identifier">IRequsetInfoSender</span>, <span class="identifier">IUdpClientSender</span>, <span class="identifier">IUdpRequsetInfoSender</span>, <span class="identifier">IDefaultSender</span>, <span class="identifier">IUdpDefaultSender</span>, 
+	<span class="identifier">IDmtpActorObject</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="fs"><div class="codeHeader"><span class="codeHeaderTitle">F#</span><span class="buttons"><button class="button is-small is-light copyCode" title="复制"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>复制</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-fs"><span class="keyword">type</span> <span class="identifier">UdpDmtp</span> = 
+    <span class="keyword">class</span>
+        <span class="keyword">inherit</span> <span class="identifier">UdpSessionBase</span>
+        <span class="keyword">interface</span> <span class="identifier">IUdpDmtp</span>
+        <span class="keyword">interface</span> <span class="identifier">IUdpSession</span>
+        <span class="keyword">interface</span> <span class="identifier">IService</span>
+        <span class="keyword">interface</span> <span class="identifier">ISetupConfigObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IConfigObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IDependencyObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IDisposable</span>
+        <span class="keyword">interface</span> <span class="identifier">ILoggerObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IPluginObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IResolverObject</span>
+        <span class="keyword">interface</span> <span class="identifier">IClient</span>
+        <span class="keyword">interface</span> <span class="identifier">IClientSender</span>
+        <span class="keyword">interface</span> <span class="identifier">ISender</span>
+        <span class="keyword">interface</span> <span class="identifier">ISenderBase</span>
+        <span class="keyword">interface</span> <span class="identifier">IRequsetInfoSender</span>
+        <span class="keyword">interface</span> <span class="identifier">IUdpClientSender</span>
+        <span class="keyword">interface</span> <span class="identifier">IUdpRequsetInfoSender</span>
+        <span class="keyword">interface</span> <span class="identifier">IDefaultSender</span>
+        <span class="keyword">interface</span> <span class="identifier">IUdpDefaultSender</span>
+        <span class="keyword">interface</span> <span class="identifier">IDmtpActorObject</span>
+    <span class="keyword">end</span></code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><span class="noLink">Object</span>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <a href="a0613d96-896e-904e-e56e-cea5d9180d46.htm">ConfigObject</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <a href="61f037b2-14e9-cf31-d727-ac8a6b7e9005.htm">ServiceBase</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">UdpDmtp</span></dd></dl><dl class="implementsList"><dt>Implements</dt><dd><span class="noLink">IDisposable</span>, <a href="8b02ea30-8198-eb93-029c-5e4b09de2838.htm">IConfigObject</a>, <a href="c064d0ed-eda7-ccca-3c2f-2f645deb4f77.htm">IDependencyObject</a>, <a href="a6bc5cc2-3970-6f17-1a9f-3c92ae18ab28.htm">ILoggerObject</a>, <a href="1791eead-c0e1-5a23-2445-22cf05cbfd39.htm">IPluginObject</a>, <a href="72920cfc-581b-ecf9-f899-5ce7ba8556ec.htm">IResolverObject</a>, <a href="d6aed578-b16f-2c57-1423-d1a4718b56de.htm">ISetupConfigObject</a>, <a href="cfcb5c6a-e44a-143d-9a9d-f2d9040d5b8a.htm">IDmtpActorObject</a>, <a href="84bb993e-a1af-7a03-5fdc-d4c4827d3b4f.htm">IUdpDmtp</a>, <a href="34ad1a7c-123b-fe5d-2a7d-a920ac2ad0f6.htm">IClient</a>, <a href="89d7f7e9-1998-684f-9cc1-5205cafa5e10.htm">IClientSender</a>, <a href="0c9240b4-9ed5-6df8-bb12-97b10c1a6411.htm">IDefaultSender</a>, <a href="d0905000-9aed-27c5-c4d8-c858e9acbd26.htm">IRequsetInfoSender</a>, <a href="8e0e1843-1382-edcf-5890-181030c58226.htm">ISender</a>, <a href="509aa5c1-c117-ae50-582f-0bf3ae4cfaee.htm">ISenderBase</a>, <a href="0647cb31-d011-7a68-a249-9b205616b6f1.htm">IService</a>, <a href="1bc6a7af-c6bf-9a05-f86e-e40e5ba36638.htm">IUdpClientSender</a>, <a href="95471bd9-d0ba-2be7-9154-c2e7ac74b67b.htm">IUdpDefaultSender</a>, <a href="50291752-facb-f79f-f035-9d2e0aa23933.htm">IUdpRequsetInfoSender</a>, <a href="9d5bd9f5-85dc-8de4-a102-cf59e4f356b5.htm">IUdpSession</a></dd></dl></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>构造函数</h2><div id="ID06B0FASection"><table id="ConstructorList" class="table is-hoverable"><tr><td><a href="1d38ae88-e7ff-e674-6b6b-2e27550085a4.htm">UdpDmtp</a></td><td>
+            构造函数
+            </td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>属性</h2><div id="ID0UC0FASection"><table id="PropertyList" class="table is-hoverable"><tr><td><a href="28da202e-7f83-0193-db36-d1a2d96bdfc3.htm">CanSend</a></td><td>
+    
+            表示对象能否顺利执行发送操作。
+            <p>由于高并发，当该值为True时，也不一定完全能执行。</p><br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="c8bb4691-bbb2-4c60-509d-b601a4180a00.htm">CanSetDataHandlingAdapter</a></td><td>
+    
+            是否允许自由调用<a href="38dd27d8-2044-d530-91e6-b4d4f2cf692d.htm">SetDataHandlingAdapter(UdpDataHandlingAdapter)</a>进行赋值。
+            
+  <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="cdf0907b-aa1c-80b1-70ec-2a5cab8d4793.htm">Config</a></td><td>
+            设置项
+            <br />(继承自 <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>。)</td></tr><tr><td><a href="36983482-11ef-3485-0cae-44c81c50e515.htm">DataHandlingAdapter</a></td><td>
+            数据处理适配器
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="22e3748a-13bf-513c-292d-ae214df7cc93.htm">DisposedValue</a></td><td>
+    
+            标识该对象是否已被释放
+            
+  <br />(继承自 <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>。)</td></tr><tr><td><a href="7a02ef8f-41ca-19f5-6286-dffb64ea716f.htm">DmtpActor</a></td><td>
+            提供Dmtp协议的最基础功能件
+            </td></tr><tr><td><a href="2d73e85b-071e-63a5-eef6-6c3a0e713524.htm">LastReceivedTime</a></td><td>
+    
+            最后一次接收到数据的时间
+            
+  <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="2830ea80-e1d1-e4a8-c6b0-6d1f842c6729.htm">LastSendTime</a></td><td>
+    
+            最后一次发送数据的时间
+            
+  <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="39c691ec-f0c6-f657-7319-198b3bda5889.htm">Logger</a></td><td>
+            日志记录器
+            <br />(继承自 <a href="a0613d96-896e-904e-e56e-cea5d9180d46.htm">ConfigObject</a>。)</td></tr><tr><td><a href="20c26322-88e2-43da-a8b1-860582ec49a9.htm">Monitor</a></td><td>
+            监听器
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="5607c4f0-1871-2e9a-c3b5-a1d97aae80cd.htm">PluginManager</a></td><td>
+            插件管理器
+            <br />(继承自 <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>。)</td></tr><tr><td><a href="f7b591e1-9826-e1c7-9242-41f43f1c6b0c.htm">Protocol</a></td><td>
+    
+            终端协议
+            
+  <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="32de4154-9bbe-9558-d3a2-0979a5420c19.htm">RemoteIPHost</a></td><td>
+            默认远程节点
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="6e6f681e-b268-f26e-d6e0-9c26f09f8834.htm">Resolver</a></td><td>
+            Resolver
+            <br />(继承自 <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>。)</td></tr><tr><td><a href="472e382b-94a0-e429-14e9-d6f2efb8514c.htm">ServerName</a></td><td>
+            服务器名称
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="0aad3efe-882d-441b-bed5-137c1340bdd8.htm">ServerState</a></td><td>
+            获取服务器状态
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>方法</h2><div id="ID0NB0FASection"><table id="MethodList" class="table is-hoverable"><tr><td><a href="4b5a7966-6a35-689a-76b2-36a5e862c089.htm">ClearReceiver</a></td><td>
+            移除同步数据接收器
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="4265f4f9-7adb-8415-940b-7b22beab7e4b.htm">CloneTo</a></td><td>
+            将当前对象的依赖项克隆到目标对象中
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr><tr><td><a href="5bf0f07d-0178-cc8d-6758-6301997033d0.htm">CreateReceiver</a></td><td>
+            获取一个同步数据接收器
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="79412acd-53d8-2c6e-366e-ab6c88fbb80c.htm">DefaultSend(<span id="LST61B2DEC1_0" data-languageSpecificText="cpp=array&lt;"></span>Byte<span id="LST61B2DEC1_1" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>, Int32, Int32)</a></td><td>
+            绕过适配器，直接发送字节流
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="a7b7918d-7fe0-c2f7-0d92-bfd7a5d9df4f.htm">DefaultSend(EndPoint, <span id="LST61B2DEC1_2" data-languageSpecificText="cpp=array&lt;"></span>Byte<span id="LST61B2DEC1_3" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>, Int32, Int32)</a></td><td>
+    
+            绕过适配器，直接发送字节流
+            
+  <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="54f90b2a-7ff6-f4bb-ca1f-f33b9a652036.htm">DefaultSendAsync(<span id="LST61B2DEC1_4" data-languageSpecificText="cpp=array&lt;"></span>Byte<span id="LST61B2DEC1_5" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>, Int32, Int32)</a></td><td>
+    
+            绕过适配器，直接发送字节流
+            
+  <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="fe3efcf9-3a2b-b2d2-5ace-128ddd779017.htm">DefaultSendAsync(EndPoint, <span id="LST61B2DEC1_6" data-languageSpecificText="cpp=array&lt;"></span>Byte<span id="LST61B2DEC1_7" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>, Int32, Int32)</a></td><td>
+    
+            绕过适配器，直接发送字节流
+            
+  <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="e55366a7-567d-9b9d-7eda-80fb4d5d4b0e.htm">Dispose<span id="LST61B2DEC1_8" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            释放资源。内部已经处理了<span class="noLink">SuppressFinalize(Object)</span><br />(继承自 <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>。)</td></tr><tr><td><a href="7b22fab4-edbd-1c69-57d8-d0419cba7fca.htm">Dispose(Boolean)</a></td><td>
+    
+    
+            调用释放，切换释放状态。
+            
+  
+  <br />(重写 <a href="d7c5df9a-72d1-6473-134d-68eba16b5364.htm">UdpSessionBase<span id="LST61B2DEC1_9" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>Dispose(Boolean)</a>)</td></tr><tr><td><a href="61a01c7e-031f-099a-2236-85af6bf0f7c8.htm">DisposeAsync</a></td><td>
+            异步释放资源。内部已经处理了<span class="noLink">SuppressFinalize(Object)</span><br />(继承自 <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>。)</td></tr><tr><td><a href="f7daf5e3-c800-b046-7301-40f7bba1fca1.htm">DisposeAsyncCore</a></td><td>
+            异步释放资源。注意：此方法仅在调用<span class="noLink">DisposeAsync<span id="LST61B2DEC1_10" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></span>时有效。
+            <br />(继承自 <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>。)</td></tr><tr><td><a href="8542f04e-4fe9-65eb-be96-58f6e0d28dfb.htm">DropMulticastGroup</a></td><td>
+            退出组播
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><span class="noLink">Equals</span></td><td>Determines whether the specified object is equal to the current object.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><span class="noLink">Finalize</span></td><td>Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><span class="noLink">GetHashCode</span></td><td>Serves as the default hash function.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><span class="noLink">GetType</span></td><td>Gets the <span class="noLink">Type</span> of the current instance.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><a href="74433296-93f5-27c8-9a6d-2d7e4dc2a250.htm">GetUdpDmtpClient</a></td><td>
+            通过终结点获取<a href="3aa58d85-b2fc-5c1f-81e9-b03149067a72.htm">IUdpDmtpClient</a></td></tr><tr><td><a href="ea521899-5cfc-ffb4-b0ce-54ccab0c8dfe.htm">GetValue<span id="LST61B2DEC1_11" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST61B2DEC1_12" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            获取依赖注入的值，当没有注入时，会返回默认值。
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr><tr><td><a href="c3109f7c-7deb-797d-045e-4f5efc8ab89b.htm">HandleSendingData</a></td><td>
+            当即将发送时，如果覆盖父类方法，则不会触发插件。
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="087be592-2e9e-aa78-e80c-efab210a09bb.htm">HasValue<span id="LST61B2DEC1_13" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST61B2DEC1_14" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            是否有值。
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr><tr><td><a href="26213ee1-3f73-1446-1434-a23aa904b861.htm">JoinMulticastGroup</a></td><td>
+            加入组播。
+            <p>组播地址为 224.0.0.0 ~ 239.255.255.255，其中 224.0.0.0~224.255.255.255 不建议在用户程序中使用，因为它们一般都有特殊用途。</p><br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="fbbf316e-a035-1bfc-0865-07aea8db781b.htm">LoadConfig</a></td><td>
+            加载配置
+            <br />(重写 <a href="6e2ee453-c4ba-d625-16fa-0c714bf417bb.htm">UdpSessionBase<span id="LST61B2DEC1_15" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>LoadConfig(TouchSocketConfig)</a>)</td></tr><tr><td><span class="noLink">MemberwiseClone</span></td><td>Creates a shallow copy of the current <span class="noLink">Object</span>.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><a href="e58d4ed8-c181-0c12-38bd-90ccf37dbb5f.htm">PreviewBind</a></td><td>
+            在Socket初始化对象后，Bind之前调用。
+            可用于设置Socket参数。
+            父类方法可覆盖。
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="a815b53b-ea42-478c-6871-36c6ce74c95b.htm">ReceivedData</a></td><td>
+            处理已接收到的数据。
+            <br />(重写 <a href="0672148e-e38d-d080-d7ca-2edb6af936e2.htm">UdpSessionBase<span id="LST61B2DEC1_16" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ReceivedData(UdpReceivedDataEventArgs)</a>)</td></tr><tr><td><a href="b7833a91-06f3-b415-d30b-17d5c779accb.htm">RemoveValue<span id="LST61B2DEC1_17" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST61B2DEC1_18" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            重置属性值。
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr><tr><td><a href="3f20e845-518d-e0e0-3fd8-d842fb970cdc.htm">Send(IList<span id="LST61B2DEC1_19" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>ArraySegment<span id="LST61B2DEC1_20" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Byte<span id="LST61B2DEC1_21" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span><span id="LST61B2DEC1_22" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+    
+            同步组合发送数据。
+            <p>内部已经封装Ssl和发送长度检测，即：调用完成即表示数据全部发送完毕。</p><p>该发送会经过适配器封装，具体封装内容由适配器决定。</p><br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="f7c7e19a-3493-49c9-650d-e101bc8797ce.htm">Send(IRequestInfo)</a></td><td>
+            向默认终结点发送
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="f2fd82b4-07d7-6071-83cf-2449665d076b.htm">Send(EndPoint, IList<span id="LST61B2DEC1_23" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>ArraySegment<span id="LST61B2DEC1_24" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Byte<span id="LST61B2DEC1_25" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span><span id="LST61B2DEC1_26" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+    
+            同步组合发送数据。
+            <p>该发送会经过适配器封装，具体封装内容由适配器决定。</p><br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="19e42ff3-2360-93da-b65e-1b52fd735f6e.htm">Send(EndPoint, IRequestInfo)</a></td><td>
+            向设置终结点发送
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="61b6239c-f4ac-bec1-48aa-58934269c8b0.htm">Send(<span id="LST61B2DEC1_27" data-languageSpecificText="cpp=array&lt;"></span>Byte<span id="LST61B2DEC1_28" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>, Int32, Int32)</a></td><td>
+            向默认终结点发送
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="9d965459-2dfe-4e54-49fd-4a4758baafa4.htm">Send(EndPoint, <span id="LST61B2DEC1_29" data-languageSpecificText="cpp=array&lt;"></span>Byte<span id="LST61B2DEC1_30" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>, Int32, Int32)</a></td><td>
+            向设置的远程同步发送
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="92f1580d-f18f-334b-d876-722c2c2b42e0.htm">SendAsync(IList<span id="LST61B2DEC1_31" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>ArraySegment<span id="LST61B2DEC1_32" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Byte<span id="LST61B2DEC1_33" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span><span id="LST61B2DEC1_34" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+    
+            异步组合发送数据。
+            <p>该发送会经过适配器封装，具体封装内容由适配器决定。</p><br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="a0b71cf0-9bcf-2a29-6731-022f7218b5e6.htm">SendAsync(IRequestInfo)</a></td><td>
+    
+            异步发送数据。
+            <p>该发送会经过适配器封装，具体封装内容由适配器决定。</p><br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="70d454fb-b79c-f441-ced0-4cafc2863bb0.htm">SendAsync(EndPoint, IList<span id="LST61B2DEC1_35" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>ArraySegment<span id="LST61B2DEC1_36" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>Byte<span id="LST61B2DEC1_37" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span><span id="LST61B2DEC1_38" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+    
+            异步组合发送数据。
+            <p>该发送会经过适配器封装，具体封装内容由适配器决定。</p><br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="bb9460db-427e-253c-3dea-fa642dbd6a82.htm">SendAsync(EndPoint, IRequestInfo)</a></td><td>
+            异步发送数据。
+            <p>该发送会经过适配器封装，具体封装内容由适配器决定。</p><br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="dfe304ed-9116-b5eb-84fa-b3a9506663f2.htm">SendAsync(<span id="LST61B2DEC1_39" data-languageSpecificText="cpp=array&lt;"></span>Byte<span id="LST61B2DEC1_40" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>, Int32, Int32)</a></td><td>
+            异步发送数据。
+            <p>该发送会经过适配器封装，具体封装内容由适配器决定。</p><br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="20bbcc02-9980-a246-75c3-db2df41fd095.htm">SendAsync(EndPoint, <span id="LST61B2DEC1_41" data-languageSpecificText="cpp=array&lt;"></span>Byte<span id="LST61B2DEC1_42" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>, Int32, Int32)</a></td><td>
+            向设置的远程异步发送
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="8b7804c2-2b93-05f1-2ac9-58773fa14343.htm">SetAdapter</a></td><td>
+            设置适配器，该方法不会检验<a href="c8bb4691-bbb2-4c60-509d-b601a4180a00.htm">CanSetDataHandlingAdapter</a>的值。
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="fa8e06f4-0c3f-b3a1-3a23-056f16592358.htm">SetDataHandlingAdapter</a></td><td>
+            设置数据处理适配器
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="355e46bc-ae5c-38ec-6217-f62197eb9627.htm">Setup</a></td><td>
+            配置设置项
+            <br />(继承自 <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>。)</td></tr><tr><td><a href="c4758365-1cb5-1dc2-ccdb-2df4e1859a9e.htm">SetupAsync</a></td><td>
+            异步配置设置项
+            <br />(继承自 <a href="ec100ab0-baa8-6add-855d-b92fb69fc125.htm">SetupConfigObject</a>。)</td></tr><tr><td><a href="2dcd25bd-0898-6fa8-1315-a2c545c9c288.htm">SetValue<span id="LST61B2DEC1_43" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST61B2DEC1_44" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            设置依赖注入的值
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr><tr><td><a href="8ce0e768-4449-1080-5d85-2f3032264a6d.htm">Start</a></td><td>
+            启动
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="2970a92a-7815-398a-b2f9-9c4e4522d46a.htm">StartAsync</a></td><td>
+            异步启动
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="6606064f-7b23-933b-48ab-f79bd51dab17.htm">Stop</a></td><td>
+            停止
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="2b35590d-f76d-e995-471f-2e6d4355fdd9.htm">StopAsync</a></td><td>
+            异步停止
+            <br />(继承自 <a href="5f5b2ec7-3c87-fbf2-a0b1-9ee6685eed81.htm">UdpSessionBase</a>。)</td></tr><tr><td><a href="b822d86e-7ba1-f472-e7bf-b0e3c060d1b9.htm">ThrowIfDisposed</a></td><td>
+            判断是否已经被释放，如果是，则抛出异常。
+            <br />(继承自 <a href="fcb70826-454a-371d-29d4-6713c09e00c7.htm">DisposableObject</a>。)</td></tr><tr><td><span class="noLink">ToString</span></td><td>Returns a string that represents the current object.<br />(继承自 <span class="noLink">Object</span>。)</td></tr><tr><td><a href="19363dd0-de68-196d-9905-2969cf26f79c.htm">TryGetValue<span id="LST61B2DEC1_45" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST61B2DEC1_46" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            尝试获取依赖注入的值，当没有注入时，会返回<span class="keyword"><span id="LST61B2DEC1_47" data-languageSpecificText="vb=False|nu=false"></span></span>。
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr><tr><td><a href="cd5af0b4-281f-7b7c-0e64-d44c5940e467.htm">TryRemoveValue<span id="LST61B2DEC1_48" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TValue<span id="LST61B2DEC1_49" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            重置属性值。
+            <br />(继承自 <a href="c7528c46-b166-c6d5-9637-c1433bb94961.htm">DependencyObject</a>。)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>扩展方法</h2><div id="IDAFASection"><table id="ExtensionList" class="table is-hoverable"><tr><td><a href="0e718a73-aa52-0e39-df8a-aa8472cd9726.htm">ChannelExisted</a></td><td>
+            判断指定Id的通道是否已经存在
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="8b3517c8-2fb0-325a-2550-c91efbe84cdf.htm">CreateChannel</a></td><td>
+            在当前对点创建一个随机Id的通道
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="eca0c7fd-43b0-d8de-83ab-dbfcf86c317a.htm">CreateChannel</a></td><td>
+            在当前对点创建一个指定Id的通道
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="d24913b8-8c53-67a8-d822-4b0afcf8df64.htm">CreateChannel</a></td><td>
+            在指定路由点创建一个随机Id的通道
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="9e7e40a2-6fd7-955f-5570-3f83d3e7c25b.htm">CreateChannel</a></td><td>
+            在指定路由点创建一个指定Id的通道
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="09636766-28aa-5d04-9fbb-b49416a7dab8.htm">CreateChannelAsync</a></td><td>
+            在当前对点创建一个随机Id的通道
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="95d7f596-4fe5-4de5-cebd-ed539b22310d.htm">CreateChannelAsync</a></td><td>
+            在当前对点创建一个指定Id的通道
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="73fcb5dc-42ef-69f0-97ad-f395f08b9432.htm">CreateChannelAsync</a></td><td>
+            在指定路由点创建一个随机Id的通道
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="76271fa4-37bb-b5f6-2af0-a4a8a5c660b2.htm">CreateChannelAsync</a></td><td>
+            在指定路由点创建一个指定Id的通道
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="5912a072-4cf1-9bbf-6a18-fc558943ee2f.htm">CreateTargetDmtpRpcActor</a></td><td>
+            新创建一个直接向目标地址请求的<span class="noLink">IRpcClient</span>客户端。
+            <br />(由 <a href="8e1c5535-7e98-6936-6d93-c5b97e5c0860.htm">DmtpRpcActorExtension</a> 定义。)</td></tr><tr><td><a href="730d9261-cda2-cced-564d-b5eac318977e.htm">GetDmtpFileTransferActor</a></td><td>
+            从<a href="cfcb5c6a-e44a-143d-9a9d-f2d9040d5b8a.htm">IDmtpActorObject</a>中获取能实现文件传输的<a href="6174c6c5-2b36-f87a-c2af-f682e50fbe84.htm">IDmtpFileTransferActor</a><br />(由 <a href="977795fc-cbe4-ef71-8510-888125c3e81f.htm">DmtpFileTransferActorExtension</a> 定义。)</td></tr><tr><td><a href="d636e8a6-244d-6db0-7baf-15e2830d2a08.htm">GetDmtpRedisActor</a></td><td>
+            获取<a href="8626c08b-a526-7c58-b320-2ceae2f1bf79.htm">IDmtpRedisActor</a><br />(由 <a href="f6766c8a-c2ee-d83d-a03c-5a8f641134a2.htm">DmtpRedisActorExtensions</a> 定义。)</td></tr><tr><td><a href="dc608f28-da28-8c75-b403-f47816fec965.htm">GetDmtpRpcActor</a></td><td>
+            从<a href="cfcb5c6a-e44a-143d-9a9d-f2d9040d5b8a.htm">IDmtpActorObject</a>中获取<a href="f01fcd1a-0943-3bb9-b327-2d9935612fc6.htm">IDmtpRpcActor</a>，以实现Rpc调用功能。
+            <br />(由 <a href="8e1c5535-7e98-6936-6d93-c5b97e5c0860.htm">DmtpRpcActorExtension</a> 定义。)</td></tr><tr><td><a href="1ff2b0ea-4b74-f436-5b48-4c7991548e10.htm">GetDmtpRpcActor<span id="LST61B2DEC1_50" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TDmtpRpcActor<span id="LST61B2DEC1_51" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            从<a href="cfcb5c6a-e44a-143d-9a9d-f2d9040d5b8a.htm">IDmtpActorObject</a>中获取继承实现<a href="f01fcd1a-0943-3bb9-b327-2d9935612fc6.htm">IDmtpRpcActor</a>的功能件，以实现Rpc调用功能。
+            <br />(由 <a href="8e1c5535-7e98-6936-6d93-c5b97e5c0860.htm">DmtpRpcActorExtension</a> 定义。)</td></tr><tr><td><a href="878403cd-f12c-edde-588e-08269fc9e04c.htm">Map</a></td><td>
+            简单对象映射
+            <br />(由 <a href="02bbd272-534f-46ef-2987-02490a9e41e9.htm">Mapper</a> 定义。)</td></tr><tr><td><a href="fb7e6dd3-8e3a-2831-644a-c77d3c5d6d6e.htm">Map</a></td><td>
+            简单对象映射
+            <br />(由 <a href="02bbd272-534f-46ef-2987-02490a9e41e9.htm">Mapper</a> 定义。)</td></tr><tr><td><a href="9a18a592-c63b-7ce8-f2d6-6d9ac6e2d62e.htm">Map<span id="LST61B2DEC1_52" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TTarget<span id="LST61B2DEC1_53" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            简单映射
+            <br />(由 <a href="02bbd272-534f-46ef-2987-02490a9e41e9.htm">Mapper</a> 定义。)</td></tr><tr><td><a href="123fe4dd-4f62-5d94-d41a-a4c71515c569.htm">Ping</a></td><td>
+            向当前对点发送一个Ping报文，并且等待回应。
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="69b5ca5e-e5e9-1ad9-3c53-d9cceb92a458.htm">Ping</a></td><td>
+            向指定路由点发送一个Ping报文，并且等待回应。
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="177c70ef-76d8-25cc-86a7-7e6faab86bff.htm">PingAsync</a></td><td>
+            向当前对点发送一个Ping报文，并且等待回应。
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="698c5618-96a9-c0a2-5d54-6827d5a5bb17.htm">PingAsync</a></td><td>
+            向指定路由点发送一个Ping报文，并且等待回应。
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="42561b0b-8ddf-b261-08a5-1b07b9de94b4.htm">SafeDispose</a></td><td>
+            安全性释放（不用判断对象是否为空）。不会抛出任何异常。
+            <br />(由 <a href="08dccf0a-072b-52b7-b602-1958417b7198.htm">SystemExtensions</a> 定义。)</td></tr><tr><td><a href="b1aaaab3-153a-b46c-f4df-7dff8fed6817.htm">Send</a></td><td>
+             发送
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="053c77a4-f34f-f359-19e7-73a84951597e.htm">Send</a></td><td>
+            发送估计小于64K的<a href="f6c8909b-290c-5527-9b59-7add17b3630d.htm">IPackage</a><br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="125194d3-e5f7-9664-e952-be4e9b13f0bb.htm">Send</a></td><td>
+            发送
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="1e635ed9-b9d3-d7e9-28e0-4c8ed1fbdf39.htm">Send</a></td><td>
+             发送
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="4b907a93-958b-faa0-403e-f97574087fc4.htm">Send</a></td><td>
+            发送<a href="f6c8909b-290c-5527-9b59-7add17b3630d.htm">IPackage</a><br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="ae266512-557d-905e-79f7-ac4150b5f1dd.htm">Send</a></td><td>
+            发送
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="b6090b99-9d89-82bd-4f0e-69c3ce129f67.htm">SendAsync</a></td><td>
+            发送
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="ced0a457-26b5-b8fd-bb0e-a42dcc8a55b9.htm">SendAsync</a></td><td>
+            发送估计小于64K的<a href="f6c8909b-290c-5527-9b59-7add17b3630d.htm">IPackage</a><br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="d2fb13ea-613a-18a2-1092-ecdbd517a05b.htm">SendAsync</a></td><td>
+            发送
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="7341917c-b83b-9e5a-0c18-838fdb9a1f80.htm">SendAsync</a></td><td>
+            发送<a href="f6c8909b-290c-5527-9b59-7add17b3630d.htm">IPackage</a><br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="0c8d4cc8-38de-cbf6-43ac-d65d145fe130.htm">ToJsonString</a></td><td>
+            转换为Json
+            <br />(由 <a href="8552a33c-c4bb-54b7-1888-08ff2740edab.htm">SerializeConvert</a> 定义。)</td></tr><tr><td><a href="ded187a6-f548-b994-965e-612156bf26ae.htm">TrySend</a></td><td>
+            尝试发送
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="ca78e865-62a8-8904-695d-7f636190db25.htm">TrySend</a></td><td>
+            尝试发送
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="974f8357-3a73-b561-a5a8-cf5104519d42.htm">TrySend</a></td><td>
+            尝试发送
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="53475a8f-6c06-a272-6826-9d76cd286334.htm">TrySend</a></td><td>
+            发送估计小于64K的<a href="f6c8909b-290c-5527-9b59-7add17b3630d.htm">IPackage</a><br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="e1097ff0-8d58-1b6f-c765-4c123c37a022.htm">TrySend</a></td><td>
+            发送<a href="f6c8909b-290c-5527-9b59-7add17b3630d.htm">IPackage</a><br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="e77b5ac9-41c8-a74a-b567-169d544d3b65.htm">TrySend</a></td><td>
+            尝试发送
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="21e5b7ac-fb8d-9437-4e9d-f977a2e82b35.htm">TrySendAsync</a></td><td>
+            尝试发送
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="730b0b9e-1545-9e85-d477-ee15c03f57d6.htm">TrySendAsync</a></td><td>
+            尝试发送
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="1464d149-7468-5b57-78a5-fe328b289ead.htm">TrySendAsync</a></td><td>
+            发送估计小于64K的<a href="f6c8909b-290c-5527-9b59-7add17b3630d.htm">IPackage</a><br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="377a04fd-9445-242f-cc26-ad8630a84d27.htm">TrySendAsync</a></td><td>
+            发送<a href="f6c8909b-290c-5527-9b59-7add17b3630d.htm">IPackage</a><br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="c12ab649-e850-e916-4e77-575cc2ad856e.htm">TrySendAsync</a></td><td>
+            尝试发送
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr><tr><td><a href="36b3f754-38d5-a5ca-8d26-e0906bdd7cbc.htm">TrySubscribeChannel</a></td><td>
+            尝试订阅已存在的通道。
+            <br />(由 <a href="d6a9c158-7901-79c6-bae2-4f82a41c6b48.htm">DmtpActorExtension</a> 定义。)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>参见</h2><div id="seeAlsoSection"><h4>引用</h4><div><a href="efc93c14-3d45-c826-b03a-3a54da781746.htm">TouchSocket.Dmtp 命名空间</a></div></div></div><div id="InThisArticleColumn" class="column is-hidden-mobile"><nav class="menu sticky is-hidden"><p class="menu-label"><strong>In This Article</strong></p><ul id="InThisArticleMenu" class="menu-list"><li><a class="quickLink">Definition</a></li><li><a class="quickLink">构造函数</a></li><li><a class="quickLink">属性</a></li><li><a class="quickLink">方法</a></li><li><a class="quickLink">扩展方法</a></li><li><a class="quickLink">参见</a></li></ul></nav></div></div></div><footer id="PageFooter" class="footer border-top py-3 fixedFooter"><div class="columns"><div class="column"> 
+				</div><div class="column"> 
+				</div></div></footer></div><script>$(function(){
+SetDefaultLanguage("cs");
+LoadTocFile(null, null);
+InitializeQuickLinks();
+
+$(".toggleSection" ).click(function () {
+    SectionExpandCollapse(this);
+});
+
+$(".toggleSection").keypress(function () {
+    SectionExpandCollapseCheckKey(this, event)
+});
+hljs.highlightAll();
+});</script></body></html>

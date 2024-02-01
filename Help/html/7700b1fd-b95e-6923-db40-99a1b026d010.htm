@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html ><html lang="zh-CN"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" href="../css/bulma.css" /><link rel="stylesheet" href="../css/font-awesome.min.css" /><link rel="stylesheet" href="../css/presentationStyle.css" /><link rel="stylesheet" href="../css/vs.min.css" /><link rel="stylesheet" href="../css/zh-CN.css" /><script src="../scripts/jquery-3.5.1.min.js"></script><script src="../scripts/clipboard.min.js"></script><script src="../scripts/highlight.min.js"></script><script src="../scripts/presentationStyle.js"></script><title>HttpHeaders 枚举</title><meta name="Title" content="HttpHeaders" /><meta name="Help.Id" content="T:TouchSocket.Http.HttpHeaders" /><meta name="Help.ContentType" content="Reference" /><meta name="container" content="TouchSocket.Http" /><meta name="guid" content="7700b1fd-b95e-6923-db40-99a1b026d010" /><meta name="Description" content="请求头枚举" /><meta name="tocFile" content="../toc/IDK.xml" /></head><body><div class="fixedLayout"><div id="Header" class="fixedHeader"><div class="pageHeader level mb-0 py-2 px-4"><div id="TitleContainer" class="level-left"><div id="DocumentationTitle" class="level-item">A Sandcastle Documented Class Library</div></div><div id="LangFilterSearchContainer" class="level-right"><div class="level-item"><div class="dropdown is-hoverable"><div class="dropdown-trigger"><button class="button" aria-haspopup="true" aria-controls="dropdown-menu"><span id="CurrentLanguage"></span><span class="icon is-small"><i class="fa fa-angle-down" aria-hidden="true"></i></span></button></div><div class="dropdown-menu" role="menu"><div id="LanguageSelections" class="dropdown-content"><a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a><a class="dropdown-item languageFilterItem" data-languageId="vb">VB</a><a class="dropdown-item languageFilterItem" data-languageId="fs">F#</a></div></div></div></div><div class="level-item"><form id="SearchForm" action="#" onsubmit="TransferToSearchPage(); return false;"><div class="field"><div class="control has-icons-left"><input id="SearchTerms" class="input" type="text" maxlength="200" placeholder="Search" /><span class="icon is-small is-left"><i class="fa fa-search"></i></span><button id="SearchButton" type="submit" class="is-hidden"></button></div></div></form></div></div></div></div><div class="fixedContent"><nav class="breadcrumb my-1 px-2 border-bottom" role="navigation"><ul id="TopicBreadcrumbs" /></nav><div id="ContentContainer" class="columns pl-5 pr-5 fixedContent"><div id="ShowHideTOCColumn" class="column is-hidden-tablet"><a id="ShowHideTOC">Show/Hide TOC</a></div><div id="TOCColumn" class="column is-hidden-mobile"><nav class="toc"><ul id="TableOfContents" class="toc-menu" /></nav></div><div id="Resizer" class="is-hidden"></div><div id="TopicContent" class="column content is-7"><h1>Http<wbr />Headers 枚举</h1><div class="summary">
+            请求头枚举
+            </div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Definition</h2><div id="IDBSection"><strong>命名空间：</strong> <a href="27f4faff-0bc9-f52a-7360-9fd578fe97a9.htm">TouchSocket.Http</a><br /><strong>程序集：</strong> TouchSocket.Http (在 TouchSocket.Http.dll 中) 版本：2.0.0-beta.270+78c6852f7ef501b7f66c7ecafde4229aee156a87<div class="codeSnippet" data-codeSnippetLanguage="cs"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="复制"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>复制</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="identifier">HttpHeaders</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="vb"><div class="codeHeader"><span class="codeHeaderTitle">VB</span><span class="buttons"><button class="button is-small is-light copyCode" title="复制"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>复制</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-vb"><span class="keyword">Public</span> <span class="keyword">Enumeration</span> <span class="identifier">HttpHeaders</span></code></pre></div></div><div class="codeSnippet is-hidden" data-codeSnippetLanguage="fs"><div class="codeHeader"><span class="codeHeaderTitle">F#</span><span class="buttons"><button class="button is-small is-light copyCode" title="复制"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>复制</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-fs"><span class="keyword">type</span> <span class="identifier">HttpHeaders</span></code></pre></div></div></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>成员</h2><div id="IDAEASection"><table id="enumMemberList" class="table is-hoverable"><tr><td>CacheControl</td><td>0</td><td>
+            Cache-Control 标头，指定请求/响应链上所有缓存控制机制必须服从的指令。
+            </td></tr><tr><td>Connection</td><td>1</td><td>
+            Connection 标头，指定特定连接需要的选项。
+            </td></tr><tr><td>Date</td><td>2</td><td>
+            Date 标头，指定开始创建请求的日期和时间。
+            </td></tr><tr><td>KeepAlive</td><td>3</td><td>
+            Keep-Alive 标头，指定用以维护持久性连接的参数。
+            </td></tr><tr><td>Pragma</td><td>4</td><td>
+            Pragma 标头，指定可应用于请求/响应链上的任何代理的特定于实现的指令。
+            </td></tr><tr><td>Trailer</td><td>5</td><td>
+            Trailer 标头，指定标头字段显示在以 chunked 传输编码方式编码的消息的尾部。
+            </td></tr><tr><td>TransferEncoding</td><td>6</td><td>
+            Transfer-Encoding 标头，指定对消息正文应用的转换的类型（如果有）。
+            </td></tr><tr><td>Upgrade</td><td>7</td><td>
+            Upgrade 标头，指定客户端支持的附加通信协议。
+            </td></tr><tr><td>Via</td><td>8</td><td>
+            Via 标头，指定网关和代理程序要使用的中间协议。
+            </td></tr><tr><td>Warning</td><td>9</td><td>
+            Warning 标头，指定关于可能未在消息中反映的消息的状态或转换的附加信息。
+            </td></tr><tr><td>Allow</td><td>10</td><td>
+            Allow 标头，指定支持的 HTTP 方法集。
+            </td></tr><tr><td>ContentLength</td><td>11</td><td>
+            Content-Length 标头，指定伴随正文数据的长度（以字节为单位）。
+            </td></tr><tr><td>ContentType</td><td>12</td><td>
+            Content-Type 标头，指定伴随正文数据的 MIME 类型。
+            </td></tr><tr><td>ContentEncoding</td><td>13</td><td>
+            Content-Encoding 标头，指定已应用于伴随正文数据的编码。
+            </td></tr><tr><td>ContentLanguage</td><td>14</td><td>
+            Content-Langauge 标头，指定伴随正文数据的自然语言。
+            </td></tr><tr><td>ContentLocation</td><td>15</td><td>
+            Content-Location 标头，指定可从其中获得伴随正文的 URI。
+            </td></tr><tr><td>ContentMd5</td><td>16</td><td>
+            Content-MD5 标头，指定伴随正文数据的 MD5 摘要，用于提供端到端消息完整性检查。
+            </td></tr><tr><td>ContentRange</td><td>17</td><td>
+            Content-Range 标头，指定在完整正文中应用伴随部分正文数据的位置。
+            </td></tr><tr><td>Expires</td><td>18</td><td>
+            Expires 标头，指定日期和时间，在此之后伴随的正文数据应视为陈旧的。
+            </td></tr><tr><td>LastModified</td><td>19</td><td>
+            Last-Modified 标头，指定上次修改伴随的正文数据的日期和时间。
+            </td></tr><tr><td>Accept</td><td>20</td><td>
+            Accept 标头，指定响应可接受的 MIME 类型。
+            </td></tr><tr><td>AcceptCharset</td><td>21</td><td>
+            Accept-Charset 标头，指定响应可接受的字符集。
+            </td></tr><tr><td>AcceptEncoding</td><td>22</td><td>
+            Accept-Encoding 标头，指定响应可接受的内容编码。
+            </td></tr><tr><td>AcceptLanguage</td><td>23</td><td>
+            Accept-Langauge 标头，指定响应首选的自然语言。
+            </td></tr><tr><td>Authorization</td><td>24</td><td>
+            Authorization 标头，指定客户端为向服务器验证自身身份而出示的凭据。
+            </td></tr><tr><td>Cookie</td><td>25</td><td>
+            Cookie 标头，指定向服务器提供的 Cookie 数据。
+            </td></tr><tr><td>Expect</td><td>26</td><td>
+            Expect 标头，指定客户端要求的特定服务器行为。
+            </td></tr><tr><td>From</td><td>27</td><td>
+            From 标头，指定控制请求用户代理的用户的 Internet 电子邮件地址。
+            </td></tr><tr><td>Host</td><td>28</td><td>
+            Host 标头，指定所请求资源的主机名和端口号。
+            </td></tr><tr><td>IfMatch</td><td>29</td><td>
+            If-Match 标头，指定仅当客户端的指示资源的缓存副本是最新的时，才执行请求的操作。
+            </td></tr><tr><td>IfModifiedSince</td><td>30</td><td>
+            If-Modified-Since 标头，指定仅当自指示的数据和时间之后修改了请求的资源时，才执行请求的操作。
+            </td></tr><tr><td>IfNoneMatch</td><td>31</td><td>
+            If-None-Match 标头，指定仅当客户端的指示资源的缓存副本都不是最新的时，才执行请求的操作。
+            </td></tr><tr><td>IfRange</td><td>32</td><td>
+            If-Range 标头，指定如果客户端的缓存副本是最新的，仅发送指定范围的请求资源。
+            </td></tr><tr><td>IfUnmodifiedSince</td><td>33</td><td>
+            If-Unmodified-Since 标头，指定仅当自指示的日期和时间之后修改了请求的资源时，才执行请求的操作。
+            </td></tr><tr><td>MaxForwards</td><td>34</td><td>
+            Max-Forwards 标头，指定一个整数，表示此请求还可转发的次数。
+            </td></tr><tr><td>ProxyAuthorization</td><td>35</td><td>
+            Proxy-Authorization 标头，指定客户端为向代理验证自身身份而出示的凭据。
+            </td></tr><tr><td>Referer</td><td>36</td><td>
+            Referer 标头，指定从中获得请求 URI 的资源的 URI。
+            </td></tr><tr><td>Range</td><td>37</td><td>
+            Range 标头，指定代替整个响应返回的客户端请求的响应的子范围。
+            </td></tr><tr><td>Te</td><td>38</td><td>
+            TE 标头，指定响应可接受的传输编码方式。
+            </td></tr><tr><td>Translate</td><td>39</td><td>
+            Translate 标头，与 WebDAV 功能一起使用的 HTTP 规范的 Microsoft 扩展。
+            </td></tr><tr><td>UserAgent</td><td>40</td><td>
+            User-Agent 标头，指定有关客户端代理的信息。
+            </td></tr><tr><td>AcceptRanges</td><td>41</td><td>
+            Accept-Ranges 标头，指定服务器接受的范围。
+            </td></tr><tr><td>Age</td><td>42</td><td>
+            Age 标头，指定自起始服务器生成响应以来的时间长度（以秒为单位）。
+            </td></tr><tr><td>ETag</td><td>43</td><td>
+            Etag 标头，指定请求的变量的当前值。
+            </td></tr><tr><td>Location</td><td>44</td><td>
+            Location 标头，指定为获取请求的资源而将客户端重定向到的 URI。
+            </td></tr><tr><td>ProxyAuthenticate</td><td>45</td><td>
+            Proxy-Authenticate 标头，指定客户端必须对代理验证其自身。
+            </td></tr><tr><td>RetryAfter</td><td>46</td><td>
+            Retry-After 标头，指定某个时间（以秒为单位）或日期和时间，在此时间之后客户端可以重试其请求。
+            </td></tr><tr><td>Server</td><td>47</td><td>
+            Server 标头，指定关于起始服务器代理的信息。
+            </td></tr><tr><td>SetCookie</td><td>48</td><td>
+            Set-Cookie 标头，指定提供给客户端的 Cookie 数据。
+            </td></tr><tr><td>Vary</td><td>49</td><td>
+            Vary 标头，指定用于确定缓存的响应是否为新响应的请求标头。
+            </td></tr><tr><td>WwwAuthenticate</td><td>50</td><td>
+            WWW-Authenticate 标头，指定客户端必须对服务器验证其自身。
+            </td></tr><tr><td>Origin</td><td>51</td><td>
+            Origin。
+            </td></tr><tr><td>ContentDisposition</td><td>52</td><td>
+            Content-Disposition
+            </td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>参见</h2><div id="seeAlsoSection"><h4>引用</h4><div><a href="27f4faff-0bc9-f52a-7360-9fd578fe97a9.htm">TouchSocket.Http 命名空间</a></div></div></div><div id="InThisArticleColumn" class="column is-hidden-mobile"><nav class="menu sticky is-hidden"><p class="menu-label"><strong>In This Article</strong></p><ul id="InThisArticleMenu" class="menu-list"><li><a class="quickLink">Definition</a></li><li><a class="quickLink">成员</a></li><li><a class="quickLink">参见</a></li></ul></nav></div></div></div><footer id="PageFooter" class="footer border-top py-3 fixedFooter"><div class="columns"><div class="column"> 
+				</div><div class="column"> 
+				</div></div></footer></div><script>$(function(){
+SetDefaultLanguage("cs");
+LoadTocFile(null, null);
+InitializeQuickLinks();
+
+$(".toggleSection" ).click(function () {
+    SectionExpandCollapse(this);
+});
+
+$(".toggleSection").keypress(function () {
+    SectionExpandCollapseCheckKey(this, event)
+});
+hljs.highlightAll();
+});</script></body></html>
