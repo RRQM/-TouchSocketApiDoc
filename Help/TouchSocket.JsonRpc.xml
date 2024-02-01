@@ -1,0 +1,1795 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TouchSocket.JsonRpc</name>
+  </assembly>
+  <members>
+    <member name="T:TouchSocket.Core.JsonRpcPluginManagerExtension">
+      <summary>
+            JsonRpcPluginManagerExtension
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.JsonRpcPluginManagerExtension.UseHttpJsonRpc(TouchSocket.Core.IPluginManager)">
+      <summary>
+            使用基于Http协议的JsonRpc的插件。仅服务器有用。
+            </summary>
+      <param name="pluginManager">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>pluginManager</parameter>
+            <parameter>M:TouchSocket.Core.JsonRpcPluginManagerExtension.UseHttpJsonRpc(TouchSocket.Core.IPluginManager)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.JsonRpcPluginManagerExtension.UseHttpJsonRpc(TouchSocket.Core.IPluginManager)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.JsonRpcPluginManagerExtension.UseTcpJsonRpc(TouchSocket.Core.IPluginManager)">
+      <summary>
+            使用基于Tcp协议的JsonRpc的插件。
+            </summary>
+      <param name="pluginManager">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>pluginManager</parameter>
+            <parameter>M:TouchSocket.Core.JsonRpcPluginManagerExtension.UseTcpJsonRpc(TouchSocket.Core.IPluginManager)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.JsonRpcPluginManagerExtension.UseTcpJsonRpc(TouchSocket.Core.IPluginManager)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.JsonRpcPluginManagerExtension.UseWebSocketJsonRpc(TouchSocket.Core.IPluginManager)">
+      <summary>
+            使用基于WebSocket协议的JsonRpc的插件。
+            </summary>
+      <param name="pluginManager">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>pluginManager</parameter>
+            <parameter>M:TouchSocket.Core.JsonRpcPluginManagerExtension.UseWebSocketJsonRpc(TouchSocket.Core.IPluginManager)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.JsonRpcPluginManagerExtension.UseWebSocketJsonRpc(TouchSocket.Core.IPluginManager)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.HttpJsonRpcClient">
+      <summary>
+            基于Http协议的JsonRpc客户端
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.HttpJsonRpcClient.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.JsonRpc.HttpJsonRpcClient</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.HttpJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.HttpJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])">
+      <summary>
+            Rpc调用
+            </summary>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="types">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>types</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.HttpJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="returnType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>returnType</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>服务器返回结果</returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.HttpJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="returnType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>returnType</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="types">对应类型集合</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>返回值</returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.HttpJsonRpcClient.InvokeAsync(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcClient.InvokeAsync(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcClient.InvokeAsync(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.HttpJsonRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="returnType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>returnType</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>服务器返回结果</returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.HttpJsonRpcParserPlugin">
+      <summary>
+            HttpJsonRpcParserPlugin
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.HttpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider)">
+      <summary>
+            HttpJsonRpcParserPlugin
+            </summary>
+      <param name="rpcServerProvider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>rpcServerProvider</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.HttpJsonRpcParserPlugin.JsonRpcUrl">
+      <summary>
+            当挂载在<see cref="T:TouchSocket.Http.HttpService" />时，匹配Url然后响应。当设置为null或空时，会全部响应。
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.HttpJsonRpcParserPlugin.SetJsonRpcUrl(System.String)">
+      <summary>
+            当挂载在<see cref="T:TouchSocket.Http.HttpService" />时，匹配Url然后响应。当设置为null或空时，会全部响应。
+            </summary>
+      <param name="jsonRpcUrl"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcParserPlugin.SetJsonRpcUrl(System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.IHttpJsonRpcCallContext">
+      <summary>
+            IHttpJsonRpcCallContext
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.IHttpJsonRpcClient">
+      <summary>
+            IHttpJsonRpcClient
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.IHttpJsonRpcClientSlim">
+      <summary>
+            IHttpJsonRpcClientSlim
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.IJsonRpcActionClient">
+      <summary>
+            IJsonRpcClientBase
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.IJsonRpcActionClient.InputResponseString(System.String)">
+      <summary>
+            收到JsonRpc的响应数据
+            </summary>
+      <param name="jsonString">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>jsonString</parameter>
+            <parameter>M:TouchSocket.JsonRpc.IJsonRpcActionClient.InputResponseString(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.IJsonRpcActionClient.WaitHandle">
+      <summary>
+            WaitHandle
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.IJsonRpcCallContext">
+      <summary>
+            IJsonRpcCallContext
+            </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.IJsonRpcCallContext.JsonRpcContext">
+      <summary>
+            JsonRpc数据包
+            </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.IJsonRpcCallContext.JsonString">
+      <summary>
+            Json字符串
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.IJsonRpcClient">
+      <summary>
+            IJsonRpcClient
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.IJsonRpcRequestInfo">
+      <summary>
+            当使用自定义适配器时，则可以自定义数据来源。
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.IJsonRpcRequestInfo.GetJsonRpcString">
+      <summary>
+            获取JsonRpc数据源。
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.IJsonRpcRequestInfo.GetJsonRpcString</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.ITcpJsonRpcCallContext">
+      <summary>
+            ITcpJsonRpcCallContext
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.ITcpJsonRpcClient">
+      <summary>
+            基于Tcp协议的JsonRpc客户端。
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.IWebSocketJsonRpcClient">
+      <summary>
+            IWebSocketJsonRpcClient
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcActionClientBase">
+      <summary>
+            JsonRpcActionClientBase
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcActionClientBase.InputResponseString(System.String)">
+      <summary>
+            收到JsonRpc的响应数据
+            </summary>
+      <param name="jsonString">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>jsonString</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcActionClientBase.InputResponseString(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcActionClientBase.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcActionClientBase.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcActionClientBase.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])">
+      <summary>
+            Rpc调用
+            </summary>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="types">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>types</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcActionClientBase.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcActionClientBase.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcActionClientBase.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="returnType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>returnType</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcActionClientBase.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcActionClientBase.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>服务器返回结果</returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcActionClientBase.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="returnType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>returnType</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcActionClientBase.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="types">对应类型集合</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcActionClientBase.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>返回值</returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcActionClientBase.InvokeAsync(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcActionClientBase.InvokeAsync(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcActionClientBase.InvokeAsync(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcActionClientBase.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="returnType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>returnType</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcActionClientBase.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcActionClientBase.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>服务器返回结果</returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcActionClientBase.WaitHandle">
+      <summary>
+            WaitHandle
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcAttribute">
+      <summary>
+            适用于JsonRpc的标记
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcAttribute.#ctor">
+      <summary>
+            适用于JsonRpc的标记
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcAttribute.#ctor(System.Boolean)">
+      <summary>
+             适用于JsonRpc的标记.
+             <para>是否仅以函数名调用，当为True是，调用时仅需要传入方法名即可。</para></summary>
+      <param name="methodInvoke">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>methodInvoke</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcAttribute.#ctor(System.Boolean)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcAttribute.#ctor(System.String)">
+      <summary>
+            适用于JsonRpc的标记.
+            </summary>
+      <param name="invokenKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>invokenKey</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcAttribute.#ctor(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcAttribute.GetGenericConstraintTypes">
+      <summary>
+    
+            获取生成的函数泛型限定名称。默认<see cref="T:TouchSocket.Rpc.IRpcClient" /></summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcAttribute.GetGenericConstraintTypes</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcCallContextBase">
+      <summary>
+            JsonRpc调用上下文
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcCallContextBase.#ctor(System.Object,System.String)">
+      <summary>
+             JsonRpc调用上下文
+            </summary>
+      <param name="caller">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>caller</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcCallContextBase.#ctor(System.Object,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="jsonString">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>jsonString</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcCallContextBase.#ctor(System.Object,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcCallContextBase.JsonRpcContext">
+      <summary>
+            JsonRpc上下文
+            </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcCallContextBase.JsonString">
+      <summary>
+            Json字符串
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcClientExtension">
+      <summary>
+            JsonRpcClientExtension
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcClientExtension.GetIsJsonRpc(TouchSocket.Sockets.ITcpClientBase)">
+      <summary>
+            获取<see cref="F:TouchSocket.JsonRpc.JsonRpcClientExtension.IsJsonRpcProperty" /></summary>
+      <param name="client"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcClientExtension.GetIsJsonRpc(TouchSocket.Sockets.ITcpClientBase)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcClientExtension.GetJsonRpcActionClient(TouchSocket.Sockets.ISocketClient)">
+      <summary>
+            获取基于Tcp协议或者WebSocket协议的双工JsonRpc端
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcClientExtension.GetJsonRpcActionClient(TouchSocket.Sockets.ISocketClient)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcClientExtension.GetJsonRpcActionClient(TouchSocket.Sockets.ISocketClient)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="F:TouchSocket.JsonRpc.JsonRpcClientExtension.IsJsonRpcProperty">
+      <summary>
+            标识是否为JsonRpc
+            </summary>
+    </member>
+    <member name="F:TouchSocket.JsonRpc.JsonRpcClientExtension.JsonRpcActionClientProperty">
+      <summary>
+            IJsonRpcActionClient
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcClientExtension.SetIsJsonRpc(TouchSocket.Sockets.ITcpClientBase,System.Boolean)">
+      <summary>
+            设置<see cref="F:TouchSocket.JsonRpc.JsonRpcClientExtension.IsJsonRpcProperty" /></summary>
+      <param name="client"></param>
+      <param name="value"></param>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcDispatchProxy">
+      <summary>
+            JsonRpcDispatchProxy
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcDispatchProxy`1">
+      <summary>
+            JsonRpcDispatchProxy
+            </summary>
+      <typeparam name="TClient"></typeparam>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcDispatchProxy`2">
+      <summary>
+            JsonRpcDispatchProxy
+            </summary>
+      <typeparam name="TClient"></typeparam>
+      <typeparam name="TAttribute"></typeparam>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcError">
+      <summary>
+            JsonRpcError
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcError.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.JsonRpc.JsonRpcError</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcError.Code">
+      <summary>
+            code
+            </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcError.Message">
+      <summary>
+            message
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcErrorResponse">
+      <summary>
+            JsonRpcErrorResponse
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcErrorResponse.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.JsonRpc.JsonRpcErrorResponse</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcErrorResponse.Error">
+      <summary>
+            error
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcParserPluginBase">
+      <summary>
+            JsonRpcParser解析器插件
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcParserPluginBase.#ctor(TouchSocket.Rpc.IRpcServerProvider)">
+      <summary>
+            构造函数
+            </summary>
+      <param name="rpcServerProvider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>rpcServerProvider</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcParserPluginBase.#ctor(TouchSocket.Rpc.IRpcServerProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcParserPluginBase.ActionMap">
+      <summary>
+            JsonRpc的调用键。
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcRequest">
+      <summary>
+            JsonRpcRequest
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcRequest.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.JsonRpc.JsonRpcRequest</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcRequest.Id">
+      <summary>
+            id
+            </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcRequest.Jsonrpc">
+      <summary>
+            jsonrpc
+            </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcRequest.Method">
+      <summary>
+            method
+            </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcRequest.Params">
+      <summary>
+            @params
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcRequestContext">
+      <summary>
+            JsonRpcRequestContext
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcRequestContext.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.JsonRpc.JsonRpcRequestContext</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcRequestContext.Parameters">
+      <summary>
+            parameters
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcResponseBase">
+      <summary>
+            JsonRpcResponseBase
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcResponseBase.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.JsonRpc.JsonRpcResponseBase</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcResponseBase.Id">
+      <summary>
+            id
+            </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcResponseBase.Jsonrpc">
+      <summary>
+            jsonrpc
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcResponseContext">
+      <summary>
+            JsonRpc响应器
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcResponseContext.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.JsonRpc.JsonRpcResponseContext</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcResponseContext.Error">
+      <summary>
+            error
+            </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcResponseContext.Result">
+      <summary>
+            result
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcSuccessResponse">
+      <summary>
+            JsonRpcSuccessResponse
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcSuccessResponse.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.JsonRpc.JsonRpcSuccessResponse</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcSuccessResponse.Result">
+      <summary>
+            result
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcUtility">
+      <summary>
+            JsonRpcUtility
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcUtility.BuildRequestContext(TouchSocket.Rpc.ActionMap,TouchSocket.JsonRpc.JsonRpcCallContextBase@)">
+      <summary>
+            BuildRequestContext
+            </summary>
+      <param name="actionMap">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionMap</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.BuildRequestContext(TouchSocket.Rpc.ActionMap,TouchSocket.JsonRpc.JsonRpcCallContextBase@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="callContext">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>callContext</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.BuildRequestContext(TouchSocket.Rpc.ActionMap,TouchSocket.JsonRpc.JsonRpcCallContextBase@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:TouchSocket.Rpc.RpcException"></exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcUtility.GetJsonRpcError(TouchSocket.Rpc.InvokeResult)">
+      <summary>
+            GetJsonRpcError
+            </summary>
+      <param name="invokeResult">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>invokeResult</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.GetJsonRpcError(TouchSocket.Rpc.InvokeResult)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.GetJsonRpcError(TouchSocket.Rpc.InvokeResult)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcUtility.IsJsonRpcRequest(System.String)">
+      <summary>
+            是否属于JsonRpc请求
+            </summary>
+      <param name="jsonString">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>jsonString</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.IsJsonRpcRequest(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.IsJsonRpcRequest(System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcUtility.ResultParseToType(System.Object,System.Type)">
+      <summary>
+            ResultParseToType
+            </summary>
+      <param name="result">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>result</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.ResultParseToType(System.Object,System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="returnType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>returnType</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.ResultParseToType(System.Object,System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.ResultParseToType(System.Object,System.Type)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcUtility.ToJsonRpcRequestContext(System.String)">
+      <summary>
+            ToJsonRpcRequestContext
+            </summary>
+      <param name="jsonString">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>jsonString</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.ToJsonRpcRequestContext(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.ToJsonRpcRequestContext(System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcUtility.ToJsonRpcResponseString(TouchSocket.JsonRpc.JsonRpcResponseBase)">
+      <summary>
+            ToJsonRpcResponseString
+            </summary>
+      <param name="response">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>response</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.ToJsonRpcResponseString(TouchSocket.JsonRpc.JsonRpcResponseBase)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.ToJsonRpcResponseString(TouchSocket.JsonRpc.JsonRpcResponseBase)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcUtility.ToJsonRpcWaitResult(System.String)">
+      <summary>
+            ToJsonRpcWaitResult
+            </summary>
+      <param name="jsonString">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>jsonString</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.ToJsonRpcWaitResult(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.ToJsonRpcWaitResult(System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.JsonRpcWaitResult">
+      <summary>
+            JsonRpcWaitResult
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.JsonRpcWaitResult.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.JsonRpc.JsonRpcWaitResult</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcWaitResult.Error">
+      <summary>
+            Error
+            </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcWaitResult.Message">
+      <summary>
+            消息
+            </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcWaitResult.Result">
+      <summary>
+            Result
+            </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcWaitResult.Sign">
+      <summary>
+            标记
+            </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.JsonRpcWaitResult.Status">
+      <summary>
+            状态
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.TcpJsonRpcClient">
+      <summary>
+            基于Tcp协议的TcpJsonRpc客户端
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.TcpJsonRpcClient.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.JsonRpc.TcpJsonRpcClient</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.TcpJsonRpcClient.ActionMap">
+      <summary>
+            JsonRpc的调用键。
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.TcpJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.TcpJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])">
+      <summary>
+            Rpc调用
+            </summary>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="types">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>types</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.TcpJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="returnType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>returnType</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>服务器返回结果</returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.TcpJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="returnType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>returnType</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="types">对应类型集合</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>返回值</returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.TcpJsonRpcClient.InvokeAsync(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcClient.InvokeAsync(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcClient.InvokeAsync(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.TcpJsonRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="returnType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>returnType</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>服务器返回结果</returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.TcpJsonRpcParserPlugin">
+      <summary>
+            基于Tcp协议的JsonRpc功能插件
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.TcpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider)">
+      <summary>
+            基于Tcp协议的JsonRpc功能插件
+            </summary>
+      <param name="rpcServerProvider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>rpcServerProvider</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.TcpJsonRpcParserPlugin.AutoSwitch">
+      <summary>
+            自动转换协议
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.TcpJsonRpcParserPlugin.NoSwitchProtocol">
+      <summary>
+            不需要自动转化协议。
+            <para>仅当服务器是Tcp时生效。才会解释为jsonRpc。</para></summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcParserPlugin.NoSwitchProtocol</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.WebSocketJsonRpcClient">
+      <summary>
+            基于WebSocket协议的JsonRpc客户端。
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.JsonRpc.WebSocketJsonRpcClient</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.WebSocketJsonRpcClient.ActionMap">
+      <summary>
+            JsonRpc的调用键。
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])">
+      <summary>
+            Rpc调用
+            </summary>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="types">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>types</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="returnType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>returnType</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>服务器返回结果</returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="returnType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>returnType</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="types">对应类型集合</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.Invoke(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[]@,System.Type[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>返回值</returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.InvokeAsync(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.InvokeAsync(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.InvokeAsync(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
+      <summary>
+            Rpc调用
+            <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
+      <param name="returnType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>returnType</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">调用键</param>
+      <param name="parameters">参数</param>
+      <param name="invokeOption">Rpc调用设置</param>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>服务器返回结果</returns>
+      <exception cref="T:System.TimeoutException">调用超时</exception>
+      <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.WebSocketJsonRpcClient.WaitHandle">
+      <summary>
+            WaitHandle
+            </summary>
+    </member>
+    <member name="T:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin">
+      <summary>
+            WebSocketJsonRpcParserPlugin
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider)">
+      <summary>
+            WebSocketJsonRpcParserPlugin
+            </summary>
+      <param name="rpcServerProvider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>rpcServerProvider</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.AllowJsonRpc">
+      <summary>
+            经过判断是否标识当前的客户端为JsonRpc
+            </summary>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.IHttpSocketClient,TouchSocket.Http.HttpContext,System.Boolean})">
+      <summary>
+            经过判断是否标识当前的客户端为JsonRpc
+            </summary>
+      <param name="allowJsonRpc">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>allowJsonRpc</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.IHttpSocketClient,TouchSocket.Http.HttpContext,System.Boolean})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.IHttpSocketClient,TouchSocket.Http.HttpContext,System.Boolean})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.IHttpSocketClient,TouchSocket.Http.HttpContext,System.Threading.Tasks.Task{System.Boolean}})">
+      <summary>
+            经过判断是否标识当前的客户端为JsonRpc
+            </summary>
+      <param name="allowJsonRpc">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>allowJsonRpc</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.IHttpSocketClient,TouchSocket.Http.HttpContext,System.Threading.Tasks.Task{System.Boolean}})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.IHttpSocketClient,TouchSocket.Http.HttpContext,System.Threading.Tasks.Task{System.Boolean}})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.Resources.TouchSocketJsonRpcResource">
+      <summary>
+            TouchSocketJsonRpc资源枚举
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Sockets.JsonRpcConfigExtension">
+      <summary>
+            JsonRpcConfigExtension
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithHttpJsonRpcClient``1(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            构建HttpJsonRpc类客户端，并连接
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithHttpJsonRpcClient``1(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithHttpJsonRpcClient``1(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithHttpJsonRpcClient``1(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithHttpJsonRpcClient(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            构建HttpJsonRpc类客户端，并连接
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithHttpJsonRpcClient(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithHttpJsonRpcClient(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithTcpJsonRpcClient``1(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            构建TcpJsonRpc类客户端，并连接
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithTcpJsonRpcClient``1(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithTcpJsonRpcClient``1(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithTcpJsonRpcClient``1(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithTcpJsonRpcClient(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            构建TcpJsonRpc类客户端，并连接
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithTcpJsonRpcClient(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithTcpJsonRpcClient(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithWebSocketJsonRpcClient``1(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            构建WebSocketJsonRpc类客户端，并连接
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithWebSocketJsonRpcClient``1(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithWebSocketJsonRpcClient``1(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithWebSocketJsonRpcClient``1(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithWebSocketJsonRpcClient(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            构建WebSocketJsonRpc类客户端，并连接
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithWebSocketJsonRpcClient(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.JsonRpcConfigExtension.BuildWithWebSocketJsonRpcClient(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+  </members>
+</doc>

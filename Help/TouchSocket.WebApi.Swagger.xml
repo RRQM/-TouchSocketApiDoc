@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TouchSocket.WebApi.Swagger</name>
+  </assembly>
+  <members>
+    <member name="T:TouchSocket.WebApi.Swagger.SwaggerDescriptionAttribute">
+      <summary>
+            Swagger描述特性
+            </summary>
+    </member>
+    <member name="M:TouchSocket.WebApi.Swagger.SwaggerDescriptionAttribute.#ctor">
+      <summary>
+            Swagger描述特性
+            </summary>
+    </member>
+    <member name="M:TouchSocket.WebApi.Swagger.SwaggerDescriptionAttribute.#ctor(System.String[])">
+      <summary>
+            Swagger描述特性
+            </summary>
+      <param name="groups">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>groups</parameter>
+            <parameter>M:TouchSocket.WebApi.Swagger.SwaggerDescriptionAttribute.#ctor(System.String[])</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.WebApi.Swagger.SwaggerDescriptionAttribute.Groups">
+      <summary>
+            分组
+            </summary>
+    </member>
+    <member name="T:TouchSocket.WebApi.Swagger.SwaggerPlugin">
+      <summary>
+            SwaggerPlugin
+            </summary>
+    </member>
+    <member name="M:TouchSocket.WebApi.Swagger.SwaggerPlugin.#ctor(TouchSocket.Core.IResolver,TouchSocket.Core.ILog)">
+      <summary>
+            SwaggerPlugin
+            </summary>
+      <param name="resolver">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>resolver</parameter>
+            <parameter>M:TouchSocket.WebApi.Swagger.SwaggerPlugin.#ctor(TouchSocket.Core.IResolver,TouchSocket.Core.ILog)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="logger">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>logger</parameter>
+            <parameter>M:TouchSocket.WebApi.Swagger.SwaggerPlugin.#ctor(TouchSocket.Core.IResolver,TouchSocket.Core.ILog)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.WebApi.Swagger.SwaggerPlugin.LaunchBrowser">
+      <summary>
+            是否在浏览器打开Swagger页面
+            </summary>
+    </member>
+    <member name="M:TouchSocket.WebApi.Swagger.SwaggerPlugin.OnServerStarted(TouchSocket.Sockets.IService,TouchSocket.Sockets.ServiceStateEventArgs)">
+      <summary>
+            当服务器执行<see cref="M:TouchSocket.Sockets.IService.Start" />后时。
+            <para>
+            注意：此处并不表示服务器成功启动，具体状态请看<see cref="P:TouchSocket.Sockets.ServiceStateEventArgs.ServerState" /></para></summary>
+      <param name="sender"></param>
+      <param name="e"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.WebApi.Swagger.SwaggerPlugin.OnServerStarted(TouchSocket.Sockets.IService,TouchSocket.Sockets.ServiceStateEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:TouchSocket.WebApi.Swagger.SwaggerPlugin.Prefix">
+      <summary>
+            访问Swagger的前缀，默认“swagger”
+            </summary>
+    </member>
+    <member name="M:TouchSocket.WebApi.Swagger.SwaggerPlugin.SetPrefix(System.String)">
+      <summary>
+            设置访问Swagger的前缀，默认“swagger”
+            </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:TouchSocket.WebApi.Swagger.SwaggerPlugin.SetPrefix(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.WebApi.Swagger.SwaggerPlugin.SetPrefix(System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.WebApi.Swagger.SwaggerPlugin.UseLaunchBrowser">
+      <summary>
+            在浏览器打开Swagger页面
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.WebApi.Swagger.SwaggerPlugin.UseLaunchBrowser</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.WebApi.Swagger.SwaggerPluginManagerExtension">
+      <summary>
+            SwaggerPluginManagerExtension
+            </summary>
+    </member>
+    <member name="M:TouchSocket.WebApi.Swagger.SwaggerPluginManagerExtension.UseSwagger(TouchSocket.Core.IPluginManager)">
+      <summary>
+            使用<see cref="T:TouchSocket.WebApi.Swagger.SwaggerPlugin" />插件。
+            </summary>
+      <param name="pluginManager"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.WebApi.Swagger.SwaggerPluginManagerExtension.UseSwagger(TouchSocket.Core.IPluginManager)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+  </members>
+</doc>

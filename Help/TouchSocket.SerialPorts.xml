@@ -1,0 +1,1288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TouchSocket.SerialPorts</name>
+  </assembly>
+  <members>
+    <member name="T:TouchSocket.SerialPorts.ISerialConnectedPlugin">
+      <summary>
+            ISerialConnectedPlugin
+            </summary>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialConnectedPlugin`1">
+      <summary>
+            具有完成连接动作的插件接口
+            </summary>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>T:TouchSocket.SerialPorts.ISerialConnectedPlugin`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.ISerialConnectedPlugin`1.OnSerialConnected(`0,TouchSocket.Sockets.ConnectedEventArgs)">
+      <summary>
+            客户端连接成功后触发
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialConnectedPlugin`1.OnSerialConnected(`0,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialConnectedPlugin`1.OnSerialConnected(`0,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialConnectedPlugin`1.OnSerialConnected(`0,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialConnectingPlugin">
+      <summary>
+            ISerialConnectingPlugin
+            </summary>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialConnectingPlugin`1">
+      <summary>
+            具有预备连接的插件接口
+            </summary>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>T:TouchSocket.SerialPorts.ISerialConnectingPlugin`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.ISerialConnectingPlugin`1.OnSerialConnecting(`0,TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            在即将完成连接时触发。
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialConnectingPlugin`1.OnSerialConnecting(`0,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialConnectingPlugin`1.OnSerialConnecting(`0,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialConnectingPlugin`1.OnSerialConnecting(`0,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialDisconnectedPlugin">
+      <summary>
+            ISerialDisconnectedPlugin
+            </summary>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialDisconnectedPlugin`1">
+      <summary>
+            具有断开连接的插件接口
+            </summary>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>T:TouchSocket.SerialPorts.ISerialDisconnectedPlugin`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.ISerialDisconnectedPlugin`1.OnSerialDisconnected(`0,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            会话断开后触发
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialDisconnectedPlugin`1.OnSerialDisconnected(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialDisconnectedPlugin`1.OnSerialDisconnected(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialDisconnectedPlugin`1.OnSerialDisconnected(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialDisconnectingPlugin">
+      <summary>
+            ISerialDisconnectingPlugin
+            </summary>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialDisconnectingPlugin`1">
+      <summary>
+            即将断开连接(仅主动断开时有效)。
+            </summary>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>T:TouchSocket.SerialPorts.ISerialDisconnectingPlugin`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.ISerialDisconnectingPlugin`1.OnSerialDisconnecting(`0,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            即将断开连接(仅主动断开时有效)。
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialDisconnectingPlugin`1.OnSerialDisconnecting(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialDisconnectingPlugin`1.OnSerialDisconnecting(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialDisconnectingPlugin`1.OnSerialDisconnecting(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialPortClient">
+      <summary>
+            串口客户端接口。
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.ISerialPortClient.Connected">
+      <summary>
+            成功打开串口
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.ISerialPortClient.Connecting">
+      <summary>
+            准备连接串口的时候
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.ISerialPortClient.Disconnected">
+      <summary>
+            断开连接
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.ISerialPortClient.Disconnecting">
+      <summary>
+            即将断开连接(仅主动断开时有效)。
+            <para></para></summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.ISerialPortClient.MainSerialPort">
+      <summary>
+            主通信器
+            </summary>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialReceivedPlugin">
+      <summary>
+            ISerialReceivedPlugin
+            </summary>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialReceivedPlugin`1">
+      <summary>
+            ISerialReceivedPlugin
+            </summary>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>T:TouchSocket.SerialPorts.ISerialReceivedPlugin`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.ISerialReceivedPlugin`1.OnSerialReceived(`0,TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            在收到数据时触发
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialReceivedPlugin`1.OnSerialReceived(`0,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialReceivedPlugin`1.OnSerialReceived(`0,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialReceivedPlugin`1.OnSerialReceived(`0,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialReceivingPlugin">
+      <summary>
+            ISerialReceivingPlugin
+            </summary>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialReceivingPlugin`1">
+      <summary>
+            ISerialReceivingPlugin
+            </summary>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>T:TouchSocket.SerialPorts.ISerialReceivingPlugin`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.ISerialReceivingPlugin`1.OnSerialReceiving(`0,TouchSocket.Sockets.ByteBlockEventArgs)">
+      <summary>
+            在刚收到数据时触发，即在适配器之前。
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialReceivingPlugin`1.OnSerialReceiving(`0,TouchSocket.Sockets.ByteBlockEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialReceivingPlugin`1.OnSerialReceiving(`0,TouchSocket.Sockets.ByteBlockEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialReceivingPlugin`1.OnSerialReceiving(`0,TouchSocket.Sockets.ByteBlockEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialSendingPlugin">
+      <summary>
+            ISerialSendingPlugin
+            </summary>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.ISerialSendingPlugin`1">
+      <summary>
+            ISerialSendingPlugin
+            </summary>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>T:TouchSocket.SerialPorts.ISerialSendingPlugin`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.ISerialSendingPlugin`1.OnSerialSending(`0,TouchSocket.Sockets.SendingEventArgs)">
+      <summary>
+            当即将发送数据时，调用该方法在适配器之后，接下来即会发送数据。
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialSendingPlugin`1.OnSerialSending(`0,TouchSocket.Sockets.SendingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialSendingPlugin`1.OnSerialSending(`0,TouchSocket.Sockets.SendingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.ISerialSendingPlugin`1.OnSerialSending(`0,TouchSocket.Sockets.SendingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.SerialConnectingEventArgs">
+      <summary>
+            客户端连接事件。
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialConnectingEventArgs.#ctor(System.IO.Ports.SerialPort)">
+      <summary>
+            客户端连接事件
+            </summary>
+      <param name="serialPort">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>serialPort</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialConnectingEventArgs.#ctor(System.IO.Ports.SerialPort)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialConnectingEventArgs.SerialPort">
+      <summary>
+            新初始化的通信器
+            </summary>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.SerialConnectingEventHandler`1">
+      <summary>
+            Connecting
+            </summary>
+      <param name="client"></param>
+      <param name="e"></param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>T:TouchSocket.SerialPorts.SerialConnectingEventHandler`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.SerialCore">
+      <summary>
+            Serial核心
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialCore.#ctor">
+      <summary>
+            Serial核心
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialCore.BeginReceive">
+      <summary>
+            开始接收。
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialCore.BeginReceive</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialCore.CanSend">
+      <summary>
+            表示对象能否顺利执行发送操作。
+            <para>由于高并发，当该值为True时，也不一定完全能执行。</para></summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialCore.Close(System.String)">
+      <summary>
+            请求关闭
+            </summary>
+      <param name="msg">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>msg</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialCore.Close(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialCore.MainSerialPort">
+      <summary>
+            SerialPort
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialCore.MaxBufferSize">
+      <summary>
+            最大缓存尺寸
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialCore.MinBufferSize">
+      <summary>
+            最小缓存尺寸
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialCore.OnBreakOut">
+      <summary>
+            当中断Serial的时候。当为<see langword="true" />时，意味着是调用<see cref="M:TouchSocket.SerialPorts.SerialCore.Close(System.String)" />。当为<see langword="false" />时，则是其他中断。
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialCore.OnException">
+      <summary>
+            当发生异常的时候
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialCore.Online">
+      <summary>
+            在线状态
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialCore.OnReceived">
+      <summary>
+            当收到数据的时候
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialCore.ReceiveBufferSize">
+      <summary>
+            接收缓存池,运行时的值会根据流速自动调整
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialCore.ReceiveCounter">
+      <summary>
+            接收计数器
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialCore.Reset">
+      <summary>
+            重置环境。
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialCore.Reset(System.IO.Ports.SerialPort)">
+      <summary>
+            重置环境，并设置新的<see cref="T:System.IO.Ports.SerialPort" />。
+            </summary>
+      <param name="serialPort"></param>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialCore.Send(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            发送数据。
+            <para>
+            内部会根据是否启用Ssl，进行直接发送，还是Ssl发送。
+            </para></summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialCore.Send(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialCore.Send(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialCore.Send(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialCore.SendAsync(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            异步发送数据。
+            </summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialCore.SendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialCore.SendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialCore.SendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialCore.SendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="M:TouchSocket.SerialPorts.SerialCore.Exception(System.Exception)"></exception>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialCore.SendBufferSize">
+      <summary>
+            发送缓存池,运行时的值会根据流速自动调整
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialCore.SendCounter">
+      <summary>
+            发送计数器
+            </summary>
+    </member>
+    <member name="F:TouchSocket.SerialPorts.SerialCore.SyncRoot">
+      <summary>
+            同步根
+            </summary>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.SerialPortClient">
+      <summary>
+            串口客户端基类
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClient.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.SerialPorts.SerialPortClient</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortClient.Received">
+      <summary>
+            接收到数据
+            </summary>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.SerialPortClientBase">
+      <summary>
+            串口客户端基类
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.#ctor">
+      <summary>
+            串口客户端基类
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortClientBase.CanSend">
+      <summary>
+            表示对象能否顺利执行发送操作。
+            <para>由于高并发，当该值为True时，也不一定完全能执行。</para></summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortClientBase.CanSetDataHandlingAdapter">
+      <summary>
+            是否允许自由调用<see cref="M:TouchSocket.Core.IAdapterObject.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)" />进行赋值。
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.ClearReceiver">
+      <summary>
+            移除同步数据接收器
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.Close(System.String)">
+      <summary>
+            关闭客户端。
+            </summary>
+      <param name="msg">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>msg</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.Close(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.Connect(System.Int32,System.Threading.CancellationToken)">
+      <summary>
+            连接
+            </summary>
+      <param name="timeout">最大等待时间</param>
+      <param name="token">可取消令箭</param>
+      <exception cref="T:System.TimeoutException"></exception>
+      <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.ConnectAsync(System.Int32,System.Threading.CancellationToken)">
+      <summary>
+            异步连接
+            </summary>
+      <param name="timeout">最大等待时间</param>
+      <param name="token">可取消令箭</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.ConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.TimeoutException"></exception>
+      <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortClientBase.Connected">
+      <summary>
+            成功打开串口
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortClientBase.Connecting">
+      <summary>
+            准备连接串口的时候
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.CreateReceiver">
+      <summary>
+            获取一个同步数据接收器
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.CreateReceiver</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortClientBase.DataHandlingAdapter">
+      <summary>
+            数据处理适配器
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.DefaultSend(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            绕过适配器，直接发送字节流
+            </summary>
+      <param name="buffer">数据缓存区</param>
+      <param name="offset">偏移量</param>
+      <param name="length">数据长度</param>
+      <exception cref="T:TouchSocket.Sockets.NotConnectedException">客户端没有连接</exception>
+      <exception cref="T:TouchSocket.Core.OverlengthException">发送数据超长</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.DefaultSendAsync(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            绕过适配器，直接发送字节流
+            </summary>
+      <param name="buffer">数据缓存区</param>
+      <param name="offset">偏移量</param>
+      <param name="length">数据长度</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.DefaultSendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:TouchSocket.Sockets.NotConnectedException">客户端没有连接</exception>
+      <exception cref="T:TouchSocket.Core.OverlengthException">发送数据超长</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortClientBase.Disconnected">
+      <summary>
+            断开连接
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortClientBase.Disconnecting">
+      <summary>
+            即将断开连接(仅主动断开时有效)。
+            <para></para></summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortClientBase.LastReceivedTime">
+      <summary>
+            最后一次接收到数据的时间
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortClientBase.LastSendTime">
+      <summary>
+            最后一次发送数据的时间
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortClientBase.MainSerialPort">
+      <summary>
+            主通信器
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortClientBase.Online">
+      <summary>
+            判断是否在线
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortClientBase.Protocol">
+      <summary>
+            终端协议
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.Send(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+    
+            同步发送数据。
+            <para>内部已经封装Ssl和发送长度检测，即：调用完成即表示数据全部发送完毕。</para><para>该发送会经过适配器封装，具体封装内容由适配器决定。</para></summary>
+      <param name="buffer">
+    数据缓存区
+  </param>
+      <param name="offset">
+    偏移量
+  </param>
+      <param name="length">
+    数据长度
+  </param>
+      <exception cref="T:TouchSocket.Sockets.NotConnectedException">
+    客户端没有连接
+  </exception>
+      <exception cref="T:TouchSocket.Core.OverlengthException">
+    发送数据超长
+  </exception>
+      <exception cref="T:System.Exception">
+    其他异常
+  </exception>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.Send(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.Send(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="transferBytes">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>transferBytes</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.Send(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:TouchSocket.Sockets.NotConnectedException"></exception>
+      <exception cref="T:TouchSocket.Core.OverlengthException"></exception>
+      <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.Send(TouchSocket.Core.IRequestInfo)">
+      <summary>
+    
+            同步发送数据。
+            <para>该发送会经过适配器封装，具体封装内容由适配器决定。</para></summary>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.Send(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:TouchSocket.Sockets.NotConnectedException"></exception>
+      <exception cref="T:TouchSocket.Core.OverlengthException"></exception>
+      <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.SendAsync(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+    
+            异步发送数据。
+            <para>该发送会经过适配器封装，具体封装内容由适配器决定。</para></summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.SendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.SendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.SendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.SendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:TouchSocket.Sockets.NotConnectedException"></exception>
+      <exception cref="T:TouchSocket.Core.OverlengthException"></exception>
+      <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.SendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.SendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="transferBytes">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>transferBytes</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.SendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.SendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.ArgumentNullException"></exception>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.SendAsync(TouchSocket.Core.IRequestInfo)">
+      <summary>
+    
+            异步发送数据。
+            <para>该发送会经过适配器封装，具体封装内容由适配器决定。</para></summary>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.SendAsync(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.SendAsync(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:TouchSocket.Sockets.NotConnectedException"></exception>
+      <exception cref="T:TouchSocket.Core.OverlengthException"></exception>
+      <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)">
+      <summary>
+            设置数据处理适配器
+            </summary>
+      <param name="adapter">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>adapter</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortClientBase.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.SerialPortConfigExtension">
+      <summary>
+            SerialPortConfigExtension
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortConfigExtension.Connect``1(``0,System.String,System.Int32)">
+      <summary>
+            连接
+            </summary>
+      <param name="timeout">最大等待时间</param>
+      <param name="token">可取消令箭</param>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.Connect``1(``0,System.String,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="portName">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>portName</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.Connect``1(``0,System.String,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.Connect``1(``0,System.String,System.Int32)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.Connect``1(``0,System.String,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.TimeoutException"></exception>
+      <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortConfigExtension.ConnectAsync``1(``0,System.String,System.Int32)">
+      <summary>
+            异步连接
+            </summary>
+      <param name="timeout">最大等待时间</param>
+      <param name="token">可取消令箭</param>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.ConnectAsync``1(``0,System.String,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="portName">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>portName</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.ConnectAsync``1(``0,System.String,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.ConnectAsync``1(``0,System.String,System.Int32)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.ConnectAsync``1(``0,System.String,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.TimeoutException"></exception>
+      <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="F:TouchSocket.SerialPorts.SerialPortConfigExtension.SerialDataHandlingAdapterProperty">
+      <summary>
+            设置串口适配器
+            </summary>
+    </member>
+    <member name="F:TouchSocket.SerialPorts.SerialPortConfigExtension.SerialPortOptionProperty">
+      <summary>
+            串口属性。
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortConfigExtension.SetSerialDataHandlingAdapter(TouchSocket.Core.TouchSocketConfig,System.Func{TouchSocket.Core.SingleStreamDataHandlingAdapter})">
+      <summary>
+            设置(串口系)数据处理适配器。
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.SetSerialDataHandlingAdapter(TouchSocket.Core.TouchSocketConfig,System.Func{TouchSocket.Core.SingleStreamDataHandlingAdapter})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.SetSerialDataHandlingAdapter(TouchSocket.Core.TouchSocketConfig,System.Func{TouchSocket.Core.SingleStreamDataHandlingAdapter})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.SetSerialDataHandlingAdapter(TouchSocket.Core.TouchSocketConfig,System.Func{TouchSocket.Core.SingleStreamDataHandlingAdapter})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortConfigExtension.SetSerialPortOption(TouchSocket.Core.TouchSocketConfig,TouchSocket.SerialPorts.SerialPortOption)">
+      <summary>
+            设置串口属性。
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.SetSerialPortOption(TouchSocket.Core.TouchSocketConfig,TouchSocket.SerialPorts.SerialPortOption)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.SetSerialPortOption(TouchSocket.Core.TouchSocketConfig,TouchSocket.SerialPorts.SerialPortOption)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.SetSerialPortOption(TouchSocket.Core.TouchSocketConfig,TouchSocket.SerialPorts.SerialPortOption)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortConfigExtension.TryConnect``1(``0,System.Int32)">
+      <summary>
+            尝试连接。不会抛出异常。
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.TryConnect``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="timeout">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>timeout</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.TryConnect``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.TryConnect``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.TryConnect``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortConfigExtension.TryConnectAsync``1(``0,System.Int32)">
+      <summary>
+            尝试连接。不会抛出异常。
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.TryConnectAsync``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="timeout">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>timeout</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.TryConnectAsync``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.TryConnectAsync``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.TryConnectAsync``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.SerialPortExtensions">
+      <summary>
+            SocketExtension
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortExtensions.TryClose(System.IO.Ports.SerialPort)">
+      <summary>
+            尝试关闭<see cref="T:System.IO.Ports.SerialPort" />。不会抛出异常。
+            </summary>
+      <param name="serialPort"></param>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.SerialPortOption">
+      <summary>
+            串口配置
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortOption.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.SerialPorts.SerialPortOption</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortOption.BaudRate">
+      <summary>
+            波特率
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortOption.DataBits">
+      <summary>
+            数据位
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortOption.Parity">
+      <summary>
+            校验位
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortOption.PortName">
+      <summary>
+            COM
+            </summary>
+    </member>
+    <member name="P:TouchSocket.SerialPorts.SerialPortOption.StopBits">
+      <summary>
+            停止位
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortOption.ToString">
+      <summary>Returns a string that represents the current object.</summary>
+      <returns>A string that represents the current object.</returns>
+    </member>
+    <member name="T:TouchSocket.SerialPorts.SerialPortUtility">
+      <summary>
+            SerialPortUtility
+            </summary>
+    </member>
+    <member name="M:TouchSocket.SerialPorts.SerialPortUtility.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.SerialPorts.SerialPortUtility</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.SerialPorts.SerialPortUtility.SerialPort">
+      <summary>
+            SerialPort
+            </summary>
+    </member>
+  </members>
+</doc>

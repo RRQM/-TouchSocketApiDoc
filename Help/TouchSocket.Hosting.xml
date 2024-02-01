@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TouchSocket.Hosting</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions">
+      <summary>
+            ServiceCollectionExtensions
+            </summary>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加ScopedSetupConfigObject服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TObjectService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TObjectService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TObjectImpService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TObjectImpService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加Scoped TcpClient服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedTcpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加Scoped TcpClient服务。并使用<see cref="T:TouchSocket.Sockets.ITcpClient" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddScopedTcpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddServiceHostedService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加Service类型的HostedService服务。这类服务必须实现<see cref="T:TouchSocket.Core.ISetupConfigObject" />与<see cref="T:TouchSocket.Sockets.IService" /></summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <typeparam name="TObjectService"></typeparam>
+      <typeparam name="TObjectImpService"></typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddServiceHostedService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSetupConfigObjectHostedService``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加SetupConfigObjectHostedService服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSetupConfigObjectHostedService``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSetupConfigObjectHostedService``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="THostService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>THostService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSetupConfigObjectHostedService``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TObjectService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TObjectService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSetupConfigObjectHostedService``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TObjectImpService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TObjectImpService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSetupConfigObjectHostedService``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSetupConfigObjectHostedService``3(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加SingletonSetupConfigObject服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TObjectService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TObjectService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TObjectImpService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TObjectImpService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加单例TcpClient服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonTcpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加单例TcpClient服务。并使用<see cref="T:TouchSocket.Sockets.ITcpClient" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddSingletonTcpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTcpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加TcpService服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTcpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTcpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTcpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTcpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTcpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTcpService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加TcpService服务。并使用<see cref="T:TouchSocket.Sockets.ITcpService" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTcpService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加TransientSetupConfigObject服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TObjectService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TObjectService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TObjectImpService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TObjectImpService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientSetupConfigObject``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加瞬态TcpClient服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientTcpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientTcpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加瞬态TcpClient服务。并使用<see cref="T:TouchSocket.Sockets.ITcpClient" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddTransientTcpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddUdpSession``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加UdpSession服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddUdpSession``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddUdpSession``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddUdpSession``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddUdpSession``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddUdpSession``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddUdpSession(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加Udp服务。并使用<see cref="T:TouchSocket.Sockets.IUdpSession" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddUdpSession(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="F:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.DynamicallyAccessed">
+      <summary>
+            DynamicallyAccessed
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Hosting.SetupConfigObjectHostedService`1">
+      <summary>
+            SetupObjectHostedService
+            </summary>
+      <typeparam name="TConfigObject">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TConfigObject</parameter>
+            <parameter>T:TouchSocket.Hosting.SetupConfigObjectHostedService`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
+    </member>
+    <member name="P:TouchSocket.Hosting.SetupConfigObjectHostedService`1.Config">
+      <summary>
+            Config配置
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Hosting.SetupConfigObjectHostedService`1.ConfigObject">
+      <summary>
+            实际对象。
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Hosting.SetupConfigObjectHostedService`1.Resolver">
+      <summary>
+            IResolver
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Hosting.SetupConfigObjectHostedService`1.StartAsync(System.Threading.CancellationToken)">
+      <summary>
+            启动Host。并且调用<see cref="M:TouchSocket.Core.ISetupConfigObject.SetupAsync(TouchSocket.Core.TouchSocketConfig)" /></summary>
+      <param name="cancellationToken"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Hosting.SetupConfigObjectHostedService`1.StartAsync(System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Hosting.SetupConfigObjectHostedService`1.StopAsync(System.Threading.CancellationToken)">
+      <summary>
+            Triggered when the application host is performing a graceful shutdown.
+            </summary>
+      <param name="cancellationToken">Indicates that the shutdown process should no longer be graceful.</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Hosting.SetupConfigObjectHostedService`1.StopAsync(System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+  </members>
+</doc>

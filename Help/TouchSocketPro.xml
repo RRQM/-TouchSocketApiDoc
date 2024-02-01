@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TouchSocketPro</name>
+  </assembly>
+  <members>
+    <member name="T:TouchSocket.Core.AuthorizedHelper">
+      <summary>
+            AuthorizedHelper
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.AuthorizedHelper.U32u4234u234u5u88ds8sd8hjjrs8djhc">
+      <summary>
+            09jsz9j213j1j9sj92j9sosj9sj
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Core.Enterprise">
+      <summary>
+            企业版
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.Enterprise.ForTest">
+      <summary>
+            请求测试企业版功能。
+            <para>该方法在被调用后，会抛出可控异常，如果坚持使用企业版，请Try拦截即可。</para><para>目前企业版功能暂时免费。并且在后续的使用中，只要您使用的是免费版本，则会一直免费。</para><para>如果想再次使用，请结束进程，重新启动即可。</para></summary>
+      <exception cref="T:System.Exception">如果坚持使用企业版，请Try拦截即可。</exception>
+    </member>
+    <member name="P:TouchSocket.Core.Enterprise.LicenceInfo">
+      <summary>
+            许可证信息
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Core.Enterprise.LicenceKey">
+      <summary>
+            许可密钥
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Core.Enterprise.LicenceOwner">
+      <summary>
+            密钥归属
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Core.EnterpriseEditionAttribute">
+      <summary>
+            标识为企业版功能
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.EnterpriseEditionAttribute.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.EnterpriseEditionAttribute</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.Core.EnterpriseEditionAttribute.LicenceInfo">
+      <summary>
+            许可证信息
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Core.EnterpriseEditionAttribute.LicenceOwner">
+      <summary>
+            密钥归属
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Core.EnterpriseEditionAttribute.U32u4234u234u5u88ds8sd8hjjrs8djhc">
+      <summary>
+            09jsz9j213j1j9sj92j9sosj9sj
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Core.LicenceKeyInvalidException">
+      <summary>
+            构造函数
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.LicenceKeyInvalidException.#ctor">
+      <summary>
+            构造函数
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.LicenceKeyInvalidException.#ctor(System.String)">
+      <summary>
+            构造函数
+            </summary>
+      <param name="message">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>message</parameter>
+            <parameter>M:TouchSocket.Core.LicenceKeyInvalidException.#ctor(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.LicenceKeyInvalidException.#ctor(System.String,System.Exception)">
+      <summary>
+            构造函数
+            </summary>
+      <param name="message">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>message</parameter>
+            <parameter>M:TouchSocket.Core.LicenceKeyInvalidException.#ctor(System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="inner">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>inner</parameter>
+            <parameter>M:TouchSocket.Core.LicenceKeyInvalidException.#ctor(System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:TouchSocket.Core.LicenceKeyInvalidException.i">
+      <summary>
+            7ashd7ashd7ashdahsd77
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Core.SocketProPluginManagerExtension">
+      <summary>
+            SocketProPluginManagerExtension
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.SocketProPluginManagerExtension.UseTLV(TouchSocket.Core.IPluginManager)">
+      <summary>
+            使用TLV三元组格式。
+            </summary>
+      <param name="pluginManager">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>pluginManager</parameter>
+            <parameter>M:TouchSocket.Core.SocketProPluginManagerExtension.UseTLV(TouchSocket.Core.IPluginManager)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.SocketProPluginManagerExtension.UseTLV(TouchSocket.Core.IPluginManager)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.Resources.TouchSocketProResource">
+      <summary>
+            TouchSocketPro资源枚举
+            </summary>
+    </member>
+    <member name="F:TouchSocket.Resources.TouchSocketProResource.LicenceKeyInvalid">
+      <summary>
+            授权密钥无效，程序将在5秒后退出。请检查密钥，或者不使用企业版功能。
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Sockets.ITLVDataFrame">
+      <summary>
+            ITLVDataFrame
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.ITLVDataFrame.Build(TouchSocket.Core.FixedHeaderType,TouchSocket.Core.ByteBlock)">
+      <summary>
+            构建数据
+            </summary>
+      <param name="lengthType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>lengthType</parameter>
+            <parameter>M:TouchSocket.Sockets.ITLVDataFrame.Build(TouchSocket.Core.FixedHeaderType,TouchSocket.Core.ByteBlock)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="byteBlock">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>byteBlock</parameter>
+            <parameter>M:TouchSocket.Sockets.ITLVDataFrame.Build(TouchSocket.Core.FixedHeaderType,TouchSocket.Core.ByteBlock)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.Sockets.ITLVDataFrame.Length">
+      <summary>
+        <see cref="P:TouchSocket.Sockets.ITLVDataFrame.Value" />的有效长度
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Sockets.ITLVDataFrame.Tag">
+      <summary>
+            Tag标识
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Sockets.ITLVDataFrame.Value">
+      <summary>
+            有效载荷值
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Sockets.TLVClientExtensions">
+      <summary>
+            TLVClientExtensions
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVClientExtensions.CloseWithTLV(TouchSocket.Sockets.ITcpClientBase,System.String)">
+      <summary>
+            发送TLV的Close报文，然后关闭当前客户端
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVClientExtensions.CloseWithTLV(TouchSocket.Sockets.ITcpClientBase,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="msg">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>msg</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVClientExtensions.CloseWithTLV(TouchSocket.Sockets.ITcpClientBase,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVClientExtensions.PingWithTLV(TouchSocket.Sockets.ITcpClientBase,System.Int32)">
+      <summary>
+            发送Tag为Ping的报文，然后等待Pong回应。
+            <para>当适配器不是<see cref="T:TouchSocket.Sockets.TLVDataHandlingAdapter" />时，会抛出异常。</para></summary>
+      <param name="client"></param>
+      <param name="timeout"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVClientExtensions.PingWithTLV(TouchSocket.Sockets.ITcpClientBase,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="T:TouchSocket.Sockets.TLVDataFrame">
+      <summary>
+            TLVDataFrame
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataFrame.#ctor">
+      <summary>
+            初始化一个Ushort的TLVRequestInfo对象。
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataFrame.#ctor(System.UInt16)">
+      <summary>
+            初始化一个TLVRequestInfo对象。
+            </summary>
+      <param name="tag">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>tag</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrame.#ctor(System.UInt16)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataFrame.#ctor(System.UInt16,System.Byte[])">
+      <summary>
+            初始化一个TLVRequestInfo对象。
+            </summary>
+      <param name="tag">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>tag</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrame.#ctor(System.UInt16,System.Byte[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrame.#ctor(System.UInt16,System.Byte[])</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataFrame.AppendValue(System.Byte[])">
+      <summary>
+            追加Value。
+            </summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrame.AppendValue(System.Byte[])</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataFrame.AppendValue(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            追加Value。
+             </summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrame.AppendValue(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrame.AppendValue(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrame.AppendValue(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataFrame.Build(TouchSocket.Core.FixedHeaderType,TouchSocket.Core.ByteBlock)">
+      <summary>
+    
+            构建数据
+            
+  </summary>
+      <param name="lengthType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>lengthType</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrame.Build(TouchSocket.Core.FixedHeaderType,TouchSocket.Core.ByteBlock)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="byteBlock">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>byteBlock</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrame.Build(TouchSocket.Core.FixedHeaderType,TouchSocket.Core.ByteBlock)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataFrame.ClearValue">
+      <summary>
+            清除所有Value的值
+            </summary>
+    </member>
+    <member name="F:TouchSocket.Sockets.TLVDataFrame.CloseTag">
+      <summary>
+            Close
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Sockets.TLVDataFrame.Length">
+      <summary>
+        <see cref="P:TouchSocket.Sockets.ITLVDataFrame.Value" />的有效长度
+            
+  </summary>
+    </member>
+    <member name="F:TouchSocket.Sockets.TLVDataFrame.Ping">
+      <summary>
+            Ping数据。Tag=0。
+            </summary>
+    </member>
+    <member name="F:TouchSocket.Sockets.TLVDataFrame.PingTag">
+      <summary>
+            Ping
+            </summary>
+    </member>
+    <member name="F:TouchSocket.Sockets.TLVDataFrame.Pong">
+      <summary>
+            Pong数据。Tag=1。
+            </summary>
+    </member>
+    <member name="F:TouchSocket.Sockets.TLVDataFrame.PongTag">
+      <summary>
+            Pong
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Sockets.TLVDataFrame.Tag">
+      <summary>
+    
+            Tag标识
+            
+  </summary>
+    </member>
+    <member name="P:TouchSocket.Sockets.TLVDataFrame.TouchSocket#Core#IFixedHeaderRequestInfo#BodyLength">
+      <summary>
+    
+            数据体长度
+            
+  </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataFrame.TouchSocket#Core#IFixedHeaderRequestInfo#OnParsingBody(System.Byte[])">
+      <summary>
+    
+            当收到数据，由框架封送有效载荷数据。
+            <para>如果返回false，意味着放弃本次解析的所有数据，包括已经解析完成的Header</para></summary>
+      <param name="body">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>body</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrame.TouchSocket#Core#IFixedHeaderRequestInfo#OnParsingBody(System.Byte[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrame.TouchSocket#Core#IFixedHeaderRequestInfo#OnParsingBody(System.Byte[])</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataFrame.TouchSocket#Core#IFixedHeaderRequestInfo#OnParsingHeader(System.Byte[])">
+      <summary>
+    
+            当收到数据，由框架封送固定协议头。
+            <para>您需要在此函数中，解析自己的固定包头，并且对<see cref="P:TouchSocket.Core.IFixedHeaderRequestInfo.BodyLength" />赋值后续数据的长度，然后返回True。</para><para>如果返回false，则意味着放弃本次解析</para></summary>
+      <param name="header"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrame.TouchSocket#Core#IFixedHeaderRequestInfo#OnParsingHeader(System.Byte[])</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:TouchSocket.Sockets.TLVDataFrame.Value">
+      <summary>
+    
+            有效载荷值
+            
+  </summary>
+    </member>
+    <member name="T:TouchSocket.Sockets.TLVDataFrameExtensions">
+      <summary>
+            TLVDataFrameExtensions
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataFrameExtensions.BuildAsBytes(TouchSocket.Sockets.ITLVDataFrame,TouchSocket.Core.FixedHeaderType)">
+      <summary>
+            构建为对应字节组
+            </summary>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrameExtensions.BuildAsBytes(TouchSocket.Sockets.ITLVDataFrame,TouchSocket.Core.FixedHeaderType)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="lengthType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>lengthType</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrameExtensions.BuildAsBytes(TouchSocket.Sockets.ITLVDataFrame,TouchSocket.Core.FixedHeaderType)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrameExtensions.BuildAsBytes(TouchSocket.Sockets.ITLVDataFrame,TouchSocket.Core.FixedHeaderType)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataFrameExtensions.GetValueString(TouchSocket.Sockets.ITLVDataFrame)">
+      <summary>
+            获取utf-8编码的由<see cref="P:TouchSocket.Sockets.ITLVDataFrame.Value" />转义的字符串。
+            </summary>
+      <param name="requestInfo"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataFrameExtensions.GetValueString(TouchSocket.Sockets.ITLVDataFrame)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.Sockets.TLVDataHandlingAdapter">
+      <summary>
+            TLVDataHandlingAdapter.
+            <para>数据格式如下：
+            <list type="bullet"><item>Tag，ushort类型，大端序</item><item>Length，byte/ushort/int32类型，大端序</item><item>Value，byte[]类型</item></list></para></summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataHandlingAdapter.#ctor(TouchSocket.Core.FixedHeaderType,System.Func{TouchSocket.Sockets.TLVDataFrame,System.Boolean})">
+      <summary>
+            初始化一个TLV适配器。
+            </summary>
+      <param name="lengthType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>lengthType</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataHandlingAdapter.#ctor(TouchSocket.Core.FixedHeaderType,System.Func{TouchSocket.Sockets.TLVDataFrame,System.Boolean})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="verifyFunc">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>verifyFunc</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataHandlingAdapter.#ctor(TouchSocket.Core.FixedHeaderType,System.Func{TouchSocket.Sockets.TLVDataFrame,System.Boolean})</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.Sockets.TLVDataHandlingAdapter.CanSendRequestInfo">
+      <summary>
+    
+    
+            是否允许发送<see cref="T:TouchSocket.Core.IRequestInfo" />对象。
+            
+  
+  </summary>
+    </member>
+    <member name="P:TouchSocket.Sockets.TLVDataHandlingAdapter.HeaderLength">
+      <summary>
+    
+            固定包头的长度。
+            
+  </summary>
+    </member>
+    <member name="P:TouchSocket.Sockets.TLVDataHandlingAdapter.LengthType">
+      <summary>
+            表述Value可容纳的最大字节数。
+            <see cref="F:TouchSocket.Core.FixedHeaderType.Byte" />为255字节
+            <see cref="F:TouchSocket.Core.FixedHeaderType.Ushort" />为65535字节
+            <see cref="F:TouchSocket.Core.FixedHeaderType.Int" />为2147483647字节。该值会再次由MaxPackageSize限制。
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Sockets.TLVPlugin">
+      <summary>
+            TLV插件
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVPlugin.#ctor">
+      <summary>
+            TLV插件
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVPlugin.OnLoadingConfig(TouchSocket.Core.IConfigObject,TouchSocket.Core.ConfigEventArgs)">
+      <summary>
+            当载入配置时
+            </summary>
+      <param name="sender">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>sender</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVPlugin.OnLoadingConfig(TouchSocket.Core.IConfigObject,TouchSocket.Core.ConfigEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVPlugin.OnLoadingConfig(TouchSocket.Core.IConfigObject,TouchSocket.Core.ConfigEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVPlugin.OnLoadingConfig(TouchSocket.Core.IConfigObject,TouchSocket.Core.ConfigEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVPlugin.OnTcpReceived(TouchSocket.Sockets.ITcpClientBase,TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            在收到数据时触发
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVPlugin.OnTcpReceived(TouchSocket.Sockets.ITcpClientBase,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVPlugin.OnTcpReceived(TouchSocket.Sockets.ITcpClientBase,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVPlugin.OnTcpReceived(TouchSocket.Sockets.ITcpClientBase,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVPlugin.SetLengthType(TouchSocket.Core.FixedHeaderType)">
+      <summary>
+            设置Value的长度类型。
+            </summary>
+      <param name="lengthType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>lengthType</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVPlugin.SetLengthType(TouchSocket.Core.FixedHeaderType)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVPlugin.SetLengthType(TouchSocket.Core.FixedHeaderType)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVPlugin.SetVerifyFunc(System.Func{TouchSocket.Sockets.TLVDataFrame,System.Boolean})">
+      <summary>
+            设置校验方法。
+            </summary>
+      <param name="verifyFunc">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>verifyFunc</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVPlugin.SetVerifyFunc(System.Func{TouchSocket.Sockets.TLVDataFrame,System.Boolean})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVPlugin.SetVerifyFunc(System.Func{TouchSocket.Sockets.TLVDataFrame,System.Boolean})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.Sockets.ValueTLVDataFrame">
+      <summary>
+            以1个字节表示Length的TLV
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.ValueTLVDataFrame.#ctor(System.UInt16,System.Byte[])">
+      <summary>
+            初始化一个TLVRequestInfo对象。
+            </summary>
+      <param name="tag">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>tag</parameter>
+            <parameter>M:TouchSocket.Sockets.ValueTLVDataFrame.#ctor(System.UInt16,System.Byte[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:TouchSocket.Sockets.ValueTLVDataFrame.#ctor(System.UInt16,System.Byte[])</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.ValueTLVDataFrame.AppendValue(System.Byte[])">
+      <summary>
+            追加Value。
+            </summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Sockets.ValueTLVDataFrame.AppendValue(System.Byte[])</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.ValueTLVDataFrame.AppendValue(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            追加Value。
+             </summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Sockets.ValueTLVDataFrame.AppendValue(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Sockets.ValueTLVDataFrame.AppendValue(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Sockets.ValueTLVDataFrame.AppendValue(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.ValueTLVDataFrame.Build(TouchSocket.Core.FixedHeaderType,TouchSocket.Core.ByteBlock)">
+      <summary>
+    
+            构建数据
+            
+  </summary>
+      <param name="lengthType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>lengthType</parameter>
+            <parameter>M:TouchSocket.Sockets.ValueTLVDataFrame.Build(TouchSocket.Core.FixedHeaderType,TouchSocket.Core.ByteBlock)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="byteBlock">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>byteBlock</parameter>
+            <parameter>M:TouchSocket.Sockets.ValueTLVDataFrame.Build(TouchSocket.Core.FixedHeaderType,TouchSocket.Core.ByteBlock)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.ValueTLVDataFrame.ClearValue">
+      <summary>
+            清除所有Value的值
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Sockets.ValueTLVDataFrame.Length">
+      <summary>
+        <see cref="P:TouchSocket.Sockets.ITLVDataFrame.Value" />的有效长度
+            
+  </summary>
+    </member>
+    <member name="P:TouchSocket.Sockets.ValueTLVDataFrame.Tag">
+      <summary>
+    
+            Tag标识
+            
+  </summary>
+    </member>
+    <member name="P:TouchSocket.Sockets.ValueTLVDataFrame.Value">
+      <summary>
+    
+            有效载荷值
+            
+  </summary>
+    </member>
+  </members>
+</doc>

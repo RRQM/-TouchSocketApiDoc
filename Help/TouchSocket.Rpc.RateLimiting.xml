@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TouchSocket.Rpc.RateLimiting</name>
+  </assembly>
+  <members>
+    <member name="T:TouchSocket.Rpc.RateLimiting.EnableRateLimitingAttribute">
+      <summary>
+            使用限流策略
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Rpc.RateLimiting.EnableRateLimitingAttribute.#ctor(System.String)">
+      <summary>
+            使用限流策略
+            </summary>
+      <param name="policyName">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>policyName</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.EnableRateLimitingAttribute.#ctor(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Rpc.RateLimiting.EnableRateLimitingAttribute.ExecutedAsync(TouchSocket.Rpc.ICallContext,System.Object[],TouchSocket.Rpc.InvokeResult)">
+      <summary>
+            成功执行Rpc后。
+            <para>如果修改<paramref name="invokeResult" />的InvokeStatus，或Result。则会影响Rpc最终结果</para></summary>
+      <param name="callContext"></param>
+      <param name="parameters"></param>
+      <param name="invokeResult"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.EnableRateLimitingAttribute.ExecutedAsync(TouchSocket.Rpc.ICallContext,System.Object[],TouchSocket.Rpc.InvokeResult)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Rpc.RateLimiting.EnableRateLimitingAttribute.ExecutExceptionAsync(TouchSocket.Rpc.ICallContext,System.Object[],TouchSocket.Rpc.InvokeResult,System.Exception)">
+      <summary>
+            执行Rpc遇见异常。
+            <para>如果修改<paramref name="invokeResult" />的InvokeStatus，或Result。则会影响Rpc最终结果</para></summary>
+      <param name="callContext"></param>
+      <param name="parameters"></param>
+      <param name="invokeResult"></param>
+      <param name="exception"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.EnableRateLimitingAttribute.ExecutExceptionAsync(TouchSocket.Rpc.ICallContext,System.Object[],TouchSocket.Rpc.InvokeResult,System.Exception)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Rpc.RateLimiting.EnableRateLimitingAttribute.ExecutingAsync(TouchSocket.Rpc.ICallContext,System.Object[],TouchSocket.Rpc.InvokeResult)">
+      <summary>
+            在执行Rpc之前。
+            <para>当<paramref name="invokeResult" />的InvokeStatus不为<see cref="F:TouchSocket.Rpc.InvokeStatus.Ready" />。则不会执行Rpc</para><para>同时，当<paramref name="invokeResult" />的InvokeStatus为<see cref="F:TouchSocket.Rpc.InvokeStatus.Success" />。会直接返回结果</para></summary>
+      <param name="callContext"></param>
+      <param name="parameters"></param>
+      <param name="invokeResult"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.EnableRateLimitingAttribute.ExecutingAsync(TouchSocket.Rpc.ICallContext,System.Object[],TouchSocket.Rpc.InvokeResult)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:TouchSocket.Rpc.RateLimiting.EnableRateLimitingAttribute.PolicyName">
+      <summary>
+            策略名称
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Rpc.RateLimiting.IRateLimiterPolicy">
+      <summary>
+            IRateLimiterPolicy
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Rpc.RateLimiting.IRateLimiterPolicy.GetRateLimiter(TouchSocket.Rpc.ICallContext)">
+      <summary>
+            GetRateLimiter
+            </summary>
+      <param name="callContext">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>callContext</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.IRateLimiterPolicy.GetRateLimiter(TouchSocket.Rpc.ICallContext)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.IRateLimiterPolicy.GetRateLimiter(TouchSocket.Rpc.ICallContext)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.Rpc.RateLimiting.IRateLimitService">
+      <summary>
+            Rpc速率限定服务接口
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Rpc.RateLimiting.IRateLimitService.GetRateLimiterPolicy(System.String)">
+      <summary>
+            获取限流策略
+            </summary>
+      <param name="policyName">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>policyName</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.IRateLimitService.GetRateLimiterPolicy(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.IRateLimitService.GetRateLimiterPolicy(System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.Rpc.RateLimiting.RateLimiterOptions">
+      <summary>
+            RateLimiterOptions
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Rpc.RateLimiting.RateLimiterOptions.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Rpc.RateLimiting.RateLimiterOptions</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TouchSocket.Rpc.RateLimiting.RateLimiterOptions.AddPolicy(System.String,TouchSocket.Rpc.RateLimiting.IRateLimiterPolicy)">
+      <summary>
+            添加限流策略
+            </summary>
+      <param name="policyName">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>policyName</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptions.AddPolicy(System.String,TouchSocket.Rpc.RateLimiting.IRateLimiterPolicy)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="rateLimiterPolicy">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>rateLimiterPolicy</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptions.AddPolicy(System.String,TouchSocket.Rpc.RateLimiting.IRateLimiterPolicy)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptions.AddPolicy(System.String,TouchSocket.Rpc.RateLimiting.IRateLimiterPolicy)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:TouchSocket.Rpc.RateLimiting.RateLimiterOptions.RateLimiterPolicys">
+      <summary>
+            RateLimiterPolicys
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions">
+      <summary>
+            RateLimiterOptionsExtensions
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddConcurrencyLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.ConcurrencyLimiterOptions})">
+      <summary>
+            添加并发限流策略
+            </summary>
+      <param name="options">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>options</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddConcurrencyLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.ConcurrencyLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="policyName">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>policyName</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddConcurrencyLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.ConcurrencyLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="configureOptions">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>configureOptions</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddConcurrencyLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.ConcurrencyLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddConcurrencyLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.ConcurrencyLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddFixedWindowLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.FixedWindowRateLimiterOptions})">
+      <summary>
+            添加固定窗口限流策略
+            </summary>
+      <param name="options">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>options</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddFixedWindowLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.FixedWindowRateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="policyName">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>policyName</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddFixedWindowLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.FixedWindowRateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="configureOptions">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>configureOptions</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddFixedWindowLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.FixedWindowRateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddFixedWindowLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.FixedWindowRateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddSlidingWindowLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.SlidingWindowRateLimiterOptions})">
+      <summary>
+            添加滑动窗口限流策略
+            </summary>
+      <param name="options">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>options</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddSlidingWindowLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.SlidingWindowRateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="policyName">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>policyName</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddSlidingWindowLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.SlidingWindowRateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="configureOptions">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>configureOptions</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddSlidingWindowLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.SlidingWindowRateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddSlidingWindowLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.SlidingWindowRateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddTokenBucketLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.TokenBucketRateLimiterOptions})">
+      <summary>
+            添加令牌桶限流策略
+            </summary>
+      <param name="options">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>options</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddTokenBucketLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.TokenBucketRateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="policyName">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>policyName</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddTokenBucketLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.TokenBucketRateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="configureOptions">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>configureOptions</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddTokenBucketLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.TokenBucketRateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimiterOptionsExtensions.AddTokenBucketLimiter(TouchSocket.Rpc.RateLimiting.RateLimiterOptions,System.String,System.Action{System.Threading.RateLimiting.TokenBucketRateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.Rpc.RateLimiting.RateLimitingContainerExtension">
+      <summary>
+            RateLimitingContainerExtension
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Rpc.RateLimiting.RateLimitingContainerExtension.AddRateLimiter(TouchSocket.Core.IRegistrator,System.Action{TouchSocket.Rpc.RateLimiting.RateLimiterOptions})">
+      <summary>
+            向注册器中注册限流策略。
+            </summary>
+      <param name="registrator">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>registrator</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimitingContainerExtension.AddRateLimiter(TouchSocket.Core.IRegistrator,System.Action{TouchSocket.Rpc.RateLimiting.RateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="action">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>action</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimitingContainerExtension.AddRateLimiter(TouchSocket.Core.IRegistrator,System.Action{TouchSocket.Rpc.RateLimiting.RateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RateLimiting.RateLimitingContainerExtension.AddRateLimiter(TouchSocket.Core.IRegistrator,System.Action{TouchSocket.Rpc.RateLimiting.RateLimiterOptions})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+  </members>
+</doc>

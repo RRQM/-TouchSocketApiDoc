@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TouchSocket.Core.Autofac</name>
+  </assembly>
+  <members>
+    <member name="T:TouchSocket.Core.AutofacConfigExtension">
+      <summary>
+            AutofacConfigExtension
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacConfigExtension.ConfigureContainer(Autofac.ContainerBuilder,System.Action{TouchSocket.Core.IRegistrator})">
+      <summary>
+            配置容器。
+            </summary>
+      <param name="containerBuilder">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>containerBuilder</parameter>
+            <parameter>M:TouchSocket.Core.AutofacConfigExtension.ConfigureContainer(Autofac.ContainerBuilder,System.Action{TouchSocket.Core.IRegistrator})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="action">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>action</parameter>
+            <parameter>M:TouchSocket.Core.AutofacConfigExtension.ConfigureContainer(Autofac.ContainerBuilder,System.Action{TouchSocket.Core.IRegistrator})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.AutofacConfigExtension.ConfigureContainer(Autofac.ContainerBuilder,System.Action{TouchSocket.Core.IRegistrator})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacConfigExtension.UseAutofacContainer(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            使用<see cref="T:TouchSocket.Core.AutofacContainer" />作为容器。
+            </summary>
+      <param name="config"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.AutofacConfigExtension.UseAutofacContainer(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacConfigExtension.UseAutofacContainer(TouchSocket.Core.TouchSocketConfig,Autofac.ContainerBuilder)">
+      <summary>
+            使用<see cref="T:TouchSocket.Core.AutofacContainer" />作为容器。
+            <para>
+            注意：使用此方法，在构建组件时，内部会自行调用<see cref="M:Autofac.ContainerBuilder.Build(Autofac.Builder.ContainerBuildOptions)" />.
+            </para></summary>
+      <param name="config"></param>
+      <param name="containerBuilder"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.AutofacConfigExtension.UseAutofacContainer(TouchSocket.Core.TouchSocketConfig,Autofac.ContainerBuilder)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacConfigExtension.UseAutofacContainer(TouchSocket.Core.TouchSocketConfig,Autofac.IContainer)">
+      <summary>
+            使用<see cref="T:TouchSocket.Core.AutofacContainer" />作为容器。
+            <para>
+            注意：使用此方法，在构建组件时，内部会直接使用解决器，不再调用<see cref="M:Autofac.ContainerBuilder.Build(Autofac.Builder.ContainerBuildOptions)" />.
+            </para></summary>
+      <param name="config"></param>
+      <param name="container"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.AutofacConfigExtension.UseAutofacContainer(TouchSocket.Core.TouchSocketConfig,Autofac.IContainer)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.Core.AutofacContainer">
+      <summary>
+            AutofacContainer
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacContainer.#ctor(Autofac.ContainerBuilder)">
+      <summary>
+            AutofacContainer
+            </summary>
+      <param name="containerBuilder">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>containerBuilder</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.#ctor(Autofac.ContainerBuilder)</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.ArgumentNullException"></exception>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacContainer.#ctor(Autofac.IContainer)">
+      <summary>
+            AutofacContainer
+            </summary>
+      <param name="container">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>container</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.#ctor(Autofac.IContainer)</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.ArgumentNullException"></exception>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacContainer.BuildResolver">
+      <summary>
+            构建一个服务获取器
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.BuildResolver</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacContainer.GetDescriptors">
+      <summary>
+            获取已注册的所有类型描述
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.GetDescriptors</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacContainer.GetService(System.Type)">
+      <summary>Gets the service object of the specified type.</summary>
+      <param name="serviceType">An object that specifies the type of service object to get.</param>
+      <returns>A service object of type <paramref name="serviceType" />.  
+  
+ -or-  
+  
+ <see langword="null" /> if there is no service object of type <paramref name="serviceType" />.</returns>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacContainer.IsRegistered(System.Type)">
+      <summary>
+            判断某类型是否已经注册
+            </summary>
+      <param name="fromType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>fromType</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.IsRegistered(System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.IsRegistered(System.Type)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacContainer.IsRegistered(System.Type,System.String)">
+      <summary>
+            判断某类型是否已经注册
+            </summary>
+      <param name="fromType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>fromType</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.IsRegistered(System.Type,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="key">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>key</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.IsRegistered(System.Type,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.IsRegistered(System.Type,System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacContainer.Register(TouchSocket.Core.DependencyDescriptor)">
+      <summary>
+            添加类型描述符
+            </summary>
+      <param name="descriptor">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>descriptor</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.Register(TouchSocket.Core.DependencyDescriptor)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacContainer.Register(TouchSocket.Core.DependencyDescriptor,System.String)">
+      <summary>
+            添加类型描述符。
+            </summary>
+      <param name="key">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>key</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.Register(TouchSocket.Core.DependencyDescriptor,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="descriptor">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>descriptor</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.Register(TouchSocket.Core.DependencyDescriptor,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacContainer.Resolve(System.Type)">
+      <summary>
+            创建目标类型的对应实例。
+            </summary>
+      <param name="fromType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>fromType</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.Resolve(System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.Resolve(System.Type)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacContainer.Resolve(System.Type,System.String)">
+      <summary>
+            创建目标类型的对应实例。
+            </summary>
+      <param name="fromType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>fromType</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.Resolve(System.Type,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="key">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>key</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.Resolve(System.Type,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.Resolve(System.Type,System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacContainer.Unregister(TouchSocket.Core.DependencyDescriptor)">
+      <summary>
+            移除注册信息
+            </summary>
+      <param name="descriptor">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>descriptor</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.Unregister(TouchSocket.Core.DependencyDescriptor)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.AutofacContainer.Unregister(TouchSocket.Core.DependencyDescriptor,System.String)">
+      <summary>
+            移除注册信息。
+            </summary>
+      <param name="descriptor">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>descriptor</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.Unregister(TouchSocket.Core.DependencyDescriptor,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="key">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>key</parameter>
+            <parameter>M:TouchSocket.Core.AutofacContainer.Unregister(TouchSocket.Core.DependencyDescriptor,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns></returns>
+    </member>
+  </members>
+</doc>

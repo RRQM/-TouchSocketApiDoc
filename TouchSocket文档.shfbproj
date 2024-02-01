@@ -23,27 +23,28 @@
     <Language>zh-CN</Language>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket\TouchSocket.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.AspNetCore\TouchSocket.AspNetCore.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Core\TouchSocket.Core.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Core.Autofac\TouchSocket.Core.Autofac.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Core.DependencyInjection\TouchSocket.Core.DependencyInjection.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Dmtp\TouchSocket.Dmtp.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Hosting\TouchSocket.Hosting.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Http\TouchSocket.Http.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.JsonRpc\TouchSocket.JsonRpc.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Modbus\TouchSocket.Modbus.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.NamedPipe\TouchSocket.NamedPipe.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Rpc\TouchSocket.Rpc.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Rpc.RateLimiting\TouchSocket.Rpc.RateLimiting.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.SerialPorts\TouchSocket.SerialPorts.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.WebApi\TouchSocket.WebApi.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.WebApi.Swagger\TouchSocket.WebApi.Swagger.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.XmlRpc\TouchSocket.XmlRpc.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro\TouchSocketPro.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro.AspNetCore\TouchSocketPro.AspNetCore.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro.Dmtp\TouchSocketPro.Dmtp.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro.Hosting\TouchSocketPro.Hosting.csproj" />
-<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro.Modbus\TouchSocketPro.Modbus.csproj" /></DocumentationSources>
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.AspNetCore\TouchSocket.AspNetCore.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Core\TouchSocket.Core.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Core.Autofac\TouchSocket.Core.Autofac.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Core.DependencyInjection\TouchSocket.Core.DependencyInjection.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Dmtp\TouchSocket.Dmtp.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Hosting\TouchSocket.Hosting.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Http\TouchSocket.Http.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.JsonRpc\TouchSocket.JsonRpc.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Modbus\TouchSocket.Modbus.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.NamedPipe\TouchSocket.NamedPipe.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Rpc\TouchSocket.Rpc.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Rpc.RateLimiting\TouchSocket.Rpc.RateLimiting.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.SerialPorts\TouchSocket.SerialPorts.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.WebApi\TouchSocket.WebApi.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.WebApi.Swagger\TouchSocket.WebApi.Swagger.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.XmlRpc\TouchSocket.XmlRpc.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro\TouchSocketPro.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro.AspNetCore\TouchSocketPro.AspNetCore.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro.Dmtp\TouchSocketPro.Dmtp.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro.Hosting\TouchSocketPro.Hosting.csproj" />
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro.Modbus\TouchSocketPro.Modbus.csproj" />
+    </DocumentationSources>
     <HelpFileFormat>Website</HelpFileFormat>
     <SyntaxFilters>C#, Visual Basic, F#</SyntaxFilters>
     <PresentationStyle>Default2022</PresentationStyle>
@@ -56,15 +57,57 @@
     <HelpTitle>TouchSocket手册</HelpTitle>
     <HelpFileVersion>2.0.0.0-beta</HelpFileVersion>
     <NamingMethod>Guid</NamingMethod>
-    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <ContentPlacement>BelowNamespaces</ContentPlacement>
     <RootNamespaceContainer>False</RootNamespaceContainer>
     <NamespaceGrouping>False</NamespaceGrouping>
     <MaximumGroupParts>2</MaximumGroupParts>
     <Preliminary>False</Preliminary>
-    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <SdkLinkTarget>Top</SdkLinkTarget>
     <CopyrightText>Copyright &amp;#169%3b 2020-2024 若汝棋茗.</CopyrightText>
     <FeedbackEMailAddress>505554090%40qq.com</FeedbackEMailAddress>
-    <FeedbackEMailLinkText>若汝棋茗邮箱</FeedbackEMailLinkText>
+    <FeedbackEMailLinkText>邮箱</FeedbackEMailLinkText>
+    <ComponentConfigurations>
+      <ComponentConfig id="Code Block Component" enabled="True">
+        <component id="Code Block Component">
+  <basePath value="{@HtmlEncProjectFolder}" />
+  <outputPaths>{@HelpFormatOutputPaths}</outputPaths>
+  <allowMissingSource value="false" />
+  <removeRegionMarkers value="false" />
+  <colorizer syntaxFile="{@CoreComponentsFolder}Colorizer\highlight.xml" styleFile="{@CoreComponentsFolder}Colorizer\highlight.xsl" stylesheet="{@CoreComponentsFolder}Colorizer\highlight.css" scriptFile="{@CoreComponentsFolder}Colorizer\highlight.js" disabled="{@DisableCodeBlockComponent}" language="cs" tabSize="0" numberLines="false" outlining="false" keepSeeTags="false" defaultTitle="true" />
+</component>
+      </ComponentConfig>
+<ComponentConfig id="Syntax Component" enabled="True"><component id="Syntax Component">
+  <syntax input="/document/reference" output="/document/syntax" renderReferenceLinks="false" />
+  <generators>
+    {@SyntaxFilters}
+</generators>
+  <containerElement name="codeSnippetGroup" addNoExampleTabs="true" includeOnSingleSnippets="false" groupingEnabled="{@CodeSnippetGrouping}" />
+  <configurations>
+    <generator id="C#" />
+    <generator id="Visual Basic">
+      <includeLineContinuation value="false" />
+    </generator>
+    <generator id="Visual Basic Usage">
+      <includeLineContinuation value="false" />
+    </generator>
+    <generator id="Managed C++" />
+    <generator id="F#" />
+    <generator id="J#" />
+    <generator id="JScript" />
+    <generator id="JavaScript" />
+    <generator id="XAML Usage" />
+    <generator id="ASP.NET" />
+    <generator id="X#" />
+  </configurations>
+</component></ComponentConfig>
+<ComponentConfig id="IntelliSense Component" enabled="True"><component id="IntelliSense Component">
+  <output includeNamespaces="false" namespacesFile="Namespaces" folder="{@OutputFolder}" boundedCapacity="100" />
+</component></ComponentConfig></ComponentConfigurations>
+    <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, InheritedFrameworkMembers, ProtectedInternalAsProtected, NonBrowsable</VisibleItems>
+    <HeaderText>一款简单易用的基础网络通讯组件库。</HeaderText>
+    <NamespaceSummaries>
+    </NamespaceSummaries>
+    <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, TypeParameter, AutoDocumentDispose</MissingTags>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

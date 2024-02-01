@@ -1,0 +1,1300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TouchSocket.AspNetCore</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.AspNetCore.Builder.ApplicationBuilderExtensions">
+      <summary>
+            ApplicationBuilderExtensions
+            </summary>
+    </member>
+    <member name="M:Microsoft.AspNetCore.Builder.ApplicationBuilderExtensions.UseWebSocketDmtp(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)">
+      <summary>
+            使用基于WebSocket的Dmtp服务器。
+            <para>启用该功能时，请先启用WebSocket。</para></summary>
+      <param name="builder">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>builder</parameter>
+            <parameter>M:Microsoft.AspNetCore.Builder.ApplicationBuilderExtensions.UseWebSocketDmtp(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="url">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>url</parameter>
+            <parameter>M:Microsoft.AspNetCore.Builder.ApplicationBuilderExtensions.UseWebSocketDmtp(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.AspNetCore.Builder.ApplicationBuilderExtensions.UseWebSocketDmtp(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension">
+      <summary>
+            AspNetCoreContainerExtension
+            </summary>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpDmtpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加HttpDmtpService服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpDmtpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpDmtpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpDmtpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpDmtpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpDmtpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpDmtpService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加HttpDmtpService服务。并使用<see cref="T:TouchSocket.Dmtp.IHttpDmtpService" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpDmtpService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加HttpService服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加HttpService服务。并使用<see cref="T:TouchSocket.Http.IHttpService" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddHttpService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加Scoped HttpClient服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加Scoped HttpClient服务。并使用<see cref="T:TouchSocket.Http.IHttpClient" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加Scoped HttpDmtpClient服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpDmtpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加Scoped HttpDmtpClient服务。并使用<see cref="T:TouchSocket.Dmtp.IHttpDmtpClient" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedHttpDmtpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加Scoped TcpDmtpClient服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedTcpDmtpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加Scoped TcpDmtpClient服务。并使用<see cref="T:TouchSocket.Dmtp.ITcpDmtpClient" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddScopedTcpDmtpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加单例HttpClient服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加单例HttpClient服务。并使用<see cref="T:TouchSocket.Http.IHttpClient" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加单例HttpDmtpClient服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpDmtpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加单例HttpDmtpClient服务。并使用<see cref="T:TouchSocket.Dmtp.IHttpDmtpClient" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonHttpDmtpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加单例TcpDmtpClient服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonTcpDmtpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加单例TcpDmtpClient服务。并使用<see cref="T:TouchSocket.Dmtp.ITcpDmtpClient" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddSingletonTcpDmtpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTcpDmtpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加TcpDmtpService服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTcpDmtpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTcpDmtpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTcpDmtpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpService</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTcpDmtpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTcpDmtpService``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTcpDmtpService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加TcpDmtpService服务。并使用<see cref="T:TouchSocket.Dmtp.ITcpDmtpService" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTcpDmtpService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加瞬态HttpClient服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加瞬态HttpClient服务。并使用<see cref="T:TouchSocket.Http.IHttpClient" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加瞬态HttpDmtpClient服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpDmtpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加瞬态HttpDmtpClient服务。并使用<see cref="T:TouchSocket.Dmtp.IHttpDmtpClient" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientHttpDmtpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加瞬态TcpDmtpClient服务。
+            </summary>
+      <param name="services">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>services</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="actionConfig">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>actionConfig</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TImpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TImpClient</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientTcpDmtpClient``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientTcpDmtpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加瞬态TcpDmtpClient服务。并使用<see cref="T:TouchSocket.Dmtp.ITcpDmtpClient" />注册服务。
+            </summary>
+      <param name="services"></param>
+      <param name="actionConfig"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.AspNetCoreExtension.AddTransientTcpDmtpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:Microsoft.Extensions.DependencyInjection.WebSocketDmtpServiceExtensions">
+      <summary>
+            WebSocketDmtpServiceExtensions
+            </summary>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.WebSocketDmtpServiceExtensions.AddWebSocketDmtpService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})">
+      <summary>
+            添加<see cref="T:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService" />服务。
+            </summary>
+      <param name="services"></param>
+      <param name="configAction"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Microsoft.Extensions.DependencyInjection.WebSocketDmtpServiceExtensions.AddWebSocketDmtpService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{TouchSocket.Core.TouchSocketConfig})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService">
+      <summary>
+            IWebSocketDmtpService服务器接口
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService.GetClients">
+      <summary>
+            获取所有的客户端
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService.GetClients</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService.GetIds">
+      <summary>
+            获取所有在线客户端的Id集合。
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService.GetIds</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService.ResetId(System.String,System.String)">
+      <summary>
+            重置Id
+            </summary>
+      <param name="oldId">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>oldId</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService.ResetId(System.String,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="newId">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>newId</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService.ResetId(System.String,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService.SwitchClientAsync(Microsoft.AspNetCore.Http.HttpContext)">
+      <summary>
+            转换客户端
+            </summary>
+      <param name="context">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>context</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService.SwitchClientAsync(Microsoft.AspNetCore.Http.HttpContext)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService.SwitchClientAsync(Microsoft.AspNetCore.Http.HttpContext)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="T:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpSocketClient">
+      <summary>
+            基于WebSocket协议的Dmtp服务器辅助客户端。
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpSocketClient.HttpContext">
+      <summary>
+            Http上下文
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpSocketClient.Service">
+      <summary>
+            包含该客户端的服务器。
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpMiddleware">
+      <summary>
+            WebSocketDmtpMiddleware中间件
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpMiddleware.#ctor(System.String,Microsoft.AspNetCore.Http.RequestDelegate,TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService)">
+      <summary>
+            实例化一个中间件
+            </summary>
+      <param name="m_url">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>m_url</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpMiddleware.#ctor(System.String,Microsoft.AspNetCore.Http.RequestDelegate,TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="next">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>next</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpMiddleware.#ctor(System.String,Microsoft.AspNetCore.Http.RequestDelegate,TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="rpcService">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>rpcService</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpMiddleware.#ctor(System.String,Microsoft.AspNetCore.Http.RequestDelegate,TouchSocket.Dmtp.AspNetCore.IWebSocketDmtpService)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="context">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>context</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpMiddleware.Url">
+      <summary>
+            Url
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService">
+      <summary>
+            WebSocketDmtpService
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.Count">
+      <summary>
+            数量
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.GetClients">
+      <summary>
+            获取所有的客户端
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.GetClients</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.GetDefaultNewId">
+      <summary>
+            获取默认新Id。
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.GetIds">
+      <summary>
+            获取Id集合
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.GetIds</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.Item(System.String)">
+      <summary>
+            获取SocketClient
+            </summary>
+      <param name="id"></param>
+      <returns></returns>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.ResetId(System.String,System.String)">
+      <summary>
+            重置Id
+            </summary>
+      <param name="oldId">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>oldId</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.ResetId(System.String,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="newId">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>newId</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.ResetId(System.String,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.SocketClientExist(System.String)">
+      <summary>
+            根据Id判断SocketClient是否存在
+            </summary>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.SocketClientExist(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.SocketClientExist(System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.SwitchClientAsync(Microsoft.AspNetCore.Http.HttpContext)">
+      <summary>
+            从WebSocket获取新客户端。
+            </summary>
+      <param name="context">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>context</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.SwitchClientAsync(Microsoft.AspNetCore.Http.HttpContext)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.SwitchClientAsync(Microsoft.AspNetCore.Http.HttpContext)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.TryGetSocketClient(System.String,TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient@)">
+      <summary>
+            尝试获取实例
+            </summary>
+      <param name="id">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>id</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.TryGetSocketClient(System.String,TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.TryGetSocketClient(System.String,TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.TryGetSocketClient(System.String,TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.VerifyToken">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpService.VerifyToken</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="T:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient">
+      <summary>
+            WebSocketDmtpSocketClient
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.#ctor">
+      <summary>
+            WebSocketDmtpSocketClient
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.ClearReceiver">
+      <summary>
+            不支持该功能
+            </summary>
+      <exception cref="T:System.NotSupportedException"></exception>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.Close(System.String)">
+      <summary>
+            关闭通信
+            </summary>
+      <param name="msg">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>msg</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.Close(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.Config">
+      <summary>
+            设置项
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.CreateReceiver">
+      <summary>
+            不支持该功能
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.CreateReceiver</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.NotSupportedException"></exception>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.DmtpActor">
+      <summary>
+            提供Dmtp协议的最基础功能件
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.HttpContext">
+      <summary>
+            Http上下文
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.Id">
+      <summary>
+            客户端的Id
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.IsHandshaked">
+      <summary>
+            只是当前客户端是否已经完成握手连接。
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.LastReceivedTime">
+      <summary>
+            最后一次接收到数据的时间
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.LastSendTime">
+      <summary>
+            最后一次发送数据的时间
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.PluginManager">
+      <summary>
+            插件管理器
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.Protocol">
+      <summary>
+            终端协议
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.ResetId(System.String)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.ResetId(System.String)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="newId">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>newId</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.ResetId(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.Resolver">
+      <summary>
+            Resolver
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.Service">
+      <summary>
+            包含该客户端的服务器。
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.VerifyTimeout">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.VerifyTimeout</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.VerifyToken">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.VerifyToken</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+  </members>
+</doc>
