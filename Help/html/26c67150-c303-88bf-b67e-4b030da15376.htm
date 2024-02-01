@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html ><html lang="zh-CN"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" href="../css/bulma.css" /><link rel="stylesheet" href="../css/font-awesome.min.css" /><link rel="stylesheet" href="../css/presentationStyle.css" /><link rel="stylesheet" href="../css/vs.min.css" /><link rel="stylesheet" href="../css/zh-CN.css" /><script src="../scripts/jquery-3.5.1.min.js"></script><script src="../scripts/clipboard.min.js"></script><script src="../scripts/highlight.min.js"></script><script src="../scripts/presentationStyle.js"></script><title>IDataLocaterMaster 方法</title><meta name="Title" content="方法" /><meta name="Help.Id" content="Methods.T:TouchSocket.Modbus.IDataLocaterMaster" /><meta name="Help.ContentType" content="Reference" /><meta name="container" content="TouchSocket.Modbus" /><meta name="guid" content="26c67150-c303-88bf-b67e-4b030da15376" /><meta name="tocFile" content="../toc/IDDQ.xml" /></head><body><div class="fixedLayout"><div id="Header" class="fixedHeader"><div class="pageHeader level mb-0 py-2 px-4"><div id="TitleContainer" class="level-left"><div id="DocumentationTitle" class="level-item">TouchSocket手册</div></div><div id="LangFilterSearchContainer" class="level-right"><div class="level-item"><div class="dropdown is-hoverable"><div class="dropdown-trigger"><button class="button" aria-haspopup="true" aria-controls="dropdown-menu"><span id="CurrentLanguage"></span><span class="icon is-small"><i class="fa fa-angle-down" aria-hidden="true"></i></span></button></div><div class="dropdown-menu" role="menu"><div id="LanguageSelections" class="dropdown-content"><a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a><a class="dropdown-item languageFilterItem" data-languageId="vb">VB</a><a class="dropdown-item languageFilterItem" data-languageId="fs">F#</a></div></div></div></div><div class="level-item"><form id="SearchForm" action="#" onsubmit="TransferToSearchPage(); return false;"><div class="field"><div class="control has-icons-left"><input id="SearchTerms" class="input" type="text" maxlength="200" placeholder="Search" /><span class="icon is-small is-left"><i class="fa fa-search"></i></span><button id="SearchButton" type="submit" class="is-hidden"></button></div></div></form></div></div></div></div><div class="fixedContent"><nav class="breadcrumb my-1 px-2 border-bottom" role="navigation"><ul id="TopicBreadcrumbs" /></nav><div id="ContentContainer" class="columns pl-5 pr-5 fixedContent"><div id="ShowHideTOCColumn" class="column is-hidden-tablet"><a id="ShowHideTOC">Show/Hide TOC</a></div><div id="TOCColumn" class="column is-hidden-mobile"><nav class="toc"><ul id="TableOfContents" class="toc-menu" /></nav></div><div id="Resizer" class="is-hidden"></div><div id="TopicContent" class="column content is-7"><h1>IData<wbr />Locater<wbr />Master 方法</h1><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>方法</h2><div id="ID0ZB0DASection"><table id="MethodList" class="table is-hoverable"><tr><td><a href="e512a67c-e9df-039f-5ee1-ae2777b9071d.htm">SendModbusRequest</a></td><td>
+            发送Modbus请求
+            <br />(继承自 <a href="c9cafafe-c1b7-62db-63d1-2a378a6d57ac.htm">IModbusMaster</a>。)</td></tr><tr><td><a href="97337958-0e5f-afe1-f247-0df7ef96c869.htm">SendModbusRequestAsync</a></td><td>
+            异步发送Modbus请求
+            <br />(继承自 <a href="c9cafafe-c1b7-62db-63d1-2a378a6d57ac.htm">IModbusMaster</a>。)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>扩展方法</h2><div id="IDADASection"><table id="ExtensionList" class="table is-hoverable"><tr><td><a href="b3dd85d1-9fa1-1763-ed95-67a10af23b34.htm">CreateModbusObject<span id="LST239470E0_0" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TModbusObject<span id="LST239470E0_1" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span></a></td><td>
+            创建一个Modbus对象类型。
+            <br />(由 <a href="7cbd29a3-dfdd-414a-be84-bdaa941ae097.htm">ModbusMasterProExtension</a> 定义。)</td></tr><tr><td><a href="6a0c1a53-b550-0178-108c-6b4657a573cb.htm">ReadCoils</a></td><td>
+            忽略站点（默认站号为1）读取线圈（FC1），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="5ac40dad-f38f-7574-7bc2-0c0a6efb0bf9.htm">ReadCoils</a></td><td>
+            从指定站点读取线圈（FC1），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="abcc77f2-74f1-d427-d115-8b3d92a97f66.htm">ReadCoils</a></td><td>
+            从指定站点读取线圈（FC1）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="c6e95c45-a41c-fec9-3b64-0a01c43dd397.htm">ReadCoilsAsync</a></td><td>
+            异步忽略站点（默认站号为1）读取线圈（FC1），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="4ad9a757-3667-2b49-375a-0bf47fd20cc8.htm">ReadCoilsAsync</a></td><td>
+            异步从指定站点读取线圈（FC1），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="68cda3fd-70ac-c2b9-1258-466ab30a8fd5.htm">ReadCoilsAsync</a></td><td>
+            异步从指定站点读取线圈（FC1）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="d7d4cf28-d5bb-485d-3b3a-3cd3883d7e0e.htm">ReadDiscreteInputs</a></td><td>
+            忽略站点（默认站号为1）读离散输入状态（FC2），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="53cde887-3170-5985-4e08-36459582428e.htm">ReadDiscreteInputs</a></td><td>
+            从指定站点读离散输入状态（FC2），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="f426f084-2ca5-ebd0-26ed-93660b1eab96.htm">ReadDiscreteInputs</a></td><td>
+            从指定站点读离散输入状态（FC2）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="8984fc26-022f-1e8a-6d3d-bac53b5bef52.htm">ReadDiscreteInputsAsync</a></td><td>
+            异步忽略站点（默认站号为1）读离散输入状态（FC2），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="24cbe911-53a2-3d34-a2b7-c300bfca3f2a.htm">ReadDiscreteInputsAsync</a></td><td>
+            异步从指定站点读离散输入状态（FC2），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="507634df-0241-2ee9-fe4a-7fa8cc44c3e4.htm">ReadDiscreteInputsAsync</a></td><td>
+            异步从指定站点读离散输入状态（FC2）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="fb5bac50-65c5-39a4-ee7e-b81c9e2ec2a3.htm">ReadHoldingRegisters</a></td><td>
+            忽略站点（默认站号为1）读保持寄存器（FC3），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="bd8236d5-5961-dffa-b005-4c3bab645129.htm">ReadHoldingRegisters</a></td><td>
+            从指定站点读保持寄存器（FC3），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="48e6b663-2e58-a223-db4a-1379893d3574.htm">ReadHoldingRegisters</a></td><td>
+            从指定站点读保持寄存器（FC3）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="7c4ff232-a741-f0b8-438b-777ffe059d4d.htm">ReadHoldingRegistersAsync</a></td><td>
+            异步忽略站点（默认站号为1）读保持寄存器（FC3），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="2bdbe24a-092a-89cd-3ff8-e73c8f7ce94e.htm">ReadHoldingRegistersAsync</a></td><td>
+            异步从指定站点读保持寄存器（FC3），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="2519121b-f45c-0348-d6da-3de8f6797fca.htm">ReadHoldingRegistersAsync</a></td><td>
+            异步从指定站点读保持寄存器（FC3）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="1849c625-35da-029c-3b6b-6f0a9dbf0c44.htm">ReadInputRegisters</a></td><td>
+            忽略站点（默认站号为1）读输入寄存器（FC4），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="e7efc7b4-5511-dbea-7d49-0a8968232d37.htm">ReadInputRegisters</a></td><td>
+            从指定站点读输入寄存器（FC4），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="103a75c0-1bd5-38b1-b5a3-3b6df6928054.htm">ReadInputRegisters</a></td><td>
+            从指定站点读输入寄存器（FC4）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="04a66531-bbea-b8f1-97b5-936865c2d98b.htm">ReadInputRegistersAsync</a></td><td>
+            异步忽略站点（默认站号为1）读输入寄存器（FC4），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="8c24a2dd-2f08-2c5f-c061-e8bb2d685b21.htm">ReadInputRegistersAsync</a></td><td>
+            异步从指定站点读输入寄存器（FC4），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="67be04b1-5196-a4b7-441d-cbe36e3fbcaa.htm">ReadInputRegistersAsync</a></td><td>
+            异步从指定站点读输入寄存器（FC4）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="450d6f28-8509-6d93-9dfa-c4343bf1a89f.htm">ReadWriteMultipleRegisters</a></td><td>
+            读写多个寄存器（FC23），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="7c3bd887-8e21-dfc3-7dc1-fcf44780841d.htm">ReadWriteMultipleRegisters</a></td><td>
+            读写多个寄存器（FC23），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="0307ed5c-cb14-d068-7530-402b4cb6043e.htm">ReadWriteMultipleRegisters</a></td><td>
+            读写多个寄存器（FC23）
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="e8e935fc-4c06-05cc-755d-35ae33295c6c.htm">ReadWriteMultipleRegistersAsync</a></td><td>
+            读写多个寄存器（FC23），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="198266e1-03f9-f085-a58a-7b1c8c38dde2.htm">ReadWriteMultipleRegistersAsync</a></td><td>
+            读写多个寄存器（FC23），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="6f7976b9-7ebb-1347-118a-102519404e63.htm">ReadWriteMultipleRegistersAsync</a></td><td>
+            读写多个寄存器（FC23）
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="56259ab2-0379-3585-4b25-9f23f4e3c8fe.htm">WriteMultipleCoils</a></td><td>
+            忽略站点（默认站号为1）写入多个线圈（FC15），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="64363b52-6095-727b-9ef7-9d96f2422e62.htm">WriteMultipleCoils</a></td><td>
+            向指定站点写入多个线圈（FC15），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="58db7a6e-e616-7bb2-bec6-40267ddc63aa.htm">WriteMultipleCoils</a></td><td>
+            向指定站点写入多个线圈（FC15）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="575f0204-f48e-7286-c715-081631c7fd99.htm">WriteMultipleCoilsAsync</a></td><td>
+            异步忽略站点（默认站号为1）写入多个线圈（FC15），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="d01894a2-4ef4-38e6-5a85-820f0f57a397.htm">WriteMultipleCoilsAsync</a></td><td>
+            异步向指定站点写入多个线圈（FC15），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="76da68bb-75dd-e231-50e7-f432fe65ed86.htm">WriteMultipleCoilsAsync</a></td><td>
+            异步向指定站点写入多个线圈（FC15）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="8e162026-830c-38c4-01fb-fa25e7e9cee4.htm">WriteMultipleRegisters</a></td><td>
+            忽略站点（默认站号为1）写入多个寄存器（FC16），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="9aacfeb0-7bf5-7cb8-d92d-1b08d430e96c.htm">WriteMultipleRegisters</a></td><td>
+            向指定站点写入多个寄存器（FC16），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="8a8dde04-8bb0-93ef-2a01-94c4322589a1.htm">WriteMultipleRegisters</a></td><td>
+            向指定站点写入多个寄存器（FC16）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="77a0538e-077e-3a97-ddce-9e087788d6a2.htm">WriteMultipleRegistersAsync</a></td><td>
+            异步忽略站点（默认站号为1）写入多个寄存器（FC16），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="70793c9c-07d5-8204-09da-c3a2ce8a357d.htm">WriteMultipleRegistersAsync</a></td><td>
+            异步向指定站点写入多个寄存器（FC16），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="a52e1ed4-fbd3-678f-4eec-913852db2ac0.htm">WriteMultipleRegistersAsync</a></td><td>
+            异步向指定站点写入多个寄存器（FC16）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="7e6a2a87-0035-16ed-57bd-d03395fb4ecf.htm">WriteSingleCoil</a></td><td>
+            忽略站点（默认站号为1）写入单个线圈（FC5），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="b27aa81a-ce16-1f3f-885b-81046dd8dbc0.htm">WriteSingleCoil</a></td><td>
+            向指定站点写入单个线圈（FC5），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="0523f7b8-513c-2fee-a359-017186323ffa.htm">WriteSingleCoil</a></td><td>
+            向指定站点写入单个线圈（FC5）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="bc268ee3-e996-0a1f-0716-12a51f4842df.htm">WriteSingleCoilAsync</a></td><td>
+            异步忽略站点（默认站号为1）写入单个线圈（FC5），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="8022a858-4ab5-5b8f-80a4-b2bec8ee4aa4.htm">WriteSingleCoilAsync</a></td><td>
+            异步向指定站点写入单个线圈（FC5），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="8ea2d0fd-7b04-9ffa-e6c1-d3176c5c1692.htm">WriteSingleCoilAsync</a></td><td>
+            异步向指定站点写入单个线圈（FC5）。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="35b8773b-9235-a9fd-adcc-69c4f5e975fc.htm">WriteSingleRegister</a></td><td>
+            忽略站点（默认站号为1）写入单个寄存器（FC6），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="11f71c98-6a7a-dbe0-46cd-d5486bf7d174.htm">WriteSingleRegister</a></td><td>
+            向指定站点写入单个寄存器（FC6），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="e43875cf-0dba-c545-fa66-7ee2dc068efb.htm">WriteSingleRegister</a></td><td>
+            向指定站点写入单个寄存器（FC6）
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="a0573387-101f-fa48-04ff-b98175ab0aa1.htm">WriteSingleRegister</a></td><td>
+            向指定站点写入单个寄存器（FC6）
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="a44b5e6f-c41d-ee53-46ff-f841d63be0e8.htm">WriteSingleRegisterAsync</a></td><td>
+            异步忽略站点（默认站号为1）写入单个寄存器（FC6），默认超时时间为1000ms。
+            <br />(由 <a href="18e0c7f7-cc03-4805-3c4f-c0f4ee8deee8.htm">ModbusIgnoreSlaveMasterExtension</a> 定义。)</td></tr><tr><td><a href="ed198872-d610-6a7f-936a-9b0adc09679d.htm">WriteSingleRegisterAsync</a></td><td>
+            异步向指定站点写入单个寄存器（FC6），默认超时时间为1000ms。
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="15f67ab0-4137-d9ca-b362-de434cd3fb04.htm">WriteSingleRegisterAsync</a></td><td>
+            异步向指定站点写入单个寄存器（FC6）
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr><tr><td><a href="7cf7553d-7c53-06ce-23be-f98a0f7db893.htm">WriteSingleRegisterAsync</a></td><td>
+            异步向指定站点写入单个寄存器（FC6）
+            <br />(由 <a href="dbeb9534-8af0-9163-f6b1-7cdbab0d6450.htm">ModbusMasterExtension</a> 定义。)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>参见</h2><div id="seeAlsoSection"><h4>引用</h4><div><a href="4b8ab0cb-32de-a101-d553-9817982763a0.htm">IDataLocaterMaster 接口</a></div><div><a href="64c3c78f-ff07-e28b-2d63-a329e024ea4e.htm">TouchSocket.Modbus 命名空间</a></div></div></div><div id="InThisArticleColumn" class="column is-hidden-mobile"><nav class="menu sticky is-hidden"><p class="menu-label"><strong>In This Article</strong></p><ul id="InThisArticleMenu" class="menu-list"><li><a class="quickLink">方法</a></li><li><a class="quickLink">扩展方法</a></li><li><a class="quickLink">参见</a></li></ul></nav></div></div></div><footer id="PageFooter" class="footer border-top py-3 fixedFooter"><div class="columns"><div class="column"><p>Copyright © 2020-2024 若汝棋茗.</p><div class="feedbackLink">有关这个主题的评论请发邮件到
+        <a id="HT_MailLink" href="mailto:505554090%40qq.com?Subject=TouchSocket手册">若汝棋茗邮箱</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script> 
+				</div><div class="column"> 
+				</div></div></footer></div><script>$(function(){
+SetDefaultLanguage("cs");
+LoadTocFile(null, null);
+InitializeQuickLinks();
+
+$(".toggleSection" ).click(function () {
+    SectionExpandCollapse(this);
+});
+
+$(".toggleSection").keypress(function () {
+    SectionExpandCollapseCheckKey(this, event)
+});
+});</script></body></html>

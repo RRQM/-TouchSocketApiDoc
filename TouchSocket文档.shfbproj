@@ -19,18 +19,31 @@
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Core/.NET Standard/.NET 5.0+</FrameworkVersion>
     <OutputPath>.\Help\</OutputPath>
-    <HtmlHelpName>Documentation</HtmlHelpName>
+    <HtmlHelpName>TouchSocketDocumentation</HtmlHelpName>
     <Language>zh-CN</Language>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\Src\TouchSocket\TouchSocket.csproj" />
-      <DocumentationSource sourceFile="..\Src\TouchSocket.AspNetCore\TouchSocket.AspNetCore.csproj" />
-      <DocumentationSource sourceFile="..\Src\TouchSocket.Core\TouchSocket.Core.csproj" />
-      <DocumentationSource sourceFile="..\Src\TouchSocket.Core.Autofac\TouchSocket.Core.Autofac.csproj" />
-      <DocumentationSource sourceFile="..\Src\TouchSocket.Core.DependencyInjection\TouchSocket.Core.DependencyInjection.csproj" />
-      <DocumentationSource sourceFile="..\Src\TouchSocket.Dmtp\TouchSocket.Dmtp.csproj" />
-      <DocumentationSource sourceFile="..\Src\TouchSocket.Hosting\TouchSocket.Hosting.csproj" />
-      <DocumentationSource sourceFile="..\Src\TouchSocket.Http\TouchSocket.Http.csproj" />
-    </DocumentationSources>
+      <DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket\TouchSocket.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.AspNetCore\TouchSocket.AspNetCore.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Core\TouchSocket.Core.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Core.Autofac\TouchSocket.Core.Autofac.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Core.DependencyInjection\TouchSocket.Core.DependencyInjection.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Dmtp\TouchSocket.Dmtp.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Hosting\TouchSocket.Hosting.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Http\TouchSocket.Http.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.JsonRpc\TouchSocket.JsonRpc.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Modbus\TouchSocket.Modbus.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.NamedPipe\TouchSocket.NamedPipe.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Rpc\TouchSocket.Rpc.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.Rpc.RateLimiting\TouchSocket.Rpc.RateLimiting.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.SerialPorts\TouchSocket.SerialPorts.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.WebApi\TouchSocket.WebApi.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.WebApi.Swagger\TouchSocket.WebApi.Swagger.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocket.XmlRpc\TouchSocket.XmlRpc.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro\TouchSocketPro.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro.AspNetCore\TouchSocketPro.AspNetCore.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro.Dmtp\TouchSocketPro.Dmtp.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro.Hosting\TouchSocketPro.Hosting.csproj" />
+<DocumentationSource sourceFile="..\TouchSocketPro\Src\TouchSocketPro.Modbus\TouchSocketPro.Modbus.csproj" /></DocumentationSources>
     <HelpFileFormat>Website</HelpFileFormat>
     <SyntaxFilters>C#, Visual Basic, F#</SyntaxFilters>
     <PresentationStyle>Default2022</PresentationStyle>
@@ -40,8 +53,8 @@
     <IndentHtml>False</IndentHtml>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
-    <HelpTitle>A Sandcastle Documented Class Library</HelpTitle>
-    <HelpFileVersion>1.0.0.0</HelpFileVersion>
+    <HelpTitle>TouchSocket手册</HelpTitle>
+    <HelpFileVersion>2.0.0.0-beta</HelpFileVersion>
     <NamingMethod>Guid</NamingMethod>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <RootNamespaceContainer>False</RootNamespaceContainer>
@@ -49,6 +62,9 @@
     <MaximumGroupParts>2</MaximumGroupParts>
     <Preliminary>False</Preliminary>
     <SdkLinkTarget>Blank</SdkLinkTarget>
+    <CopyrightText>Copyright &amp;#169%3b 2020-2024 若汝棋茗.</CopyrightText>
+    <FeedbackEMailAddress>505554090%40qq.com</FeedbackEMailAddress>
+    <FeedbackEMailLinkText>若汝棋茗邮箱</FeedbackEMailLinkText>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->
