@@ -569,6 +569,15 @@
         </markup>
       </typeparam>
     </member>
+    <member name="M:TouchSocket.Hosting.SetupConfigObjectHostedService`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Hosting.SetupConfigObjectHostedService`1</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="P:TouchSocket.Hosting.SetupConfigObjectHostedService`1.Config">
       <summary>
             Config配置
@@ -578,6 +587,12 @@
       <summary>
             实际对象。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Hosting.SetupConfigObjectHostedService`1.OnSetResolver(TouchSocket.Core.IResolver)">
+      <summary>
+            在设置完成<see cref="T:TouchSocket.Core.IResolver" />时调用。
+            </summary>
+      <param name="resolver"></param>
     </member>
     <member name="P:TouchSocket.Hosting.SetupConfigObjectHostedService`1.Resolver">
       <summary>

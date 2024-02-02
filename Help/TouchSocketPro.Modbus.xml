@@ -673,6 +673,15 @@
             Modbus对象抽象类
             </summary>
     </member>
+    <member name="M:TouchSocket.Modbus.ModbusObject.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Modbus.ModbusObject</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="P:TouchSocket.Modbus.ModbusObject.Client">
       <summary>
             实际通讯的Modbus客户端
@@ -949,6 +958,20 @@
         </markup>
       </summary>
     </member>
+    <member name="M:TouchSocket.Modbus.ModbusRtuOverTcpSlave.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuOverTcpSlave.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Modbus.ModbusRtuOverTcpSlave.ModbusDataLocater">
       <summary>
         <markup>
@@ -978,6 +1001,28 @@
             是否允许自由调用<see cref="M:TouchSocket.Core.IAdapterObject.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)" />进行赋值。
             </summary>
     </member>
+    <member name="M:TouchSocket.Modbus.ModbusRtuOverTcpSlaveSocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            客户端正在连接。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuOverTcpSlaveSocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuOverTcpSlaveSocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="T:TouchSocket.Modbus.ModbusRtuOverUdpSlave">
       <summary>
             基于Udp协议，且使用Rtu数据格式的从站接口
@@ -998,6 +1043,20 @@
             是否允许自由调用<see cref="M:TouchSocket.Sockets.IUdpSession.SetDataHandlingAdapter(TouchSocket.Sockets.UdpDataHandlingAdapter)" />进行赋值。
             
   </summary>
+    </member>
+    <member name="M:TouchSocket.Modbus.ModbusRtuOverUdpSlave.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuOverUdpSlave.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="P:TouchSocket.Modbus.ModbusRtuOverUdpSlave.ModbusDataLocater">
       <summary>
@@ -1028,6 +1087,20 @@
             是否允许自由调用<see cref="M:TouchSocket.Core.IAdapterObject.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)" />进行赋值。
             </summary>
     </member>
+    <member name="M:TouchSocket.Modbus.ModbusRtuSlave.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuSlave.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Modbus.ModbusRtuSlave.ModbusDataLocater">
       <summary>
         <markup>
@@ -1037,6 +1110,28 @@
           </include>
         </markup>
       </summary>
+    </member>
+    <member name="M:TouchSocket.Modbus.ModbusRtuSlave.OnConnecting(TouchSocket.SerialPorts.SerialConnectingEventArgs)">
+      <summary>
+            准备连接的时候，此时并未建立连接
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuSlave.OnConnecting(TouchSocket.SerialPorts.SerialConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuSlave.OnConnecting(TouchSocket.SerialPorts.SerialConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="T:TouchSocket.Modbus.ModbusSlaveExecutedEventArgs">
       <summary>
@@ -1329,6 +1424,20 @@
         </markup>
       </summary>
     </member>
+    <member name="M:TouchSocket.Modbus.ModbusTcpSlave.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusTcpSlave.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Modbus.ModbusTcpSlave.ModbusDataLocater">
       <summary>
         <markup>
@@ -1358,6 +1467,28 @@
             是否允许自由调用<see cref="M:TouchSocket.Core.IAdapterObject.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)" />进行赋值。
             </summary>
     </member>
+    <member name="M:TouchSocket.Modbus.ModbusTcpSlaveSocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            客户端正在连接。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusTcpSlaveSocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusTcpSlaveSocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="T:TouchSocket.Modbus.ModbusUdpSlave">
       <summary>
             基于Udp协议的Modbus从站
@@ -1378,6 +1509,20 @@
             是否允许自由调用<see cref="M:TouchSocket.Sockets.IUdpSession.SetDataHandlingAdapter(TouchSocket.Sockets.UdpDataHandlingAdapter)" />进行赋值。
             
   </summary>
+    </member>
+    <member name="M:TouchSocket.Modbus.ModbusUdpSlave.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusUdpSlave.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="P:TouchSocket.Modbus.ModbusUdpSlave.ModbusDataLocater">
       <summary>

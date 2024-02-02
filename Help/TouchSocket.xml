@@ -615,6 +615,20 @@
             已创建的客户端安全列表，一般不要直接操作。
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.ClientFactory`1.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Sockets.ClientFactory`1</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="M:TouchSocket.Sockets.ClientFactory`1.DisposeClient(`0)">
       <summary>
             释放客户端最后的调用。
@@ -702,6 +716,19 @@
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
             <parameter>M:TouchSocket.Sockets.ClientFactory`1.GetTransferClientResult(System.TimeSpan)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.ClientFactory`1.GetTransferConfig">
+      <summary>
+            获取用于传输的客户端配置
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.ClientFactory`1.GetTransferConfig</parameter>
           </include>
         </markup>
       </returns>
@@ -811,6 +838,29 @@
       <summary>
             构造函数
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.ClientNotFindException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            构造函数
+            </summary>
+      <param name="info">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>info</parameter>
+            <parameter>M:TouchSocket.Sockets.ClientNotFindException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="context">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>context</parameter>
+            <parameter>M:TouchSocket.Sockets.ClientNotFindException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="M:TouchSocket.Sockets.ClientNotFindException.#ctor(System.String)">
       <summary>
@@ -1299,6 +1349,15 @@
       <summary>
             HeartbeatPlugin
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.HeartbeatPlugin.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Sockets.HeartbeatPlugin</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="P:TouchSocket.Sockets.HeartbeatPlugin.MaxFailCount">
       <summary>
@@ -3352,6 +3411,166 @@
         </markup>
       </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.NATService.GetClientInstence(System.Net.Sockets.Socket,TouchSocket.Sockets.TcpNetworkMonitor)">
+      <summary>
+            初始化客户端实例。
+            </summary>
+      <param name="socket">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socket</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.GetClientInstence(System.Net.Sockets.Socket,TouchSocket.Sockets.TcpNetworkMonitor)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="monitor">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>monitor</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.GetClientInstence(System.Net.Sockets.Socket,TouchSocket.Sockets.TcpNetworkMonitor)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.GetClientInstence(System.Net.Sockets.Socket,TouchSocket.Sockets.TcpNetworkMonitor)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.NATService.OnNATReceived(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            在NAT服务器收到数据时。
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.OnNATReceived(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.OnNATReceived(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>需要转发的数据。</returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.NATService.OnReceived(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+    
+            当收到适配器数据。
+            
+  </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.OnReceived(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.OnReceived(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.OnReceived(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.NATService.OnTargetClientDisconnected(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ITcpClient,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            当目标客户端断开。
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.OnTargetClientDisconnected(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ITcpClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="tcpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>tcpClient</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.OnTargetClientDisconnected(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ITcpClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.OnTargetClientDisconnected(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ITcpClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.NATService.OnTargetClientReceived(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ITcpClient,TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            在目标客户端收到数据时。
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.OnTargetClientReceived(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ITcpClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="tcpClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>tcpClient</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.OnTargetClientReceived(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ITcpClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.OnTargetClientReceived(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ITcpClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.NATService.OnTargetClientReceived(TouchSocket.Sockets.NATSocketClient,TouchSocket.Sockets.ITcpClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="T:TouchSocket.Sockets.NATSocketClient">
       <summary>
             端口转发辅助
@@ -3405,6 +3624,30 @@
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
             <parameter>M:TouchSocket.Sockets.NATSocketClient.GetTargetClients</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.NATSocketClient.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+    
+            客户端已断开连接。
+            
+  </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.NATSocketClient.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.NATSocketClient.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
           </include>
         </markup>
       </returns>
@@ -3469,6 +3712,114 @@
             
   </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.NormalUdpDataHandlingAdapter.PreviewReceived(System.Net.EndPoint,TouchSocket.Core.ByteBlock)">
+      <summary>
+    
+            当接收到数据后预先处理数据,然后调用<see cref="M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoReceived(System.Net.EndPoint,TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)" />处理数据
+            
+  </summary>
+      <param name="remoteEndPoint"></param>
+      <param name="byteBlock"></param>
+    </member>
+    <member name="M:TouchSocket.Sockets.NormalUdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)">
+      <summary>
+    
+            当发送数据前预先处理数据
+            
+  </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.NormalUdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Sockets.NormalUdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Sockets.NormalUdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Sockets.NormalUdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.NormalUdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.NormalUdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="transferBytes">代发送数据组合</param>
+    </member>
+    <member name="M:TouchSocket.Sockets.NormalUdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.NormalUdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="transferBytes">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>transferBytes</parameter>
+            <parameter>M:TouchSocket.Sockets.NormalUdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.NormalUdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.NotImplementedException"></exception>
+    </member>
+    <member name="M:TouchSocket.Sockets.NormalUdpDataHandlingAdapter.Reset">
+      <summary>
+    
+            重置解析器到初始状态，一般在<see cref="M:TouchSocket.Core.DataHandlingAdapter.OnError(System.Exception,System.String,System.Boolean,System.Boolean)" />被触发时，由返回值指示是否调用。
+            
+  </summary>
+    </member>
     <member name="T:TouchSocket.Sockets.NotConnectedException">
       <summary>
             未连接异常
@@ -3478,6 +3829,29 @@
       <summary>
             构造函数
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.NotConnectedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            构造函数
+            </summary>
+      <param name="info">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>info</parameter>
+            <parameter>M:TouchSocket.Sockets.NotConnectedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="context">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>context</parameter>
+            <parameter>M:TouchSocket.Sockets.NotConnectedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="M:TouchSocket.Sockets.NotConnectedException.#ctor(System.String)">
       <summary>
@@ -3521,6 +3895,20 @@
             Pipeline读取管道
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.Pipeline.#ctor(TouchSocket.Sockets.ITcpClientBase)">
+      <summary>
+            Pipeline读取管道
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.Sockets.Pipeline.#ctor(TouchSocket.Sockets.ITcpClientBase)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Sockets.Pipeline.Client">
       <summary>
             当前支持此管道的客户端。
@@ -3538,12 +3926,30 @@
             使用该适配器后，<see cref="T:TouchSocket.Core.IRequestInfo" />将为<see cref="T:TouchSocket.Sockets.Pipeline" />.
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.PipelineDataHandlingAdapter.Dispose(System.Boolean)">
+      <summary>
+    
+    
+            调用释放，切换释放状态。
+            
+  
+  </summary>
+      <param name="disposing"></param>
+    </member>
     <member name="M:TouchSocket.Sockets.PipelineDataHandlingAdapter.OnLoaded(System.Object)">
       <summary>
             当适配器在被第一次加载时调用。
             </summary>
       <param name="owner"></param>
       <exception cref="T:System.Exception">此适配器已被其他终端使用，请重新创建对象。</exception>
+    </member>
+    <member name="M:TouchSocket.Sockets.PipelineDataHandlingAdapter.PreviewReceived(TouchSocket.Core.ByteBlock)">
+      <summary>
+    
+            当接收到数据时处理数据
+            
+  </summary>
+      <param name="byteBlock"></param>
     </member>
     <member name="T:TouchSocket.Sockets.Protocol">
       <summary>
@@ -3755,6 +4161,23 @@
           </include>
         </markup>
       </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.Receiver.Dispose(System.Boolean)">
+      <summary>
+            调用释放，切换释放状态。
+            </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Sockets.Receiver</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.Receiver.Finalize">
+      <summary>
+            Receiver
+            </summary>
     </member>
     <member name="M:TouchSocket.Sockets.Receiver.ReadAsync(System.Threading.CancellationToken)">
       <summary>
@@ -5347,6 +5770,15 @@
             服务器基类
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.ServiceBase.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Sockets.ServiceBase</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="P:TouchSocket.Sockets.ServiceBase.ServerName">
       <summary>
             名称
@@ -5628,6 +6060,29 @@
             构造函数
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.BreakOut(System.Boolean,System.String)">
+      <summary>
+            中断连接
+            </summary>
+      <param name="manual">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>manual</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.BreakOut(System.Boolean,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="msg">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>msg</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.BreakOut(System.Boolean,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Sockets.SocketClient.CanSend">
       <summary>
             表示对象能否顺利执行发送操作。
@@ -5711,6 +6166,20 @@
       <exception cref="T:TouchSocket.Core.OverlengthException">发送数据超长</exception>
       <exception cref="T:System.Exception">其他异常</exception>
     </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.DirectResetId(System.String)">
+      <summary>
+            直接重置内部Id。
+            </summary>
+      <param name="newId">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>newId</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.DirectResetId(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Sockets.SocketClient.Disconnected">
       <summary>
             断开连接
@@ -5720,6 +6189,20 @@
       <summary>
             即将断开连接(仅主动断开时有效)。
             <para></para></summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Sockets.SocketClient</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="M:TouchSocket.Sockets.SocketClient.GetStream">
       <summary>
@@ -5737,10 +6220,49 @@
       </returns>
       <exception cref="T:System.NotImplementedException"></exception>
     </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.HandleReceivedData(TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)">
+      <summary>
+            处理已接收到的数据。
+            <para>根据不同的数据处理适配器，会传递不同的数据</para></summary>
+      <param name="byteBlock">以二进制流形式传递</param>
+      <param name="requestInfo">以解析的数据对象传递</param>
+      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
+    </member>
     <member name="P:TouchSocket.Sockets.SocketClient.Id">
       <summary>
             用于索引的Id
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.IdChanged(System.String,System.String)">
+      <summary>
+            当Id更新的时候触发
+            </summary>
+      <param name="oldId">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>oldId</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.IdChanged(System.String,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="newId">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>newId</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.IdChanged(System.String,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.IdChanged(System.String,System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="P:TouchSocket.Sockets.SocketClient.IP">
       <summary>
@@ -5774,6 +6296,107 @@
             主通信器
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)">
+      <summary>
+            当客户端完整建立Tcp连接。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            客户端正在连接。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            客户端已断开连接。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            即将断开连接(仅主动断开时有效)。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.OnInitialized">
+      <summary>
+            当初始化完成时，执行在<see cref="M:TouchSocket.Sockets.SocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)" />之前。
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.OnInitialized</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:TouchSocket.Sockets.SocketClient.Online">
       <summary>
             判断是否在线
@@ -5794,10 +6417,32 @@
             终端协议
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器处理的数据时。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.SocketClient.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
+    </member>
     <member name="P:TouchSocket.Sockets.SocketClient.ReceiveType">
       <summary>
             接收模式
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.ReceivingData(TouchSocket.Core.ByteBlock)">
+      <summary>
+            当收到原始数据
+            </summary>
+      <param name="byteBlock"></param>
+      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
     </member>
     <member name="M:TouchSocket.Sockets.SocketClient.ResetId(System.String)">
       <summary>
@@ -6125,6 +6770,15 @@
       <exception cref="T:TouchSocket.Core.OverlengthException"></exception>
       <exception cref="T:System.Exception"></exception>
     </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.SendingData(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当即将发送时，如果覆盖父类方法，则不会触发插件。
+            </summary>
+      <param name="buffer">数据缓存区</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+      <returns>返回值表示是否允许发送</returns>
+    </member>
     <member name="P:TouchSocket.Sockets.SocketClient.Service">
       <summary>
             包含此辅助类的主服务器类
@@ -6139,6 +6793,12 @@
       <summary>
             接收此客户端的服务器端口
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.SocketClient.SetAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)">
+      <summary>
+            设置适配器，该方法不会检验<see cref="P:TouchSocket.Sockets.SocketClient.CanSetDataHandlingAdapter" />的值。
+            </summary>
+      <param name="adapter"></param>
     </member>
     <member name="M:TouchSocket.Sockets.SocketClient.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)">
       <summary>
@@ -6399,6 +7059,28 @@
             接收到数据
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpClient.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器处理的数据时。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClient.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClient.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="T:TouchSocket.Sockets.TcpClientBase">
       <summary>
             Tcp客户端
@@ -6408,6 +7090,29 @@
       <summary>
             Tcp客户端
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.BreakOut(System.Boolean,System.String)">
+      <summary>
+            BreakOut。
+            </summary>
+      <param name="manual">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>manual</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.BreakOut(System.Boolean,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="msg">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>msg</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.BreakOut(System.Boolean,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="P:TouchSocket.Sockets.TcpClientBase.CanSend">
       <summary>
@@ -6533,6 +7238,22 @@
             即将断开连接(仅主动断开时有效)。
             <para></para></summary>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.Dispose(System.Boolean)">
+      <summary>
+    
+    
+            调用释放，切换释放状态。
+            
+  
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Sockets.TcpClientBase</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="M:TouchSocket.Sockets.TcpClientBase.GetStream">
       <summary>
             获取流，在正常模式下为<see cref="T:System.Net.Sockets.NetworkStream" />，在Ssl模式下为<see cref="T:System.Net.Security.SslStream" />。
@@ -6545,6 +7266,14 @@
           </include>
         </markup>
       </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.HandleReceivedData(TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)">
+      <summary>
+            处理已接收到的数据。
+            </summary>
+      <param name="byteBlock">以二进制流形式传递</param>
+      <param name="requestInfo">以解析的数据对象传递</param>
+      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
     </member>
     <member name="P:TouchSocket.Sockets.TcpClientBase.IP">
       <summary>
@@ -6566,10 +7295,112 @@
             最后一次发送数据的时间
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Sockets.TcpClientBase.MainSocket">
       <summary>
             主通信器
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)">
+      <summary>
+            已经建立Tcp连接
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            准备连接的时候，此时已初始化Socket，但是并未建立Tcp连接
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            断开连接。在客户端未设置连接状态时，不会触发
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            即将断开连接(仅主动断开时有效)。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="P:TouchSocket.Sockets.TcpClientBase.Online">
       <summary>
@@ -6586,10 +7417,39 @@
             终端协议
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器处理的数据时。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:TouchSocket.Sockets.TcpClientBase.ReceiveType">
       <summary>
             接收模式
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.ReceivingData(TouchSocket.Core.ByteBlock)">
+      <summary>
+            当收到原始数据
+            </summary>
+      <param name="byteBlock"></param>
+      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
     </member>
     <member name="P:TouchSocket.Sockets.TcpClientBase.RemoteIPHost">
       <summary>
@@ -6750,6 +7610,21 @@
       <exception cref="T:TouchSocket.Core.OverlengthException"></exception>
       <exception cref="T:System.Exception"></exception>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.SendingData(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当即将发送时，如果覆盖父类方法，则不会触发插件。
+            </summary>
+      <param name="buffer">数据缓存区</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+      <returns>返回值表示是否允许发送</returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.SetAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)">
+      <summary>
+            设置适配器，该方法不会检验<see cref="P:TouchSocket.Sockets.TcpClientBase.CanSetDataHandlingAdapter" />的值。
+            </summary>
+      <param name="adapter"></param>
+    </member>
     <member name="M:TouchSocket.Sockets.TcpClientBase.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)">
       <summary>
             设置数据处理适配器
@@ -6763,6 +7638,67 @@
           </include>
         </markup>
       </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.TcpConnect(System.Int32,System.Threading.CancellationToken)">
+      <summary>
+            建立Tcp的连接。
+            </summary>
+      <param name="timeout">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>timeout</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.TcpConnect(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="token">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>token</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.TcpConnect(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.ObjectDisposedException"></exception>
+      <exception cref="T:System.ArgumentNullException"></exception>
+      <exception cref="T:System.Exception"></exception>
+      <exception cref="T:System.TimeoutException"></exception>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientBase.TcpConnectAsync(System.Int32,System.Threading.CancellationToken)">
+      <summary>
+            异步连接服务器
+            </summary>
+      <param name="timeout">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>timeout</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.TcpConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="token">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>token</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.TcpConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientBase.TcpConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.ObjectDisposedException"></exception>
+      <exception cref="T:System.ArgumentNullException"></exception>
+      <exception cref="T:System.TimeoutException"></exception>
     </member>
     <member name="P:TouchSocket.Sockets.TcpClientBase.UseSsl">
       <summary>
@@ -6812,6 +7748,22 @@
       <summary>
             连接超时设定
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientFactory`1.Dispose(System.Boolean)">
+      <summary>
+    
+    
+            调用释放，切换释放状态。
+            
+  
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Sockets.TcpClientFactory`1</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="M:TouchSocket.Sockets.TcpClientFactory`1.DisposeClient(`0)">
       <summary>
@@ -6897,6 +7849,19 @@
       <exception cref="T:System.TimeoutException"></exception>
       <exception cref="T:System.Exception"></exception>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpClientFactory`1.GetTransferConfig">
+      <summary>
+            获取用于传输的客户端配置
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientFactory`1.GetTransferConfig</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="M:TouchSocket.Sockets.TcpClientFactory`1.IsAlive(`0)">
       <summary>
             判断客户端是不是存活状态。
@@ -6929,6 +7894,11 @@
             获取传输的客户端配置
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpClientFactory`1.OnMainClientSetuping">
+      <summary>
+            在主客户端加载配置之前
+            </summary>
+    </member>
     <member name="M:TouchSocket.Sockets.TcpClientFactory`1.ReleaseTransferClient(`0)">
       <summary>
             归还使用完的连接。
@@ -6955,6 +7925,29 @@
       <summary>
             固定Tcp客户端的端口
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientSlim.BreakOut(System.Boolean,System.String)">
+      <summary>
+            BreakOut。
+            </summary>
+      <param name="manual">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>manual</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.BreakOut(System.Boolean,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="msg">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>msg</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.BreakOut(System.Boolean,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="P:TouchSocket.Sockets.TcpClientSlim.CanSend">
       <summary>
@@ -7105,6 +8098,20 @@
         </markup>
       </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpClientSlim.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Sockets.TcpClientSlim</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Sockets.TcpClientSlim.IP">
       <summary>
         <markup>
@@ -7180,6 +8187,94 @@
             禁止Delay算法
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpClientSlim.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)">
+      <summary>
+            已经建立Tcp连接
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientSlim.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            准备连接的时候，此时已初始化Socket，但是并未建立Tcp连接
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientSlim.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            断开连接。在客户端未设置连接状态时，不会触发
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientSlim.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            即将断开连接(仅主动断开时有效)。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:TouchSocket.Sockets.TcpClientSlim.Online">
       <summary>
             判断是否在线
@@ -7199,6 +8294,35 @@
       <summary>
             接收到数据
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientSlim.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器处理的数据时。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientSlim.ReceivingData(TouchSocket.Core.ByteBlock)">
+      <summary>
+            当收到原始数据
+            </summary>
+      <param name="byteBlock"></param>
+      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
     </member>
     <member name="P:TouchSocket.Sockets.TcpClientSlim.RemoteIPHost">
       <summary>
@@ -7369,10 +8493,25 @@
       <exception cref="T:TouchSocket.Core.OverlengthException"></exception>
       <exception cref="T:System.Exception"></exception>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpClientSlim.SendingData(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当即将发送时，如果覆盖父类方法，则不会触发插件。
+            </summary>
+      <param name="buffer">数据缓存区</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+      <returns>返回值表示是否允许发送</returns>
+    </member>
     <member name="P:TouchSocket.Sockets.TcpClientSlim.SendTimeout">
       <summary>
     Gets or sets a value that specifies the amount of time after which a synchronous <see cref="Overload:System.Net.Sockets.Socket.Send" /> call will time out.
   </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientSlim.SetAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)">
+      <summary>
+            设置适配器，该方法不会检验<see cref="P:TouchSocket.Sockets.TcpClientSlim.CanSetDataHandlingAdapter" />的值。
+            </summary>
+      <param name="adapter"></param>
     </member>
     <member name="M:TouchSocket.Sockets.TcpClientSlim.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)">
       <summary>
@@ -7387,6 +8526,67 @@
           </include>
         </markup>
       </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientSlim.TcpConnect(System.Int32,System.Threading.CancellationToken)">
+      <summary>
+            建立Tcp的连接。
+            </summary>
+      <param name="timeout">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>timeout</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.TcpConnect(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="token">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>token</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.TcpConnect(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.ObjectDisposedException"></exception>
+      <exception cref="T:System.ArgumentNullException"></exception>
+      <exception cref="T:System.Exception"></exception>
+      <exception cref="T:System.TimeoutException"></exception>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpClientSlim.TcpConnectAsync(System.Int32,System.Threading.CancellationToken)">
+      <summary>
+            异步连接服务器
+            </summary>
+      <param name="timeout">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>timeout</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.TcpConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="token">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>token</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.TcpConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpClientSlim.TcpConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.ObjectDisposedException"></exception>
+      <exception cref="T:System.ArgumentNullException"></exception>
+      <exception cref="T:System.TimeoutException"></exception>
     </member>
     <member name="P:TouchSocket.Sockets.TcpClientSlim.TcpDataHandlingAdapter">
       <summary>
@@ -7407,6 +8607,21 @@
       <summary>
             Tcp命令行插件。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpCommandLinePlugin.#ctor(TouchSocket.Core.ILog)">
+      <summary>
+            Tcp命令行插件。
+            </summary>
+      <param name="logger">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>logger</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpCommandLinePlugin.#ctor(TouchSocket.Core.ILog)</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.ArgumentNullException"></exception>
     </member>
     <member name="P:TouchSocket.Sockets.TcpCommandLinePlugin.Converter">
       <summary>
@@ -7564,6 +8779,13 @@
         </markup>
       </returns>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpCore.BreakOut(System.Boolean,System.String)">
+      <summary>
+            当中断Tcp时。
+            </summary>
+      <param name="manual">当为<see langword="true" />时，意味着是调用<see cref="M:TouchSocket.Sockets.TcpCore.Close(System.String)" />。当为<see langword="false" />时，则是其他中断。</param>
+      <param name="msg"></param>
+    </member>
     <member name="P:TouchSocket.Sockets.TcpCore.CanSend">
       <summary>
             表示对象能否顺利执行发送操作。
@@ -7588,6 +8810,37 @@
             释放对象
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpCore.Dispose(System.Boolean)">
+      <summary>
+            释放对象
+            </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Sockets.TcpCore</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpCore.Exception(System.Exception)">
+      <summary>
+            当发生异常的时候
+            </summary>
+      <param name="ex">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>ex</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpCore.Exception(System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpCore.Finalize">
+      <summary>
+            析构函数
+            </summary>
+    </member>
     <member name="P:TouchSocket.Sockets.TcpCore.MaxBufferSize">
       <summary>
             最大缓存尺寸
@@ -7602,6 +8855,10 @@
       <summary>
             当中断Tcp的时候。当为<see langword="true" />时，意味着是调用<see cref="M:TouchSocket.Sockets.TcpCore.Close(System.String)" />。当为<see langword="false" />时，则是其他中断。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpCore.OnCompleted(System.Net.Sockets.SocketAsyncEventArgs)">
+      <summary>Represents a method that is called when an asynchronous operation completes.</summary>
+      <param name="e">The event that is signaled.</param>
     </member>
     <member name="P:TouchSocket.Sockets.TcpCore.OnException">
       <summary>
@@ -7627,6 +8884,20 @@
       <summary>
             接收计数器
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpCore.Received(TouchSocket.Core.ByteBlock)">
+      <summary>
+            当收到数据的时候
+            </summary>
+      <param name="byteBlock">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>byteBlock</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpCore.Received(TouchSocket.Core.ByteBlock)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="M:TouchSocket.Sockets.TcpCore.Reset">
       <summary>
@@ -7740,6 +9011,12 @@
       <summary>
             同步根
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpCore.ThrowIfNotConnected">
+      <summary>
+            判断，当不在连接状态时触发异常。
+            </summary>
+      <exception cref="T:TouchSocket.Sockets.NotConnectedException"></exception>
     </member>
     <member name="P:TouchSocket.Sockets.TcpCore.UseSsl">
       <summary>
@@ -7891,6 +9168,37 @@
         </markup>
       </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpService.OnReceived(TouchSocket.Sockets.SocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器数据。
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService.OnReceived(TouchSocket.Sockets.SocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService.OnReceived(TouchSocket.Sockets.SocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService.OnReceived(TouchSocket.Sockets.SocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:TouchSocket.Sockets.TcpService.Received">
       <summary>
             处理数据
@@ -7959,6 +9267,47 @@
             即将断开连接(仅主动断开时有效)。
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.Dispose(System.Boolean)">
+      <summary>
+    
+    
+            调用释放，切换释放状态。
+            
+  
+  </summary>
+      <param name="disposing"></param>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.GetClientInstence(System.Net.Sockets.Socket,TouchSocket.Sockets.TcpNetworkMonitor)">
+      <summary>
+            初始化客户端实例。
+            </summary>
+      <param name="socket">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socket</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.GetClientInstence(System.Net.Sockets.Socket,TouchSocket.Sockets.TcpNetworkMonitor)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="monitor">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>monitor</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.GetClientInstence(System.Net.Sockets.Socket,TouchSocket.Sockets.TcpNetworkMonitor)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.GetClientInstence(System.Net.Sockets.Socket,TouchSocket.Sockets.TcpNetworkMonitor)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="M:TouchSocket.Sockets.TcpService`1.GetClients">
       <summary>
             获取当前在线的所有客户端
@@ -7971,6 +9320,25 @@
           </include>
         </markup>
       </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.GetNextNewId">
+      <summary>
+            获取下一个新Id
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.GetNextNewId</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config"></param>
     </member>
     <member name="P:TouchSocket.Sockets.TcpService`1.MaxCount">
       <summary>
@@ -7985,6 +9353,191 @@
             网络监听集合
             
   </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.OnAuthenticatingError(System.Exception)">
+      <summary>
+            在验证Ssl发送错误时。
+            </summary>
+      <param name="ex"></param>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.OnClientConnected(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ConnectedEventArgs)">
+      <summary>
+    
+            客户端连接完成
+            
+  </summary>
+      <param name="socketClient"></param>
+      <param name="e"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.OnClientConnected(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.OnClientConnecting(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+    
+            客户端请求连接
+            
+  </summary>
+      <param name="socketClient"></param>
+      <param name="e"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.OnClientConnecting(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.OnClientDisconnected(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+    
+            客户端断开连接
+            
+  </summary>
+      <param name="socketClient"></param>
+      <param name="e"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.OnClientDisconnected(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.OnClientDisconnecting(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+    
+            即将断开连接(仅主动断开时有效)。
+            
+  </summary>
+      <param name="socketClient"></param>
+      <param name="e"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.OnClientDisconnecting(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.OnClientReceivedData(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+    
+            收到数据时
+            
+  </summary>
+      <param name="socketClient"></param>
+      <param name="e"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.OnClientReceivedData(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.OnConnected(`0,TouchSocket.Sockets.ConnectedEventArgs)">
+      <summary>
+            客户端连接完成，覆盖父类方法将不会触发事件。
+            </summary>
+      <param name="socketClient"></param>
+      <param name="e"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.OnConnected(`0,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.OnConnecting(`0,TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            客户端请求连接，覆盖父类方法将不会触发事件。
+            </summary>
+      <param name="socketClient"></param>
+      <param name="e"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.OnConnecting(`0,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.OnDisconnected(`0,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            客户端断开连接，覆盖父类方法将不会触发事件。
+            </summary>
+      <param name="socketClient"></param>
+      <param name="e"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.OnDisconnected(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.OnDisconnecting(`0,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            即将断开连接(仅主动断开时有效)。
+            </summary>
+      <param name="socketClient"></param>
+      <param name="e"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.OnDisconnecting(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.OnReceived(`0,TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器数据。
+            </summary>
+      <param name="socketClient"></param>
+      <param name="e"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.OnReceived(`0,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpService`1.PreviewBind(TouchSocket.Sockets.TcpNetworkMonitor)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.PreviewBind(TouchSocket.Sockets.TcpNetworkMonitor)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="monitor">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>monitor</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpService`1.PreviewBind(TouchSocket.Sockets.TcpNetworkMonitor)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="M:TouchSocket.Sockets.TcpService`1.RemoveListen(TouchSocket.Sockets.TcpNetworkMonitor)">
       <summary>
@@ -8111,6 +9664,15 @@
             Tcp服务器基类
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.TcpServiceBase.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Sockets.TcpServiceBase</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="M:TouchSocket.Sockets.TcpServiceBase.AddListen(TouchSocket.Sockets.TcpListenOption)">
       <summary>
             添加一个地址监听。支持在服务器运行过程中动态添加。
@@ -8138,6 +9700,20 @@
             当前在线客户端数量
             
   </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpServiceBase.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Sockets.TcpServiceBase</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="M:TouchSocket.Sockets.TcpServiceBase.GetIds">
       <summary>
@@ -8167,6 +9743,161 @@
             网络监听集合
             
   </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpServiceBase.OnClientConnected(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ConnectedEventArgs)">
+      <summary>
+            客户端连接完成
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientConnected(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientConnected(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientConnected(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpServiceBase.OnClientConnecting(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            客户端请求连接
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientConnecting(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientConnecting(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientConnecting(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpServiceBase.OnClientDisconnected(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            客户端断开连接
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientDisconnected(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientDisconnected(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientDisconnected(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpServiceBase.OnClientDisconnecting(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            即将断开连接(仅主动断开时有效)。
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientDisconnecting(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientDisconnecting(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientDisconnecting(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TcpServiceBase.OnClientReceivedData(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            收到数据时
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientReceivedData(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientReceivedData(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TcpServiceBase.OnClientReceivedData(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="M:TouchSocket.Sockets.TcpServiceBase.RemoveListen(TouchSocket.Sockets.TcpNetworkMonitor)">
       <summary>
@@ -9460,6 +11191,15 @@
             Udp数据处理适配器
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.UdpDataHandlingAdapter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Sockets.UdpDataHandlingAdapter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="P:TouchSocket.Sockets.UdpDataHandlingAdapter.CanSendRequestInfo">
       <summary>
             是否允许发送<see cref="T:TouchSocket.Core.IRequestInfo" />对象。
@@ -9469,6 +11209,288 @@
       <summary>
             拼接发送
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoReceived(System.Net.EndPoint,TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)">
+      <summary>
+            处理已经经过预先处理后的数据
+            </summary>
+      <param name="remoteEndPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>remoteEndPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoReceived(System.Net.EndPoint,TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="byteBlock">以二进制形式传递</param>
+      <param name="requestInfo">以解析实例传递</param>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            发送已经经过预先处理后的数据
+            </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            发送已经经过预先处理后的数据
+            </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewReceived(System.Net.EndPoint,TouchSocket.Core.ByteBlock)">
+      <summary>
+            当接收到数据后预先处理数据,然后调用<see cref="M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoReceived(System.Net.EndPoint,TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)" />处理数据
+            </summary>
+      <param name="remoteEndPoint"></param>
+      <param name="byteBlock"></param>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="buffer">数据</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="transferBytes">代发送数据组合</param>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,TouchSocket.Core.IRequestInfo)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSend(System.Net.EndPoint,TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="transferBytes">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>transferBytes</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.NotImplementedException"></exception>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,TouchSocket.Core.IRequestInfo)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpDataHandlingAdapter.PreviewSendAsync(System.Net.EndPoint,TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="P:TouchSocket.Sockets.UdpDataHandlingAdapter.ReceivedCallBack">
       <summary>
@@ -9497,6 +11519,11 @@
           </include>
         </markup>
       </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpDataHandlingAdapter.Reset">
+      <summary>
+            重置解析器到初始状态，一般在<see cref="M:TouchSocket.Core.DataHandlingAdapter.OnError(System.Exception,System.String,System.Boolean,System.Boolean)" />被触发时，由返回值指示是否调用。
+            </summary>
     </member>
     <member name="P:TouchSocket.Sockets.UdpDataHandlingAdapter.SendCallBack">
       <summary>
@@ -9790,6 +11817,15 @@
         </markup>
       </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.UdpKcpPackageAdapter.PreviewReceived(System.Net.EndPoint,TouchSocket.Core.ByteBlock)">
+      <summary>
+    
+            当接收到数据后预先处理数据,然后调用<see cref="M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoReceived(System.Net.EndPoint,TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)" />处理数据
+            
+  </summary>
+      <param name="remoteEndPoint"></param>
+      <param name="byteBlock"></param>
+    </member>
     <member name="T:TouchSocket.Sockets.UdpNetworkMonitor">
       <summary>
             Udp监听器
@@ -9966,6 +12002,91 @@
             最大传输单元
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.UdpPackageAdapter.PreviewReceived(System.Net.EndPoint,TouchSocket.Core.ByteBlock)">
+      <summary>
+    
+            当接收到数据后预先处理数据,然后调用<see cref="M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoReceived(System.Net.EndPoint,TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)" />处理数据
+            
+  </summary>
+      <param name="remoteEndPoint"></param>
+      <param name="byteBlock"></param>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)">
+      <summary>
+    
+            当发送数据前预先处理数据
+            
+  </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+    
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            
+  </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="transferBytes">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>transferBytes</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpPackageAdapter.Reset">
+      <summary>
+    
+            重置解析器到初始状态，一般在<see cref="M:TouchSocket.Core.DataHandlingAdapter.OnError(System.Exception,System.String,System.Boolean,System.Boolean)" />被触发时，由返回值指示是否调用。
+            
+  </summary>
+    </member>
     <member name="P:TouchSocket.Sockets.UdpPackageAdapter.Timeout">
       <summary>
             接收超时时间，默认5000ms
@@ -10045,6 +12166,28 @@
       <summary>
             当收到数据时
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpSession.ReceivedData(TouchSocket.Sockets.UdpReceivedDataEventArgs)">
+      <summary>
+            处理已接收到的数据。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpSession.ReceivedData(TouchSocket.Sockets.UdpReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpSession.ReceivedData(TouchSocket.Sockets.UdpReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="T:TouchSocket.Sockets.UdpSessionBase">
       <summary>
@@ -10239,6 +12382,22 @@
         </markup>
       </returns>
     </member>
+    <member name="M:TouchSocket.Sockets.UdpSessionBase.Dispose(System.Boolean)">
+      <summary>
+    
+    
+            调用释放，切换释放状态。
+            
+  
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Sockets.UdpSessionBase</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="M:TouchSocket.Sockets.UdpSessionBase.DropMulticastGroup(System.Net.IPAddress)">
       <summary>
             退出组播
@@ -10252,6 +12411,24 @@
           </include>
         </markup>
       </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpSessionBase.HandleSendingData(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当即将发送时，如果覆盖父类方法，则不会触发插件。
+            </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpSessionBase.HandleSendingData(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="buffer">数据缓存区</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+      <returns>返回值表示是否允许发送</returns>
     </member>
     <member name="M:TouchSocket.Sockets.UdpSessionBase.JoinMulticastGroup(System.Net.IPAddress)">
       <summary>
@@ -10281,10 +12458,40 @@
             
   </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.UdpSessionBase.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpSessionBase.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Sockets.UdpSessionBase.Monitor">
       <summary>
             监听器
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpSessionBase.PreviewBind(System.Net.Sockets.Socket)">
+      <summary>
+            在Socket初始化对象后，Bind之前调用。
+            可用于设置Socket参数。
+            父类方法可覆盖。
+            </summary>
+      <param name="socket">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socket</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpSessionBase.PreviewBind(System.Net.Sockets.Socket)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="P:TouchSocket.Sockets.UdpSessionBase.Protocol">
       <summary>
@@ -10292,6 +12499,28 @@
             终端协议
             
   </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpSessionBase.ReceivedData(TouchSocket.Sockets.UdpReceivedDataEventArgs)">
+      <summary>
+            处理已接收到的数据。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpSessionBase.ReceivedData(TouchSocket.Sockets.UdpReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpSessionBase.ReceivedData(TouchSocket.Sockets.UdpReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="P:TouchSocket.Sockets.UdpSessionBase.RemoteIPHost">
       <summary>
@@ -10640,6 +12869,12 @@
       <summary>
             获取服务器状态
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpSessionBase.SetAdapter(TouchSocket.Sockets.UdpDataHandlingAdapter)">
+      <summary>
+            设置适配器，该方法不会检验<see cref="P:TouchSocket.Sockets.UdpSessionBase.CanSetDataHandlingAdapter" />的值。
+            </summary>
+      <param name="adapter"></param>
     </member>
     <member name="M:TouchSocket.Sockets.UdpSessionBase.SetDataHandlingAdapter(TouchSocket.Sockets.UdpDataHandlingAdapter)">
       <summary>

@@ -148,6 +148,20 @@
       <param name="id"></param>
       <returns></returns>
     </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpService.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpService.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpService.MaxCount">
       <summary>
         <markup>
@@ -324,6 +338,36 @@
       </returns>
       <exception cref="T:System.NotSupportedException"></exception>
     </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.DirectResetId(System.String)">
+      <summary>
+            直接重置Id。
+            </summary>
+      <param name="newId">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>newId</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.DirectResetId(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.Exception"></exception>
+      <exception cref="T:TouchSocket.Sockets.ClientNotFindException"></exception>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.DmtpActor">
       <summary>
             提供Dmtp协议的最基础功能件
@@ -348,6 +392,86 @@
       <summary>
             最后一次发送数据的时间
             </summary>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.OnCreateChannel(TouchSocket.Dmtp.CreateChannelEventArgs)">
+      <summary>
+            当创建通道
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.OnCreateChannel(TouchSocket.Dmtp.CreateChannelEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.OnCreateChannel(TouchSocket.Dmtp.CreateChannelEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.OnHandshaked(TouchSocket.Dmtp.DmtpVerifyEventArgs)">
+      <summary>
+            在完成握手连接时
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.OnHandshaked(TouchSocket.Dmtp.DmtpVerifyEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.OnHandshaked(TouchSocket.Dmtp.DmtpVerifyEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.OnHandshaking(TouchSocket.Dmtp.DmtpVerifyEventArgs)">
+      <summary>
+            在验证Token时
+            </summary>
+      <param name="e">参数</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.OnHandshaking(TouchSocket.Dmtp.DmtpVerifyEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.OnRouting(TouchSocket.Dmtp.PackageRouterEventArgs)">
+      <summary>
+            在需要转发路由包时。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.OnRouting(TouchSocket.Dmtp.PackageRouterEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.OnRouting(TouchSocket.Dmtp.PackageRouterEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="P:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.PluginManager">
       <summary>

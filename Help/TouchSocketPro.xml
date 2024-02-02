@@ -79,6 +79,29 @@
             构造函数
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.LicenceKeyInvalidException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            构造函数
+            </summary>
+      <param name="info">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>info</parameter>
+            <parameter>M:TouchSocket.Core.LicenceKeyInvalidException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="context">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>context</parameter>
+            <parameter>M:TouchSocket.Core.LicenceKeyInvalidException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="M:TouchSocket.Core.LicenceKeyInvalidException.#ctor(System.String)">
       <summary>
             构造函数
@@ -546,6 +569,21 @@
   
   </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.TLVDataHandlingAdapter.GetInstance">
+      <summary>
+    
+            获取泛型实例。
+            
+  </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataHandlingAdapter.GetInstance</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:TouchSocket.Sockets.TLVDataHandlingAdapter.HeaderLength">
       <summary>
     
@@ -560,6 +598,58 @@
             <see cref="F:TouchSocket.Core.FixedHeaderType.Ushort" />为65535字节
             <see cref="F:TouchSocket.Core.FixedHeaderType.Int" />为2147483647字节。该值会再次由MaxPackageSize限制。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataHandlingAdapter.OnReceivingSuccess(TouchSocket.Sockets.TLVDataFrame)">
+      <summary>
+    
+            即将执行<see cref="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoReceived(TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)" />。
+            
+  </summary>
+      <param name="request"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataHandlingAdapter.OnReceivingSuccess(TouchSocket.Sockets.TLVDataFrame)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataHandlingAdapter.PreviewSend(TouchSocket.Core.IRequestInfo)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataHandlingAdapter.PreviewSend(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Sockets.TLVDataHandlingAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataHandlingAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TLVDataHandlingAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="T:TouchSocket.Sockets.TLVPlugin">
       <summary>

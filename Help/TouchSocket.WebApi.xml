@@ -665,11 +665,29 @@
             WebApiDispatchProxy
             </summary>
     </member>
+    <member name="M:TouchSocket.WebApi.WebApiDispatchProxy.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.WebApi.WebApiDispatchProxy</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="T:TouchSocket.WebApi.WebApiDispatchProxy`1">
       <summary>
             WebApiDispatchProxy
             </summary>
       <typeparam name="TClient"></typeparam>
+    </member>
+    <member name="M:TouchSocket.WebApi.WebApiDispatchProxy`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.WebApi.WebApiDispatchProxy`1</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="T:TouchSocket.WebApi.WebApiDispatchProxy`2">
       <summary>
@@ -677,6 +695,15 @@
             </summary>
       <typeparam name="TClient"></typeparam>
       <typeparam name="TAttribute"></typeparam>
+    </member>
+    <member name="M:TouchSocket.WebApi.WebApiDispatchProxy`2.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.WebApi.WebApiDispatchProxy`2</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="T:TouchSocket.WebApi.WebApiEventArgs">
       <summary>
@@ -813,6 +840,12 @@
       <summary>
             获取Get函数路由映射图
             </summary>
+    </member>
+    <member name="M:TouchSocket.WebApi.WebApiParserPlugin.Loaded(TouchSocket.Core.IPluginManager)">
+      <summary>
+            在插件被成功添加在<see cref="T:TouchSocket.Core.IPluginManager" />时执行。
+            </summary>
+      <param name="pluginManager"></param>
     </member>
     <member name="P:TouchSocket.WebApi.WebApiParserPlugin.PostRouteMap">
       <summary>

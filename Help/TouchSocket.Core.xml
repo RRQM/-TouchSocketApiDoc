@@ -717,6 +717,18 @@
       <param name="initialState">是否包含初始信号</param>
       <param name="autoReset">是否自动重置</param>
     </member>
+    <member name="M:TouchSocket.Core.AsyncResetEvent.Dispose(System.Boolean)">
+      <summary>
+            调用释放，切换释放状态。
+            </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.AsyncResetEvent</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="M:TouchSocket.Core.AsyncResetEvent.Reset">
       <summary>
             重置
@@ -798,6 +810,80 @@
       <summary>
             可读
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.BlockReader.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.BlockReader</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.BlockReader.Finalize">
+      <summary>
+            析构函数
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.BlockReader.Input(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            传输输入.
+            当以length为0结束。
+            否则读取端会超时。
+            </summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Core.BlockReader.Input(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Core.BlockReader.Input(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Core.BlockReader.Input(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.BlockReader.Input(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.BlockReader.InputComplate">
+      <summary>
+            输入完成
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.BlockReader.InputComplate</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="M:TouchSocket.Core.BlockReader.PeekRead(System.Byte[],System.Int32,System.Int32)">
       <summary>
@@ -889,6 +975,11 @@
         </markup>
       </summary>
     </member>
+    <member name="M:TouchSocket.Core.BlockReader.ResetBlock">
+      <summary>
+            重置阻塞
+            </summary>
+    </member>
     <member name="T:TouchSocket.Core.BlockReadStream">
       <summary>
             阻塞式单项读取流。
@@ -908,6 +999,53 @@
       <summary>
             不可使用
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.BlockReadStream.Dispose(System.Boolean)">
+      <summary>
+    Releases the unmanaged resources used by the <see cref="T:System.IO.Stream" /> and optionally releases the managed resources.
+  </summary>
+      <param name="disposing"></param>
+    </member>
+    <member name="M:TouchSocket.Core.BlockReadStream.Input(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            传输输入.
+            必须以length为0结束。读取端会超时。
+            </summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Core.BlockReadStream.Input(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Core.BlockReadStream.Input(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Core.BlockReadStream.Input(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.BlockReadStream.Input(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="P:TouchSocket.Core.BlockReadStream.Length">
       <summary>
@@ -3059,6 +3197,105 @@
             CacheDataHandlingAdapter
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.CacheDataHandlingAdapter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.CacheDataHandlingAdapter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TouchSocket.Core.CacheDataHandlingAdapter.Cache(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            将数据缓存起来
+            </summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Core.CacheDataHandlingAdapter.Cache(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Core.CacheDataHandlingAdapter.Cache(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Core.CacheDataHandlingAdapter.Cache(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:TouchSocket.Core.CacheDataHandlingAdapter.m_cacheByteBlock">
+      <summary>
+            缓存数据，如果需要手动释放，请先判断，然后到调用<see cref="M:System.IDisposable.Dispose" />后，再置空；
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.CacheDataHandlingAdapter.Reset">
+      <summary>
+    
+            重置解析器到初始状态，一般在<see cref="M:TouchSocket.Core.DataHandlingAdapter.OnError(System.Exception,System.String,System.Boolean,System.Boolean)" />被触发时，由返回值指示是否调用。
+            
+  </summary>
+    </member>
+    <member name="M:TouchSocket.Core.CacheDataHandlingAdapter.TryGetCache(System.Byte[]@)">
+      <summary>
+            获取当前缓存，
+            如果缓存超时，或者不存在，均会返回false。
+            如果获取成功，则会清空内部缓存。
+            </summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Core.CacheDataHandlingAdapter.TryGetCache(System.Byte[]@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.CacheDataHandlingAdapter.TryGetCache(System.Byte[]@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.CacheDataHandlingAdapter.TryGetCache(TouchSocket.Core.ByteBlock@)">
+      <summary>
+            获取缓存，注意：获取的ByteBlock需要手动释放。
+            </summary>
+      <param name="byteBlock">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>byteBlock</parameter>
+            <parameter>M:TouchSocket.Core.CacheDataHandlingAdapter.TryGetCache(TouchSocket.Core.ByteBlock@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.CacheDataHandlingAdapter.TryGetCache(TouchSocket.Core.ByteBlock@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="T:TouchSocket.Core.CacheEntry`2">
       <summary>
             缓存实体
@@ -4381,6 +4618,15 @@
             具有配置设置的对象
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.ConfigObject.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.ConfigObject</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="P:TouchSocket.Core.ConfigObject.Config">
       <summary>
             设置项
@@ -4460,6 +4706,49 @@
       <summary>
             默认的实例
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.ConsoleLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)">
+      <summary>
+    
+            筛选日志后输出
+            
+  </summary>
+      <param name="logLevel">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>logLevel</parameter>
+            <parameter>M:TouchSocket.Core.ConsoleLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="source">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>source</parameter>
+            <parameter>M:TouchSocket.Core.ConsoleLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="message">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>message</parameter>
+            <parameter>M:TouchSocket.Core.ConsoleLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="exception">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>exception</parameter>
+            <parameter>M:TouchSocket.Core.ConsoleLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="T:TouchSocket.Core.Container">
       <summary>
@@ -6639,6 +6928,16 @@
             最后一次递增时间
             </summary>
     </member>
+    <member name="F:TouchSocket.Core.Counter.m_count">
+      <summary>
+            周期内的累计计数值。
+            </summary>
+    </member>
+    <member name="F:TouchSocket.Core.Counter.m_lastIncrement">
+      <summary>
+            最后一次递增时间
+            </summary>
+    </member>
     <member name="P:TouchSocket.Core.Counter.OnPeriod">
       <summary>
             当达到一个周期时触发。
@@ -7702,10 +8001,49 @@
         </markup>
       </typeparam>
     </member>
+    <member name="M:TouchSocket.Core.CustomBetweenAndDataHandlingAdapter`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.CustomBetweenAndDataHandlingAdapter`1</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="P:TouchSocket.Core.CustomBetweenAndDataHandlingAdapter`1.EndCode">
       <summary>
             结束字符，不可以为null，不可以为0长度，必须具有有效值。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.CustomBetweenAndDataHandlingAdapter`1.Filter(TouchSocket.Core.ByteBlock@,System.Boolean,`0@,System.Int32@)">
+      <summary>
+            筛选解析数据。实例化的TRequest会一直保存，直至解析成功，或手动清除。
+            <para>当不满足解析条件时，请返回<see cref="F:TouchSocket.Core.FilterResult.Cache" />，此时会保存<see cref="P:TouchSocket.Core.ByteBlock.CanReadLen" />的数据</para><para>当数据部分异常时，请移动<see cref="P:TouchSocket.Core.ByteBlock.Pos" />到指定位置，然后返回<see cref="F:TouchSocket.Core.FilterResult.GoOn" /></para><para>当完全满足解析条件时，请返回<see cref="F:TouchSocket.Core.FilterResult.Success" />最后将<see cref="P:TouchSocket.Core.ByteBlock.Pos" />移至指定位置。</para></summary>
+      <param name="byteBlock">字节块</param>
+      <param name="beCached">是否为上次遗留对象，当该参数为True时，request也将是上次实例化的对象。</param>
+      <param name="request">对象。</param>
+      <param name="tempCapacity">缓存容量。当需要首次缓存时，指示申请的ByteBlock的容量。合理的值可避免ByteBlock扩容带来的性能消耗。</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.CustomBetweenAndDataHandlingAdapter`1.Filter(TouchSocket.Core.ByteBlock@,System.Boolean,`0@,System.Int32@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.CustomBetweenAndDataHandlingAdapter`1.GetInstance">
+      <summary>
+            获取泛型实例。
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.CustomBetweenAndDataHandlingAdapter`1.GetInstance</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="P:TouchSocket.Core.CustomBetweenAndDataHandlingAdapter`1.MinSize">
       <summary>
@@ -7731,6 +8069,45 @@
         </markup>
       </typeparam>
     </member>
+    <member name="M:TouchSocket.Core.CustomBigFixedHeaderDataHandlingAdapter`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.CustomBigFixedHeaderDataHandlingAdapter`1</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TouchSocket.Core.CustomBigFixedHeaderDataHandlingAdapter`1.Filter(TouchSocket.Core.ByteBlock@,System.Boolean,`0@,System.Int32@)">
+      <summary>
+            筛选解析数据。实例化的TRequest会一直保存，直至解析成功，或手动清除。
+            <para>当不满足解析条件时，请返回<see cref="F:TouchSocket.Core.FilterResult.Cache" />，此时会保存<see cref="P:TouchSocket.Core.ByteBlock.CanReadLen" />的数据</para><para>当数据部分异常时，请移动<see cref="P:TouchSocket.Core.ByteBlock.Pos" />到指定位置，然后返回<see cref="F:TouchSocket.Core.FilterResult.GoOn" /></para><para>当完全满足解析条件时，请返回<see cref="F:TouchSocket.Core.FilterResult.Success" />最后将<see cref="P:TouchSocket.Core.ByteBlock.Pos" />移至指定位置。</para></summary>
+      <param name="byteBlock">字节块</param>
+      <param name="beCached">是否为上次遗留对象，当该参数为True时，request也将是上次实例化的对象。</param>
+      <param name="request">对象。</param>
+      <param name="tempCapacity">缓存容量。当需要首次缓存时，指示申请的ByteBlock的容量。合理的值可避免ByteBlock扩容带来的性能消耗。</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.CustomBigFixedHeaderDataHandlingAdapter`1.Filter(TouchSocket.Core.ByteBlock@,System.Boolean,`0@,System.Int32@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.CustomBigFixedHeaderDataHandlingAdapter`1.GetInstance">
+      <summary>
+            获取泛型实例。
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.CustomBigFixedHeaderDataHandlingAdapter`1.GetInstance</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:TouchSocket.Core.CustomBigFixedHeaderDataHandlingAdapter`1.HeaderLength">
       <summary>
             固定包头的长度。
@@ -7751,6 +8128,15 @@
         </markup>
       </typeparam>
     </member>
+    <member name="M:TouchSocket.Core.CustomDataHandlingAdapter`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.CustomDataHandlingAdapter`1</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="P:TouchSocket.Core.CustomDataHandlingAdapter`1.CanSendRequestInfo">
       <summary>
     
@@ -7761,6 +8147,71 @@
     <member name="P:TouchSocket.Core.CustomDataHandlingAdapter`1.CanSplicingSend">
       <summary>
             默认不支持拼接发送
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.CustomDataHandlingAdapter`1.Filter(TouchSocket.Core.ByteBlock@,System.Boolean,`0@,System.Int32@)">
+      <summary>
+            筛选解析数据。实例化的TRequest会一直保存，直至解析成功，或手动清除。
+            <para>当不满足解析条件时，请返回<see cref="F:TouchSocket.Core.FilterResult.Cache" />，此时会保存<see cref="P:TouchSocket.Core.ByteBlock.CanReadLen" />的数据</para><para>当数据部分异常时，请移动<see cref="P:TouchSocket.Core.ByteBlock.Pos" />到指定位置，然后返回<see cref="F:TouchSocket.Core.FilterResult.GoOn" /></para><para>当完全满足解析条件时，请返回<see cref="F:TouchSocket.Core.FilterResult.Success" />最后将<see cref="P:TouchSocket.Core.ByteBlock.Pos" />移至指定位置。</para></summary>
+      <param name="byteBlock">字节块</param>
+      <param name="beCached">是否为上次遗留对象，当该参数为True时，request也将是上次实例化的对象。</param>
+      <param name="request">对象。</param>
+      <param name="tempCapacity">缓存容量。当需要首次缓存时，指示申请的ByteBlock的容量。合理的值可避免ByteBlock扩容带来的性能消耗。</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.CustomDataHandlingAdapter`1.Filter(TouchSocket.Core.ByteBlock@,System.Boolean,`0@,System.Int32@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.CustomDataHandlingAdapter`1.OnReceivedSuccess(`0)">
+      <summary>
+            成功执行接收以后。
+            </summary>
+      <param name="request"></param>
+    </member>
+    <member name="M:TouchSocket.Core.CustomDataHandlingAdapter`1.OnReceivingSuccess(`0)">
+      <summary>
+            即将执行<see cref="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoReceived(TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)" />。
+            </summary>
+      <param name="request"></param>
+      <returns>返回值标识是否继续执行</returns>
+    </member>
+    <member name="M:TouchSocket.Core.CustomDataHandlingAdapter`1.PreviewReceived(TouchSocket.Core.ByteBlock)">
+      <summary>
+    
+            当接收到数据后预先处理数据,然后调用<see cref="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoReceived(TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)" />处理数据
+            
+  </summary>
+      <param name="byteBlock"></param>
+    </member>
+    <member name="M:TouchSocket.Core.CustomDataHandlingAdapter`1.PreviewSend(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+    
+            当发送数据前预先处理数据
+            
+  </summary>
+      <param name="buffer">数据</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+    </member>
+    <member name="M:TouchSocket.Core.CustomDataHandlingAdapter`1.Reset">
+      <summary>
+    
+            重置解析器到初始状态，一般在<see cref="M:TouchSocket.Core.DataHandlingAdapter.OnError(System.Exception,System.String,System.Boolean,System.Boolean)" />被触发时，由返回值指示是否调用。
+            
+  </summary>
+    </member>
+    <member name="F:TouchSocket.Core.CustomDataHandlingAdapter`1.TempByteBlock">
+      <summary>
+            缓存数据，如果需要手动释放，请先判断，然后到调用<see cref="M:System.IDisposable.Dispose" />后，再置空；
+            </summary>
+    </member>
+    <member name="F:TouchSocket.Core.CustomDataHandlingAdapter`1.TempRequest">
+      <summary>
+            缓存对象。
             </summary>
     </member>
     <member name="T:TouchSocket.Core.CustomFixedHeaderByteBlockDataHandlingAdapter`1">
@@ -7776,6 +8227,45 @@
           </include>
         </markup>
       </typeparam>
+    </member>
+    <member name="M:TouchSocket.Core.CustomFixedHeaderByteBlockDataHandlingAdapter`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.CustomFixedHeaderByteBlockDataHandlingAdapter`1</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TouchSocket.Core.CustomFixedHeaderByteBlockDataHandlingAdapter`1.Filter(TouchSocket.Core.ByteBlock@,System.Boolean,`0@,System.Int32@)">
+      <summary>
+            筛选解析数据。实例化的TRequest会一直保存，直至解析成功，或手动清除。
+            <para>当不满足解析条件时，请返回<see cref="F:TouchSocket.Core.FilterResult.Cache" />，此时会保存<see cref="P:TouchSocket.Core.ByteBlock.CanReadLen" />的数据</para><para>当数据部分异常时，请移动<see cref="P:TouchSocket.Core.ByteBlock.Pos" />到指定位置，然后返回<see cref="F:TouchSocket.Core.FilterResult.GoOn" /></para><para>当完全满足解析条件时，请返回<see cref="F:TouchSocket.Core.FilterResult.Success" />最后将<see cref="P:TouchSocket.Core.ByteBlock.Pos" />移至指定位置。</para></summary>
+      <param name="byteBlock">字节块</param>
+      <param name="beCached">是否为上次遗留对象，当该参数为True时，request也将是上次实例化的对象。</param>
+      <param name="request">对象。</param>
+      <param name="tempCapacity">缓存容量。当需要首次缓存时，指示申请的ByteBlock的容量。合理的值可避免ByteBlock扩容带来的性能消耗。</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.CustomFixedHeaderByteBlockDataHandlingAdapter`1.Filter(TouchSocket.Core.ByteBlock@,System.Boolean,`0@,System.Int32@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.CustomFixedHeaderByteBlockDataHandlingAdapter`1.GetInstance">
+      <summary>
+            获取泛型实例。
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.CustomFixedHeaderByteBlockDataHandlingAdapter`1.GetInstance</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="P:TouchSocket.Core.CustomFixedHeaderByteBlockDataHandlingAdapter`1.HeaderLength">
       <summary>
@@ -7795,6 +8285,45 @@
           </include>
         </markup>
       </typeparam>
+    </member>
+    <member name="M:TouchSocket.Core.CustomFixedHeaderDataHandlingAdapter`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.CustomFixedHeaderDataHandlingAdapter`1</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TouchSocket.Core.CustomFixedHeaderDataHandlingAdapter`1.Filter(TouchSocket.Core.ByteBlock@,System.Boolean,`0@,System.Int32@)">
+      <summary>
+            筛选解析数据。实例化的TRequest会一直保存，直至解析成功，或手动清除。
+            <para>当不满足解析条件时，请返回<see cref="F:TouchSocket.Core.FilterResult.Cache" />，此时会保存<see cref="P:TouchSocket.Core.ByteBlock.CanReadLen" />的数据</para><para>当数据部分异常时，请移动<see cref="P:TouchSocket.Core.ByteBlock.Pos" />到指定位置，然后返回<see cref="F:TouchSocket.Core.FilterResult.GoOn" /></para><para>当完全满足解析条件时，请返回<see cref="F:TouchSocket.Core.FilterResult.Success" />最后将<see cref="P:TouchSocket.Core.ByteBlock.Pos" />移至指定位置。</para></summary>
+      <param name="byteBlock">字节块</param>
+      <param name="beCached">是否为上次遗留对象，当该参数为True时，request也将是上次实例化的对象。</param>
+      <param name="request">对象。</param>
+      <param name="tempCapacity">缓存容量。当需要首次缓存时，指示申请的ByteBlock的容量。合理的值可避免ByteBlock扩容带来的性能消耗。</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.CustomFixedHeaderDataHandlingAdapter`1.Filter(TouchSocket.Core.ByteBlock@,System.Boolean,`0@,System.Int32@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.CustomFixedHeaderDataHandlingAdapter`1.GetInstance">
+      <summary>
+            获取泛型实例。
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.CustomFixedHeaderDataHandlingAdapter`1.GetInstance</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="P:TouchSocket.Core.CustomFixedHeaderDataHandlingAdapter`1.HeaderLength">
       <summary>
@@ -7852,10 +8381,58 @@
         </markup>
       </typeparam>
     </member>
+    <member name="M:TouchSocket.Core.CustomUnfixedHeaderDataHandlingAdapter`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.CustomUnfixedHeaderDataHandlingAdapter`1</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TouchSocket.Core.CustomUnfixedHeaderDataHandlingAdapter`1.Filter(TouchSocket.Core.ByteBlock@,System.Boolean,`0@,System.Int32@)">
+      <summary>
+            筛选解析数据。实例化的TRequest会一直保存，直至解析成功，或手动清除。
+            <para>当不满足解析条件时，请返回<see cref="F:TouchSocket.Core.FilterResult.Cache" />，此时会保存<see cref="P:TouchSocket.Core.ByteBlock.CanReadLen" />的数据</para><para>当数据部分异常时，请移动<see cref="P:TouchSocket.Core.ByteBlock.Pos" />到指定位置，然后返回<see cref="F:TouchSocket.Core.FilterResult.GoOn" /></para><para>当完全满足解析条件时，请返回<see cref="F:TouchSocket.Core.FilterResult.Success" />最后将<see cref="P:TouchSocket.Core.ByteBlock.Pos" />移至指定位置。</para></summary>
+      <param name="byteBlock">字节块</param>
+      <param name="beCached">是否为上次遗留对象，当该参数为True时，request也将是上次实例化的对象。</param>
+      <param name="request">对象。</param>
+      <param name="tempCapacity">缓存容量。当需要首次缓存时，指示申请的ByteBlock的容量。合理的值可避免ByteBlock扩容带来的性能消耗。</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.CustomUnfixedHeaderDataHandlingAdapter`1.Filter(TouchSocket.Core.ByteBlock@,System.Boolean,`0@,System.Int32@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.CustomUnfixedHeaderDataHandlingAdapter`1.GetInstance">
+      <summary>
+            获取泛型实例。
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.CustomUnfixedHeaderDataHandlingAdapter`1.GetInstance</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="T:TouchSocket.Core.DataHandlingAdapter">
       <summary>
             数据处理适配器
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.DataHandlingAdapter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.DataHandlingAdapter</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="P:TouchSocket.Core.DataHandlingAdapter.CanSendRequestInfo">
       <summary>
@@ -7877,6 +8454,15 @@
             获取或设置适配器能接收的最大数据包长度。默认1024*1024 Byte。
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.DataHandlingAdapter.OnError(System.Exception,System.String,System.Boolean,System.Boolean)">
+      <summary>
+            在解析时发生错误。
+            </summary>
+      <param name="ex">异常</param>
+      <param name="error">错误异常</param>
+      <param name="reset">是否调用<see cref="M:TouchSocket.Core.DataHandlingAdapter.Reset" /></param>
+      <param name="log">是否记录日志</param>
+    </member>
     <member name="M:TouchSocket.Core.DataHandlingAdapter.OnLoaded(System.Object)">
       <summary>
             当适配器在被第一次加载时调用。
@@ -7895,6 +8481,11 @@
     <member name="P:TouchSocket.Core.DataHandlingAdapter.Owner">
       <summary>
             适配器所有者
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.DataHandlingAdapter.Reset">
+      <summary>
+            重置解析器到初始状态，一般在<see cref="M:TouchSocket.Core.DataHandlingAdapter.OnError(System.Exception,System.String,System.Boolean,System.Boolean)" />被触发时，由返回值指示是否调用。
             </summary>
     </member>
     <member name="T:TouchSocket.Core.DataHandlingAdapterExtension">
@@ -8386,6 +8977,29 @@
         </markup>
       </summary>
     </member>
+    <member name="M:TouchSocket.Core.DependencyObject.CloneTo(TouchSocket.Core.DependencyObject,System.Boolean)">
+      <summary>
+            将当前对象的依赖项克隆到目标对象中
+            </summary>
+      <param name="dependencyObject">目标对象</param>
+      <param name="overwrite">当目标对象中存在相同依赖项时，是或否覆盖</param>
+      <exception cref="T:System.ArgumentNullException"></exception>
+      <exception cref="T:System.ObjectDisposedException"></exception>
+    </member>
+    <member name="M:TouchSocket.Core.DependencyObject.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.DependencyObject</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="M:TouchSocket.Core.DependencyObject.GetValue``1(TouchSocket.Core.IDependencyProperty{``0})">
       <summary>
             获取依赖注入的值，当没有注入时，会返回默认值。
@@ -8668,6 +9282,11 @@
         </markup>
       </returns>
     </member>
+    <member name="F:TouchSocket.Core.DependencyProperty`1.m_name">
+      <summary>
+            属性名称
+            </summary>
+    </member>
     <member name="P:TouchSocket.Core.DependencyProperty`1.Name">
       <summary>
     
@@ -8755,6 +9374,11 @@
     <member name="T:TouchSocket.Core.DependencyPropertyBase">
       <summary>
             DependencyPropertyBase
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.DependencyPropertyBase.#ctor">
+      <summary>
+            依赖项属性
             </summary>
     </member>
     <member name="P:TouchSocket.Core.DependencyPropertyBase.Id">
@@ -9010,6 +9634,18 @@
       <summary>
             释放资源。内部已经处理了<see cref="M:System.GC.SuppressFinalize(System.Object)" /></summary>
     </member>
+    <member name="M:TouchSocket.Core.DisposableObject.Dispose(System.Boolean)">
+      <summary>
+            调用释放，切换释放状态。
+            </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.DisposableObject</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="M:TouchSocket.Core.DisposableObject.DisposeAsync">
       <summary>
             异步释放资源。内部已经处理了<see cref="M:System.GC.SuppressFinalize(System.Object)" /></summary>
@@ -9022,12 +9658,31 @@
         </markup>
       </returns>
     </member>
+    <member name="M:TouchSocket.Core.DisposableObject.DisposeAsyncCore">
+      <summary>
+            异步释放资源。注意：此方法仅在调用<see cref="M:System.IAsyncDisposable.DisposeAsync" />时有效。
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.DisposableObject.DisposeAsyncCore</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:TouchSocket.Core.DisposableObject.DisposedValue">
       <summary>
     
             标识该对象是否已被释放
             
   </summary>
+    </member>
+    <member name="M:TouchSocket.Core.DisposableObject.ThrowIfDisposed">
+      <summary>
+            判断是否已经被释放，如果是，则抛出异常。
+            </summary>
+      <exception cref="T:System.ObjectDisposedException"></exception>
     </member>
     <member name="T:TouchSocket.Core.DynamicBuilderType">
       <summary>
@@ -9158,6 +9813,49 @@
             </summary>
       <param name="action">参数依次为：日志类型，触发源，消息，异常</param>
     </member>
+    <member name="M:TouchSocket.Core.EasyLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)">
+      <summary>
+    
+            筛选日志后输出
+            
+  </summary>
+      <param name="logLevel">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>logLevel</parameter>
+            <parameter>M:TouchSocket.Core.EasyLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="source">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>source</parameter>
+            <parameter>M:TouchSocket.Core.EasyLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="message">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>message</parameter>
+            <parameter>M:TouchSocket.Core.EasyLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="exception">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>exception</parameter>
+            <parameter>M:TouchSocket.Core.EasyLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="T:TouchSocket.Core.EasyTask">
       <summary>
             易用组件
@@ -9262,6 +9960,24 @@
             </summary>
       <typeparam name="T"></typeparam>
     </member>
+    <member name="M:TouchSocket.Core.FastBinaryConverter`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.FastBinaryConverter`1</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TouchSocket.Core.FastBinaryConverter`1.Read(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            读取对象，不需要考虑为null的情况。
+            </summary>
+      <param name="buffer">读取的内存</param>
+      <param name="offset">内存偏移</param>
+      <param name="len">该数据对象应该占用的长度</param>
+      <returns>返回实际对象</returns>
+    </member>
     <member name="M:TouchSocket.Core.FastBinaryConverter`1.TouchSocket#Core#IFastBinaryConverter#Read(System.Byte[],System.Int32,System.Int32)">
       <summary>
             读取对象，不需要考虑为null的情况。
@@ -9272,6 +9988,14 @@
       <returns>返回实际对象</returns>
     </member>
     <member name="M:TouchSocket.Core.FastBinaryConverter`1.TouchSocket#Core#IFastBinaryConverter#Write(TouchSocket.Core.ByteBlock,System.Object)">
+      <summary>
+            写入对象，不需要考虑为null的情况。
+            </summary>
+      <param name="byteBlock">存储内存块</param>
+      <param name="obj">需要序列化的对象</param>
+      <returns>返回该对象实际占用的字节长度。</returns>
+    </member>
+    <member name="M:TouchSocket.Core.FastBinaryConverter`1.Write(TouchSocket.Core.ByteBlock,`0)">
       <summary>
             写入对象，不需要考虑为null的情况。
             </summary>
@@ -9352,6 +10076,66 @@
           </include>
         </markup>
       </typeparam>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.Boolean">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.Boolean</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.Byte">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.Byte</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.Char">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.Char</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.ClassObject">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.ClassObject</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.DateTime">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.DateTime</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.Decimal">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.Decimal</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="M:TouchSocket.Core.FastBinaryFormatter.Deserialize(System.Byte[],System.Int32,System.Type)">
       <summary>
@@ -9442,10 +10226,80 @@
         </markup>
       </returns>
     </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.Double">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.Double</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="F:TouchSocket.Core.FastBinaryFormatter.DynamicallyAccessed">
       <summary>
             DynamicallyAccessed
             </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.Empty">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.Empty</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.EnumObject">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.EnumObject</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.Int16">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.Int16</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.Int32">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.Int32</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.Int64">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.Int64</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.SByte">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.SByte</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="M:TouchSocket.Core.FastBinaryFormatter.Serialize``1(TouchSocket.Core.ByteBlock,``0@)">
       <summary>
@@ -9487,6 +10341,76 @@
           </include>
         </markup>
       </typeparam>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.Single">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.Single</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.String">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.String</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.StructObject">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.StructObject</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.TimeSpan">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.TimeSpan</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.UInt16">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.UInt16</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.UInt32">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.UInt32</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:TouchSocket.Core.FastBinaryFormatter.UInt64">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>F:TouchSocket.Core.FastBinaryFormatter.UInt64</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="T:TouchSocket.Core.FastConverterAttribute">
       <summary>
@@ -9571,6 +10495,29 @@
             快速序列化上下文
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.FastSerializerContext.AddConverter(System.Type,TouchSocket.Core.IFastBinaryConverter)">
+      <summary>
+            添加转换器
+            </summary>
+      <param name="type">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>type</parameter>
+            <parameter>M:TouchSocket.Core.FastSerializerContext.AddConverter(System.Type,TouchSocket.Core.IFastBinaryConverter)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="converter">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>converter</parameter>
+            <parameter>M:TouchSocket.Core.FastSerializerContext.AddConverter(System.Type,TouchSocket.Core.IFastBinaryConverter)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="M:TouchSocket.Core.FastSerializerContext.GetNewInstance(System.Type)">
       <summary>
             获取新实例
@@ -9631,10 +10578,70 @@
     Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
   </summary>
     </member>
+    <member name="M:TouchSocket.Core.FileLogger.Dispose(System.Boolean)">
+      <summary>
+            释放
+            </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.FileLogger</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.FileLogger.Finalize">
+      <summary>
+            析构函数
+            </summary>
+    </member>
     <member name="P:TouchSocket.Core.FileLogger.MaxSize">
       <summary>
             最大日志尺寸
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.FileLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)">
+      <summary>
+    
+            筛选日志后输出
+            
+  </summary>
+      <param name="logLevel">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>logLevel</parameter>
+            <parameter>M:TouchSocket.Core.FileLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="source">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>source</parameter>
+            <parameter>M:TouchSocket.Core.FileLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="message">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>message</parameter>
+            <parameter>M:TouchSocket.Core.FileLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="exception">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>exception</parameter>
+            <parameter>M:TouchSocket.Core.FileLogger.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="T:TouchSocket.Core.FilePool">
       <summary>
@@ -10165,9 +11172,28 @@
         </markup>
       </param>
     </member>
+    <member name="M:TouchSocket.Core.FileStorageReader.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.FileStorageReader</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Core.FileStorageReader.FileStorage">
       <summary>
             文件存储器
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.FileStorageReader.Finalize">
+      <summary>
+            析构函数
             </summary>
     </member>
     <member name="P:TouchSocket.Core.FileStorageReader.Pos">
@@ -10254,9 +11280,20 @@
     When overridden in a derived class, gets a value indicating whether the current stream supports writing.
   </summary>
     </member>
+    <member name="M:TouchSocket.Core.FileStorageStream.Dispose(System.Boolean)">
+      <summary>
+    Releases the unmanaged resources used by the <see cref="T:System.IO.Stream" /> and optionally releases the managed resources.
+  </summary>
+      <param name="disposing"></param>
+    </member>
     <member name="P:TouchSocket.Core.FileStorageStream.FileStorage">
       <summary>
             文件存储器
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.FileStorageStream.Finalize">
+      <summary>
+            析构函数
             </summary>
     </member>
     <member name="M:TouchSocket.Core.FileStorageStream.Flush">
@@ -10410,9 +11447,28 @@
         </markup>
       </param>
     </member>
+    <member name="M:TouchSocket.Core.FileStorageWriter.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.FileStorageWriter</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Core.FileStorageWriter.FileStorage">
       <summary>
             文件存储器
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.FileStorageWriter.Finalize">
+      <summary>
+            析构函数
             </summary>
     </member>
     <member name="P:TouchSocket.Core.FileStorageWriter.Pos">
@@ -10818,6 +11874,89 @@
             获取或设置包数据的最小值（默认为0）
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.FixedHeaderPackageAdapter.PreviewReceived(TouchSocket.Core.ByteBlock)">
+      <summary>
+            当接收到数据时处理数据
+            </summary>
+      <param name="byteBlock">数据流</param>
+    </member>
+    <member name="M:TouchSocket.Core.FixedHeaderPackageAdapter.PreviewSend(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当发送数据前处理数据
+            </summary>
+      <param name="buffer"></param>
+      <param name="offset"></param>
+      <param name="length"></param>
+    </member>
+    <member name="M:TouchSocket.Core.FixedHeaderPackageAdapter.PreviewSend(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+    
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            
+  </summary>
+      <param name="transferBytes"></param>
+    </member>
+    <member name="M:TouchSocket.Core.FixedHeaderPackageAdapter.PreviewSend(TouchSocket.Core.IRequestInfo)">
+      <summary>
+    
+            当发送数据前预先处理数据
+            
+  </summary>
+      <param name="requestInfo"></param>
+    </member>
+    <member name="M:TouchSocket.Core.FixedHeaderPackageAdapter.PreviewSendAsync(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="buffer">数据</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.FixedHeaderPackageAdapter.PreviewSendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.FixedHeaderPackageAdapter.PreviewSendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            </summary>
+      <param name="transferBytes">代发送数据组合</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.FixedHeaderPackageAdapter.PreviewSendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.FixedHeaderPackageAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="requestInfo"></param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.FixedHeaderPackageAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.FixedHeaderPackageAdapter.Reset">
+      <summary>
+    
+            重置解析器到初始状态，一般在<see cref="M:TouchSocket.Core.DataHandlingAdapter.OnError(System.Exception,System.String,System.Boolean,System.Boolean)" />被触发时，由返回值指示是否调用。
+            
+  </summary>
+    </member>
     <member name="T:TouchSocket.Core.FixedHeaderType">
       <summary>
             固定包头类型
@@ -10867,6 +12006,145 @@
       <summary>
             获取已设置的数据包的长度
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.FixedSizePackageAdapter.PreviewReceived(TouchSocket.Core.ByteBlock)">
+      <summary>
+            预处理
+            </summary>
+      <param name="byteBlock">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>byteBlock</parameter>
+            <parameter>M:TouchSocket.Core.FixedSizePackageAdapter.PreviewReceived(TouchSocket.Core.ByteBlock)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSend(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            预处理
+            </summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSend(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSend(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSend(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSend(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+    
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            
+  </summary>
+      <param name="transferBytes">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>transferBytes</parameter>
+            <parameter>M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSend(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSend(TouchSocket.Core.IRequestInfo)">
+      <summary>
+    
+            当发送数据前预先处理数据
+            
+  </summary>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSend(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSendAsync(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="buffer">数据</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            </summary>
+      <param name="transferBytes">代发送数据组合</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.FixedSizePackageAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.FixedSizePackageAdapter.Reset">
+      <summary>
+    
+            重置解析器到初始状态，一般在<see cref="M:TouchSocket.Core.DataHandlingAdapter.OnError(System.Exception,System.String,System.Boolean,System.Boolean)" />被触发时，由返回值指示是否调用。
+            
+  </summary>
     </member>
     <member name="T:TouchSocket.Core.FlowGate">
       <summary>
@@ -13634,6 +14912,15 @@
             日志基类
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.LoggerBase.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.LoggerBase</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="M:TouchSocket.Core.LoggerBase.Log(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)">
       <summary>
             日志记录
@@ -13680,6 +14967,47 @@
             日志输出级别。
             当<see cref="M:TouchSocket.Core.ILog.Log(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)" />的类型，在该设置之内时，才会真正输出日志。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.LoggerBase.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)">
+      <summary>
+            筛选日志后输出
+            </summary>
+      <param name="logLevel">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>logLevel</parameter>
+            <parameter>M:TouchSocket.Core.LoggerBase.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="source">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>source</parameter>
+            <parameter>M:TouchSocket.Core.LoggerBase.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="message">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>message</parameter>
+            <parameter>M:TouchSocket.Core.LoggerBase.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="exception">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>exception</parameter>
+            <parameter>M:TouchSocket.Core.LoggerBase.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="T:TouchSocket.Core.LoggerContainerExtension">
       <summary>
@@ -14660,6 +15988,49 @@
         </markup>
       </returns>
     </member>
+    <member name="M:TouchSocket.Core.LoggerGroup.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)">
+      <summary>
+    
+            筛选日志后输出
+            
+  </summary>
+      <param name="logLevel">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>logLevel</parameter>
+            <parameter>M:TouchSocket.Core.LoggerGroup.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="source">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>source</parameter>
+            <parameter>M:TouchSocket.Core.LoggerGroup.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="message">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>message</parameter>
+            <parameter>M:TouchSocket.Core.LoggerGroup.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="exception">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>exception</parameter>
+            <parameter>M:TouchSocket.Core.LoggerGroup.WriteLog(TouchSocket.Core.LogLevel,System.Object,System.String,System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="T:TouchSocket.Core.LoggerGroup`2">
       <summary>
             一组日志记录器
@@ -15046,6 +16417,11 @@
             已执行次数
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.LoopAction.Finalize">
+      <summary>
+            析构函数
+            </summary>
+    </member>
     <member name="P:TouchSocket.Core.LoopAction.Interval">
       <summary>
             执行间隔
@@ -15111,6 +16487,15 @@
       <summary>
             手动IOC容器
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.ManualContainer.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.ManualContainer</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="M:TouchSocket.Core.ManualContainer.BuildResolver">
       <summary>
@@ -15275,6 +16660,81 @@
         </markup>
       </returns>
       <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="M:TouchSocket.Core.ManualContainer.TryResolve(System.Type,System.Object@)">
+      <summary>
+            尝试解决Ioc容器所需类型。
+            <para>
+            本方法仅实现了在单例实例注册下的获取。
+            </para></summary>
+      <param name="fromType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>fromType</parameter>
+            <parameter>M:TouchSocket.Core.ManualContainer.TryResolve(System.Type,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="instance">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>instance</parameter>
+            <parameter>M:TouchSocket.Core.ManualContainer.TryResolve(System.Type,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.ManualContainer.TryResolve(System.Type,System.Object@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.ManualContainer.TryResolve(System.Type,System.Object@,System.String)">
+      <summary>
+            尝试解决Ioc容器所需类型。
+            <para>
+            本方法仅实现了在单例实例注册下的获取。
+            </para></summary>
+      <param name="fromType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>fromType</parameter>
+            <parameter>M:TouchSocket.Core.ManualContainer.TryResolve(System.Type,System.Object@,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="instance">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>instance</parameter>
+            <parameter>M:TouchSocket.Core.ManualContainer.TryResolve(System.Type,System.Object@,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="key">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>key</parameter>
+            <parameter>M:TouchSocket.Core.ManualContainer.TryResolve(System.Type,System.Object@,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.ManualContainer.TryResolve(System.Type,System.Object@,System.String)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="M:TouchSocket.Core.ManualContainer.Unregister(TouchSocket.Core.DependencyDescriptor)">
       <summary>
@@ -15789,6 +17249,15 @@
       <summary>
             用于表达式树的成员
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.Member.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.Member</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="T:TouchSocket.Core.MemberAccessor">
       <summary>
@@ -16559,6 +18028,50 @@
       <param name="method">方法信息</param>
       <param name="build">是否直接使用IL构建调用</param>
     </member>
+    <member name="M:TouchSocket.Core.Method.CreateExpressionInvoker(System.Reflection.MethodInfo)">
+      <summary>
+            构建表达式树调用
+            </summary>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.Core.Method.CreateExpressionInvoker(System.Reflection.MethodInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.Method.CreateExpressionInvoker(System.Reflection.MethodInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.Method.CreateILInvoker(System.Reflection.MethodInfo)">
+      <summary>
+            构建IL调用
+            </summary>
+      <param name="methodInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>methodInfo</parameter>
+            <parameter>M:TouchSocket.Core.Method.CreateILInvoker(System.Reflection.MethodInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.Method.CreateILInvoker(System.Reflection.MethodInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="M:TouchSocket.Core.Method.Equals(System.Object)">
       <summary>Determines whether the specified object is equal to the current object.</summary>
       <param name="obj">The object to compare with the current object.</param>
@@ -16683,6 +18196,11 @@
     <member name="P:TouchSocket.Core.Method.IsByRef">
       <summary>
             是否有引用类型
+            </summary>
+    </member>
+    <member name="F:TouchSocket.Core.Method.m_invoker">
+      <summary>
+            方法执行委托
             </summary>
     </member>
     <member name="P:TouchSocket.Core.Method.Name">
@@ -16899,6 +18417,115 @@
             
   </summary>
     </member>
+    <member name="M:TouchSocket.Core.NormalDataHandlingAdapter.PreviewReceived(TouchSocket.Core.ByteBlock)">
+      <summary>
+            当接收到数据时处理数据
+            </summary>
+      <param name="byteBlock">数据流</param>
+    </member>
+    <member name="M:TouchSocket.Core.NormalDataHandlingAdapter.PreviewSend(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+    
+            当发送数据前预先处理数据
+            
+  </summary>
+      <param name="buffer">数据</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+    </member>
+    <member name="M:TouchSocket.Core.NormalDataHandlingAdapter.PreviewSend(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+    
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            
+  </summary>
+      <param name="transferBytes">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>transferBytes</parameter>
+            <parameter>M:TouchSocket.Core.NormalDataHandlingAdapter.PreviewSend(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.NormalDataHandlingAdapter.PreviewSend(TouchSocket.Core.IRequestInfo)">
+      <summary>
+    
+            当发送数据前预先处理数据
+            
+  </summary>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.Core.NormalDataHandlingAdapter.PreviewSend(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.NormalDataHandlingAdapter.PreviewSendAsync(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="buffer">数据</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.NormalDataHandlingAdapter.PreviewSendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.NormalDataHandlingAdapter.PreviewSendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            </summary>
+      <param name="transferBytes">代发送数据组合</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.NormalDataHandlingAdapter.PreviewSendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.NormalDataHandlingAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.Core.NormalDataHandlingAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.NormalDataHandlingAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.NormalDataHandlingAdapter.Reset">
+      <summary>
+    
+            重置解析器到初始状态，一般在<see cref="M:TouchSocket.Core.DataHandlingAdapter.OnError(System.Exception,System.String,System.Boolean,System.Boolean)" />被触发时，由返回值指示是否调用。
+            
+  </summary>
+    </member>
     <member name="T:TouchSocket.Core.OverlengthException">
       <summary>
             超长异常
@@ -16908,6 +18535,29 @@
       <summary>
             构造函数
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.OverlengthException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            构造函数
+            </summary>
+      <param name="info">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>info</parameter>
+            <parameter>M:TouchSocket.Core.OverlengthException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="context">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>context</parameter>
+            <parameter>M:TouchSocket.Core.OverlengthException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="M:TouchSocket.Core.OverlengthException.#ctor(System.String)">
       <summary>
@@ -16950,6 +18600,15 @@
       <summary>
             PackageBase包结构数据。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.PackageBase.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.PackageBase</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="M:TouchSocket.Core.PackageBase.Package(TouchSocket.Core.ByteBlock@)">
       <summary>
@@ -17020,6 +18679,12 @@
         </markup>
       </summary>
     </member>
+    <member name="M:TouchSocket.Core.PeriodPackageAdapter.PreviewReceived(TouchSocket.Core.ByteBlock)">
+      <summary>
+            当接收到数据后预先处理数据,然后调用<see cref="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoReceived(TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)" />处理数据
+            </summary>
+      <param name="byteBlock"></param>
+    </member>
     <member name="T:TouchSocket.Core.PermitEventArgs">
       <summary>
             具有操作许可的事件参数类
@@ -17052,6 +18717,12 @@
           </include>
         </markup>
       </summary>
+    </member>
+    <member name="M:TouchSocket.Core.PluginBase.Loaded(TouchSocket.Core.IPluginManager)">
+      <summary>
+            在插件被成功添加在<see cref="T:TouchSocket.Core.IPluginManager" />时执行。
+            </summary>
+      <param name="pluginManager"></param>
     </member>
     <member name="P:TouchSocket.Core.PluginBase.Order">
       <summary>
@@ -17146,6 +18817,18 @@
             <parameter>param</parameter>
             <parameter>resolver</parameter>
             <parameter>M:TouchSocket.Core.PluginManager.#ctor(TouchSocket.Core.IResolver)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.PluginManager.Dispose(System.Boolean)">
+      <summary>
+            调用释放，切换释放状态。
+            </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.PluginManager</parameter>
           </include>
         </markup>
       </param>
@@ -19282,10 +20965,60 @@
             具有设置配置的对象
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.SetupConfigObject.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.SetupConfigObject</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="P:TouchSocket.Core.SetupConfigObject.Config">
       <summary>
             设置项
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.SetupConfigObject.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.SetupConfigObject</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.SetupConfigObject.DisposeAsyncCore">
+      <summary>
+            异步释放资源。注意：此方法仅在调用<see cref="M:System.IAsyncDisposable.DisposeAsync" />时有效。
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.SetupConfigObject.DisposeAsyncCore</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.SetupConfigObject.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Core.SetupConfigObject.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="P:TouchSocket.Core.SetupConfigObject.PluginManager">
       <summary>
@@ -19338,6 +21071,11 @@
       <summary>
             单线程状况的流式数据处理适配器测试
              </summary>
+    </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataAdapterTester.#ctor">
+      <summary>
+            Tcp数据处理适配器测试
+            </summary>
     </member>
     <member name="M:TouchSocket.Core.SingleStreamDataAdapterTester.CreateTester(TouchSocket.Core.SingleStreamDataHandlingAdapter,System.Int32,System.Action{TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo})">
       <summary>
@@ -19433,6 +21171,15 @@
             单线程状况的流式数据处理适配器。
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.SingleStreamDataHandlingAdapter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="P:TouchSocket.Core.SingleStreamDataHandlingAdapter.CacheTimeout">
       <summary>
             缓存超时时间。默认1秒。
@@ -19453,6 +21200,192 @@
             拼接发送
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.SingleStreamDataHandlingAdapter</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoReceived(TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)">
+      <summary>
+            处理已经经过预先处理后的数据
+            </summary>
+      <param name="byteBlock">以二进制形式传递</param>
+      <param name="requestInfo">以解析实例传递</param>
+    </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoSend(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            发送已经经过预先处理后的数据
+            </summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoSend(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoSend(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoSend(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoSendAsync(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            异步发送已经经过预先处理后的数据
+            </summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoSendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoSendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoSendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoSendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:TouchSocket.Core.SingleStreamDataHandlingAdapter.LastCacheTime">
+      <summary>
+            最后缓存的时间
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.PreviewReceived(TouchSocket.Core.ByteBlock)">
+      <summary>
+            当接收到数据后预先处理数据,然后调用<see cref="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.GoReceived(TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)" />处理数据
+            </summary>
+      <param name="byteBlock"></param>
+    </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.PreviewSend(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="buffer">数据</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+    </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.PreviewSend(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            </summary>
+      <param name="transferBytes">代发送数据组合</param>
+    </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.PreviewSend(TouchSocket.Core.IRequestInfo)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.Core.SingleStreamDataHandlingAdapter.PreviewSend(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.PreviewSendAsync(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="buffer">数据</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.SingleStreamDataHandlingAdapter.PreviewSendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.PreviewSendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            </summary>
+      <param name="transferBytes">代发送数据组合</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.SingleStreamDataHandlingAdapter.PreviewSendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.Core.SingleStreamDataHandlingAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.SingleStreamDataHandlingAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:TouchSocket.Core.SingleStreamDataHandlingAdapter.ReceivedCallBack">
       <summary>
             当接收数据处理完成后，回调该函数执行接收
@@ -19471,6 +21404,11 @@
           </include>
         </markup>
       </param>
+    </member>
+    <member name="M:TouchSocket.Core.SingleStreamDataHandlingAdapter.Reset">
+      <summary>
+            重置解析器到初始状态，一般在<see cref="M:TouchSocket.Core.DataHandlingAdapter.OnError(System.Exception,System.String,System.Boolean,System.Boolean)" />被触发时，由返回值指示是否调用。
+            </summary>
     </member>
     <member name="P:TouchSocket.Core.SingleStreamDataHandlingAdapter.SendAsyncCallBack">
       <summary>
@@ -19860,6 +21798,20 @@
       <summary>
             自启动以来执行的次数。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.SingleTimer.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.SingleTimer</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="P:TouchSocket.Core.SingleTimer.Pause">
       <summary>
@@ -21079,10 +23031,149 @@
             即使找到了终止因子，也不会结束，默认0
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.TerminatorPackageAdapter.PreviewReceived(TouchSocket.Core.ByteBlock)">
+      <summary>
+            预处理
+            </summary>
+      <param name="byteBlock">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>byteBlock</parameter>
+            <parameter>M:TouchSocket.Core.TerminatorPackageAdapter.PreviewReceived(TouchSocket.Core.ByteBlock)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSend(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            预处理
+            </summary>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSend(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSend(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSend(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSend(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+    
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            
+  </summary>
+      <param name="transferBytes">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>transferBytes</parameter>
+            <parameter>M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSend(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSend(TouchSocket.Core.IRequestInfo)">
+      <summary>
+    
+            当发送数据前预先处理数据
+            
+  </summary>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSend(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSendAsync(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="buffer">数据</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSendAsync(System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            </summary>
+      <param name="transferBytes">代发送数据组合</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSendAsync(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="requestInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>requestInfo</parameter>
+            <parameter>M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.TerminatorPackageAdapter.PreviewSendAsync(TouchSocket.Core.IRequestInfo)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:TouchSocket.Core.TerminatorPackageAdapter.ReserveTerminatorCode">
       <summary>
             保留终止因子
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.TerminatorPackageAdapter.Reset">
+      <summary>
+    
+            重置解析器到初始状态，一般在<see cref="M:TouchSocket.Core.DataHandlingAdapter.OnError(System.Exception,System.String,System.Boolean,System.Boolean)" />被触发时，由返回值指示是否调用。
+            
+  </summary>
     </member>
     <member name="T:TouchSocket.Core.Ternary`3">
       <summary>
@@ -22839,6 +24930,18 @@
              触发器队列
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.TriggerQueue`1.Dispose(System.Boolean)">
+      <summary>
+            释放
+            </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.TriggerQueue`1</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="M:TouchSocket.Core.TriggerQueue`1.Enqueue(`0)">
       <summary>
             发送
@@ -22852,6 +24955,11 @@
           </include>
         </markup>
       </param>
+    </member>
+    <member name="M:TouchSocket.Core.TriggerQueue`1.Finalize">
+      <summary>
+            析构函数
+            </summary>
     </member>
     <member name="P:TouchSocket.Core.TriggerQueue`1.OnDequeue">
       <summary>
@@ -24922,6 +27030,18 @@
             取消等待
             </summary>
     </member>
+    <member name="M:TouchSocket.Core.WaitData`1.Dispose(System.Boolean)">
+      <summary>
+            调用释放，切换释放状态。
+            </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.WaitData`1</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="M:TouchSocket.Core.WaitData`1.Reset">
       <summary>
             Reset。
@@ -25065,6 +27185,18 @@
       <summary>
             取消等待
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.WaitDataAsync`1.Dispose(System.Boolean)">
+      <summary>
+            调用释放，切换释放状态。
+            </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.WaitDataAsync`1</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="M:TouchSocket.Core.WaitDataAsync`1.Reset">
       <summary>
@@ -25261,6 +27393,20 @@
             <parameter>param</parameter>
             <parameter>waitData</parameter>
             <parameter>M:TouchSocket.Core.WaitHandlePool`1.Destroy(TouchSocket.Core.WaitDataAsync{`0})</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.WaitHandlePool`1.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.WaitHandlePool`1</parameter>
           </include>
         </markup>
       </param>
@@ -25636,6 +27782,11 @@
         </markup>
       </summary>
     </member>
+    <member name="P:TouchSocket.Core.WaitRouterPackage.IncludedRouter">
+      <summary>
+            是否将<see cref="P:TouchSocket.Core.WaitRouterPackage.Sign" />和<see cref="P:TouchSocket.Core.WaitRouterPackage.Status" />等参数放置在Router中。
+            </summary>
+    </member>
     <member name="M:TouchSocket.Core.WaitRouterPackage.PackageBody(TouchSocket.Core.ByteBlock@)">
       <summary>
             打包数据体。一般不需要单独调用该方法。
@@ -25740,6 +27891,18 @@
       <summary>
             没有关闭效果
             </summary>
+    </member>
+    <member name="M:TouchSocket.Core.WrapStream.Dispose(System.Boolean)">
+      <summary>
+            没有释放效果
+            </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Core.WrapStream</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="M:TouchSocket.Core.WrapStream.Flush">
       <summary>

@@ -469,6 +469,12 @@
             允许客户端携带验证信息
             </summary>
     </member>
+    <member name="M:TouchSocket.Http.CorsPlugin.Loaded(TouchSocket.Core.IPluginManager)">
+      <summary>
+            在插件被成功添加在<see cref="T:TouchSocket.Core.IPluginManager" />时执行。
+            </summary>
+      <param name="pluginManager"></param>
+    </member>
     <member name="P:TouchSocket.Http.CorsPlugin.Methods">
       <summary>
             允许跨域的方法。
@@ -647,9 +653,26 @@
             Clear the memory cache
             </summary>
     </member>
+    <member name="M:TouchSocket.Http.FileCachePool.Dispose(System.Boolean)">
+      <summary>
+            释放
+            </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Http.FileCachePool</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Http.FileCachePool.Empty">
       <summary>
             Is the file cache empty?
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Http.FileCachePool.Finalize">
+      <summary>
+            析构函数
             </summary>
     </member>
     <member name="M:TouchSocket.Http.FileCachePool.Find(System.String,System.Byte[]@)">
@@ -820,6 +843,22 @@
             内容类型
             </summary>
     </member>
+    <member name="M:TouchSocket.Http.HttpBase.Dispose(System.Boolean)">
+      <summary>
+    
+    
+            调用释放，切换释放状态。
+            
+  
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Http.HttpBase</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Http.HttpBase.Flag">
       <summary>
             传递标识
@@ -836,6 +875,11 @@
             <para>
             一般的，当是http1.1时，如果没有显式的Connection: close，即返回true。当是http1.0时，如果没有显式的Connection: Keep-Alive，即返回false。
             </para></summary>
+    </member>
+    <member name="M:TouchSocket.Http.HttpBase.LoadHeaderProterties">
+      <summary>
+            读取信息
+            </summary>
     </member>
     <member name="M:TouchSocket.Http.HttpBase.ParsingHeader(TouchSocket.Core.ByteBlock,System.Int32)">
       <summary>
@@ -958,6 +1002,11 @@
     <member name="P:TouchSocket.Http.HttpBase.RequestLine">
       <summary>
             请求行
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Http.HttpBase.Reset">
+      <summary>
+            重置Http状态。
             </summary>
     </member>
     <member name="F:TouchSocket.Http.HttpBase.ServerVersion">
@@ -1088,6 +1137,92 @@
       <exception cref="T:System.TimeoutException"></exception>
       <exception cref="T:System.Exception"></exception>
     </member>
+    <member name="M:TouchSocket.Http.HttpClientBase.Dispose(System.Boolean)">
+      <summary>
+    
+    
+    
+            调用释放，切换释放状态。
+            
+  
+  
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Http.HttpClientBase</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Http.HttpClientBase.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+    
+            准备连接的时候，此时已初始化Socket，但是并未建立Tcp连接
+            
+  </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Http.HttpClientBase.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Http.HttpClientBase.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Http.HttpClientBase.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            断开连接。在客户端未设置连接状态时，不会触发
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Http.HttpClientBase.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Http.HttpClientBase.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Http.HttpClientBase.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器处理的数据时。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Http.HttpClientBase.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Http.HttpClientBase.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="M:TouchSocket.Http.HttpClientBase.Request(TouchSocket.Http.HttpRequest,System.Boolean,System.Int32,System.Threading.CancellationToken)">
       <summary>
             发起请求
@@ -1194,6 +1329,27 @@
       </param>
       <exception cref="T:System.Exception">此适配器已被其他终端使用，请重新创建对象。</exception>
     </member>
+    <member name="M:TouchSocket.Http.HttpClientDataHandlingAdapter.PreviewReceived(TouchSocket.Core.ByteBlock)">
+      <summary>
+    
+            当接收到数据时处理数据
+            
+  </summary>
+      <param name="byteBlock">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>byteBlock</parameter>
+            <parameter>M:TouchSocket.Http.HttpClientDataHandlingAdapter.PreviewReceived(TouchSocket.Core.ByteBlock)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:TouchSocket.Http.HttpClientDataHandlingAdapter.tempByteBlock">
+      <summary>
+            缓存数据，如果需要手动释放，请先判断，然后到调用<see cref="M:System.IDisposable.Dispose" />后，再置空；
+            </summary>
+    </member>
     <member name="T:TouchSocket.Http.HttpClientPool">
       <summary>
             HttpClient客户端连接池
@@ -1212,6 +1368,34 @@
       <summary>
             清除现有的所有链接
             </summary>
+    </member>
+    <member name="M:TouchSocket.Http.HttpClientPool.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Http.HttpClientPool</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Http.HttpClientPool.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Http.HttpClientPool.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="P:TouchSocket.Http.HttpClientPool.MaxCount">
       <summary>
@@ -1270,6 +1454,12 @@
       <summary>
             通讯客户端
             </summary>
+    </member>
+    <member name="M:TouchSocket.Http.HttpClientSlim.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config"></param>
     </member>
     <member name="T:TouchSocket.Http.HttpContainerExtension">
       <summary>
@@ -3274,9 +3464,30 @@
             
   </summary>
     </member>
+    <member name="M:TouchSocket.Http.HttpRequest.Dispose(System.Boolean)">
+      <summary>
+    
+    
+            调用释放，切换释放状态。
+            
+  
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Http.HttpRequest</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Http.HttpRequest.Forms">
       <summary>
             表单数据
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Http.HttpRequest.LoadHeaderProterties">
+      <summary>
+            从内存中读取
             </summary>
     </member>
     <member name="P:TouchSocket.Http.HttpRequest.Method">
@@ -3297,6 +3508,11 @@
     <member name="P:TouchSocket.Http.HttpRequest.RelativeURL">
       <summary>
             相对路径（不含参数）
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Http.HttpRequest.Reset">
+      <summary>
+            重置Http状态。
             </summary>
     </member>
     <member name="M:TouchSocket.Http.HttpRequest.SetContent(System.Byte[])">
@@ -3527,6 +3743,24 @@
             当传输模式是Chunk时，用于结束传输。
             </summary>
     </member>
+    <member name="M:TouchSocket.Http.HttpResponse.Dispose(System.Boolean)">
+      <summary>
+    
+    
+    
+            调用释放，切换释放状态。
+            
+  
+  
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Http.HttpResponse</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.Http.HttpResponse.IsChunk">
       <summary>
             是否分块
@@ -3540,6 +3774,16 @@
     <member name="P:TouchSocket.Http.HttpResponse.IsRedirect">
       <summary>
             是否重定向
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Http.HttpResponse.LoadHeaderProterties">
+      <summary>
+            读取数据
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Http.HttpResponse.Reset">
+      <summary>
+            重置Http状态。
             </summary>
     </member>
     <member name="P:TouchSocket.Http.HttpResponse.Responsed">
@@ -3665,6 +3909,20 @@
             
   </summary>
     </member>
+    <member name="M:TouchSocket.Http.HttpServerDataHandlingAdapter.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Http.HttpServerDataHandlingAdapter</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="M:TouchSocket.Http.HttpServerDataHandlingAdapter.OnLoaded(System.Object)">
       <summary>
             当适配器在被第一次加载时调用。
@@ -3679,6 +3937,27 @@
         </markup>
       </param>
       <exception cref="T:System.Exception">此适配器已被其他终端使用，请重新创建对象。</exception>
+    </member>
+    <member name="M:TouchSocket.Http.HttpServerDataHandlingAdapter.PreviewReceived(TouchSocket.Core.ByteBlock)">
+      <summary>
+    
+            当接收到数据时处理数据
+            
+  </summary>
+      <param name="byteBlock">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>byteBlock</parameter>
+            <parameter>M:TouchSocket.Http.HttpServerDataHandlingAdapter.PreviewReceived(TouchSocket.Core.ByteBlock)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="F:TouchSocket.Http.HttpServerDataHandlingAdapter.tempByteBlock">
+      <summary>
+            缓存数据，如果需要手动释放，请先判断，然后到调用<see cref="M:System.IDisposable.Dispose" />后，再置空；
+            </summary>
     </member>
     <member name="T:TouchSocket.Http.HttpService">
       <summary>
@@ -3727,6 +4006,65 @@
             构造函数
             </summary>
     </member>
+    <member name="M:TouchSocket.Http.HttpSocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            客户端正在连接。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Http.HttpSocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Http.HttpSocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Http.HttpSocketClient.OnReceivedHttpRequest(TouchSocket.Http.HttpRequest)">
+      <summary>
+            当收到到Http请求时。覆盖父类方法将不会触发插件。
+            </summary>
+      <param name="request">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>request</parameter>
+            <parameter>M:TouchSocket.Http.HttpSocketClient.OnReceivedHttpRequest(TouchSocket.Http.HttpRequest)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Http.HttpSocketClient.OnReceivedHttpRequest(TouchSocket.Http.HttpRequest)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Http.HttpSocketClient.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器处理的数据时。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Http.HttpSocketClient.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
+    </member>
     <member name="T:TouchSocket.Http.HttpStaticPagePlugin">
       <summary>
             Http静态内容插件
@@ -3760,6 +4098,12 @@
       <summary>
             静态文件缓存。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Http.HttpStaticPagePlugin.Loaded(TouchSocket.Core.IPluginManager)">
+      <summary>
+            在插件被成功添加在<see cref="T:TouchSocket.Core.IPluginManager" />时执行。
+            </summary>
+      <param name="pluginManager"></param>
     </member>
     <member name="P:TouchSocket.Http.HttpStaticPagePlugin.NavigateAction">
       <summary>
@@ -5157,6 +5501,28 @@
         </markup>
       </summary>
     </member>
+    <member name="M:TouchSocket.Http.WebSockets.WebSocketClient.OnReceivedWSDataFrame(TouchSocket.Http.WebSockets.WSDataFrameEventArgs)">
+      <summary>
+            当收到WS数据时。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Http.WebSockets.WebSocketClient.OnReceivedWSDataFrame(TouchSocket.Http.WebSockets.WSDataFrameEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Http.WebSockets.WebSocketClient.OnReceivedWSDataFrame(TouchSocket.Http.WebSockets.WSDataFrameEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:TouchSocket.Http.WebSockets.WebSocketClient.Received">
       <summary>
             收到WebSocket数据
@@ -5226,6 +5592,118 @@
       <summary>
             表示在即将握手连接时。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Http.WebSockets.WebSocketClientBase.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+    
+            断开连接。在客户端未设置连接状态时，不会触发
+            
+  </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Http.WebSockets.WebSocketClientBase.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Http.WebSockets.WebSocketClientBase.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Http.WebSockets.WebSocketClientBase.OnHandshaked(TouchSocket.Http.HttpContextEventArgs)">
+      <summary>
+            表示完成握手后。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Http.WebSockets.WebSocketClientBase.OnHandshaked(TouchSocket.Http.HttpContextEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Http.WebSockets.WebSocketClientBase.OnHandshaked(TouchSocket.Http.HttpContextEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Http.WebSockets.WebSocketClientBase.OnHandshaking(TouchSocket.Http.HttpContextEventArgs)">
+      <summary>
+            表示在即将握手连接时。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Http.WebSockets.WebSocketClientBase.OnHandshaking(TouchSocket.Http.HttpContextEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Http.WebSockets.WebSocketClientBase.OnHandshaking(TouchSocket.Http.HttpContextEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Http.WebSockets.WebSocketClientBase.OnReceivedWSDataFrame(TouchSocket.Http.WebSockets.WSDataFrameEventArgs)">
+      <summary>
+            当收到WS数据时。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Http.WebSockets.WebSocketClientBase.OnReceivedWSDataFrame(TouchSocket.Http.WebSockets.WSDataFrameEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Http.WebSockets.WebSocketClientBase.OnReceivedWSDataFrame(TouchSocket.Http.WebSockets.WSDataFrameEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Http.WebSockets.WebSocketClientBase.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器处理的数据时。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Http.WebSockets.WebSocketClientBase.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Http.WebSockets.WebSocketClientBase.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="T:TouchSocket.Http.WebSockets.WebSocketClientExtension">
       <summary>
@@ -5833,6 +6311,21 @@
       <summary>
             WS命令行插件。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Http.WebSockets.WebSocketCommandLinePlugin.#ctor(TouchSocket.Core.ILog)">
+      <summary>
+            WSCommandLinePlugin
+            </summary>
+      <param name="logger">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>logger</parameter>
+            <parameter>M:TouchSocket.Http.WebSockets.WebSocketCommandLinePlugin.#ctor(TouchSocket.Core.ILog)</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.ArgumentNullException"></exception>
     </member>
     <member name="P:TouchSocket.Http.WebSockets.WebSocketCommandLinePlugin.Converter">
       <summary>
@@ -6504,6 +6997,18 @@
           </include>
         </markup>
       </returns>
+    </member>
+    <member name="M:TouchSocket.Http.WebSockets.WSDataFrame.Dispose(System.Boolean)">
+      <summary>
+            调用释放，切换释放状态。
+            </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.Http.WebSockets.WSDataFrame</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="P:TouchSocket.Http.WebSockets.WSDataFrame.FIN">
       <summary>

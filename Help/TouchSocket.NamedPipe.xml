@@ -691,6 +691,13 @@
             接收到数据
             </summary>
     </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClient.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            处理已接收到的数据。
+            <para>根据不同的数据处理适配器，会传递不同的数据</para></summary>
+      <param name="e"></param>
+      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
+    </member>
     <member name="T:TouchSocket.NamedPipe.NamedPipeClientBase">
       <summary>
             命名管道客户端客户端基类
@@ -700,6 +707,29 @@
       <summary>
             命名管道客户端客户端基类
             </summary>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.BreakOut(System.Boolean,System.String)">
+      <summary>
+            中断链接
+            </summary>
+      <param name="manual">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>manual</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.BreakOut(System.Boolean,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="msg">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>msg</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.BreakOut(System.Boolean,System.String)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="P:TouchSocket.NamedPipe.NamedPipeClientBase.CanSend">
       <summary>
@@ -853,6 +883,22 @@
             即将断开连接(仅主动断开时有效)。
             <para></para></summary>
     </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.Dispose(System.Boolean)">
+      <summary>
+    
+    
+            调用释放，切换释放状态。
+            
+  
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.NamedPipe.NamedPipeClientBase</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.NamedPipe.NamedPipeClientBase.IsClient">
       <summary>
             表示是否为客户端。
@@ -868,10 +914,180 @@
             最后一次发送数据的时间
             </summary>
     </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)">
+      <summary>
+            已经建立管道连接
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            准备连接的时候，此时已初始化Socket，但是并未建立Tcp连接
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.OnDelaySenderError(System.Exception)">
+      <summary>
+            在延迟发生错误
+            </summary>
+      <param name="ex">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>ex</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.OnDelaySenderError(System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            断开连接。在客户端未设置连接状态时，不会触发
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            即将断开连接(仅主动断开时有效)。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.NamedPipe.NamedPipeClientBase.Online">
       <summary>
             判断是否在线
             <para>该属性仅表示管道状态是否在线</para></summary>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.PipeConnect(System.Int32,System.Threading.CancellationToken)">
+      <summary>
+            建立管道的连接。
+            </summary>
+      <param name="timeout">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>timeout</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.PipeConnect(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="token">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>token</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.PipeConnect(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </param>
+      <exception cref="T:System.ObjectDisposedException"></exception>
+      <exception cref="T:System.ArgumentNullException"></exception>
+      <exception cref="T:System.Exception"></exception>
+      <exception cref="T:System.TimeoutException"></exception>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.PipeConnectAsync(System.Int32,System.Threading.CancellationToken)">
+      <summary>
+            建立管道的连接。
+            </summary>
+      <param name="timeout">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>timeout</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.PipeConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="token">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>token</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.PipeConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.PipeConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.ObjectDisposedException"></exception>
+      <exception cref="T:System.ArgumentNullException"></exception>
+      <exception cref="T:System.Exception"></exception>
+      <exception cref="T:System.TimeoutException"></exception>
     </member>
     <member name="P:TouchSocket.NamedPipe.NamedPipeClientBase.PipeStream">
       <summary>
@@ -882,6 +1098,20 @@
       <summary>
             终端协议
             </summary>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            处理已接收到的数据。
+            <para>根据不同的数据处理适配器，会传递不同的数据</para></summary>
+      <param name="e"></param>
+      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.ReceivingData(TouchSocket.Core.ByteBlock)">
+      <summary>
+            当收到原始数据
+            </summary>
+      <param name="byteBlock"></param>
+      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
     </member>
     <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.Send(System.Byte[],System.Int32,System.Int32)">
       <summary>
@@ -1009,6 +1239,21 @@
       <exception cref="T:TouchSocket.Sockets.NotConnectedException">客户端没有连接</exception>
       <exception cref="T:TouchSocket.Core.OverlengthException">发送数据超长</exception>
       <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.SendingData(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当即将发送时，如果覆盖父类方法，则不会触发插件。
+            </summary>
+      <param name="buffer">数据缓存区</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+      <returns>返回值表示是否允许发送</returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.SetAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)">
+      <summary>
+            设置适配器，该方法不会检验<see cref="P:TouchSocket.NamedPipe.NamedPipeClientBase.CanSetDataHandlingAdapter" />的值。
+            </summary>
+      <param name="adapter"></param>
     </member>
     <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)">
       <summary>
@@ -1554,6 +1799,37 @@
         </markup>
       </summary>
     </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeService.OnReceived(TouchSocket.NamedPipe.NamedPipeSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器数据。
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService.OnReceived(TouchSocket.NamedPipe.NamedPipeSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService.OnReceived(TouchSocket.NamedPipe.NamedPipeSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService.OnReceived(TouchSocket.NamedPipe.NamedPipeSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:TouchSocket.NamedPipe.NamedPipeService.Received">
       <summary>
             处理数据
@@ -1614,6 +1890,37 @@
             即将断开连接(仅主动断开时有效)。
             </summary>
     </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.GetClientInstence(System.IO.Pipes.NamedPipeServerStream,TouchSocket.NamedPipe.NamedPipeMonitor)">
+      <summary>
+            获取客户端实例
+            </summary>
+      <param name="namedPipe">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>namedPipe</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.GetClientInstence(System.IO.Pipes.NamedPipeServerStream,TouchSocket.NamedPipe.NamedPipeMonitor)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="monitor">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>monitor</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.GetClientInstence(System.IO.Pipes.NamedPipeServerStream,TouchSocket.NamedPipe.NamedPipeMonitor)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.GetClientInstence(System.IO.Pipes.NamedPipeServerStream,TouchSocket.NamedPipe.NamedPipeMonitor)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.GetClients">
       <summary>
             获取当前在线的所有客户端
@@ -1626,6 +1933,20 @@
           </include>
         </markup>
       </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="P:TouchSocket.NamedPipe.NamedPipeService`1.MaxCount">
       <summary>
@@ -1640,6 +1961,325 @@
             管道监听集合
             
   </summary>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientConnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectedEventArgs)">
+      <summary>
+    
+            客户端连接完成
+            
+  </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientConnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientConnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientConnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientConnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+    
+            客户端请求连接
+            
+  </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientConnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientConnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientConnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientDisconnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+    
+            客户端断开连接
+            
+  </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientDisconnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientDisconnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientDisconnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientDisconnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+    
+            即将断开连接(仅主动断开时有效)。
+            <para></para></summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientDisconnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientDisconnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientDisconnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientReceivedData(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+    
+            收到数据时
+            
+  </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientReceivedData(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientReceivedData(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnClientReceivedData(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.OnConnected(`0,TouchSocket.Sockets.ConnectedEventArgs)">
+      <summary>
+            客户端连接完成，覆盖父类方法将不会触发事件。
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnConnected(`0,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnConnected(`0,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnConnected(`0,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.OnConnecting(`0,TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            客户端请求连接，覆盖父类方法将不会触发事件。
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnConnecting(`0,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnConnecting(`0,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnConnecting(`0,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.OnDisconnected(`0,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            客户端断开连接，覆盖父类方法将不会触发事件。
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnDisconnected(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnDisconnected(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnDisconnected(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.OnDisconnecting(`0,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            即将断开连接(仅主动断开时有效)。
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnDisconnecting(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnDisconnecting(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnDisconnecting(`0,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.OnReceived(`0,TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器数据。
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnReceived(`0,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnReceived(`0,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeService`1.OnReceived(`0,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="M:TouchSocket.NamedPipe.NamedPipeService`1.RemoveListen(TouchSocket.NamedPipe.NamedPipeMonitor)">
       <summary>
@@ -1782,6 +2422,15 @@
             命名管道服务器基类
             </summary>
     </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeServiceBase.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.NamedPipe.NamedPipeServiceBase</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="M:TouchSocket.NamedPipe.NamedPipeServiceBase.AddListen(TouchSocket.NamedPipe.NamedPipeListenOption)">
       <summary>
             添加一个地址监听。支持在服务器运行过程中动态添加。
@@ -1838,6 +2487,161 @@
             管道监听集合
             
   </summary>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientConnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectedEventArgs)">
+      <summary>
+            客户端连接完成
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientConnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientConnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientConnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientConnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            客户端请求连接
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientConnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientConnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientConnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientDisconnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            客户端断开连接
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientDisconnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientDisconnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientDisconnected(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientDisconnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            即将断开连接(仅主动断开时有效)。
+            <para></para></summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientDisconnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientDisconnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientDisconnecting(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientReceivedData(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            收到数据时
+            </summary>
+      <param name="socketClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>socketClient</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientReceivedData(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientReceivedData(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeServiceBase.OnClientReceivedData(TouchSocket.NamedPipe.INamedPipeSocketClient,TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="M:TouchSocket.NamedPipe.NamedPipeServiceBase.RemoveListen(TouchSocket.NamedPipe.NamedPipeMonitor)">
       <summary>
@@ -2091,6 +2895,29 @@
             命名管道服务器辅助客户端类
             </summary>
     </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.BreakOut(System.String,System.Boolean)">
+      <summary>
+            中断连接
+            </summary>
+      <param name="msg">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>msg</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.BreakOut(System.String,System.Boolean)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="manual">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>manual</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.BreakOut(System.String,System.Boolean)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.NamedPipe.NamedPipeSocketClient.CanSend">
       <summary>
             表示对象能否顺利执行发送操作。
@@ -2174,6 +3001,20 @@
       <exception cref="T:TouchSocket.Core.OverlengthException">发送数据超长</exception>
       <exception cref="T:System.Exception">其他异常</exception>
     </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.DirectResetId(System.String)">
+      <summary>
+            直接重置内部Id。
+            </summary>
+      <param name="newId">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>newId</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.DirectResetId(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="P:TouchSocket.NamedPipe.NamedPipeSocketClient.Disconnected">
       <summary>
             断开连接
@@ -2183,6 +3024,20 @@
       <summary>
             即将断开连接(仅主动断开时有效)。
             <para></para></summary>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.Dispose(System.Boolean)">
+      <summary>
+    
+            调用释放，切换释放状态。
+            
+  </summary>
+      <param name="disposing">
+        <markup>
+          <include item="SMCAutoDocDisposeParam">
+            <parameter>TouchSocket.NamedPipe.NamedPipeSocketClient</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="P:TouchSocket.NamedPipe.NamedPipeSocketClient.Id">
       <summary>
@@ -2204,6 +3059,121 @@
             最后一次发送数据的时间
             </summary>
     </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)">
+      <summary>
+            当客户端完整建立Tcp连接。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnConnected(TouchSocket.Sockets.ConnectedEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            客户端正在连接。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnDelaySenderError(System.Exception)">
+      <summary>
+            在延迟发生错误
+            </summary>
+      <param name="ex">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>ex</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnDelaySenderError(System.Exception)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            客户端已断开连接。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)">
+      <summary>
+            即将断开连接(仅主动断开时有效)。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnDisconnecting(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnInitialized">
+      <summary>
+            当初始化完成时，执行在<see cref="M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)" />之前。
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.OnInitialized</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:TouchSocket.NamedPipe.NamedPipeSocketClient.Online">
       <summary>
             判断是否在线
@@ -2223,6 +3193,35 @@
       <summary>
             终端协议
             </summary>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            处理已接收到的数据。
+            <para>根据不同的数据处理适配器，会传递不同的数据</para></summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.NamedPipe.NamedPipeSocketClient.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.ReceivingData(TouchSocket.Core.ByteBlock)">
+      <summary>
+            当收到原始数据
+            </summary>
+      <param name="byteBlock"></param>
+      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
     </member>
     <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.ResetId(System.String)">
       <summary>
@@ -2473,6 +3472,15 @@
       <exception cref="T:TouchSocket.Core.OverlengthException">发送数据超长</exception>
       <exception cref="T:System.Exception">其他异常</exception>
     </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.SendingData(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当即将发送时。
+            </summary>
+      <param name="buffer">数据缓存区</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+      <returns>返回值表示是否允许发送</returns>
+    </member>
     <member name="P:TouchSocket.NamedPipe.NamedPipeSocketClient.Service">
       <summary>
         <markup>
@@ -2482,6 +3490,12 @@
           </include>
         </markup>
       </summary>
+    </member>
+    <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.SetAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)">
+      <summary>
+            设置适配器，该方法不会检验<see cref="P:TouchSocket.NamedPipe.NamedPipeSocketClient.CanSetDataHandlingAdapter" />的值。
+            </summary>
+      <param name="adapter"></param>
     </member>
     <member name="M:TouchSocket.NamedPipe.NamedPipeSocketClient.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)">
       <summary>

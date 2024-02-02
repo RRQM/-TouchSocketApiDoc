@@ -1180,6 +1180,15 @@
             ModbusRtuBase
             </summary>
     </member>
+    <member name="M:TouchSocket.Modbus.ModbusRtuBase.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Modbus.ModbusRtuBase</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="P:TouchSocket.Modbus.ModbusRtuBase.Crc">
       <summary>
             校验码
@@ -1199,6 +1208,35 @@
       <summary>
             是否允许自由调用<see cref="M:TouchSocket.Core.IAdapterObject.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)" />进行赋值。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Modbus.ModbusRtuMaster.OnConnecting(TouchSocket.SerialPorts.SerialConnectingEventArgs)">
+      <summary>
+            准备连接的时候，此时并未建立连接
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuMaster.OnConnecting(TouchSocket.SerialPorts.SerialConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuMaster.OnConnecting(TouchSocket.SerialPorts.SerialConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Modbus.ModbusRtuMaster.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器处理的数据时。
+            </summary>
+      <param name="e"></param>
+      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
     </member>
     <member name="M:TouchSocket.Modbus.ModbusRtuMaster.SendModbusRequest(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)">
       <summary>
@@ -1294,6 +1332,50 @@
       <summary>
             是否允许自由调用<see cref="M:TouchSocket.Core.IAdapterObject.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)" />进行赋值。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Modbus.ModbusRtuOverTcpMaster.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            准备连接的时候，此时已初始化Socket，但是并未建立Tcp连接
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuOverTcpMaster.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuOverTcpMaster.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Modbus.ModbusRtuOverTcpMaster.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器处理的数据时。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuOverTcpMaster.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuOverTcpMaster.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="M:TouchSocket.Modbus.ModbusRtuOverTcpMaster.SendModbusRequest(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)">
       <summary>
@@ -1392,6 +1474,42 @@
             
   </summary>
     </member>
+    <member name="M:TouchSocket.Modbus.ModbusRtuOverUdpMaster.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuOverUdpMaster.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Modbus.ModbusRtuOverUdpMaster.ReceivedData(TouchSocket.Sockets.UdpReceivedDataEventArgs)">
+      <summary>
+            处理已接收到的数据。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuOverUdpMaster.ReceivedData(TouchSocket.Sockets.UdpReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusRtuOverUdpMaster.ReceivedData(TouchSocket.Sockets.UdpReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="M:TouchSocket.Modbus.ModbusRtuOverUdpMaster.SendModbusRequest(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)">
       <summary>
             发送Modbus请求
@@ -1477,6 +1595,15 @@
             ModbusTcpBase
             </summary>
     </member>
+    <member name="M:TouchSocket.Modbus.ModbusTcpBase.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Modbus.ModbusTcpBase</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="P:TouchSocket.Modbus.ModbusTcpBase.ProtocolId">
       <summary>
             协议标识符
@@ -1501,6 +1628,50 @@
       <summary>
             是否允许自由调用<see cref="M:TouchSocket.Core.IAdapterObject.SetDataHandlingAdapter(TouchSocket.Core.SingleStreamDataHandlingAdapter)" />进行赋值。
             </summary>
+    </member>
+    <member name="M:TouchSocket.Modbus.ModbusTcpMaster.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)">
+      <summary>
+            准备连接的时候，此时已初始化Socket，但是并未建立Tcp连接
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusTcpMaster.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusTcpMaster.OnConnecting(TouchSocket.Sockets.ConnectingEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Modbus.ModbusTcpMaster.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)">
+      <summary>
+            当收到适配器处理的数据时。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusTcpMaster.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusTcpMaster.ReceivedData(TouchSocket.Sockets.ReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="M:TouchSocket.Modbus.ModbusTcpMaster.SendModbusRequest(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)">
       <summary>
@@ -1598,6 +1769,42 @@
             是否允许自由调用<see cref="M:TouchSocket.Sockets.IUdpSession.SetDataHandlingAdapter(TouchSocket.Sockets.UdpDataHandlingAdapter)" />进行赋值。
             
   </summary>
+    </member>
+    <member name="M:TouchSocket.Modbus.ModbusUdpMaster.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            加载配置
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusUdpMaster.LoadConfig(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Modbus.ModbusUdpMaster.ReceivedData(TouchSocket.Sockets.UdpReceivedDataEventArgs)">
+      <summary>
+            处理已接收到的数据。
+            </summary>
+      <param name="e">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>e</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusUdpMaster.ReceivedData(TouchSocket.Sockets.UdpReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Modbus.ModbusUdpMaster.ReceivedData(TouchSocket.Sockets.UdpReceivedDataEventArgs)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="M:TouchSocket.Modbus.ModbusUdpMaster.SendModbusRequest(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)">
       <summary>

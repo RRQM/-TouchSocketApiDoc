@@ -347,11 +347,29 @@
             XmlRpcDispatchProxy
             </summary>
     </member>
+    <member name="M:TouchSocket.XmlRpc.XmlRpcDispatchProxy.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.XmlRpc.XmlRpcDispatchProxy</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="T:TouchSocket.XmlRpc.XmlRpcDispatchProxy`1">
       <summary>
             XmlRpcDispatchProxy
             </summary>
       <typeparam name="TClient"></typeparam>
+    </member>
+    <member name="M:TouchSocket.XmlRpc.XmlRpcDispatchProxy`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.XmlRpc.XmlRpcDispatchProxy`1</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="T:TouchSocket.XmlRpc.XmlRpcDispatchProxy`2">
       <summary>
@@ -359,6 +377,15 @@
             </summary>
       <typeparam name="TClient"></typeparam>
       <typeparam name="TAttribute"></typeparam>
+    </member>
+    <member name="M:TouchSocket.XmlRpc.XmlRpcDispatchProxy`2.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.XmlRpc.XmlRpcDispatchProxy`2</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="T:TouchSocket.XmlRpc.XmlRpcParserPlugin">
       <summary>

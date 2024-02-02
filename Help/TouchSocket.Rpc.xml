@@ -1641,6 +1641,15 @@
             RpcActionFilterAttribute
             </summary>
     </member>
+    <member name="M:TouchSocket.Rpc.RpcActionFilterAttribute.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Rpc.RpcActionFilterAttribute</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="M:TouchSocket.Rpc.RpcActionFilterAttribute.ExecutedAsync(TouchSocket.Rpc.ICallContext,System.Object[],TouchSocket.Rpc.InvokeResult)">
       <summary>
             成功执行Rpc后。
@@ -2357,6 +2366,86 @@
         </markup>
       </returns>
     </member>
+    <member name="M:TouchSocket.Rpc.RpcDispatchProxy`2.Invoke(System.Reflection.MethodInfo,System.Object[])">
+      <summary>Whenever any method on the generated proxy type is called, this method is invoked to dispatch control.</summary>
+      <param name="targetMethod">The method the caller invoked.</param>
+      <param name="args">The arguments the caller passed to the method.</param>
+      <returns>The object to return to the caller, or <see langword="null" /> for void methods.</returns>
+    </member>
+    <member name="M:TouchSocket.Rpc.RpcDispatchProxy`2.OnAfter(System.Reflection.MethodInfo,System.String,System.Object[]@,System.Object@)">
+      <summary>
+            方法调用后
+            </summary>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcDispatchProxy`2.OnAfter(System.Reflection.MethodInfo,System.String,System.Object[]@,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>invokeKey</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcDispatchProxy`2.OnAfter(System.Reflection.MethodInfo,System.String,System.Object[]@,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="args">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>args</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcDispatchProxy`2.OnAfter(System.Reflection.MethodInfo,System.String,System.Object[]@,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="result">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>result</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcDispatchProxy`2.OnAfter(System.Reflection.MethodInfo,System.String,System.Object[]@,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Rpc.RpcDispatchProxy`2.OnBefore(System.Reflection.MethodInfo,System.String,System.Object[]@)">
+      <summary>
+            方法调用前
+            </summary>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcDispatchProxy`2.OnBefore(System.Reflection.MethodInfo,System.String,System.Object[]@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="invokeKey">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>invokeKey</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcDispatchProxy`2.OnBefore(System.Reflection.MethodInfo,System.String,System.Object[]@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="args">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>args</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcDispatchProxy`2.OnBefore(System.Reflection.MethodInfo,System.String,System.Object[]@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns></returns>
+    </member>
     <member name="T:TouchSocket.Rpc.RpcException">
       <summary>
             Rpc异常
@@ -2366,6 +2455,29 @@
       <summary>
             构造函数
              </summary>
+    </member>
+    <member name="M:TouchSocket.Rpc.RpcException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            构造函数
+             </summary>
+      <param name="info">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>info</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="context">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>context</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="M:TouchSocket.Rpc.RpcException.#ctor(System.String)">
       <summary>
@@ -2413,6 +2525,29 @@
       <summary>
             构造函数
              </summary>
+    </member>
+    <member name="M:TouchSocket.Rpc.RpcInvokeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+            构造函数
+             </summary>
+      <param name="info">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>info</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcInvokeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="context">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>context</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcInvokeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</parameter>
+          </include>
+        </markup>
+      </param>
     </member>
     <member name="M:TouchSocket.Rpc.RpcInvokeException.#ctor(System.String)">
       <summary>
@@ -2504,6 +2639,15 @@
       <summary>
             Rpc范围类
             </summary>
+    </member>
+    <member name="M:TouchSocket.Rpc.RpcServer.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Rpc.RpcServer</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="T:TouchSocket.Rpc.RpcServerProvider">
       <summary>
@@ -3015,6 +3159,20 @@
             TransientRpcServer
             </summary>
     </member>
+    <member name="M:TouchSocket.Rpc.TransientRpcServer.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Rpc.TransientRpcServer</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.TransientRpcServer.CallContext">
+      <summary>
+            调用上下文。
+            </summary>
+    </member>
     <member name="P:TouchSocket.Rpc.TransientRpcServer.TouchSocket#Rpc#ITransientRpcServer#CallContext">
       <summary>
             调用上下文
@@ -3033,6 +3191,20 @@
           </include>
         </markup>
       </typeparam>
+    </member>
+    <member name="M:TouchSocket.Rpc.TransientRpcServer`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Rpc.TransientRpcServer`1</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.TransientRpcServer`1.CallContext">
+      <summary>
+            调用上下文。
+            </summary>
     </member>
     <member name="P:TouchSocket.Rpc.TransientRpcServer`1.TouchSocket#Rpc#ITransientRpcServer#CallContext">
       <summary>
