@@ -316,15 +316,7 @@
       <summary>
             Rpc调用
             <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
-      <param name="returnType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>returnType</parameter>
-            <parameter>M:TouchSocket.XmlRpc.XmlRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
-          </include>
-        </markup>
-      </param>
+      <param name="returnType">返回值类型</param>
       <param name="invokeKey">调用键</param>
       <param name="parameters">参数</param>
       <param name="invokeOption">Rpc调用设置</param>
@@ -422,8 +414,8 @@
     </member>
     <member name="M:TouchSocket.XmlRpc.XmlRpcParserPlugin.OnHttpRequest(TouchSocket.Http.IHttpSocketClient,TouchSocket.Http.HttpContextEventArgs)">
       <summary>
-            在收到Http请求时。注意：此插件的执行在<see cref="T:TouchSocket.Http.IHttpGetPlugin" />,<see cref="T:TouchSocket.Http.IHttpPostPlugin" />,
-            <see cref="T:TouchSocket.Http.IHttpDeletePlugin" />,<see cref="T:TouchSocket.Http.IHttpPutPlugin" />之前。
+            在收到Http请求时。注意：此插件的执行在<see cref="!:IHttpGetPlugin" />,<see cref="!:IHttpPostPlugin" />,
+            <see cref="!:IHttpDeletePlugin" />,<see cref="!:IHttpPutPlugin" />之前。
             </summary>
       <param name="client"></param>
       <param name="e"></param>

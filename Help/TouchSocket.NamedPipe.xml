@@ -759,13 +759,12 @@
           </include>
         </markup>
       </param>
-      <exception cref="T:System.Exception"></exception>
     </member>
     <member name="M:TouchSocket.NamedPipe.NamedPipeClientBase.Connect(System.Int32,System.Threading.CancellationToken)">
       <summary>
             连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <exception cref="T:System.TimeoutException"></exception>
       <exception cref="T:System.Exception"></exception>
@@ -774,7 +773,7 @@
       <summary>
             异步连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -1031,11 +1030,11 @@
       <summary>
             建立管道的连接。
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.PipeConnect(System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1058,11 +1057,11 @@
       <summary>
             建立管道的连接。
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.NamedPipe.NamedPipeClientBase.PipeConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1288,7 +1287,7 @@
         </markup>
       </param>
       <param name="pipeName">管道名称</param>
-      <param name="timeout">超时设定</param>
+      <param name="millisecondsTimeout">超时设定</param>
       <typeparam name="TClient">
         <markup>
           <include item="SMCMissingParamTag">
@@ -1321,7 +1320,7 @@
         </markup>
       </param>
       <param name="pipeName">管道名称</param>
-      <param name="timeout">超时设定</param>
+      <param name="millisecondsTimeout">超时设定</param>
       <typeparam name="TClient">
         <markup>
           <include item="SMCMissingParamTag">
@@ -2946,7 +2945,6 @@
           </include>
         </markup>
       </param>
-      <exception cref="T:System.Exception"></exception>
     </member>
     <member name="P:TouchSocket.NamedPipe.NamedPipeSocketClient.Config">
       <summary>

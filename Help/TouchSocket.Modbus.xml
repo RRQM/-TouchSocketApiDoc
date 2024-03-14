@@ -77,11 +77,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Modbus.IModbusMaster.SendModbusRequest(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -117,11 +117,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Modbus.IModbusMaster.SendModbusRequestAsync(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -507,7 +507,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="quantity">读取数量</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>读取到的值集合</returns>
     </member>
@@ -529,7 +529,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="quantity">读取数量</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>读取到的值集合</returns>
     </member>
@@ -551,7 +551,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="quantity">读取数量</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>读取到的值集合</returns>
     </member>
@@ -573,7 +573,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="quantity">读取数量</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>读取到的值集合</returns>
     </member>
@@ -595,7 +595,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="quantity">读取数量</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>响应值</returns>
     </member>
@@ -617,7 +617,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="quantity">读取数量</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>响应值</returns>
     </member>
@@ -639,7 +639,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="quantity">读取数量</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>响应值</returns>
     </member>
@@ -661,7 +661,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="quantity">读取数量</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>响应值</returns>
     </member>
@@ -687,7 +687,7 @@
       <param name="quantityForRead">读取长度</param>
       <param name="startingAddress">写入位置（从0开始）</param>
       <param name="bytes">待写入数据</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>响应值</returns>
     </member>
@@ -713,7 +713,7 @@
       <param name="quantityForRead">读取长度</param>
       <param name="startingAddress">写入位置（从0开始）</param>
       <param name="bytes">待写入数据</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>响应值</returns>
     </member>
@@ -734,7 +734,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="values">待写入集合</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
     </member>
     <member name="M:TouchSocket.Modbus.ModbusMasterExtension.WriteMultipleCoilsAsync(TouchSocket.Modbus.IModbusMaster,System.Byte,System.UInt16,System.Boolean[])">
@@ -762,7 +762,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="values">待写入集合</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -790,7 +790,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="bytes">待写入集合</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
     </member>
     <member name="M:TouchSocket.Modbus.ModbusMasterExtension.WriteMultipleRegistersAsync(TouchSocket.Modbus.IModbusMaster,System.Byte,System.UInt16,System.Byte[])">
@@ -818,7 +818,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="bytes">待写入集合</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -846,7 +846,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="value">待写入数值</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
     </member>
     <member name="M:TouchSocket.Modbus.ModbusMasterExtension.WriteSingleCoilAsync(TouchSocket.Modbus.IModbusMaster,System.Byte,System.UInt16,System.Boolean)">
@@ -874,7 +874,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="value">待写入数值</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -902,7 +902,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="value">待写入数值</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
     </member>
     <member name="M:TouchSocket.Modbus.ModbusMasterExtension.WriteSingleRegister(TouchSocket.Modbus.IModbusMaster,System.Byte,System.UInt16,System.UInt16,System.Int32,System.Threading.CancellationToken)">
@@ -913,7 +913,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="value">待写入数值</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
     </member>
     <member name="M:TouchSocket.Modbus.ModbusMasterExtension.WriteSingleRegisterAsync(TouchSocket.Modbus.IModbusMaster,System.Byte,System.UInt16,System.Int16)">
@@ -941,7 +941,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="value">待写入数值</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -960,7 +960,7 @@
       <param name="slaveId">站点号</param>
       <param name="startingAddress">起始位置（从0开始）</param>
       <param name="value">待写入数值</param>
-      <param name="timeout">超时时间，单位（ms）</param>
+      <param name="millisecondsTimeout">超时时间，单位（ms）</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -1251,11 +1251,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Modbus.ModbusRtuMaster.SendModbusRequest(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1291,11 +1291,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Modbus.ModbusRtuMaster.SendModbusRequestAsync(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1390,11 +1390,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Modbus.ModbusRtuOverTcpMaster.SendModbusRequest(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1430,11 +1430,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Modbus.ModbusRtuOverTcpMaster.SendModbusRequestAsync(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1523,11 +1523,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Modbus.ModbusRtuOverUdpMaster.SendModbusRequest(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1563,11 +1563,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Modbus.ModbusRtuOverUdpMaster.SendModbusRequestAsync(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1686,11 +1686,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Modbus.ModbusTcpMaster.SendModbusRequest(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1726,11 +1726,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Modbus.ModbusTcpMaster.SendModbusRequestAsync(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1819,11 +1819,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Modbus.ModbusUdpMaster.SendModbusRequest(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1859,11 +1859,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Modbus.ModbusUdpMaster.SendModbusRequestAsync(TouchSocket.Modbus.ModbusRequest,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>

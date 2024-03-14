@@ -55,7 +55,7 @@
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <HelpTitle>TouchSocket手册</HelpTitle>
-    <HelpFileVersion>2.0.0.0-beta</HelpFileVersion>
+    <HelpFileVersion>2.0.0</HelpFileVersion>
     <NamingMethod>Guid</NamingMethod>
     <ContentPlacement>BelowNamespaces</ContentPlacement>
     <RootNamespaceContainer>False</RootNamespaceContainer>

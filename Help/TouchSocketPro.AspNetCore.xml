@@ -504,8 +504,13 @@
     </member>
     <member name="P:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.Resolver">
       <summary>
-            Resolver
-            </summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.Resolver</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="P:TouchSocket.Dmtp.AspNetCore.HttpMiddlewareDmtpSocketClient.Service">
       <summary>

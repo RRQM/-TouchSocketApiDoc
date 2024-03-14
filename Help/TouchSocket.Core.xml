@@ -786,7 +786,7 @@
       <summary>
             异步等待指定时间
              </summary>
-      <param name="timeout">超时时间</param>
+      <param name="millisecondsTimeout">超时时间</param>
       <returns>
         <markup>
           <include item="SMCMissingTag">
@@ -2975,16 +2975,6 @@
         </markup>
       </param>
     </member>
-    <member name="T:TouchSocket.Core.BytesConverter">
-      <summary>
-            字节类转换器
-            </summary>
-    </member>
-    <member name="M:TouchSocket.Core.BytesConverter.#ctor">
-      <summary>
-            字节类转换器
-            </summary>
-    </member>
     <member name="T:TouchSocket.Core.BytesExtension">
       <summary>
             BytesExtension
@@ -3191,6 +3181,43 @@
           </include>
         </markup>
       </returns>
+    </member>
+    <member name="T:TouchSocket.Core.BytesSerializerConverter">
+      <summary>
+            字节类转换器
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.BytesSerializerConverter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.BytesSerializerConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="T:TouchSocket.Core.BytesSerializerConverter`1">
+      <summary>
+            字节类转换器
+            </summary>
+      <typeparam name="TState">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TState</parameter>
+            <parameter>T:TouchSocket.Core.BytesSerializerConverter`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
+    </member>
+    <member name="M:TouchSocket.Core.BytesSerializerConverter`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.BytesSerializerConverter`1</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="T:TouchSocket.Core.CacheDataHandlingAdapter">
       <summary>
@@ -8520,14 +8547,6 @@
         </markup>
       </returns>
     </member>
-    <member name="F:TouchSocket.Core.DataHandlingAdapterExtension.CacheTimeoutEnableProperty">
-      <summary>
-            适配器数据包缓存启用。默认为缺省（null），如果有正常值会在设置适配器时，直接作用于<see cref="P:TouchSocket.Core.SingleStreamDataHandlingAdapter.CacheTimeout" /></summary>
-    </member>
-    <member name="F:TouchSocket.Core.DataHandlingAdapterExtension.CacheTimeoutProperty">
-      <summary>
-            适配器数据包缓存时长。默认为缺省（<see cref="F:System.TimeSpan.Zero" />）。当该值有效时会在设置适配器时，直接作用于<see cref="P:TouchSocket.Core.SingleStreamDataHandlingAdapter.CacheTimeout" /></summary>
-    </member>
     <member name="M:TouchSocket.Core.DataHandlingAdapterExtension.Config(TouchSocket.Core.DataHandlingAdapter,TouchSocket.Core.TouchSocketConfig)">
       <summary>
             将<see cref="T:TouchSocket.Core.TouchSocketConfig" />中的配置，装载在<see cref="T:TouchSocket.Core.SingleStreamDataHandlingAdapter" />上。
@@ -8541,10 +8560,6 @@
             </summary>
       <param name="adapter"></param>
       <param name="config"></param>
-    </member>
-    <member name="F:TouchSocket.Core.DataHandlingAdapterExtension.MaxPackageSizeProperty">
-      <summary>
-            适配器数据包最大值。默认缺省（null），当该值有效时会在设置适配器时，直接作用于<see cref="P:TouchSocket.Core.DataHandlingAdapter.MaxPackageSize" /></summary>
     </member>
     <member name="M:TouchSocket.Core.DataHandlingAdapterExtension.SetAdapterOption(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.AdapterOption)">
       <summary>
@@ -8576,66 +8591,6 @@
           </include>
         </markup>
       </returns>
-    </member>
-    <member name="M:TouchSocket.Core.DataHandlingAdapterExtension.SetCacheTimeout(TouchSocket.Core.TouchSocketConfig,System.TimeSpan)">
-      <summary>
-            适配器数据包缓存时长。默认为缺省（<see cref="F:System.TimeSpan.Zero" />）。当该值有效时会在设置适配器时，直接作用于<see cref="P:TouchSocket.Core.SingleStreamDataHandlingAdapter.CacheTimeout" /></summary>
-      <param name="config"></param>
-      <param name="value"></param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.DataHandlingAdapterExtension.SetCacheTimeout(TouchSocket.Core.TouchSocketConfig,System.TimeSpan)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Core.DataHandlingAdapterExtension.SetCacheTimeoutEnable(TouchSocket.Core.TouchSocketConfig,System.Boolean)">
-      <summary>
-            适配器数据包缓存启用。默认为缺省（null），如果有正常值会在设置适配器时，直接作用于<see cref="P:TouchSocket.Core.SingleStreamDataHandlingAdapter.CacheTimeoutEnable" /></summary>
-      <param name="config"></param>
-      <param name="value"></param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.DataHandlingAdapterExtension.SetCacheTimeoutEnable(TouchSocket.Core.TouchSocketConfig,System.Boolean)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Core.DataHandlingAdapterExtension.SetMaxPackageSize(TouchSocket.Core.TouchSocketConfig,System.Int32)">
-      <summary>
-            适配器数据包最大值。默认缺省（null），当该值有效时会在设置适配器时，直接作用于<see cref="P:TouchSocket.Core.DataHandlingAdapter.MaxPackageSize" /></summary>
-      <param name="config"></param>
-      <param name="value"></param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.DataHandlingAdapterExtension.SetMaxPackageSize(TouchSocket.Core.TouchSocketConfig,System.Int32)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Core.DataHandlingAdapterExtension.SetUpdateCacheTimeWhenRev(TouchSocket.Core.TouchSocketConfig,System.Boolean)">
-      <summary>
-            适配器数据包缓存策略。默认缺省（null），当该值有效时会在设置适配器时，直接作用于<see cref="P:TouchSocket.Core.SingleStreamDataHandlingAdapter.UpdateCacheTimeWhenRev" /></summary>
-      <param name="config"></param>
-      <param name="value"></param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.DataHandlingAdapterExtension.SetUpdateCacheTimeWhenRev(TouchSocket.Core.TouchSocketConfig,System.Boolean)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="F:TouchSocket.Core.DataHandlingAdapterExtension.UpdateCacheTimeWhenRevProperty">
-      <summary>
-            适配器数据包缓存策略。默认缺省（null），当该值有效时会在设置适配器时，直接作用于<see cref="P:TouchSocket.Core.SingleStreamDataHandlingAdapter.UpdateCacheTimeWhenRev" /></summary>
     </member>
     <member name="T:TouchSocket.Core.DataSecurity">
       <summary>
@@ -9645,31 +9600,6 @@
           </include>
         </markup>
       </param>
-    </member>
-    <member name="M:TouchSocket.Core.DisposableObject.DisposeAsync">
-      <summary>
-            异步释放资源。内部已经处理了<see cref="M:System.GC.SuppressFinalize(System.Object)" /></summary>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.DisposableObject.DisposeAsync</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Core.DisposableObject.DisposeAsyncCore">
-      <summary>
-            异步释放资源。注意：此方法仅在调用<see cref="M:System.IAsyncDisposable.DisposeAsync" />时有效。
-            </summary>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.DisposableObject.DisposeAsyncCore</parameter>
-          </include>
-        </markup>
-      </returns>
     </member>
     <member name="P:TouchSocket.Core.DisposableObject.DisposedValue">
       <summary>
@@ -12941,105 +12871,6 @@
             注入容器接口
             </summary>
     </member>
-    <member name="T:TouchSocket.Core.IConverter`1">
-      <summary>
-            转换器接口
-            </summary>
-      <typeparam name="TSource">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TSource</parameter>
-            <parameter>T:TouchSocket.Core.IConverter`1</parameter>
-          </include>
-        </markup>
-      </typeparam>
-    </member>
-    <member name="P:TouchSocket.Core.IConverter`1.Order">
-      <summary>
-            转换器执行顺序
-            <para>该属性值越小，越靠前执行。值相等时，按添加先后顺序</para><para>该属性效果，仅在<see cref="M:TouchSocket.Core.TouchSocketConverter`1.Add(TouchSocket.Core.IConverter{`0})" />之前设置有效。</para></summary>
-    </member>
-    <member name="M:TouchSocket.Core.IConverter`1.TryConvertFrom(`0,System.Type,System.Object@)">
-      <summary>
-            尝试将源数据转换目标类型对象
-            </summary>
-      <param name="source">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>source</parameter>
-            <parameter>M:TouchSocket.Core.IConverter`1.TryConvertFrom(`0,System.Type,System.Object@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="targetType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>targetType</parameter>
-            <parameter>M:TouchSocket.Core.IConverter`1.TryConvertFrom(`0,System.Type,System.Object@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="target">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>target</parameter>
-            <parameter>M:TouchSocket.Core.IConverter`1.TryConvertFrom(`0,System.Type,System.Object@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.IConverter`1.TryConvertFrom(`0,System.Type,System.Object@)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Core.IConverter`1.TryConvertTo``1(``0,`0@)">
-      <summary>
-            尝试将目标类型对象转换源数据
-            </summary>
-      <param name="target">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>target</parameter>
-            <parameter>M:TouchSocket.Core.IConverter`1.TryConvertTo``1(``0,`0@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="source">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>source</parameter>
-            <parameter>M:TouchSocket.Core.IConverter`1.TryConvertTo``1(``0,`0@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <typeparam name="TTarget">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TTarget</parameter>
-            <parameter>M:TouchSocket.Core.IConverter`1.TryConvertTo``1(``0,`0@)</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.IConverter`1.TryConvertTo``1(``0,`0@)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
     <member name="T:TouchSocket.Core.IDataCompressor">
       <summary>
             数据压缩机接口
@@ -13894,11 +13725,6 @@
             </summary>
       <param name="pluginManager"></param>
     </member>
-    <member name="P:TouchSocket.Core.IPlugin.Order">
-      <summary>
-            插件执行顺序
-            <para>该属性值越大，越靠前执行。值相等时，按添加先后顺序</para><para>该属性效果，仅在<see cref="M:TouchSocket.Core.IPluginManager.Add(TouchSocket.Core.IPlugin)" />之前设置有效。</para></summary>
-    </member>
     <member name="T:TouchSocket.Core.IPluginManager">
       <summary>
             插件管理器接口
@@ -14379,30 +14205,53 @@
             是否成功
             </summary>
     </member>
-    <member name="T:TouchSocket.Core.ISerializer`1">
+    <member name="T:TouchSocket.Core.ISerializerFormatter`2">
       <summary>
-            序列化器
+            转换器接口
             </summary>
       <typeparam name="TSource">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>typeparam</parameter>
             <parameter>TSource</parameter>
-            <parameter>T:TouchSocket.Core.ISerializer`1</parameter>
+            <parameter>T:TouchSocket.Core.ISerializerFormatter`2</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TState">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TState</parameter>
+            <parameter>T:TouchSocket.Core.ISerializerFormatter`2</parameter>
           </include>
         </markup>
       </typeparam>
     </member>
-    <member name="M:TouchSocket.Core.ISerializer`1.Deserialize(`0,System.Type)">
+    <member name="P:TouchSocket.Core.ISerializerFormatter`2.Order">
       <summary>
-            反序列化
+            转换器执行顺序
+            <para>该属性值越小，越靠前执行。值相等时，按添加先后顺序</para><para>该属性效果，仅在<see cref="M:TouchSocket.Core.TouchSocketSerializerConverter`2.Add(TouchSocket.Core.ISerializerFormatter{`0,`1})" />之前设置有效。</para></summary>
+    </member>
+    <member name="M:TouchSocket.Core.ISerializerFormatter`2.TryDeserialize(`1,`0@,System.Type,System.Object@)">
+      <summary>
+            尝试将源数据转换目标类型对象
             </summary>
+      <param name="state">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>state</parameter>
+            <parameter>M:TouchSocket.Core.ISerializerFormatter`2.TryDeserialize(`1,`0@,System.Type,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
       <param name="source">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>source</parameter>
-            <parameter>M:TouchSocket.Core.ISerializer`1.Deserialize(`0,System.Type)</parameter>
+            <parameter>M:TouchSocket.Core.ISerializerFormatter`2.TryDeserialize(`1,`0@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </param>
@@ -14411,29 +14260,16 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>targetType</parameter>
-            <parameter>M:TouchSocket.Core.ISerializer`1.Deserialize(`0,System.Type)</parameter>
+            <parameter>M:TouchSocket.Core.ISerializerFormatter`2.TryDeserialize(`1,`0@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.ISerializer`1.Deserialize(`0,System.Type)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Core.ISerializer`1.Serialize(System.Object)">
-      <summary>
-            序列化
-            </summary>
       <param name="target">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>target</parameter>
-            <parameter>M:TouchSocket.Core.ISerializer`1.Serialize(System.Object)</parameter>
+            <parameter>M:TouchSocket.Core.ISerializerFormatter`2.TryDeserialize(`1,`0@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </param>
@@ -14441,7 +14277,47 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.ISerializer`1.Serialize(System.Object)</parameter>
+            <parameter>M:TouchSocket.Core.ISerializerFormatter`2.TryDeserialize(`1,`0@,System.Type,System.Object@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.ISerializerFormatter`2.TrySerialize(`1,System.Object@,`0@)">
+      <summary>
+            尝试将目标类型对象转换源数据
+            </summary>
+      <param name="state">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>state</parameter>
+            <parameter>M:TouchSocket.Core.ISerializerFormatter`2.TrySerialize(`1,System.Object@,`0@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:TouchSocket.Core.ISerializerFormatter`2.TrySerialize(`1,System.Object@,`0@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="source">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>source</parameter>
+            <parameter>M:TouchSocket.Core.ISerializerFormatter`2.TrySerialize(`1,System.Object@,`0@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.ISerializerFormatter`2.TrySerialize(`1,System.Object@,`0@)</parameter>
           </include>
         </markup>
       </returns>
@@ -14674,43 +14550,61 @@
         </markup>
       </param>
     </member>
-    <member name="T:TouchSocket.Core.JsonBytesToClassConverter">
+    <member name="T:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1">
       <summary>
             Json字节转到对应类
             </summary>
+      <typeparam name="TState">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TState</parameter>
+            <parameter>T:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
     </member>
-    <member name="M:TouchSocket.Core.JsonBytesToClassConverter.#ctor">
+    <member name="M:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.#ctor">
       <summary>
         <markup>
           <include item="SMCAutoDocConstructor">
-            <parameter>TouchSocket.Core.JsonBytesToClassConverter</parameter>
+            <parameter>TouchSocket.Core.JsonBytesToClassSerializerFormatter`1</parameter>
           </include>
         </markup>
       </summary>
     </member>
-    <member name="P:TouchSocket.Core.JsonBytesToClassConverter.JsonSettings">
+    <member name="P:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.JsonSettings">
       <summary>
             JsonSettings
             </summary>
     </member>
-    <member name="P:TouchSocket.Core.JsonBytesToClassConverter.Order">
+    <member name="P:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.Order">
       <summary>
     
             转换器执行顺序
-            <para>该属性值越小，越靠前执行。值相等时，按添加先后顺序</para><para>该属性效果，仅在<see cref="M:TouchSocket.Core.TouchSocketConverter`1.Add(TouchSocket.Core.IConverter{`0})" />之前设置有效。</para></summary>
+            <para>该属性值越小，越靠前执行。值相等时，按添加先后顺序</para><para>该属性效果，仅在<see cref="M:TouchSocket.Core.TouchSocketSerializerConverter`2.Add(TouchSocket.Core.ISerializerFormatter{`0,`1})" />之前设置有效。</para></summary>
     </member>
-    <member name="M:TouchSocket.Core.JsonBytesToClassConverter.TryConvertFrom(System.Byte[],System.Type,System.Object@)">
+    <member name="M:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.TryDeserialize(`0,System.Byte[]@,System.Type,System.Object@)">
       <summary>
     
             尝试将源数据转换目标类型对象
             
   </summary>
+      <param name="state">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>state</parameter>
+            <parameter>M:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.TryDeserialize(`0,System.Byte[]@,System.Type,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
       <param name="source">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>source</parameter>
-            <parameter>M:TouchSocket.Core.JsonBytesToClassConverter.TryConvertFrom(System.Byte[],System.Type,System.Object@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.TryDeserialize(`0,System.Byte[]@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </param>
@@ -14719,7 +14613,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>targetType</parameter>
-            <parameter>M:TouchSocket.Core.JsonBytesToClassConverter.TryConvertFrom(System.Byte[],System.Type,System.Object@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.TryDeserialize(`0,System.Byte[]@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </param>
@@ -14728,7 +14622,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>target</parameter>
-            <parameter>M:TouchSocket.Core.JsonBytesToClassConverter.TryConvertFrom(System.Byte[],System.Type,System.Object@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.TryDeserialize(`0,System.Byte[]@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </param>
@@ -14736,23 +14630,32 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.JsonBytesToClassConverter.TryConvertFrom(System.Byte[],System.Type,System.Object@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.TryDeserialize(`0,System.Byte[]@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Core.JsonBytesToClassConverter.TryConvertTo``1(``0,System.Byte[]@)">
+    <member name="M:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.Byte[]@)">
       <summary>
     
             尝试将目标类型对象转换源数据
             
   </summary>
+      <param name="state">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>state</parameter>
+            <parameter>M:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.Byte[]@)</parameter>
+          </include>
+        </markup>
+      </param>
       <param name="target">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>target</parameter>
-            <parameter>M:TouchSocket.Core.JsonBytesToClassConverter.TryConvertTo``1(``0,System.Byte[]@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.Byte[]@)</parameter>
           </include>
         </markup>
       </param>
@@ -14761,65 +14664,74 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>source</parameter>
-            <parameter>M:TouchSocket.Core.JsonBytesToClassConverter.TryConvertTo``1(``0,System.Byte[]@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.Byte[]@)</parameter>
           </include>
         </markup>
       </param>
-      <typeparam name="TTarget">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TTarget</parameter>
-            <parameter>M:TouchSocket.Core.JsonBytesToClassConverter.TryConvertTo``1(``0,System.Byte[]@)</parameter>
-          </include>
-        </markup>
-      </typeparam>
       <returns>
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.JsonBytesToClassConverter.TryConvertTo``1(``0,System.Byte[]@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonBytesToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.Byte[]@)</parameter>
           </include>
         </markup>
       </returns>
     </member>
-    <member name="T:TouchSocket.Core.JsonStringToClassConverter">
+    <member name="T:TouchSocket.Core.JsonStringToClassSerializerFormatter`1">
       <summary>
             Json字符串转到对应类
             </summary>
+      <typeparam name="TState">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TState</parameter>
+            <parameter>T:TouchSocket.Core.JsonStringToClassSerializerFormatter`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
     </member>
-    <member name="M:TouchSocket.Core.JsonStringToClassConverter.#ctor">
+    <member name="M:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.#ctor">
       <summary>
         <markup>
           <include item="SMCAutoDocConstructor">
-            <parameter>TouchSocket.Core.JsonStringToClassConverter</parameter>
+            <parameter>TouchSocket.Core.JsonStringToClassSerializerFormatter`1</parameter>
           </include>
         </markup>
       </summary>
     </member>
-    <member name="P:TouchSocket.Core.JsonStringToClassConverter.JsonSettings">
+    <member name="P:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.JsonSettings">
       <summary>
             JsonSettings
             </summary>
     </member>
-    <member name="P:TouchSocket.Core.JsonStringToClassConverter.Order">
+    <member name="P:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.Order">
       <summary>
     
             转换器执行顺序
-            <para>该属性值越小，越靠前执行。值相等时，按添加先后顺序</para><para>该属性效果，仅在<see cref="M:TouchSocket.Core.TouchSocketConverter`1.Add(TouchSocket.Core.IConverter{`0})" />之前设置有效。</para></summary>
+            <para>该属性值越小，越靠前执行。值相等时，按添加先后顺序</para><para>该属性效果，仅在<see cref="M:TouchSocket.Core.TouchSocketSerializerConverter`2.Add(TouchSocket.Core.ISerializerFormatter{`0,`1})" />之前设置有效。</para></summary>
     </member>
-    <member name="M:TouchSocket.Core.JsonStringToClassConverter.TryConvertFrom(System.String,System.Type,System.Object@)">
+    <member name="M:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)">
       <summary>
     
             尝试将源数据转换目标类型对象
             
   </summary>
+      <param name="state">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>state</parameter>
+            <parameter>M:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
       <param name="source">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>source</parameter>
-            <parameter>M:TouchSocket.Core.JsonStringToClassConverter.TryConvertFrom(System.String,System.Type,System.Object@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </param>
@@ -14828,7 +14740,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>targetType</parameter>
-            <parameter>M:TouchSocket.Core.JsonStringToClassConverter.TryConvertFrom(System.String,System.Type,System.Object@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </param>
@@ -14837,7 +14749,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>target</parameter>
-            <parameter>M:TouchSocket.Core.JsonStringToClassConverter.TryConvertFrom(System.String,System.Type,System.Object@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </param>
@@ -14845,23 +14757,32 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.JsonStringToClassConverter.TryConvertFrom(System.String,System.Type,System.Object@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Core.JsonStringToClassConverter.TryConvertTo``1(``0,System.String@)">
+    <member name="M:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)">
       <summary>
     
             尝试将目标类型对象转换源数据
             
   </summary>
+      <param name="state">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>state</parameter>
+            <parameter>M:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)</parameter>
+          </include>
+        </markup>
+      </param>
       <param name="target">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>target</parameter>
-            <parameter>M:TouchSocket.Core.JsonStringToClassConverter.TryConvertTo``1(``0,System.String@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)</parameter>
           </include>
         </markup>
       </param>
@@ -14870,24 +14791,15 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>source</parameter>
-            <parameter>M:TouchSocket.Core.JsonStringToClassConverter.TryConvertTo``1(``0,System.String@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)</parameter>
           </include>
         </markup>
       </param>
-      <typeparam name="TTarget">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TTarget</parameter>
-            <parameter>M:TouchSocket.Core.JsonStringToClassConverter.TryConvertTo``1(``0,System.String@)</parameter>
-          </include>
-        </markup>
-      </typeparam>
       <returns>
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.JsonStringToClassConverter.TryConvertTo``1(``0,System.String@)</parameter>
+            <parameter>M:TouchSocket.Core.JsonStringToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)</parameter>
           </include>
         </markup>
       </returns>
@@ -18082,6 +17994,11 @@
       <summary>Serves as the default hash function.</summary>
       <returns>A hash code for the current object.</returns>
     </member>
+    <member name="P:TouchSocket.Core.Method.HasByRef">
+      <summary>
+            是否有引用类型
+            </summary>
+    </member>
     <member name="P:TouchSocket.Core.Method.HasReturn">
       <summary>
             是否具有返回值。当返回值为Task时，也会认为没有返回值。
@@ -18192,11 +18109,6 @@
           </include>
         </markup>
       </returns>
-    </member>
-    <member name="P:TouchSocket.Core.Method.IsByRef">
-      <summary>
-            是否有引用类型
-            </summary>
     </member>
     <member name="F:TouchSocket.Core.Method.m_invoker">
       <summary>
@@ -18724,11 +18636,6 @@
             </summary>
       <param name="pluginManager"></param>
     </member>
-    <member name="P:TouchSocket.Core.PluginBase.Order">
-      <summary>
-            插件执行顺序
-            <para>该属性值越大，越靠前执行。值相等时，按添加先后顺序</para><para>该属性效果，仅在<see cref="M:TouchSocket.Core.IPluginManager.Add(TouchSocket.Core.IPlugin)" />之前设置有效。</para></summary>
-    </member>
     <member name="P:TouchSocket.Core.PluginBase.PluginManager">
       <summary>
             插件管理器
@@ -19031,20 +18938,6 @@
             PluginManagerContainerExtension
             </summary>
     </member>
-    <member name="M:TouchSocket.Core.PluginManagerContainerExtension.AddPluginManager(TouchSocket.Core.IRegistrator)">
-      <summary>
-            添加<see cref="T:TouchSocket.Core.IPluginManager" />到容器。
-            </summary>
-      <param name="registrator"></param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.PluginManagerContainerExtension.AddPluginManager(TouchSocket.Core.IRegistrator)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
     <member name="T:TouchSocket.Core.PluginManagerExtension">
       <summary>
             PluginManagerExtension
@@ -19275,11 +19168,6 @@
           </include>
         </markup>
       </summary>
-    </member>
-    <member name="P:TouchSocket.Core.PluginOptionAttribute.NotRegister">
-      <summary>
-            标识该插件不需要注册到容器。可能是功能性插件。
-            </summary>
     </member>
     <member name="P:TouchSocket.Core.PluginOptionAttribute.Singleton">
       <summary>
@@ -20718,15 +20606,6 @@
         </markup>
       </param>
     </member>
-    <member name="P:TouchSocket.Core.SerializeConvert.NewtonsoftJsonFirst">
-      <summary>
-            首先使用NewtonsoftJson.默认True。
-            <para>
-            当设置True时，json序列化会优先使用NewtonsoftJson。
-            当设置为FALSE，netstandard2.0和net45平台将继续使用。
-            其他平台将使用System.Text.Json。
-            </para></summary>
-    </member>
     <member name="M:TouchSocket.Core.SerializeConvert.ToJsonString(System.Object)">
       <summary>
             转换为Json
@@ -20810,12 +20689,90 @@
         </markup>
       </returns>
     </member>
+    <member name="M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromStream``1(System.IO.Stream)">
+      <summary>
+            Xml反序列化
+            </summary>
+      <param name="xmlStream">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>xmlStream</parameter>
+            <parameter>M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromStream``1(System.IO.Stream)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="T">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>T</parameter>
+            <parameter>M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromStream``1(System.IO.Stream)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromStream``1(System.IO.Stream)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromStream(System.IO.Stream,System.Type)">
+      <summary>
+            Xml反序列化
+            </summary>
+      <param name="xmlStream">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>xmlStream</parameter>
+            <parameter>M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromStream(System.IO.Stream,System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="targetType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>targetType</parameter>
+            <parameter>M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromStream(System.IO.Stream,System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromStream(System.IO.Stream,System.Type)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromString``1(System.String)">
       <summary>
             Xml反序列化
             </summary>
-      <param name="json">xml字符串</param>
-      <typeparam name="T">类型</typeparam>
+      <param name="xmlString">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>xmlString</parameter>
+            <parameter>M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromString``1(System.String)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="T">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>T</parameter>
+            <parameter>M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromString``1(System.String)</parameter>
+          </include>
+        </markup>
+      </typeparam>
       <returns>
         <markup>
           <include item="SMCMissingTag">
@@ -20825,18 +20782,25 @@
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromString``1(System.String,System.Text.Encoding)">
+    <member name="M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromString(System.String,System.Type)">
       <summary>
             Xml反序列化
             </summary>
       <param name="xmlString">xml字符串</param>
-      <param name="encoding">编码格式</param>
-      <typeparam name="T">类型</typeparam>
+      <param name="targetType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>targetType</parameter>
+            <parameter>M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromString(System.String,System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
       <returns>
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromString``1(System.String,System.Text.Encoding)</parameter>
+            <parameter>M:TouchSocket.Core.SerializeConvert.XmlDeserializeFromString(System.String,System.Type)</parameter>
           </include>
         </markup>
       </returns>
@@ -20993,19 +20957,6 @@
         </markup>
       </param>
     </member>
-    <member name="M:TouchSocket.Core.SetupConfigObject.DisposeAsyncCore">
-      <summary>
-            异步释放资源。注意：此方法仅在调用<see cref="M:System.IAsyncDisposable.DisposeAsync" />时有效。
-            </summary>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.SetupConfigObject.DisposeAsyncCore</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
     <member name="M:TouchSocket.Core.SetupConfigObject.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
       <summary>
             加载配置
@@ -21113,7 +21064,7 @@
       </param>
       <param name="testCount">测试次数</param>
       <param name="expectedCount">期待测试次数</param>
-      <param name="timeout">超时</param>
+      <param name="millisecondsTimeout">超时</param>
       <returns>
         <markup>
           <include item="SMCMissingTag">
@@ -21156,7 +21107,7 @@
       </param>
       <param name="testCount">测试次数</param>
       <param name="expectedCount">期待测试次数</param>
-      <param name="timeout">超时</param>
+      <param name="millisecondsTimeout">超时</param>
       <returns>
         <markup>
           <include item="SMCMissingTag">
@@ -21855,16 +21806,6 @@
         </markup>
       </returns>
     </member>
-    <member name="T:TouchSocket.Core.StringConverter">
-      <summary>
-            String类型数据转换器
-            </summary>
-    </member>
-    <member name="M:TouchSocket.Core.StringConverter.#ctor">
-      <summary>
-            构造函数
-            </summary>
-    </member>
     <member name="T:TouchSocket.Core.StringExtension">
       <summary>
             StringExtension
@@ -22286,38 +22227,103 @@
         </markup>
       </returns>
     </member>
-    <member name="T:TouchSocket.Core.StringToPrimitiveConverter">
+    <member name="T:TouchSocket.Core.StringSerializerConverter">
+      <summary>
+            String类型数据转换器
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.StringSerializerConverter.#ctor(TouchSocket.Core.ISerializerFormatter{System.String,System.Object}[])">
+      <summary>
+            String类型数据转换器
+            </summary>
+      <param name="converters">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>converters</parameter>
+            <parameter>M:TouchSocket.Core.StringSerializerConverter.#ctor(TouchSocket.Core.ISerializerFormatter{System.String,System.Object}[])</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="T:TouchSocket.Core.StringSerializerConverter`1">
+      <summary>
+            String类型数据转换器
+            </summary>
+      <typeparam name="TState">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TState</parameter>
+            <parameter>T:TouchSocket.Core.StringSerializerConverter`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
+    </member>
+    <member name="M:TouchSocket.Core.StringSerializerConverter`1.#ctor(TouchSocket.Core.ISerializerFormatter{System.String,`0}[])">
+      <summary>
+            String类型数据转换器
+            </summary>
+      <param name="converters">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>converters</parameter>
+            <parameter>M:TouchSocket.Core.StringSerializerConverter`1.#ctor(TouchSocket.Core.ISerializerFormatter{System.String,`0}[])</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="T:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1">
       <summary>
             String值转换为基础类型。
             </summary>
+      <typeparam name="TState">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TState</parameter>
+            <parameter>T:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
     </member>
-    <member name="M:TouchSocket.Core.StringToPrimitiveConverter.#ctor">
+    <member name="M:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1.#ctor">
       <summary>
         <markup>
           <include item="SMCAutoDocConstructor">
-            <parameter>TouchSocket.Core.StringToPrimitiveConverter</parameter>
+            <parameter>TouchSocket.Core.StringToPrimitiveSerializerFormatter`1</parameter>
           </include>
         </markup>
       </summary>
     </member>
-    <member name="P:TouchSocket.Core.StringToPrimitiveConverter.Order">
+    <member name="P:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1.Order">
       <summary>
     
             转换器执行顺序
-            <para>该属性值越小，越靠前执行。值相等时，按添加先后顺序</para><para>该属性效果，仅在<see cref="M:TouchSocket.Core.TouchSocketConverter`1.Add(TouchSocket.Core.IConverter{`0})" />之前设置有效。</para></summary>
+            <para>该属性值越小，越靠前执行。值相等时，按添加先后顺序</para><para>该属性效果，仅在<see cref="M:TouchSocket.Core.TouchSocketSerializerConverter`2.Add(TouchSocket.Core.ISerializerFormatter{`0,`1})" />之前设置有效。</para></summary>
     </member>
-    <member name="M:TouchSocket.Core.StringToPrimitiveConverter.TryConvertFrom(System.String,System.Type,System.Object@)">
+    <member name="M:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)">
       <summary>
     
             尝试将源数据转换目标类型对象
             
   </summary>
+      <param name="state">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>state</parameter>
+            <parameter>M:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
       <param name="source">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>source</parameter>
-            <parameter>M:TouchSocket.Core.StringToPrimitiveConverter.TryConvertFrom(System.String,System.Type,System.Object@)</parameter>
+            <parameter>M:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </param>
@@ -22326,7 +22332,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>targetType</parameter>
-            <parameter>M:TouchSocket.Core.StringToPrimitiveConverter.TryConvertFrom(System.String,System.Type,System.Object@)</parameter>
+            <parameter>M:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </param>
@@ -22335,7 +22341,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>target</parameter>
-            <parameter>M:TouchSocket.Core.StringToPrimitiveConverter.TryConvertFrom(System.String,System.Type,System.Object@)</parameter>
+            <parameter>M:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </param>
@@ -22343,23 +22349,32 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.StringToPrimitiveConverter.TryConvertFrom(System.String,System.Type,System.Object@)</parameter>
+            <parameter>M:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
           </include>
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Core.StringToPrimitiveConverter.TryConvertTo``1(``0,System.String@)">
+    <member name="M:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)">
       <summary>
     
             尝试将目标类型对象转换源数据
             
   </summary>
+      <param name="state">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>state</parameter>
+            <parameter>M:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)</parameter>
+          </include>
+        </markup>
+      </param>
       <param name="target">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>target</parameter>
-            <parameter>M:TouchSocket.Core.StringToPrimitiveConverter.TryConvertTo``1(``0,System.String@)</parameter>
+            <parameter>M:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)</parameter>
           </include>
         </markup>
       </param>
@@ -22368,24 +22383,15 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>source</parameter>
-            <parameter>M:TouchSocket.Core.StringToPrimitiveConverter.TryConvertTo``1(``0,System.String@)</parameter>
+            <parameter>M:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)</parameter>
           </include>
         </markup>
       </param>
-      <typeparam name="TTarget">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TTarget</parameter>
-            <parameter>M:TouchSocket.Core.StringToPrimitiveConverter.TryConvertTo``1(``0,System.String@)</parameter>
-          </include>
-        </markup>
-      </typeparam>
       <returns>
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.StringToPrimitiveConverter.TryConvertTo``1(``0,System.String@)</parameter>
+            <parameter>M:TouchSocket.Core.StringToPrimitiveSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)</parameter>
           </include>
         </markup>
       </returns>
@@ -22867,11 +22873,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Core.TaskExtension.WaitAsync(System.Threading.Tasks.Task,System.TimeSpan)</parameter>
           </include>
         </markup>
@@ -22899,11 +22905,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Core.TaskExtension.WaitAsync``1(System.Threading.Tasks.Task{``0},System.TimeSpan)</parameter>
           </include>
         </markup>
@@ -24326,122 +24332,6 @@
       <summary>Creates a new object that is a copy of the current instance.</summary>
       <returns>A new object that is a copy of this instance.</returns>
     </member>
-    <member name="T:TouchSocket.Core.TouchSocketConverter`1">
-      <summary>
-            转换器
-            </summary>
-      <typeparam name="TSource">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TSource</parameter>
-            <parameter>T:TouchSocket.Core.TouchSocketConverter`1</parameter>
-          </include>
-        </markup>
-      </typeparam>
-    </member>
-    <member name="M:TouchSocket.Core.TouchSocketConverter`1.#ctor">
-      <summary>
-        <markup>
-          <include item="SMCAutoDocConstructor">
-            <parameter>TouchSocket.Core.TouchSocketConverter`1</parameter>
-          </include>
-        </markup>
-      </summary>
-    </member>
-    <member name="M:TouchSocket.Core.TouchSocketConverter`1.Add(TouchSocket.Core.IConverter{`0})">
-      <summary>
-            添加插件
-            </summary>
-      <param name="converter">插件</param>
-      <exception cref="T:System.ArgumentNullException"></exception>
-    </member>
-    <member name="M:TouchSocket.Core.TouchSocketConverter`1.Clear">
-      <summary>
-            清除所有转化器
-            </summary>
-    </member>
-    <member name="M:TouchSocket.Core.TouchSocketConverter`1.ConvertFrom(`0,System.Type)">
-      <summary>
-            将源数据转换目标类型对象
-            </summary>
-      <param name="source">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>source</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketConverter`1.ConvertFrom(`0,System.Type)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="targetType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>targetType</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketConverter`1.ConvertFrom(`0,System.Type)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketConverter`1.ConvertFrom(`0,System.Type)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Core.TouchSocketConverter`1.ConvertTo(System.Object)">
-      <summary>
-            将目标类型对象转换源数据
-            </summary>
-      <param name="target">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>target</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketConverter`1.ConvertTo(System.Object)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketConverter`1.ConvertTo(System.Object)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Core.TouchSocketConverter`1.Remove(System.Type)">
-      <summary>
-            移除插件
-            </summary>
-      <param name="type">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>type</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketConverter`1.Remove(System.Type)</parameter>
-          </include>
-        </markup>
-      </param>
-    </member>
-    <member name="M:TouchSocket.Core.TouchSocketConverter`1.Remove(TouchSocket.Core.IConverter{`0})">
-      <summary>
-            移除插件
-            </summary>
-      <param name="converter">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>converter</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketConverter`1.Remove(TouchSocket.Core.IConverter{`0})</parameter>
-          </include>
-        </markup>
-      </param>
-    </member>
     <member name="T:TouchSocket.Core.TouchSocketCoreConfigExtension">
       <summary>
             TouchSocketCoreConfigExtension
@@ -24519,21 +24409,6 @@
             配置插件。
             </summary>
     </member>
-    <member name="F:TouchSocket.Core.TouchSocketCoreConfigExtension.ContainerProperty">
-      <summary>
-            容器
-            </summary>
-    </member>
-    <member name="F:TouchSocket.Core.TouchSocketCoreConfigExtension.NewPluginManagerProperty">
-      <summary>
-            是否使用新插件管理器。
-            </summary>
-    </member>
-    <member name="F:TouchSocket.Core.TouchSocketCoreConfigExtension.PluginManagerProperty">
-      <summary>
-            容器
-            </summary>
-    </member>
     <member name="F:TouchSocket.Core.TouchSocketCoreConfigExtension.RegistratorProperty">
       <summary>
             容器注册
@@ -24543,68 +24418,6 @@
       <summary>
             容器提供者
             </summary>
-    </member>
-    <member name="M:TouchSocket.Core.TouchSocketCoreConfigExtension.SetContainer(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.IContainer)">
-      <summary>
-            设置容器。
-            </summary>
-      <param name="config">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>config</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketCoreConfigExtension.SetContainer(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.IContainer)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="value">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>value</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketCoreConfigExtension.SetContainer(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.IContainer)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketCoreConfigExtension.SetContainer(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.IContainer)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Core.TouchSocketCoreConfigExtension.SetPluginManager(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.IPluginManager)">
-      <summary>
-            使用插件。
-            </summary>
-      <param name="config">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>config</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketCoreConfigExtension.SetPluginManager(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.IPluginManager)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="value">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>value</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketCoreConfigExtension.SetPluginManager(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.IPluginManager)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketCoreConfigExtension.SetPluginManager(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.IPluginManager)</parameter>
-          </include>
-        </markup>
-      </returns>
     </member>
     <member name="M:TouchSocket.Core.TouchSocketCoreConfigExtension.SetRegistrator(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.IRegistrator)">
       <summary>
@@ -24630,23 +24443,6 @@
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
             <parameter>M:TouchSocket.Core.TouchSocketCoreConfigExtension.SetResolver(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.IResolver)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Core.TouchSocketCoreConfigExtension.UseNewPluginManager(TouchSocket.Core.TouchSocketConfig)">
-      <summary>
-            使用新的插件管理器。
-            <para>
-            一般的，当在容器<see cref="T:TouchSocket.Core.IContainer" />中注入<see cref="T:TouchSocket.Core.IPluginManager" />时。会使用容器中的<see cref="T:TouchSocket.Core.IPluginManager" />。
-            但是有时候，我们希望个别配置能够独立使用插件管理器。所以可以使用此配置。
-            </para></summary>
-      <param name="config"></param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.TouchSocketCoreConfigExtension.UseNewPluginManager(TouchSocket.Core.TouchSocketConfig)</parameter>
           </include>
         </markup>
       </returns>
@@ -24918,6 +24714,149 @@
           </include>
         </markup>
       </typeparam>
+    </member>
+    <member name="T:TouchSocket.Core.TouchSocketSerializerConverter`2">
+      <summary>
+            序列化转换器
+            </summary>
+      <typeparam name="TSource">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TSource</parameter>
+            <parameter>T:TouchSocket.Core.TouchSocketSerializerConverter`2</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <typeparam name="TState">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TState</parameter>
+            <parameter>T:TouchSocket.Core.TouchSocketSerializerConverter`2</parameter>
+          </include>
+        </markup>
+      </typeparam>
+    </member>
+    <member name="M:TouchSocket.Core.TouchSocketSerializerConverter`2.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.TouchSocketSerializerConverter`2</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TouchSocket.Core.TouchSocketSerializerConverter`2.Add(TouchSocket.Core.ISerializerFormatter{`0,`1})">
+      <summary>
+            添加插件
+            </summary>
+      <param name="converter">插件</param>
+      <exception cref="T:System.ArgumentNullException"></exception>
+    </member>
+    <member name="M:TouchSocket.Core.TouchSocketSerializerConverter`2.Clear">
+      <summary>
+            清除所有转化器
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Core.TouchSocketSerializerConverter`2.Deserialize(`1,`0,System.Type)">
+      <summary>
+            将源数据转换目标类型对象
+            </summary>
+      <param name="state">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>state</parameter>
+            <parameter>M:TouchSocket.Core.TouchSocketSerializerConverter`2.Deserialize(`1,`0,System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="source">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>source</parameter>
+            <parameter>M:TouchSocket.Core.TouchSocketSerializerConverter`2.Deserialize(`1,`0,System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="targetType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>targetType</parameter>
+            <parameter>M:TouchSocket.Core.TouchSocketSerializerConverter`2.Deserialize(`1,`0,System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.TouchSocketSerializerConverter`2.Deserialize(`1,`0,System.Type)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.TouchSocketSerializerConverter`2.Remove(System.Type)">
+      <summary>
+            移除插件
+            </summary>
+      <param name="type">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>type</parameter>
+            <parameter>M:TouchSocket.Core.TouchSocketSerializerConverter`2.Remove(System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.TouchSocketSerializerConverter`2.Remove(TouchSocket.Core.ISerializerFormatter{`0,`1})">
+      <summary>
+            移除插件
+            </summary>
+      <param name="converter">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>converter</parameter>
+            <parameter>M:TouchSocket.Core.TouchSocketSerializerConverter`2.Remove(TouchSocket.Core.ISerializerFormatter{`0,`1})</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Core.TouchSocketSerializerConverter`2.Serialize(`1,System.Object@)">
+      <summary>
+            将目标类型对象转换源数据
+            </summary>
+      <param name="state">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>state</parameter>
+            <parameter>M:TouchSocket.Core.TouchSocketSerializerConverter`2.Serialize(`1,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:TouchSocket.Core.TouchSocketSerializerConverter`2.Serialize(`1,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.TouchSocketSerializerConverter`2.Serialize(`1,System.Object@)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="T:TouchSocket.Core.TriggerQueue`1">
       <summary>
@@ -28059,6 +27998,115 @@
       <summary>
             释放
             </summary>
+    </member>
+    <member name="T:TouchSocket.Core.XmlStringToClassSerializerFormatter`1">
+      <summary>
+            Xml字符串转换器
+            </summary>
+      <typeparam name="TState"></typeparam>
+    </member>
+    <member name="M:TouchSocket.Core.XmlStringToClassSerializerFormatter`1.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Core.XmlStringToClassSerializerFormatter`1</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:TouchSocket.Core.XmlStringToClassSerializerFormatter`1.Order">
+      <summary>
+            转换器执行顺序
+            <para>该属性值越小，越靠前执行。值相等时，按添加先后顺序</para><para>该属性效果，仅在<see cref="M:TouchSocket.Core.TouchSocketSerializerConverter`2.Add(TouchSocket.Core.ISerializerFormatter{`0,`1})" />之前设置有效。</para></summary>
+    </member>
+    <member name="M:TouchSocket.Core.XmlStringToClassSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)">
+      <summary>
+            尝试将源数据转换目标类型对象
+            </summary>
+      <param name="state">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>state</parameter>
+            <parameter>M:TouchSocket.Core.XmlStringToClassSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="source">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>source</parameter>
+            <parameter>M:TouchSocket.Core.XmlStringToClassSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="targetType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>targetType</parameter>
+            <parameter>M:TouchSocket.Core.XmlStringToClassSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:TouchSocket.Core.XmlStringToClassSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.XmlStringToClassSerializerFormatter`1.TryDeserialize(`0,System.String@,System.Type,System.Object@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Core.XmlStringToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)">
+      <summary>
+            尝试将目标类型对象转换源数据
+            </summary>
+      <param name="state">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>state</parameter>
+            <parameter>M:TouchSocket.Core.XmlStringToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:TouchSocket.Core.XmlStringToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="source">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>source</parameter>
+            <parameter>M:TouchSocket.Core.XmlStringToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Core.XmlStringToClassSerializerFormatter`1.TrySerialize(`0,System.Object@,System.String@)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="T:TouchSocket.Core.XmlTool">
       <summary>

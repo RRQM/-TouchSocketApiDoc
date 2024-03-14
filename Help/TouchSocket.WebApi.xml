@@ -271,52 +271,6 @@
         </markup>
       </returns>
     </member>
-    <member name="T:TouchSocket.WebApi.OriginAttribute">
-      <summary>
-            跨域相关设置
-            </summary>
-    </member>
-    <member name="M:TouchSocket.WebApi.OriginAttribute.#ctor">
-      <summary>
-        <markup>
-          <include item="SMCAutoDocConstructor">
-            <parameter>TouchSocket.WebApi.OriginAttribute</parameter>
-          </include>
-        </markup>
-      </summary>
-    </member>
-    <member name="P:TouchSocket.WebApi.OriginAttribute.AllowCredentials">
-      <summary>
-            允许客户端携带验证信息
-            </summary>
-    </member>
-    <member name="P:TouchSocket.WebApi.OriginAttribute.AllowMethods">
-      <summary>
-            允许跨域的方法。
-            默认为“PUT,POST,GET,DELETE,OPTIONS,HEAD,PATCH”
-            </summary>
-    </member>
-    <member name="P:TouchSocket.WebApi.OriginAttribute.AllowOrigin">
-      <summary>
-            允许跨域的域名
-            </summary>
-    </member>
-    <member name="M:TouchSocket.WebApi.OriginAttribute.ExecutedAsync(TouchSocket.Rpc.ICallContext,System.Object[],TouchSocket.Rpc.InvokeResult)">
-      <summary>
-            成功执行Rpc后。
-            <para>如果修改<paramref name="invokeResult" />的InvokeStatus，或Result。则会影响Rpc最终结果</para></summary>
-      <param name="callContext"></param>
-      <param name="parameters"></param>
-      <param name="invokeResult"></param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.WebApi.OriginAttribute.ExecutedAsync(TouchSocket.Rpc.ICallContext,System.Object[],TouchSocket.Rpc.InvokeResult)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
     <member name="T:TouchSocket.WebApi.RouterAttribute">
       <summary>
             表示WebApi路由。
@@ -382,7 +336,7 @@
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.WebApi.WebApiAttribute.GetInvokenKey(TouchSocket.Rpc.MethodInstance)">
+    <member name="M:TouchSocket.WebApi.WebApiAttribute.GetInvokenKey(TouchSocket.Rpc.RpcMethod)">
       <summary>
     
             获取调用键
@@ -393,7 +347,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>methodInstance</parameter>
-            <parameter>M:TouchSocket.WebApi.WebApiAttribute.GetInvokenKey(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.WebApi.WebApiAttribute.GetInvokenKey(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </param>
@@ -401,12 +355,12 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.WebApi.WebApiAttribute.GetInvokenKey(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.WebApi.WebApiAttribute.GetInvokenKey(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.WebApi.WebApiAttribute.GetRouteUrls(TouchSocket.Rpc.MethodInstance)">
+    <member name="M:TouchSocket.WebApi.WebApiAttribute.GetRouteUrls(TouchSocket.Rpc.RpcMethod)">
       <summary>
             获取路由路径。
             <para>路由路径的第一个值会被当做调用值。</para></summary>
@@ -415,7 +369,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>methodInstance</parameter>
-            <parameter>M:TouchSocket.WebApi.WebApiAttribute.GetRouteUrls(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.WebApi.WebApiAttribute.GetRouteUrls(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </param>
@@ -423,7 +377,7 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.WebApi.WebApiAttribute.GetRouteUrls(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.WebApi.WebApiAttribute.GetRouteUrls(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </returns>
@@ -441,6 +395,11 @@
     <member name="M:TouchSocket.WebApi.WebApiClient.#ctor">
       <summary>
             构造函数
+            </summary>
+    </member>
+    <member name="P:TouchSocket.WebApi.WebApiClient.Converter">
+      <summary>
+            字符串转化器
             </summary>
     </member>
     <member name="M:TouchSocket.WebApi.WebApiClient.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
@@ -540,15 +499,7 @@
       <summary>
             Rpc调用
             <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
-      <param name="returnType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>returnType</parameter>
-            <parameter>M:TouchSocket.WebApi.WebApiClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
-          </include>
-        </markup>
-      </param>
+      <param name="returnType">返回值类型</param>
       <param name="invokeKey">调用键</param>
       <param name="parameters">参数</param>
       <param name="invokeOption">Rpc调用设置</param>
@@ -556,11 +507,6 @@
       <exception cref="T:System.TimeoutException">调用超时</exception>
       <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
       <exception cref="T:System.Exception">其他异常</exception>
-    </member>
-    <member name="P:TouchSocket.WebApi.WebApiClient.StringConverter">
-      <summary>
-            字符串转化器
-            </summary>
     </member>
     <member name="T:TouchSocket.WebApi.WebApiClientSlim">
       <summary>
@@ -572,6 +518,11 @@
             使用<see cref="T:System.Net.Http.HttpClient" />为基础的WebApi客户端。
             </summary>
       <param name="httpClient"></param>
+    </member>
+    <member name="P:TouchSocket.WebApi.WebApiClientSlim.Converter">
+      <summary>
+            字符串转化器
+            </summary>
     </member>
     <member name="M:TouchSocket.WebApi.WebApiClientSlim.Invoke(System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])">
       <summary>
@@ -646,7 +597,7 @@
       <summary>
             Rpc调用
             <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
-      <param name="returnType"></param>
+      <param name="returnType">返回值类型</param>
       <param name="invokeKey">调用键</param>
       <param name="parameters">参数</param>
       <param name="invokeOption">Rpc调用设置</param>
@@ -654,11 +605,6 @@
       <exception cref="T:System.TimeoutException">调用超时</exception>
       <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
       <exception cref="T:System.Exception">其他异常</exception>
-    </member>
-    <member name="P:TouchSocket.WebApi.WebApiClientSlim.StringConverter">
-      <summary>
-            字符串转化器
-            </summary>
     </member>
     <member name="T:TouchSocket.WebApi.WebApiDispatchProxy">
       <summary>
@@ -809,7 +755,7 @@
         </markup>
       </param>
     </member>
-    <member name="M:TouchSocket.WebApi.WebApiParserPlugin.ConfigureConverter(System.Action{TouchSocket.Core.StringConverter})">
+    <member name="M:TouchSocket.WebApi.WebApiParserPlugin.ConfigureConverter(System.Action{TouchSocket.WebApi.WebApiSerializerConverter})">
       <summary>
             配置转换器。可以实现json序列化或者xml序列化。
             </summary>
@@ -818,7 +764,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>action</parameter>
-            <parameter>M:TouchSocket.WebApi.WebApiParserPlugin.ConfigureConverter(System.Action{TouchSocket.Core.StringConverter})</parameter>
+            <parameter>M:TouchSocket.WebApi.WebApiParserPlugin.ConfigureConverter(System.Action{TouchSocket.WebApi.WebApiSerializerConverter})</parameter>
           </include>
         </markup>
       </param>
@@ -826,7 +772,7 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.WebApi.WebApiParserPlugin.ConfigureConverter(System.Action{TouchSocket.Core.StringConverter})</parameter>
+            <parameter>M:TouchSocket.WebApi.WebApiParserPlugin.ConfigureConverter(System.Action{TouchSocket.WebApi.WebApiSerializerConverter})</parameter>
           </include>
         </markup>
       </returns>
@@ -851,6 +797,70 @@
       <summary>
             获取Post函数路由映射图
             </summary>
+    </member>
+    <member name="T:TouchSocket.WebApi.WebApiSerializerConverter">
+      <summary>
+            适用于WebApi的序列化器
+            </summary>
+    </member>
+    <member name="M:TouchSocket.WebApi.WebApiSerializerConverter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.WebApi.WebApiSerializerConverter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TouchSocket.WebApi.WebApiSerializerConverter.AddJsonSerializerFormatter(Newtonsoft.Json.JsonSerializerSettings)">
+      <summary>
+            添加Json序列化器
+            </summary>
+      <param name="settings">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>settings</parameter>
+            <parameter>M:TouchSocket.WebApi.WebApiSerializerConverter.AddJsonSerializerFormatter(Newtonsoft.Json.JsonSerializerSettings)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.WebApi.WebApiSerializerConverter.AddXmlSerializerFormatter">
+      <summary>
+            添加Xml序列化器
+            </summary>
+    </member>
+    <member name="M:TouchSocket.WebApi.WebApiSerializerConverter.Serialize(TouchSocket.Http.HttpContext,System.Object@)">
+      <summary>
+            将目标类型对象转换源数据
+            </summary>
+      <param name="state">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>state</parameter>
+            <parameter>M:TouchSocket.WebApi.WebApiSerializerConverter.Serialize(TouchSocket.Http.HttpContext,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="target">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>target</parameter>
+            <parameter>M:TouchSocket.WebApi.WebApiSerializerConverter.Serialize(TouchSocket.Http.HttpContext,System.Object@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.WebApi.WebApiSerializerConverter.Serialize(TouchSocket.Http.HttpContext,System.Object@)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
   </members>
 </doc>

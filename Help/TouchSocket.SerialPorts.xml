@@ -745,13 +745,12 @@
           </include>
         </markup>
       </param>
-      <exception cref="T:System.Exception"></exception>
     </member>
     <member name="M:TouchSocket.SerialPorts.SerialPortClientBase.Connect(System.Int32,System.Threading.CancellationToken)">
       <summary>
             连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <exception cref="T:System.TimeoutException"></exception>
       <exception cref="T:System.Exception"></exception>
@@ -760,7 +759,7 @@
       <summary>
             异步连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -1189,7 +1188,7 @@
       <summary>
             连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <param name="client">
         <markup>
@@ -1233,7 +1232,7 @@
       <summary>
             异步连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <param name="client">
         <markup>
@@ -1358,11 +1357,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.TryConnect``1(``0,System.Int32)</parameter>
           </include>
         </markup>
@@ -1398,11 +1397,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.SerialPorts.SerialPortConfigExtension.TryConnectAsync``1(``0,System.Int32)</parameter>
           </include>
         </markup>

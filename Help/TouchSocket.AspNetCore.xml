@@ -1182,12 +1182,6 @@
             WebSocketDmtpSocketClient
             </summary>
     </member>
-    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.ClearReceiver">
-      <summary>
-            不支持该功能
-            </summary>
-      <exception cref="T:System.NotSupportedException"></exception>
-    </member>
     <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.Close(System.String)">
       <summary>
             关闭通信
@@ -1206,20 +1200,6 @@
       <summary>
             设置项
             </summary>
-    </member>
-    <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.CreateReceiver">
-      <summary>
-            不支持该功能
-            </summary>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.CreateReceiver</parameter>
-          </include>
-        </markup>
-      </returns>
-      <exception cref="T:System.NotSupportedException"></exception>
     </member>
     <member name="M:TouchSocket.Dmtp.AspNetCore.WebSocketDmtpSocketClient.DirectResetId(System.String)">
       <summary>

@@ -93,11 +93,11 @@
       <summary>
             使用NamedPipe进行Dmtp连接
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.NamedPipeDmtpClient.Connect(System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -116,11 +116,11 @@
       <summary>
             异步使用NamedPipe进行Dmtp连接
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.NamedPipeDmtpClient.ConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1024,15 +1024,7 @@
       <summary>
             Rpc调用
             <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
-      <param name="returnType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>returnType</parameter>
-            <parameter>M:TouchSocket.Dmtp.TcpDmtpClientFactory`1.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
-          </include>
-        </markup>
-      </param>
+      <param name="returnType">返回值类型</param>
       <param name="invokeKey">调用键</param>
       <param name="parameters">参数</param>
       <param name="invokeOption">Rpc调用设置</param>
@@ -1535,11 +1527,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.CreateDirectory``1(``0,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1602,11 +1594,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.CreateDirectoryAsync``1(``0,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1669,11 +1661,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.DeleteDirectory``1(``0,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1736,11 +1728,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.DeleteDirectoryAsync``1(``0,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1803,11 +1795,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.DeleteFile``1(``0,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1870,11 +1862,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.DeleteFileAsync``1(``0,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -1946,11 +1938,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.DirectoryCopy``1(``0,System.String,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -2022,11 +2014,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.DirectoryCopyAsync``1(``0,System.String,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -2098,11 +2090,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.DirectoryMove``1(``0,System.String,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -2174,11 +2166,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.DirectoryMoveAsync``1(``0,System.String,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -2250,11 +2242,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.FileCopy``1(``0,System.String,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -2326,11 +2318,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.FileCopyAsync``1(``0,System.String,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -2402,11 +2394,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.FileMove``1(``0,System.String,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -2478,11 +2470,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.FileMoveAsync``1(``0,System.String,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -2545,11 +2537,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.GetDirectoryInfo``1(``0,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -2612,11 +2604,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.GetDirectoryInfoAsync``1(``0,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -2679,11 +2671,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.GetFileInfo``1(``0,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -2746,11 +2738,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteAccess.DmtpRemoteAccessExtension.GetFileInfoAsync``1(``0,System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -3549,11 +3541,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteStream.DmtpRemoteStreamActor.LoadRemoteStream(System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -3589,11 +3581,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteStream.DmtpRemoteStreamActor.LoadRemoteStream(TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -3638,11 +3630,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteStream.DmtpRemoteStreamActor.LoadRemoteStreamAsync(System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -3678,11 +3670,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteStream.DmtpRemoteStreamActor.LoadRemoteStreamAsync(TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -3940,11 +3932,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteStream.IDmtpRemoteStreamActor.LoadRemoteStream(System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -3980,11 +3972,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteStream.IDmtpRemoteStreamActor.LoadRemoteStream(TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -4029,11 +4021,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteStream.IDmtpRemoteStreamActor.LoadRemoteStreamAsync(System.String,TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -4069,11 +4061,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.RemoteStream.IDmtpRemoteStreamActor.LoadRemoteStreamAsync(TouchSocket.Core.Metadata,System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -4281,7 +4273,7 @@
             </summary>
       <param name="packageType">响应包类型</param>
       <param name="package">请求的路由包</param>
-      <param name="timeout">超时设定</param>
+      <param name="millisecondsTimeout">超时设定</param>
       <param name="token">可取消令箭</param>
       <returns>返回的响应包</returns>
     </member>
@@ -4290,7 +4282,7 @@
             请求一个路由包，并等待响应。
             </summary>
       <param name="package">请求的路由包</param>
-      <param name="timeout">超时设定</param>
+      <param name="millisecondsTimeout">超时设定</param>
       <param name="token">可取消令箭</param>
       <typeparam name="TRouterPackage">
         <markup>
@@ -4308,7 +4300,7 @@
             请求一个路由包，并等待<see cref="T:TouchSocket.Core.Result" />响应。
             </summary>
       <param name="package">请求的路由包</param>
-      <param name="timeout">超时设定</param>
+      <param name="millisecondsTimeout">超时设定</param>
       <param name="token">可取消令箭</param>
       <returns>返回的响应结果</returns>
     </member>
@@ -4573,7 +4565,7 @@
             </summary>
       <param name="packageType">响应包类型</param>
       <param name="package">请求的路由包</param>
-      <param name="timeout">超时设定</param>
+      <param name="millisecondsTimeout">超时设定</param>
       <param name="token">可取消令箭</param>
       <returns>返回的响应包</returns>
     </member>
@@ -4582,7 +4574,7 @@
             请求一个路由包，并等待响应。
             </summary>
       <param name="package">请求的路由包</param>
-      <param name="timeout">超时设定</param>
+      <param name="millisecondsTimeout">超时设定</param>
       <param name="token">可取消令箭</param>
       <typeparam name="TRouterPackage">
         <markup>
@@ -4600,7 +4592,7 @@
             请求一个路由包，并等待<see cref="T:TouchSocket.Core.Result" />响应。
             </summary>
       <param name="package">请求的路由包</param>
-      <param name="timeout">超时设定</param>
+      <param name="millisecondsTimeout">超时设定</param>
       <param name="token">可取消令箭</param>
       <returns>返回的响应结果</returns>
     </member>
@@ -5518,7 +5510,7 @@
             定义元素的序列化和反序列化。
             <para>注意：Byte[]类型不用考虑。内部单独会做处理。</para></summary>
     </member>
-    <member name="M:TouchSocket.Dmtp.Rpc.MessageQueuePlugin.SetConverter(TouchSocket.Core.BytesConverter)">
+    <member name="M:TouchSocket.Dmtp.Rpc.MessageQueuePlugin.SetConverter(TouchSocket.Core.BytesSerializerConverter)">
       <summary>
             定义元素的序列化和反序列化。
             <para>注意：Byte[]类型不用考虑。内部单独会做处理。</para></summary>
@@ -5527,7 +5519,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>converter</parameter>
-            <parameter>M:TouchSocket.Dmtp.Rpc.MessageQueuePlugin.SetConverter(TouchSocket.Core.BytesConverter)</parameter>
+            <parameter>M:TouchSocket.Dmtp.Rpc.MessageQueuePlugin.SetConverter(TouchSocket.Core.BytesSerializerConverter)</parameter>
           </include>
         </markup>
       </param>

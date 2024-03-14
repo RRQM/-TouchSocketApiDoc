@@ -153,7 +153,6 @@
           </include>
         </markup>
       </param>
-      <exception cref="T:System.Exception"></exception>
     </member>
     <member name="P:TouchSocket.Dmtp.DmtpActor.Closed">
       <summary>
@@ -456,11 +455,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.DmtpActor.Handshake(System.String,System.String,System.Int32,TouchSocket.Core.Metadata,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -509,11 +508,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.DmtpActor.HandshakeAsync(System.String,System.String,System.Int32,TouchSocket.Core.Metadata,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -793,7 +792,7 @@
       <summary>
             向当前对点发送一个Ping报文，并且等待回应。
             </summary>
-      <param name="timeout"></param>
+      <param name="millisecondsTimeout"></param>
       <returns>一般的，当返回<see langword="true" />时，则表明对点一定存在。而其他情况则返回<see langword="false" /></returns>
     </member>
     <member name="M:TouchSocket.Dmtp.DmtpActor.Ping(System.String,System.Int32)">
@@ -801,14 +800,14 @@
             向指定路由点发送一个Ping报文，并且等待回应。
             </summary>
       <param name="targetId"></param>
-      <param name="timeout"></param>
+      <param name="millisecondsTimeout"></param>
       <returns>一般的，当返回<see langword="true" />时，则表明对点一定存在。而其他情况则返回<see langword="false" /></returns>
     </member>
     <member name="M:TouchSocket.Dmtp.DmtpActor.PingAsync(System.Int32)">
       <summary>
             向当前对点发送一个Ping报文，并且等待回应。
             </summary>
-      <param name="timeout"></param>
+      <param name="millisecondsTimeout"></param>
       <returns>一般的，当返回<see langword="true" />时，则表明对点一定存在。而其他情况则返回<see langword="false" /></returns>
     </member>
     <member name="M:TouchSocket.Dmtp.DmtpActor.PingAsync(System.String,System.Int32)">
@@ -816,7 +815,7 @@
             向指定路由点发送一个Ping报文，并且等待回应。
             </summary>
       <param name="targetId"></param>
-      <param name="timeout"></param>
+      <param name="millisecondsTimeout"></param>
       <returns>一般的，当返回<see langword="true" />时，则表明对点一定存在。而其他情况则返回<see langword="false" /></returns>
     </member>
     <member name="M:TouchSocket.Dmtp.DmtpActor.ResetId(System.String)">
@@ -1431,7 +1430,7 @@
       <summary>
             向当前对点发送一个Ping报文，并且等待回应。
             </summary>
-      <param name="timeout"></param>
+      <param name="millisecondsTimeout"></param>
       <param name="client">
         <markup>
           <include item="SMCMissingParamTag">
@@ -1448,7 +1447,7 @@
             向指定路由点发送一个Ping报文，并且等待回应。
             </summary>
       <param name="targetId"></param>
-      <param name="timeout"></param>
+      <param name="millisecondsTimeout"></param>
       <param name="client">
         <markup>
           <include item="SMCMissingParamTag">
@@ -1464,7 +1463,7 @@
       <summary>
             向当前对点发送一个Ping报文，并且等待回应。
             </summary>
-      <param name="timeout"></param>
+      <param name="millisecondsTimeout"></param>
       <param name="client">
         <markup>
           <include item="SMCMissingParamTag">
@@ -1481,7 +1480,7 @@
             向指定路由点发送一个Ping报文，并且等待回应。
             </summary>
       <param name="targetId"></param>
-      <param name="timeout"></param>
+      <param name="millisecondsTimeout"></param>
       <param name="client">
         <markup>
           <include item="SMCMissingParamTag">
@@ -2286,52 +2285,10 @@
         </markup>
       </returns>
     </member>
-    <member name="F:TouchSocket.Dmtp.DmtpConfigExtension.DefaultIdProperty">
-      <summary>
-            默认使用Id。
-            </summary>
-    </member>
     <member name="F:TouchSocket.Dmtp.DmtpConfigExtension.DmtpOptionProperty">
       <summary>
             设置Dmtp相关配置。
             </summary>
-    </member>
-    <member name="F:TouchSocket.Dmtp.DmtpConfigExtension.MetadataProperty">
-      <summary>
-            DmtpClient连接时的元数据, 所需类型<see cref="T:TouchSocket.Core.Metadata" /></summary>
-    </member>
-    <member name="M:TouchSocket.Dmtp.DmtpConfigExtension.SetDefaultId(TouchSocket.Core.TouchSocketConfig,System.String)">
-      <summary>
-            设置默认的使用Id。仅在DmtpRpc组件适用。
-            <para>
-            使用该功能时，仅在服务器的Handshaking之后生效。且如果id重复，则会连接失败。
-            </para></summary>
-      <param name="config">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>config</parameter>
-            <parameter>M:TouchSocket.Dmtp.DmtpConfigExtension.SetDefaultId(TouchSocket.Core.TouchSocketConfig,System.String)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="value">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>value</parameter>
-            <parameter>M:TouchSocket.Dmtp.DmtpConfigExtension.SetDefaultId(TouchSocket.Core.TouchSocketConfig,System.String)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Dmtp.DmtpConfigExtension.SetDefaultId(TouchSocket.Core.TouchSocketConfig,System.String)</parameter>
-          </include>
-        </markup>
-      </returns>
     </member>
     <member name="M:TouchSocket.Dmtp.DmtpConfigExtension.SetDmtpOption(TouchSocket.Core.TouchSocketConfig,TouchSocket.Dmtp.DmtpOption)">
       <summary>
@@ -2363,107 +2320,6 @@
           </include>
         </markup>
       </returns>
-    </member>
-    <member name="M:TouchSocket.Dmtp.DmtpConfigExtension.SetMetadata(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.Metadata)">
-      <summary>
-            设置DmtpClient连接时的元数据
-            <para>仅适用于DmtpClient系类</para></summary>
-      <param name="config">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>config</parameter>
-            <parameter>M:TouchSocket.Dmtp.DmtpConfigExtension.SetMetadata(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.Metadata)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="value">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>value</parameter>
-            <parameter>M:TouchSocket.Dmtp.DmtpConfigExtension.SetMetadata(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.Metadata)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Dmtp.DmtpConfigExtension.SetMetadata(TouchSocket.Core.TouchSocketConfig,TouchSocket.Core.Metadata)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Dmtp.DmtpConfigExtension.SetVerifyTimeout(TouchSocket.Core.TouchSocketConfig,System.Int32)">
-      <summary>
-            验证超时时间,默认为3000ms.
-            </summary>
-      <param name="config">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>config</parameter>
-            <parameter>M:TouchSocket.Dmtp.DmtpConfigExtension.SetVerifyTimeout(TouchSocket.Core.TouchSocketConfig,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="value">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>value</parameter>
-            <parameter>M:TouchSocket.Dmtp.DmtpConfigExtension.SetVerifyTimeout(TouchSocket.Core.TouchSocketConfig,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Dmtp.DmtpConfigExtension.SetVerifyTimeout(TouchSocket.Core.TouchSocketConfig,System.Int32)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Dmtp.DmtpConfigExtension.SetVerifyToken(TouchSocket.Core.TouchSocketConfig,System.String)">
-      <summary>
-            连接令箭，当为null或空时，重置为默认值“rrqm”
-            </summary>
-      <param name="config">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>config</parameter>
-            <parameter>M:TouchSocket.Dmtp.DmtpConfigExtension.SetVerifyToken(TouchSocket.Core.TouchSocketConfig,System.String)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="value">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>value</parameter>
-            <parameter>M:TouchSocket.Dmtp.DmtpConfigExtension.SetVerifyToken(TouchSocket.Core.TouchSocketConfig,System.String)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Dmtp.DmtpConfigExtension.SetVerifyToken(TouchSocket.Core.TouchSocketConfig,System.String)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="F:TouchSocket.Dmtp.DmtpConfigExtension.VerifyTimeoutProperty">
-      <summary>
-            验证超时时间,默认为3000ms, 所需类型<see cref="T:System.Int32" /></summary>
-    </member>
-    <member name="F:TouchSocket.Dmtp.DmtpConfigExtension.VerifyTokenProperty">
-      <summary>
-            连接令箭,当为null或空时，重置为默认值“rrqm”, 所需类型<see cref="T:System.String" /></summary>
     </member>
     <member name="T:TouchSocket.Dmtp.DmtpFeatureExtension">
       <summary>
@@ -3035,11 +2891,11 @@
       <summary>
             使用基于Http升级的协议，连接Dmtp服务器
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.HttpDmtpClient.Connect(System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -3059,11 +2915,11 @@
       <summary>
             异步使用基于Http升级的协议，连接Dmtp服务器
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.HttpDmtpClient.ConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -3404,7 +3260,6 @@
           </include>
         </markup>
       </param>
-      <exception cref="T:System.Exception"></exception>
     </member>
     <member name="M:TouchSocket.Dmtp.HttpDmtpSocketClient.Dispose(System.Boolean)">
       <summary>
@@ -4065,7 +3920,7 @@
       <summary>
             向当前对点发送一个Ping报文，并且等待回应。
             </summary>
-      <param name="timeout"></param>
+      <param name="millisecondsTimeout"></param>
       <returns>一般的，当返回<see langword="true" />时，则表明对点一定存在。而其他情况则返回<see langword="false" /></returns>
     </member>
     <member name="M:TouchSocket.Dmtp.IDmtpActor.Ping(System.String,System.Int32)">
@@ -4073,14 +3928,14 @@
             向指定路由点发送一个Ping报文，并且等待回应。
             </summary>
       <param name="targetId"></param>
-      <param name="timeout"></param>
+      <param name="millisecondsTimeout"></param>
       <returns>一般的，当返回<see langword="true" />时，则表明对点一定存在。而其他情况则返回<see langword="false" /></returns>
     </member>
     <member name="M:TouchSocket.Dmtp.IDmtpActor.PingAsync(System.Int32)">
       <summary>
             向当前对点发送一个Ping报文，并且等待回应。
             </summary>
-      <param name="timeout"></param>
+      <param name="millisecondsTimeout"></param>
       <returns>一般的，当返回<see langword="true" />时，则表明对点一定存在。而其他情况则返回<see langword="false" /></returns>
     </member>
     <member name="M:TouchSocket.Dmtp.IDmtpActor.PingAsync(System.String,System.Int32)">
@@ -4088,7 +3943,7 @@
             向指定路由点发送一个Ping报文，并且等待回应。
             </summary>
       <param name="targetId"></param>
-      <param name="timeout"></param>
+      <param name="millisecondsTimeout"></param>
       <returns>一般的，当返回<see langword="true" />时，则表明对点一定存在。而其他情况则返回<see langword="false" /></returns>
     </member>
     <member name="M:TouchSocket.Dmtp.IDmtpActor.ResetId(System.String)">
@@ -5091,51 +4946,6 @@
             IWebSocketDmtpClient
             </summary>
     </member>
-    <member name="M:TouchSocket.Dmtp.IWebSocketDmtpClient.ConnectAsync(System.Int32)">
-      <summary>
-            异步连接
-            </summary>
-      <param name="timeout">验证超时时间</param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Dmtp.IWebSocketDmtpClient.ConnectAsync(System.Int32)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Dmtp.IWebSocketDmtpClient.ConnectAsync(System.Threading.CancellationToken,System.Int32)">
-      <summary>
-            异步连接
-            </summary>
-      <param name="token">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>token</parameter>
-            <parameter>M:TouchSocket.Dmtp.IWebSocketDmtpClient.ConnectAsync(System.Threading.CancellationToken,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="timeout">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>timeout</parameter>
-            <parameter>M:TouchSocket.Dmtp.IWebSocketDmtpClient.ConnectAsync(System.Threading.CancellationToken,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Dmtp.IWebSocketDmtpClient.ConnectAsync(System.Threading.CancellationToken,System.Int32)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
     <member name="T:TouchSocket.Dmtp.IWebSocketDmtpClientBase">
       <summary>
             基于WebSocket协议的Dmtp终端接口
@@ -5376,11 +5186,11 @@
       <summary>
             进行Dmtp协议的握手连接
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.TcpDmtpClient.Connect(System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -5399,11 +5209,11 @@
       <summary>
             异步进行Dmtp协议的握手连接
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.TcpDmtpClient.ConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -6401,22 +6211,6 @@
             WebSocketDmtpClient
             </summary>
     </member>
-    <member name="P:TouchSocket.Dmtp.WebSocketDmtpClient.CanSend">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>P:TouchSocket.Dmtp.WebSocketDmtpClient.CanSend</parameter>
-          </include>
-        </markup>
-      </summary>
-    </member>
-    <member name="M:TouchSocket.Dmtp.WebSocketDmtpClient.ClearReceiver">
-      <summary>
-            不支持该功能
-            </summary>
-      <exception cref="T:System.NotSupportedException"></exception>
-    </member>
     <member name="M:TouchSocket.Dmtp.WebSocketDmtpClient.Close(System.String)">
       <summary>
             发送<see cref="T:TouchSocket.Dmtp.IDmtpActor" />关闭消息。
@@ -6424,64 +6218,31 @@
       <param name="msg"></param>
       <returns></returns>
     </member>
-    <member name="M:TouchSocket.Dmtp.WebSocketDmtpClient.ConnectAsync(System.Int32)">
+    <member name="M:TouchSocket.Dmtp.WebSocketDmtpClient.Connect(System.Int32,System.Threading.CancellationToken)">
+      <summary>
+            连接
+            </summary>
+      <param name="millisecondsTimeout">最大等待时间</param>
+      <param name="token">可取消令箭</param>
+      <exception cref="T:System.TimeoutException"></exception>
+      <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="M:TouchSocket.Dmtp.WebSocketDmtpClient.ConnectAsync(System.Int32,System.Threading.CancellationToken)">
       <summary>
             异步连接
             </summary>
-      <param name="timeout">验证超时时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
+      <param name="token">可取消令箭</param>
       <returns>
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Dmtp.WebSocketDmtpClient.ConnectAsync(System.Int32)</parameter>
+            <parameter>M:TouchSocket.Dmtp.WebSocketDmtpClient.ConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
       </returns>
-    </member>
-    <member name="M:TouchSocket.Dmtp.WebSocketDmtpClient.ConnectAsync(System.Threading.CancellationToken,System.Int32)">
-      <summary>
-            异步连接
-            </summary>
-      <param name="token">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>token</parameter>
-            <parameter>M:TouchSocket.Dmtp.WebSocketDmtpClient.ConnectAsync(System.Threading.CancellationToken,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="timeout">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>timeout</parameter>
-            <parameter>M:TouchSocket.Dmtp.WebSocketDmtpClient.ConnectAsync(System.Threading.CancellationToken,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Dmtp.WebSocketDmtpClient.ConnectAsync(System.Threading.CancellationToken,System.Int32)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Dmtp.WebSocketDmtpClient.CreateReceiver">
-      <summary>
-            不支持该功能
-            </summary>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Dmtp.WebSocketDmtpClient.CreateReceiver</parameter>
-          </include>
-        </markup>
-      </returns>
-      <exception cref="T:System.NotSupportedException"></exception>
+      <exception cref="T:System.TimeoutException"></exception>
+      <exception cref="T:System.Exception"></exception>
     </member>
     <member name="P:TouchSocket.Dmtp.WebSocketDmtpClient.Disconnected">
       <summary>
@@ -6644,11 +6405,11 @@
           </include>
         </markup>
       </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.WebSocketDmtpClient.Ping(System.Int32)</parameter>
           </include>
         </markup>
@@ -6680,11 +6441,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.WebSocketDmtpClient.Ping(System.String,System.Int32)</parameter>
           </include>
         </markup>
@@ -6732,6 +6493,44 @@
         </markup>
       </param>
     </member>
+    <member name="T:TouchSocket.Dmtp.FileTransfer.CancellationFileOperator">
+      <summary>
+            可取消文件传输操作器
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Dmtp.FileTransfer.CancellationFileOperator.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Dmtp.FileTransfer.CancellationFileOperator</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:TouchSocket.Dmtp.FileTransfer.CancellationFileOperator.Cancel">
+      <summary>
+            取消传输
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Dmtp.FileTransfer.CancellationFileOperator.CancelAfter(System.TimeSpan)">
+      <summary>
+            在指定的时间之后取消传输。
+            </summary>
+      <param name="delay">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>delay</parameter>
+            <parameter>M:TouchSocket.Dmtp.FileTransfer.CancellationFileOperator.CancelAfter(System.TimeSpan)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.Dmtp.FileTransfer.CancellationFileOperator.Token">
+      <summary>
+            可取消令箭
+            </summary>
+    </member>
     <member name="T:TouchSocket.Dmtp.FileTransfer.DmtpFileTransferActor">
       <summary>
             能够基于Dmtp协议提供文件传输功能
@@ -6760,7 +6559,7 @@
       <param name="fileResourceInfo">文件资源信息</param>
       <param name="code">状态代码</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -6778,7 +6577,7 @@
       <param name="fileResourceInfo">文件资源信息</param>
       <param name="code">状态代码</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -6797,7 +6596,7 @@
       <param name="fileResourceInfo">文件资源信息</param>
       <param name="code">状态代码</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -6815,7 +6614,7 @@
       <param name="fileResourceInfo">文件资源信息</param>
       <param name="code">状态代码</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -6855,7 +6654,7 @@
       <param name="targetId">目标客户端Id</param>
       <param name="path">资源路径</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="fileSectionSize">文件分块尺寸。</param>
       <param name="token">可取消令箭</param>
       <returns>
@@ -6874,7 +6673,7 @@
       <param name="path">资源路径</param>
       <param name="metadata">元数据</param>
       <param name="fileSectionSize">文件分块尺寸</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -6892,7 +6691,7 @@
       <param name="targetId">目标客户端Id</param>
       <param name="path">资源路径</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="fileSectionSize">文件分块尺寸。</param>
       <param name="token">可取消令箭</param>
       <returns>
@@ -6911,7 +6710,7 @@
       <param name="path">资源路径</param>
       <param name="metadata">元数据</param>
       <param name="fileSectionSize">文件分块尺寸</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -6928,7 +6727,7 @@
             <para>注意：拉取文件块时，两个成功块之间的时间应该在设定时间（60秒）内完成。</para></summary>
       <param name="targetId">目标客户端Id</param>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -6944,7 +6743,7 @@
             拉取文件块。
             <para>注意：拉取文件块时，两个成功块之间的时间应该在设定时间（60秒）内完成。</para></summary>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -6961,7 +6760,7 @@
             <para>注意：拉取文件块时，两个成功块之间的时间应该在设定时间（60秒）内完成。</para></summary>
       <param name="targetId">目标客户端Id</param>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -6977,7 +6776,7 @@
             拉取文件块。
             <para>注意：拉取文件块时，两个成功块之间的时间应该在设定时间（60秒）内完成。</para></summary>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -6995,7 +6794,7 @@
       <param name="targetId">目标客户端Id</param>
       <param name="path">请求路径</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7012,7 +6811,7 @@
             </summary>
       <param name="path">请求路径</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7030,7 +6829,7 @@
       <param name="targetId">目标客户端Id</param>
       <param name="path">请求路径</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7047,7 +6846,7 @@
             </summary>
       <param name="path">请求路径</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7066,7 +6865,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7084,7 +6883,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7103,7 +6902,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7121,7 +6920,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7139,7 +6938,7 @@
       <param name="targetId">目标客户端Id</param>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7156,7 +6955,7 @@
             <para>注意：推送文件块时，两个成功块之间的时间应该在设定时间（60秒）内完成。</para></summary>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7174,7 +6973,7 @@
       <param name="targetId">目标客户端Id</param>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7191,7 +6990,7 @@
             <para>注意：推送文件块时，两个成功块之间的时间应该在设定时间（60秒）内完成。</para></summary>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7209,7 +7008,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileInfo">推送的文件信息</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7228,7 +7027,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileInfo">推送的文件信息</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7246,7 +7045,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileInfo">推送的文件信息</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7273,7 +7072,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileInfo">推送的文件信息</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9120,7 +8919,7 @@
       <param name="fileResourceInfo">文件资源信息</param>
       <param name="code">状态代码</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9138,7 +8937,7 @@
       <param name="fileResourceInfo">文件资源信息</param>
       <param name="code">状态代码</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9157,7 +8956,7 @@
       <param name="fileResourceInfo">文件资源信息</param>
       <param name="code">状态代码</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9175,7 +8974,7 @@
       <param name="fileResourceInfo">文件资源信息</param>
       <param name="code">状态代码</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9198,7 +8997,7 @@
       <param name="targetId">目标客户端Id</param>
       <param name="path">资源路径</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="fileSectionSize">文件分块尺寸。</param>
       <param name="token">可取消令箭</param>
       <returns>
@@ -9217,7 +9016,7 @@
       <param name="path">资源路径</param>
       <param name="metadata">元数据</param>
       <param name="fileSectionSize">文件分块尺寸</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9235,7 +9034,7 @@
       <param name="targetId">目标客户端Id</param>
       <param name="path">资源路径</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="fileSectionSize">文件分块尺寸。</param>
       <param name="token">可取消令箭</param>
       <returns>
@@ -9254,7 +9053,7 @@
       <param name="path">资源路径</param>
       <param name="metadata">元数据</param>
       <param name="fileSectionSize">文件分块尺寸</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9271,7 +9070,7 @@
             <para>注意：拉取文件块时，两个成功块之间的时间应该在设定时间（60秒）内完成。</para></summary>
       <param name="targetId">目标客户端Id</param>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9287,7 +9086,7 @@
             拉取文件块。
             <para>注意：拉取文件块时，两个成功块之间的时间应该在设定时间（60秒）内完成。</para></summary>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9304,7 +9103,7 @@
             <para>注意：拉取文件块时，两个成功块之间的时间应该在设定时间（60秒）内完成。</para></summary>
       <param name="targetId">目标客户端Id</param>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9320,7 +9119,7 @@
             拉取文件块。
             <para>注意：拉取文件块时，两个成功块之间的时间应该在设定时间（60秒）内完成。</para></summary>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9338,7 +9137,7 @@
       <param name="targetId">目标客户端Id</param>
       <param name="path">请求路径</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9355,7 +9154,7 @@
             </summary>
       <param name="path">请求路径</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9373,7 +9172,7 @@
       <param name="targetId">目标客户端Id</param>
       <param name="path">请求路径</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9390,7 +9189,7 @@
             </summary>
       <param name="path">请求路径</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9409,7 +9208,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9427,7 +9226,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9446,7 +9245,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9464,7 +9263,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9482,7 +9281,7 @@
       <param name="targetId">目标客户端Id</param>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9499,7 +9298,7 @@
             <para>注意：推送文件块时，两个成功块之间的时间应该在设定时间（60秒）内完成。</para></summary>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9517,7 +9316,7 @@
       <param name="targetId">目标客户端Id</param>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9534,7 +9333,7 @@
             <para>注意：推送文件块时，两个成功块之间的时间应该在设定时间（60秒）内完成。</para></summary>
       <param name="fileResourceLocator">文件资源定位器</param>
       <param name="fileSection">文件块</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9552,7 +9351,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileInfo">推送的文件信息</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9571,7 +9370,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileInfo">推送的文件信息</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9589,7 +9388,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileInfo">推送的文件信息</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -9616,7 +9415,7 @@
       <param name="savePath">保存路径</param>
       <param name="fileInfo">推送的文件信息</param>
       <param name="metadata">元数据</param>
-      <param name="timeout">超时设置</param>
+      <param name="millisecondsTimeout">超时设置</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -11050,6 +10849,28 @@
             RedisFeature
             </summary>
     </member>
+    <member name="M:TouchSocket.Dmtp.Redis.RedisFeature.ConfigureConverter(System.Action{TouchSocket.Core.BytesSerializerConverter})">
+      <summary>
+            定义元素的序列化和反序列化。
+            <para>注意：Byte[]类型不用考虑。内部单独会做处理。</para></summary>
+      <param name="action">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>action</parameter>
+            <parameter>M:TouchSocket.Dmtp.Redis.RedisFeature.ConfigureConverter(System.Action{TouchSocket.Core.BytesSerializerConverter})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Dmtp.Redis.RedisFeature.ConfigureConverter(System.Action{TouchSocket.Core.BytesSerializerConverter})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:TouchSocket.Dmtp.Redis.RedisFeature.Converter">
       <summary>
             定义元素的序列化和反序列化。
@@ -11136,28 +10957,6 @@
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
             <parameter>M:TouchSocket.Dmtp.Redis.RedisFeature.SetCache(TouchSocket.Core.ICache{System.String,System.Byte[]})</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Dmtp.Redis.RedisFeature.SetConverter(TouchSocket.Core.BytesConverter)">
-      <summary>
-            定义元素的序列化和反序列化。
-            <para>注意：Byte[]类型不用考虑。内部单独会做处理。</para></summary>
-      <param name="converter">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>converter</parameter>
-            <parameter>M:TouchSocket.Dmtp.Redis.RedisFeature.SetConverter(TouchSocket.Core.BytesConverter)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Dmtp.Redis.RedisFeature.SetConverter(TouchSocket.Core.BytesConverter)</parameter>
           </include>
         </markup>
       </returns>
@@ -11282,11 +11081,11 @@
       <summary>
             构造函数
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Dmtp.Rpc.DmtpInvokeOption.#ctor(System.Int32)</parameter>
           </include>
         </markup>
@@ -11636,15 +11435,7 @@
       <summary>
             Rpc调用
             <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
-      <param name="returnType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>returnType</parameter>
-            <parameter>M:TouchSocket.Dmtp.Rpc.DmtpRpcActor.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
-          </include>
-        </markup>
-      </param>
+      <param name="returnType">返回值类型</param>
       <param name="invokeKey">调用键</param>
       <param name="parameters">参数</param>
       <param name="invokeOption">Rpc调用设置</param>
@@ -11850,7 +11641,7 @@
             DmtpRpcCallContext
             </summary>
     </member>
-    <member name="M:TouchSocket.Dmtp.Rpc.DmtpRpcCallContext.#ctor(System.Object,TouchSocket.Rpc.MethodInstance,TouchSocket.Dmtp.Rpc.DmtpRpcPackage,TouchSocket.Core.IResolver)">
+    <member name="M:TouchSocket.Dmtp.Rpc.DmtpRpcCallContext.#ctor(System.Object,TouchSocket.Rpc.RpcMethod,TouchSocket.Dmtp.Rpc.DmtpRpcPackage,TouchSocket.Core.IResolver)">
       <summary>
             DmtpRpcCallContext
             </summary>
@@ -11859,7 +11650,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>caller</parameter>
-            <parameter>M:TouchSocket.Dmtp.Rpc.DmtpRpcCallContext.#ctor(System.Object,TouchSocket.Rpc.MethodInstance,TouchSocket.Dmtp.Rpc.DmtpRpcPackage,TouchSocket.Core.IResolver)</parameter>
+            <parameter>M:TouchSocket.Dmtp.Rpc.DmtpRpcCallContext.#ctor(System.Object,TouchSocket.Rpc.RpcMethod,TouchSocket.Dmtp.Rpc.DmtpRpcPackage,TouchSocket.Core.IResolver)</parameter>
           </include>
         </markup>
       </param>
@@ -11868,7 +11659,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>methodInstance</parameter>
-            <parameter>M:TouchSocket.Dmtp.Rpc.DmtpRpcCallContext.#ctor(System.Object,TouchSocket.Rpc.MethodInstance,TouchSocket.Dmtp.Rpc.DmtpRpcPackage,TouchSocket.Core.IResolver)</parameter>
+            <parameter>M:TouchSocket.Dmtp.Rpc.DmtpRpcCallContext.#ctor(System.Object,TouchSocket.Rpc.RpcMethod,TouchSocket.Dmtp.Rpc.DmtpRpcPackage,TouchSocket.Core.IResolver)</parameter>
           </include>
         </markup>
       </param>
@@ -11877,7 +11668,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>dmtpRpcPackage</parameter>
-            <parameter>M:TouchSocket.Dmtp.Rpc.DmtpRpcCallContext.#ctor(System.Object,TouchSocket.Rpc.MethodInstance,TouchSocket.Dmtp.Rpc.DmtpRpcPackage,TouchSocket.Core.IResolver)</parameter>
+            <parameter>M:TouchSocket.Dmtp.Rpc.DmtpRpcCallContext.#ctor(System.Object,TouchSocket.Rpc.RpcMethod,TouchSocket.Dmtp.Rpc.DmtpRpcPackage,TouchSocket.Core.IResolver)</parameter>
           </include>
         </markup>
       </param>
@@ -11886,7 +11677,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>resolver</parameter>
-            <parameter>M:TouchSocket.Dmtp.Rpc.DmtpRpcCallContext.#ctor(System.Object,TouchSocket.Rpc.MethodInstance,TouchSocket.Dmtp.Rpc.DmtpRpcPackage,TouchSocket.Core.IResolver)</parameter>
+            <parameter>M:TouchSocket.Dmtp.Rpc.DmtpRpcCallContext.#ctor(System.Object,TouchSocket.Rpc.RpcMethod,TouchSocket.Dmtp.Rpc.DmtpRpcPackage,TouchSocket.Core.IResolver)</parameter>
           </include>
         </markup>
       </param>

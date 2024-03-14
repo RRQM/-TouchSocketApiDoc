@@ -257,7 +257,7 @@
             发送Tag为Ping的报文，然后等待Pong回应。
             <para>当适配器不是<see cref="T:TouchSocket.Sockets.TLVDataHandlingAdapter" />时，会抛出异常。</para></summary>
       <param name="client"></param>
-      <param name="timeout"></param>
+      <param name="millisecondsTimeout"></param>
       <returns>
         <markup>
           <include item="SMCMissingTag">

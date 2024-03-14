@@ -29,31 +29,6 @@
             客户端没有连接
             </summary>
     </member>
-    <member name="T:TouchSocket.Sockets.AdapterFilter">
-      <summary>
-            适配器筛选
-            </summary>
-    </member>
-    <member name="F:TouchSocket.Sockets.AdapterFilter.AllAdapter">
-      <summary>
-            发送和接收都经过适配器
-            </summary>
-    </member>
-    <member name="F:TouchSocket.Sockets.AdapterFilter.SendAdapter">
-      <summary>
-            发送经过适配器，接收不经过
-            </summary>
-    </member>
-    <member name="F:TouchSocket.Sockets.AdapterFilter.WaitAdapter">
-      <summary>
-            发送不经过适配器，接收经过
-            </summary>
-    </member>
-    <member name="F:TouchSocket.Sockets.AdapterFilter.NoneAll">
-      <summary>
-            全都不经过适配器。
-            </summary>
-    </member>
     <member name="T:TouchSocket.Sockets.ByteBlockEventArgs">
       <summary>
             字节事件
@@ -221,94 +196,6 @@
             客户端扩展类
             </summary>
     </member>
-    <member name="M:TouchSocket.Sockets.ClientExtension.Connect``1(``0,TouchSocket.Sockets.IPHost,System.Int32)">
-      <summary>
-            连接
-            </summary>
-      <param name="timeout">最大等待时间</param>
-      <param name="token">可取消令箭</param>
-      <param name="client">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>client</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.Connect``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="ipHost">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>ipHost</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.Connect``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <typeparam name="TClient">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TClient</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.Connect``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.Connect``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
-          </include>
-        </markup>
-      </returns>
-      <exception cref="T:System.TimeoutException"></exception>
-      <exception cref="T:System.Exception"></exception>
-    </member>
-    <member name="M:TouchSocket.Sockets.ClientExtension.ConnectAsync``1(``0,TouchSocket.Sockets.IPHost,System.Int32)">
-      <summary>
-            异步连接
-            </summary>
-      <param name="timeout">最大等待时间</param>
-      <param name="token">可取消令箭</param>
-      <param name="client">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>client</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.ConnectAsync``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="ipHost">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>ipHost</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.ConnectAsync``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <typeparam name="TClient">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TClient</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.ConnectAsync``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.ConnectAsync``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
-          </include>
-        </markup>
-      </returns>
-      <exception cref="T:System.TimeoutException"></exception>
-      <exception cref="T:System.Exception"></exception>
-    </member>
     <member name="M:TouchSocket.Sockets.ClientExtension.GetInfo``1(``0)">
       <summary>
              获取相关信息。格式：
@@ -413,86 +300,6 @@
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
             <parameter>M:TouchSocket.Sockets.ClientExtension.GetOtherIds``1(``0)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Sockets.ClientExtension.TryConnect``1(``0,System.Int32)">
-      <summary>
-            尝试连接。不会抛出异常。
-            </summary>
-      <param name="client">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>client</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.TryConnect``1(``0,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="timeout">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>timeout</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.TryConnect``1(``0,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <typeparam name="TClient">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TClient</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.TryConnect``1(``0,System.Int32)</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.TryConnect``1(``0,System.Int32)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Sockets.ClientExtension.TryConnectAsync``1(``0,System.Int32)">
-      <summary>
-            尝试连接。不会抛出异常。
-            </summary>
-      <param name="client">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>client</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.TryConnectAsync``1(``0,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="timeout">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>timeout</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.TryConnectAsync``1(``0,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <typeparam name="TClient">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TClient</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.TryConnectAsync``1(``0,System.Int32)</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Sockets.ClientExtension.TryConnectAsync``1(``0,System.Int32)</parameter>
           </include>
         </markup>
       </returns>
@@ -1088,7 +895,7 @@
       <summary>
             连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <param name="client">
         <markup>
@@ -1102,11 +909,55 @@
       <exception cref="T:System.TimeoutException"></exception>
       <exception cref="T:System.Exception"></exception>
     </member>
+    <member name="M:TouchSocket.Sockets.ConnectObjectExtension.Connect``1(``0,TouchSocket.Sockets.IPHost,System.Int32)">
+      <summary>
+            连接
+            </summary>
+      <param name="millisecondsTimeout">最大等待时间</param>
+      <param name="token">可取消令箭</param>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.Connect``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="ipHost">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>ipHost</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.Connect``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.Connect``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.Connect``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.TimeoutException"></exception>
+      <exception cref="T:System.Exception"></exception>
+    </member>
     <member name="M:TouchSocket.Sockets.ConnectObjectExtension.ConnectAsync(TouchSocket.Sockets.IConnectObject,System.Int32)">
       <summary>
             异步连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <param name="client">
         <markup>
@@ -1122,6 +973,50 @@
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
             <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.ConnectAsync(TouchSocket.Sockets.IConnectObject,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.TimeoutException"></exception>
+      <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="M:TouchSocket.Sockets.ConnectObjectExtension.ConnectAsync``1(``0,TouchSocket.Sockets.IPHost,System.Int32)">
+      <summary>
+            异步连接
+            </summary>
+      <param name="millisecondsTimeout">最大等待时间</param>
+      <param name="token">可取消令箭</param>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.ConnectAsync``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="ipHost">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>ipHost</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.ConnectAsync``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.ConnectAsync``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.ConnectAsync``1(``0,TouchSocket.Sockets.IPHost,System.Int32)</parameter>
           </include>
         </markup>
       </returns>
@@ -1141,11 +1036,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.TryConnect(TouchSocket.Sockets.IConnectObject,System.Int32)</parameter>
           </include>
         </markup>
@@ -1155,6 +1050,46 @@
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
             <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.TryConnect(TouchSocket.Sockets.IConnectObject,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.ConnectObjectExtension.TryConnect``1(``0,System.Int32)">
+      <summary>
+            尝试连接。不会抛出异常。
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.TryConnect``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="millisecondsTimeout">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>millisecondsTimeout</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.TryConnect``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.TryConnect``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.TryConnect``1(``0,System.Int32)</parameter>
           </include>
         </markup>
       </returns>
@@ -1172,11 +1107,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.TryConnectAsync(TouchSocket.Sockets.IConnectObject,System.Int32)</parameter>
           </include>
         </markup>
@@ -1186,6 +1121,46 @@
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
             <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.TryConnectAsync(TouchSocket.Sockets.IConnectObject,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.ConnectObjectExtension.TryConnectAsync``1(``0,System.Int32)">
+      <summary>
+            尝试连接。不会抛出异常。
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.TryConnectAsync``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="millisecondsTimeout">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>millisecondsTimeout</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.TryConnectAsync``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TClient</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.TryConnectAsync``1(``0,System.Int32)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.ConnectObjectExtension.TryConnectAsync``1(``0,System.Int32)</parameter>
           </include>
         </markup>
       </returns>
@@ -1523,7 +1498,6 @@
           </include>
         </markup>
       </param>
-      <exception cref="T:System.Exception"></exception>
     </member>
     <member name="T:TouchSocket.Sockets.IConnectObject">
       <summary>
@@ -1534,7 +1508,7 @@
       <summary>
             连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <exception cref="T:System.TimeoutException"></exception>
       <exception cref="T:System.Exception"></exception>
@@ -1543,7 +1517,7 @@
       <summary>
             异步连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -2474,19 +2448,6 @@
             即将断开连接(仅主动断开时有效)。
             <para></para></summary>
     </member>
-    <member name="M:TouchSocket.Sockets.ITcpClientBase.GetStream">
-      <summary>
-            获取流，在正常模式下为<see cref="T:System.Net.Sockets.NetworkStream" />，在Ssl模式下为<see cref="T:System.Net.Security.SslStream" />。
-            </summary>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Sockets.ITcpClientBase.GetStream</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
     <member name="P:TouchSocket.Sockets.ITcpClientBase.IP">
       <summary>
             IP地址
@@ -2505,11 +2466,6 @@
     <member name="P:TouchSocket.Sockets.ITcpClientBase.Port">
       <summary>
             端口号
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Sockets.ITcpClientBase.ReceiveType">
-      <summary>
-            接收模式
             </summary>
     </member>
     <member name="P:TouchSocket.Sockets.ITcpClientBase.UseSsl">
@@ -2926,6 +2882,20 @@
             Tcp服务器接口
             </summary>
     </member>
+    <member name="M:TouchSocket.Sockets.ITcpServiceBase.AddListen(TouchSocket.Sockets.TcpListenOption)">
+      <summary>
+            添加一个地址监听。支持在服务器运行过程中动态添加。
+            </summary>
+      <param name="options">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>options</parameter>
+            <parameter>M:TouchSocket.Sockets.ITcpServiceBase.AddListen(TouchSocket.Sockets.TcpListenOption)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
     <member name="M:TouchSocket.Sockets.ITcpServiceBase.Clear">
       <summary>
             清理当前已连接的所有客户端
@@ -2958,6 +2928,13 @@
       <summary>
             网络监听集合
             </summary>
+    </member>
+    <member name="M:TouchSocket.Sockets.ITcpServiceBase.RemoveListen(TouchSocket.Sockets.TcpNetworkMonitor)">
+      <summary>
+            移除一个地址监听。支持在服务器运行过程中动态移除。
+            </summary>
+      <param name="monitor">监听器</param>
+      <returns>返回是否已成功移除</returns>
     </member>
     <member name="M:TouchSocket.Sockets.ITcpServiceBase.ResetId(System.String,System.String)">
       <summary>
@@ -4314,26 +4291,6 @@
             数据对象
             </summary>
     </member>
-    <member name="T:TouchSocket.Sockets.ReceiveType">
-      <summary>
-            接收类型
-            </summary>
-    </member>
-    <member name="F:TouchSocket.Sockets.ReceiveType.None">
-      <summary>
-            在该模式下，不会投递接收申请，用户可通过<see cref="M:TouchSocket.Sockets.ITcpClientBase.GetStream" />，获取到流以后，自己处理接收。
-            <para>注意：连接端不会感知主动断开</para></summary>
-    </member>
-    <member name="F:TouchSocket.Sockets.ReceiveType.Iocp">
-      <summary>
-            该模式下会使用Iocp自动接收数据，然后主动触发。
-            </summary>
-    </member>
-    <member name="F:TouchSocket.Sockets.ReceiveType.Bio">
-      <summary>
-            该模式下，会使用同步阻塞模式接收数据。注意：使用该模式时，每个回话连接会独占一个线程。
-            </summary>
-    </member>
     <member name="T:TouchSocket.Sockets.ReconnectionPlugin`1">
       <summary>
             重连插件
@@ -4350,7 +4307,7 @@
     </member>
     <member name="M:TouchSocket.Sockets.ReconnectionPlugin`1.#ctor">
       <summary>
-            重连插件我才
+            重连插件
             </summary>
     </member>
     <member name="P:TouchSocket.Sockets.ReconnectionPlugin`1.ActionForCheck">
@@ -5481,11 +5438,11 @@
         </markup>
       </param>
       <param name="buffer">数据缓存区</param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Sockets.SenderExtension.SendThenReturn(TouchSocket.Sockets.IWaitSender,System.Byte[],System.Int32)</parameter>
           </include>
         </markup>
@@ -5494,6 +5451,24 @@
       <exception cref="T:TouchSocket.Sockets.NotConnectedException">客户端没有连接</exception>
       <exception cref="T:TouchSocket.Core.OverlengthException">发送数据超长</exception>
       <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.Sockets.SenderExtension.SendThenReturn(TouchSocket.Sockets.IWaitSender,System.Byte[],System.Int32,System.Int32,System.Int32)">
+      <summary>
+            发送字节流
+            </summary>
+      <param name="client">客户端</param>
+      <param name="buffer">数据缓存区</param>
+      <param name="offset">数据偏移</param>
+      <param name="length">数据长度</param>
+      <param name="millisecondsTimeout">超时时间</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.SenderExtension.SendThenReturn(TouchSocket.Sockets.IWaitSender,System.Byte[],System.Int32,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="M:TouchSocket.Sockets.SenderExtension.SendThenReturn(TouchSocket.Sockets.IWaitSender,System.Byte[],System.Threading.CancellationToken)">
       <summary>
@@ -5537,11 +5512,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Sockets.SenderExtension.SendThenReturn(TouchSocket.Sockets.IWaitSender,System.String,System.Int32)</parameter>
           </include>
         </markup>
@@ -5565,11 +5540,11 @@
         </markup>
       </param>
       <param name="byteBlock">数据块载体</param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Sockets.SenderExtension.SendThenReturn(TouchSocket.Sockets.IWaitSender,TouchSocket.Core.ByteBlock,System.Int32)</parameter>
           </include>
         </markup>
@@ -5613,11 +5588,11 @@
         </markup>
       </param>
       <param name="buffer">数据缓存区</param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Sockets.SenderExtension.SendThenReturnAsync(TouchSocket.Sockets.IWaitSender,System.Byte[],System.Int32)</parameter>
           </include>
         </markup>
@@ -5626,6 +5601,25 @@
       <exception cref="T:TouchSocket.Sockets.NotConnectedException">客户端没有连接</exception>
       <exception cref="T:TouchSocket.Core.OverlengthException">发送数据超长</exception>
       <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.Sockets.SenderExtension.SendThenReturnAsync(TouchSocket.Sockets.IWaitSender,System.Byte[],System.Int32,System.Int32,System.Int32)">
+      <summary>
+            异步发送并等待响应数据
+            </summary>
+      <param name="client">客户端</param>
+      <param name="buffer">数据缓存区</param>
+      <param name="offset">数据偏移</param>
+      <param name="length">数据长度</param>
+      <param name="millisecondsTimeout">超时时间</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.SenderExtension.SendThenReturnAsync(TouchSocket.Sockets.IWaitSender,System.Byte[],System.Int32,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.TimeoutException"></exception>
     </member>
     <member name="M:TouchSocket.Sockets.SenderExtension.SendThenReturnAsync(TouchSocket.Sockets.IWaitSender,System.Byte[],System.Threading.CancellationToken)">
       <summary>
@@ -5669,11 +5663,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Sockets.SenderExtension.SendThenReturnAsync(TouchSocket.Sockets.IWaitSender,System.String,System.Int32)</parameter>
           </include>
         </markup>
@@ -6111,7 +6105,6 @@
           </include>
         </markup>
       </param>
-      <exception cref="T:System.Exception"></exception>
     </member>
     <member name="P:TouchSocket.Sockets.SocketClient.Config">
       <summary>
@@ -6203,30 +6196,6 @@
           </include>
         </markup>
       </param>
-    </member>
-    <member name="M:TouchSocket.Sockets.SocketClient.GetStream">
-      <summary>
-    
-            获取流，在正常模式下为<see cref="T:System.Net.Sockets.NetworkStream" />，在Ssl模式下为<see cref="T:System.Net.Security.SslStream" />。
-            
-  </summary>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Sockets.SocketClient.GetStream</parameter>
-          </include>
-        </markup>
-      </returns>
-      <exception cref="T:System.NotImplementedException"></exception>
-    </member>
-    <member name="M:TouchSocket.Sockets.SocketClient.HandleReceivedData(TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)">
-      <summary>
-            处理已接收到的数据。
-            <para>根据不同的数据处理适配器，会传递不同的数据</para></summary>
-      <param name="byteBlock">以二进制流形式传递</param>
-      <param name="requestInfo">以解析的数据对象传递</param>
-      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
     </member>
     <member name="P:TouchSocket.Sockets.SocketClient.Id">
       <summary>
@@ -6431,11 +6400,6 @@
         </markup>
       </param>
       <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
-    </member>
-    <member name="P:TouchSocket.Sockets.SocketClient.ReceiveType">
-      <summary>
-            接收模式
-            </summary>
     </member>
     <member name="M:TouchSocket.Sockets.SocketClient.ReceivingData(TouchSocket.Core.ByteBlock)">
       <summary>
@@ -7142,13 +7106,12 @@
           </include>
         </markup>
       </param>
-      <exception cref="T:System.Exception"></exception>
     </member>
     <member name="M:TouchSocket.Sockets.TcpClientBase.Connect(System.Int32,System.Threading.CancellationToken)">
       <summary>
             连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <exception cref="T:System.TimeoutException"></exception>
       <exception cref="T:System.Exception"></exception>
@@ -7157,7 +7120,7 @@
       <summary>
             异步连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -7253,27 +7216,6 @@
           </include>
         </markup>
       </param>
-    </member>
-    <member name="M:TouchSocket.Sockets.TcpClientBase.GetStream">
-      <summary>
-            获取流，在正常模式下为<see cref="T:System.Net.Sockets.NetworkStream" />，在Ssl模式下为<see cref="T:System.Net.Security.SslStream" />。
-            </summary>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Sockets.TcpClientBase.GetStream</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Sockets.TcpClientBase.HandleReceivedData(TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)">
-      <summary>
-            处理已接收到的数据。
-            </summary>
-      <param name="byteBlock">以二进制流形式传递</param>
-      <param name="requestInfo">以解析的数据对象传递</param>
-      <returns>如果返回<see langword="true" />则表示数据已被处理，且不会再向下传递。</returns>
     </member>
     <member name="P:TouchSocket.Sockets.TcpClientBase.IP">
       <summary>
@@ -7438,11 +7380,6 @@
           </include>
         </markup>
       </returns>
-    </member>
-    <member name="P:TouchSocket.Sockets.TcpClientBase.ReceiveType">
-      <summary>
-            接收模式
-            </summary>
     </member>
     <member name="M:TouchSocket.Sockets.TcpClientBase.ReceivingData(TouchSocket.Core.ByteBlock)">
       <summary>
@@ -7643,11 +7580,11 @@
       <summary>
             建立Tcp的连接。
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Sockets.TcpClientBase.TcpConnect(System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -7670,11 +7607,11 @@
       <summary>
             异步连接服务器
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Sockets.TcpClientBase.TcpConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -7982,13 +7919,12 @@
           </include>
         </markup>
       </param>
-      <exception cref="T:System.Exception"></exception>
     </member>
     <member name="M:TouchSocket.Sockets.TcpClientSlim.Connect(System.Int32,System.Threading.CancellationToken)">
       <summary>
             连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <exception cref="T:System.TimeoutException"></exception>
       <exception cref="T:System.Exception"></exception>
@@ -7997,7 +7933,7 @@
       <summary>
             异步连接
             </summary>
-      <param name="timeout">最大等待时间</param>
+      <param name="millisecondsTimeout">最大等待时间</param>
       <param name="token">可取消令箭</param>
       <returns>
         <markup>
@@ -8531,11 +8467,11 @@
       <summary>
             建立Tcp的连接。
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Sockets.TcpClientSlim.TcpConnect(System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -8558,11 +8494,11 @@
       <summary>
             异步连接服务器
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Sockets.TcpClientSlim.TcpConnectAsync(System.Int32,System.Threading.CancellationToken)</parameter>
           </include>
         </markup>
@@ -8822,6 +8758,11 @@
         </markup>
       </param>
     </member>
+    <member name="P:TouchSocket.Sockets.TcpCore.DisposedValue">
+      <summary>
+            标识该对象是否已被释放
+            </summary>
+    </member>
     <member name="M:TouchSocket.Sockets.TcpCore.Exception(System.Exception)">
       <summary>
             当发生异常的时候
@@ -9076,11 +9017,6 @@
             禁用延迟发送
             </summary>
     </member>
-    <member name="P:TouchSocket.Sockets.TcpListenOption.ReceiveType">
-      <summary>
-            接收类型
-            </summary>
-    </member>
     <member name="P:TouchSocket.Sockets.TcpListenOption.ReuseAddress">
       <summary>
             是否使用地址复用
@@ -9242,10 +9178,8 @@
     </member>
     <member name="M:TouchSocket.Sockets.TcpService`1.Clear">
       <summary>
-    
             清理当前已连接的所有客户端
-            
-  </summary>
+            </summary>
     </member>
     <member name="P:TouchSocket.Sockets.TcpService`1.Connected">
       <summary>
@@ -9342,17 +9276,13 @@
     </member>
     <member name="P:TouchSocket.Sockets.TcpService`1.MaxCount">
       <summary>
-    
             获取最大可连接数
-            
-  </summary>
+            </summary>
     </member>
     <member name="P:TouchSocket.Sockets.TcpService`1.Monitors">
       <summary>
-    
             网络监听集合
-            
-  </summary>
+            </summary>
     </member>
     <member name="M:TouchSocket.Sockets.TcpService`1.OnAuthenticatingError(System.Exception)">
       <summary>
@@ -9580,10 +9510,8 @@
     <member name="M:TouchSocket.Sockets.TcpService`1.SocketClientExist(System.String)">
       <summary>
     
-    
             根据Id判断SocketClient是否存在
             
-  
   </summary>
       <param name="id"></param>
       <returns>
@@ -9597,10 +9525,8 @@
     </member>
     <member name="P:TouchSocket.Sockets.TcpService`1.SocketClients">
       <summary>
-    
             获取当前连接的所有客户端
-            
-  </summary>
+            </summary>
     </member>
     <member name="M:TouchSocket.Sockets.TcpService`1.Start">
       <summary>
@@ -9689,17 +9615,13 @@
     </member>
     <member name="M:TouchSocket.Sockets.TcpServiceBase.Clear">
       <summary>
-    
             清理当前已连接的所有客户端
-            
-  </summary>
+            </summary>
     </member>
     <member name="P:TouchSocket.Sockets.TcpServiceBase.Count">
       <summary>
-    
             当前在线客户端数量
-            
-  </summary>
+            </summary>
     </member>
     <member name="M:TouchSocket.Sockets.TcpServiceBase.Dispose(System.Boolean)">
       <summary>
@@ -9717,10 +9639,8 @@
     </member>
     <member name="M:TouchSocket.Sockets.TcpServiceBase.GetIds">
       <summary>
-    
             获取当前在线的所有Id集合
-            
-  </summary>
+            </summary>
       <returns>
         <markup>
           <include item="SMCMissingTag">
@@ -9732,17 +9652,13 @@
     </member>
     <member name="P:TouchSocket.Sockets.TcpServiceBase.MaxCount">
       <summary>
-    
             获取最大可连接数
-            
-  </summary>
+            </summary>
     </member>
     <member name="P:TouchSocket.Sockets.TcpServiceBase.Monitors">
       <summary>
-    
             网络监听集合
-            
-  </summary>
+            </summary>
     </member>
     <member name="M:TouchSocket.Sockets.TcpServiceBase.OnClientConnected(TouchSocket.Sockets.ISocketClient,TouchSocket.Sockets.ConnectedEventArgs)">
       <summary>
@@ -9960,98 +9876,35 @@
     </member>
     <member name="M:TouchSocket.Sockets.TcpServiceBase.Send(System.String,System.Byte[],System.Int32,System.Int32)">
       <summary>
-            发送字节流
+            向对应Id的客户端发送
             </summary>
-      <param name="id">用于检索TcpSocketClient</param>
-      <param name="buffer">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>buffer</parameter>
-            <parameter>M:TouchSocket.Sockets.TcpServiceBase.Send(System.String,System.Byte[],System.Int32,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="offset">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>offset</parameter>
-            <parameter>M:TouchSocket.Sockets.TcpServiceBase.Send(System.String,System.Byte[],System.Int32,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="length">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>length</parameter>
-            <parameter>M:TouchSocket.Sockets.TcpServiceBase.Send(System.String,System.Byte[],System.Int32,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <exception cref="T:System.Collections.Generic.KeyNotFoundException"></exception>
-      <exception cref="T:TouchSocket.Sockets.NotConnectedException"></exception>
-      <exception cref="T:TouchSocket.Core.OverlengthException"></exception>
-      <exception cref="T:System.Exception"></exception>
+      <param name="id">目标Id</param>
+      <param name="buffer">数据</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+      <exception cref="T:TouchSocket.Sockets.NotConnectedException">未连接异常</exception>
+      <exception cref="T:TouchSocket.Sockets.ClientNotFindException">未找到Id对应的客户端</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
     </member>
     <member name="M:TouchSocket.Sockets.TcpServiceBase.Send(System.String,TouchSocket.Core.IRequestInfo)">
       <summary>
-    
             向对应Id的客户端发送
-            
-  </summary>
-      <param name="id">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>id</parameter>
-            <parameter>M:TouchSocket.Sockets.TcpServiceBase.Send(System.String,TouchSocket.Core.IRequestInfo)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="requestInfo">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>requestInfo</parameter>
-            <parameter>M:TouchSocket.Sockets.TcpServiceBase.Send(System.String,TouchSocket.Core.IRequestInfo)</parameter>
-          </include>
-        </markup>
-      </param>
+            </summary>
+      <param name="id">目标Id</param>
+      <param name="requestInfo">数据对象</param>
+      <exception cref="T:TouchSocket.Sockets.NotConnectedException">未连接异常</exception>
+      <exception cref="T:TouchSocket.Sockets.ClientNotFindException">未找到Id对应的客户端</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+      <exception cref="T:TouchSocket.Core.OverlengthException">发送数据超长</exception>
     </member>
     <member name="M:TouchSocket.Sockets.TcpServiceBase.SendAsync(System.String,System.Byte[],System.Int32,System.Int32)">
       <summary>
-            发送字节流
+            向对应Id的客户端发送
             </summary>
-      <param name="id">用于检索TcpSocketClient</param>
-      <param name="buffer">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>buffer</parameter>
-            <parameter>M:TouchSocket.Sockets.TcpServiceBase.SendAsync(System.String,System.Byte[],System.Int32,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="offset">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>offset</parameter>
-            <parameter>M:TouchSocket.Sockets.TcpServiceBase.SendAsync(System.String,System.Byte[],System.Int32,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="length">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>length</parameter>
-            <parameter>M:TouchSocket.Sockets.TcpServiceBase.SendAsync(System.String,System.Byte[],System.Int32,System.Int32)</parameter>
-          </include>
-        </markup>
-      </param>
+      <param name="id">目标Id</param>
+      <param name="buffer">数据</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
       <returns>
         <markup>
           <include item="SMCMissingTag">
@@ -10060,35 +9913,16 @@
           </include>
         </markup>
       </returns>
-      <exception cref="T:System.Collections.Generic.KeyNotFoundException"></exception>
-      <exception cref="T:TouchSocket.Sockets.NotConnectedException"></exception>
-      <exception cref="T:TouchSocket.Core.OverlengthException"></exception>
-      <exception cref="T:System.Exception"></exception>
+      <exception cref="T:TouchSocket.Sockets.NotConnectedException">未连接异常</exception>
+      <exception cref="T:TouchSocket.Sockets.ClientNotFindException">未找到Id对应的客户端</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
     </member>
     <member name="M:TouchSocket.Sockets.TcpServiceBase.SendAsync(System.String,TouchSocket.Core.IRequestInfo)">
       <summary>
-    
             向对应Id的客户端发送
-            
-  </summary>
-      <param name="id">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>id</parameter>
-            <parameter>M:TouchSocket.Sockets.TcpServiceBase.SendAsync(System.String,TouchSocket.Core.IRequestInfo)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="requestInfo">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>requestInfo</parameter>
-            <parameter>M:TouchSocket.Sockets.TcpServiceBase.SendAsync(System.String,TouchSocket.Core.IRequestInfo)</parameter>
-          </include>
-        </markup>
-      </param>
+            </summary>
+      <param name="id">目标Id</param>
+      <param name="requestInfo">数据对象</param>
       <returns>
         <markup>
           <include item="SMCMissingTag">
@@ -10097,13 +9931,15 @@
           </include>
         </markup>
       </returns>
+      <exception cref="T:TouchSocket.Sockets.NotConnectedException">未连接异常</exception>
+      <exception cref="T:TouchSocket.Sockets.ClientNotFindException">未找到Id对应的客户端</exception>
+      <exception cref="T:System.Exception">其他异常</exception>
+      <exception cref="T:TouchSocket.Core.OverlengthException">发送数据超长</exception>
     </member>
     <member name="M:TouchSocket.Sockets.TcpServiceBase.SocketClientExist(System.String)">
       <summary>
-    
             根据Id判断SocketClient是否存在
-            
-  </summary>
+            </summary>
       <param name="id">
         <markup>
           <include item="SMCMissingParamTag">
@@ -10124,10 +9960,8 @@
     </member>
     <member name="P:TouchSocket.Sockets.TcpServiceBase.SocketClients">
       <summary>
-    
             获取当前连接的所有客户端
-            
-  </summary>
+            </summary>
     </member>
     <member name="T:TouchSocket.Sockets.TouchSocketConfigExtension">
       <summary>
@@ -10145,7 +9979,7 @@
     </member>
     <member name="M:TouchSocket.Sockets.TouchSocketConfigExtension.BuildClient``1(TouchSocket.Core.TouchSocketConfig)">
       <summary>
-            构建Tcp类客户端，并连接
+            构建可配置，可连接类客户端，并连接
             </summary>
       <param name="config">
         <markup>
@@ -10410,11 +10244,6 @@
       <summary>
             设置Socket不使用Delay算法，
             所需类型<see cref="T:System.Boolean" /></summary>
-    </member>
-    <member name="F:TouchSocket.Sockets.TouchSocketConfigExtension.ReceiveTypeProperty">
-      <summary>
-            接收类型，默认为<see cref="F:TouchSocket.Sockets.ReceiveType.Iocp" /><para><see cref="F:TouchSocket.Sockets.ReceiveType.Iocp" />为自动接收数据，然后主动触发。</para><para><see cref="F:TouchSocket.Sockets.ReceiveType.None" />为不投递IO接收申请，用户可通过<see cref="M:TouchSocket.Sockets.ITcpClientBase.GetStream" />，获取到流以后，自己处理接收。注意：连接端不会感知主动断开</para>
-            所需类型<see cref="T:TouchSocket.Sockets.ReceiveType" /></summary>
     </member>
     <member name="F:TouchSocket.Sockets.TouchSocketConfigExtension.RemoteIPHostProperty">
       <summary>
@@ -10696,20 +10525,6 @@
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Sockets.TouchSocketConfigExtension.SetReceiveType(TouchSocket.Core.TouchSocketConfig,TouchSocket.Sockets.ReceiveType)">
-      <summary>
-            接收类型，默认为<see cref="F:TouchSocket.Sockets.ReceiveType.Iocp" /><para><see cref="F:TouchSocket.Sockets.ReceiveType.Iocp" />为自动接收数据，然后主动触发。</para><para><see cref="F:TouchSocket.Sockets.ReceiveType.None" />为不投递IO接收申请，用户可通过<see cref="M:TouchSocket.Sockets.ITcpClientBase.GetStream" />，获取到流以后，自己处理接收。注意：连接端不会感知主动断开</para></summary>
-      <param name="config"></param>
-      <param name="value"></param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Sockets.TouchSocketConfigExtension.SetReceiveType(TouchSocket.Core.TouchSocketConfig,TouchSocket.Sockets.ReceiveType)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
     <member name="M:TouchSocket.Sockets.TouchSocketConfigExtension.SetRemoteIPHost(TouchSocket.Core.TouchSocketConfig,TouchSocket.Sockets.IPHost)">
       <summary>
             设置远程目标地址。在<see cref="T:TouchSocket.Sockets.UdpSessionBase" />中，表示默认发送时的目标地址。
@@ -10927,6 +10742,11 @@
             <para>UDP模式中，该值为重叠IO并发数</para>
             所需类型<see cref="T:System.Int32" /></summary>
     </member>
+    <member name="F:TouchSocket.Sockets.TouchSocketConfigExtension.UdpConnResetProperty">
+      <summary>
+            解决Windows下UDP连接被重置错误10054。
+            </summary>
+    </member>
     <member name="F:TouchSocket.Sockets.TouchSocketConfigExtension.UdpDataHandlingAdapterProperty">
       <summary>
             数据处理适配器，默认为获取<see cref="T:TouchSocket.Sockets.UdpDataHandlingAdapter" />
@@ -10987,6 +10807,28 @@
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
             <parameter>M:TouchSocket.Sockets.TouchSocketConfigExtension.UseReuseAddress(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Sockets.TouchSocketConfigExtension.UseUdpConnReset(TouchSocket.Core.TouchSocketConfig)">
+      <summary>
+            解决Windows下UDP连接被重置错误10054。
+            </summary>
+      <param name="config">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>config</parameter>
+            <parameter>M:TouchSocket.Sockets.TouchSocketConfigExtension.UseUdpConnReset(TouchSocket.Core.TouchSocketConfig)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.TouchSocketConfigExtension.UseUdpConnReset(TouchSocket.Core.TouchSocketConfig)</parameter>
           </include>
         </markup>
       </returns>
@@ -11133,7 +10975,7 @@
       </param>
       <param name="testCount">测试次数</param>
       <param name="expectedCount">期待测试次数</param>
-      <param name="timeout">超时</param>
+      <param name="millisecondsTimeout">超时</param>
       <returns>
         <markup>
           <include item="SMCMissingTag">
@@ -11176,7 +11018,7 @@
       </param>
       <param name="testCount">测试次数</param>
       <param name="expectedCount">期待测试次数</param>
-      <param name="timeout">超时</param>
+      <param name="millisecondsTimeout">超时</param>
       <returns>
         <markup>
           <include item="SMCMissingTag">
@@ -11883,11 +11725,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Sockets.UdpPackage.#ctor(System.Int64,System.Int32,System.Collections.Concurrent.ConcurrentDictionary{System.Int64,TouchSocket.Sockets.UdpPackage})</parameter>
           </include>
         </markup>
@@ -12004,25 +11846,54 @@
     </member>
     <member name="M:TouchSocket.Sockets.UdpPackageAdapter.PreviewReceived(System.Net.EndPoint,TouchSocket.Core.ByteBlock)">
       <summary>
-    
             当接收到数据后预先处理数据,然后调用<see cref="M:TouchSocket.Sockets.UdpDataHandlingAdapter.GoReceived(System.Net.EndPoint,TouchSocket.Core.ByteBlock,TouchSocket.Core.IRequestInfo)" />处理数据
-            
-  </summary>
+            </summary>
       <param name="remoteEndPoint"></param>
       <param name="byteBlock"></param>
     </member>
     <member name="M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)">
       <summary>
-    
             当发送数据前预先处理数据
-            
-  </summary>
+            </summary>
       <param name="endPoint">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>endPoint</parameter>
             <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="buffer">数据</param>
+      <param name="offset">偏移</param>
+      <param name="length">长度</param>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+      <summary>
+            组合发送预处理数据，
+            当属性SplicingSend实现为True时，系统才会调用该方法。
+            </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="transferBytes">代发送数据组合</param>
+    </member>
+    <member name="M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            当发送数据前预先处理数据
+            </summary>
+      <param name="endPoint">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>endPoint</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
           </include>
         </markup>
       </param>
@@ -12031,7 +11902,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>buffer</parameter>
-            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
           </include>
         </markup>
       </param>
@@ -12040,7 +11911,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>offset</parameter>
-            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
           </include>
         </markup>
       </param>
@@ -12049,24 +11920,30 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>length</parameter>
-            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
           </include>
         </markup>
       </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSendAsync(System.Net.EndPoint,System.Byte[],System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
-    <member name="M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
+    <member name="M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSendAsync(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})">
       <summary>
-    
             组合发送预处理数据，
             当属性SplicingSend实现为True时，系统才会调用该方法。
-            
-  </summary>
+            </summary>
       <param name="endPoint">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>endPoint</parameter>
-            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSendAsync(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
           </include>
         </markup>
       </param>
@@ -12075,17 +11952,19 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>transferBytes</parameter>
-            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSend(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSendAsync(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
           </include>
         </markup>
       </param>
-    </member>
-    <member name="M:TouchSocket.Sockets.UdpPackageAdapter.Reset">
-      <summary>
-    
-            重置解析器到初始状态，一般在<see cref="M:TouchSocket.Core.DataHandlingAdapter.OnError(System.Exception,System.String,System.Boolean,System.Boolean)" />被触发时，由返回值指示是否调用。
-            
-  </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.UdpPackageAdapter.PreviewSendAsync(System.Net.EndPoint,System.Collections.Generic.IList{System.ArraySegment{System.Byte}})</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.NotImplementedException"></exception>
     </member>
     <member name="P:TouchSocket.Sockets.UdpPackageAdapter.Timeout">
       <summary>
@@ -12977,87 +12856,6 @@
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Sockets.WaitingClientExtension.GetWaitingClient``1(``0,TouchSocket.Sockets.WaitingOptions)">
-      <summary>
-            获取可等待的客户端。
-            </summary>
-      <param name="client">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>client</parameter>
-            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.GetWaitingClient``1(``0,TouchSocket.Sockets.WaitingOptions)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="waitingOptions">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>waitingOptions</parameter>
-            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.GetWaitingClient``1(``0,TouchSocket.Sockets.WaitingOptions)</parameter>
-          </include>
-        </markup>
-      </param>
-      <typeparam name="TClient">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TClient</parameter>
-            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.GetWaitingClient``1(``0,TouchSocket.Sockets.WaitingOptions)</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.GetWaitingClient``1(``0,TouchSocket.Sockets.WaitingOptions)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Sockets.WaitingClientExtension.GetWaitingClient``1(``0,TouchSocket.Sockets.WaitingOptions,System.Func{TouchSocket.Sockets.ResponsedData,System.Boolean})">
-      <summary>
-            获取筛选条件的可等待的客户端。
-            </summary>
-      <param name="client">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>client</parameter>
-            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.GetWaitingClient``1(``0,TouchSocket.Sockets.WaitingOptions,System.Func{TouchSocket.Sockets.ResponsedData,System.Boolean})</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="waitingOptions">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>waitingOptions</parameter>
-            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.GetWaitingClient``1(``0,TouchSocket.Sockets.WaitingOptions,System.Func{TouchSocket.Sockets.ResponsedData,System.Boolean})</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="func">当条件成立时返回</param>
-      <typeparam name="TClient">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TClient</parameter>
-            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.GetWaitingClient``1(``0,TouchSocket.Sockets.WaitingOptions,System.Func{TouchSocket.Sockets.ResponsedData,System.Boolean})</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.GetWaitingClient``1(``0,TouchSocket.Sockets.WaitingOptions,System.Func{TouchSocket.Sockets.ResponsedData,System.Boolean})</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
     <member name="M:TouchSocket.Sockets.WaitingClientExtension.SendThenResponse``1(TouchSocket.Sockets.IWaitingClient{``0},System.Byte[],System.Int32)">
       <summary>
             发送数据并等待
@@ -13072,7 +12870,7 @@
         </markup>
       </param>
       <param name="buffer">数据缓存区</param>
-      <param name="timeout">超时时间</param>
+      <param name="millisecondsTimeout">超时时间</param>
       <typeparam name="TClient">
         <markup>
           <include item="SMCMissingParamTag">
@@ -13086,6 +12884,66 @@
       <exception cref="T:TouchSocket.Sockets.NotConnectedException">客户端没有连接</exception>
       <exception cref="T:TouchSocket.Core.OverlengthException">发送数据超长</exception>
       <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.Sockets.WaitingClientExtension.SendThenResponse``1(TouchSocket.Sockets.IWaitingClient{``0},System.Byte[],System.Int32,System.Int32,System.Int32)">
+      <summary>
+            发送数据并等待
+            </summary>
+      <param name="client">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>client</parameter>
+            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.SendThenResponse``1(TouchSocket.Sockets.IWaitingClient{``0},System.Byte[],System.Int32,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="buffer">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>buffer</parameter>
+            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.SendThenResponse``1(TouchSocket.Sockets.IWaitingClient{``0},System.Byte[],System.Int32,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="offset">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>offset</parameter>
+            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.SendThenResponse``1(TouchSocket.Sockets.IWaitingClient{``0},System.Byte[],System.Int32,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="length">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>length</parameter>
+            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.SendThenResponse``1(TouchSocket.Sockets.IWaitingClient{``0},System.Byte[],System.Int32,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="millisecondsTimeout">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>millisecondsTimeout</parameter>
+            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.SendThenResponse``1(TouchSocket.Sockets.IWaitingClient{``0},System.Byte[],System.Int32,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TClient">客户端</typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.SendThenResponse``1(TouchSocket.Sockets.IWaitingClient{``0},System.Byte[],System.Int32,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.TimeoutException"></exception>
     </member>
     <member name="M:TouchSocket.Sockets.WaitingClientExtension.SendThenResponse``1(TouchSocket.Sockets.IWaitingClient{``0},System.Byte[],System.Threading.CancellationToken)">
       <summary>
@@ -13138,11 +12996,11 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Sockets.WaitingClientExtension.SendThenResponse``1(TouchSocket.Sockets.IWaitingClient{``0},System.String,System.Int32)</parameter>
           </include>
         </markup>
@@ -13212,7 +13070,7 @@
         </markup>
       </param>
       <param name="byteBlock">数据块载体</param>
-      <param name="timeout">超时时间</param>
+      <param name="millisecondsTimeout">超时时间</param>
       <typeparam name="TClient">
         <markup>
           <include item="SMCMissingParamTag">
@@ -13278,7 +13136,7 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">超时时间</param>
+      <param name="millisecondsTimeout">超时时间</param>
       <typeparam name="TClient">
         <markup>
           <include item="SMCMissingParamTag">
@@ -13292,6 +13150,26 @@
       <exception cref="T:TouchSocket.Sockets.NotConnectedException">客户端没有连接</exception>
       <exception cref="T:TouchSocket.Core.OverlengthException">发送数据超长</exception>
       <exception cref="T:System.Exception">其他异常</exception>
+    </member>
+    <member name="M:TouchSocket.Sockets.WaitingClientExtension.SendThenResponseAsync``1(TouchSocket.Sockets.IWaitingClient{``0},System.Byte[],System.Int32,System.Int32,System.Int32)">
+      <summary>
+            发送数据并等待
+            </summary>
+      <param name="client">客户端</param>
+      <param name="buffer">数据区</param>
+      <param name="offset">数据偏移</param>
+      <param name="length">长度</param>
+      <param name="millisecondsTimeout">超时时间</param>
+      <typeparam name="TClient">客户端泛型</typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Sockets.WaitingClientExtension.SendThenResponseAsync``1(TouchSocket.Sockets.IWaitingClient{``0},System.Byte[],System.Int32,System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.TimeoutException"></exception>
     </member>
     <member name="M:TouchSocket.Sockets.WaitingClientExtension.SendThenResponseAsync``1(TouchSocket.Sockets.IWaitingClient{``0},System.Byte[],System.Threading.CancellationToken)">
       <summary>
@@ -13352,7 +13230,7 @@
           </include>
         </markup>
       </param>
-      <param name="timeout">超时时间</param>
+      <param name="millisecondsTimeout">超时时间</param>
       <typeparam name="TClient">
         <markup>
           <include item="SMCMissingParamTag">
@@ -13418,16 +13296,6 @@
         </markup>
       </summary>
     </member>
-    <member name="P:TouchSocket.Sockets.WaitingOptions.AdapterFilter">
-      <summary>
-            适配器筛选
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Sockets.WaitingOptions.BreakTrigger">
-      <summary>
-            当Client为Tcp系时。是否在断开连接时立即触发结果。默认会返回null。当<see cref="P:TouchSocket.Sockets.WaitingOptions.ThrowBreakException" />为<see langword="true" />时，会触发异常。
-            </summary>
-    </member>
     <member name="P:TouchSocket.Sockets.WaitingOptions.FilterFunc">
       <summary>
             筛选函数
@@ -13436,11 +13304,6 @@
     <member name="P:TouchSocket.Sockets.WaitingOptions.RemoteIPHost">
       <summary>
             远程地址(仅在Udp模式下生效)
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Sockets.WaitingOptions.ThrowBreakException">
-      <summary>
-            当Client为Tcp系时。是否在断开连接时以异常返回结果。
             </summary>
     </member>
   </members>

@@ -231,15 +231,7 @@
       <summary>
             Rpc调用
             <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
-      <param name="returnType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>returnType</parameter>
-            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
-          </include>
-        </markup>
-      </param>
+      <param name="returnType">返回值类型</param>
       <param name="invokeKey">调用键</param>
       <param name="parameters">参数</param>
       <param name="invokeOption">Rpc调用设置</param>
@@ -284,7 +276,7 @@
             HttpJsonRpcParserPlugin
             </summary>
     </member>
-    <member name="M:TouchSocket.JsonRpc.HttpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider)">
+    <member name="M:TouchSocket.JsonRpc.HttpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider,TouchSocket.Core.IResolver)">
       <summary>
             HttpJsonRpcParserPlugin
             </summary>
@@ -293,7 +285,16 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>rpcServerProvider</parameter>
-            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider)</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider,TouchSocket.Core.IResolver)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="resolver">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>resolver</parameter>
+            <parameter>M:TouchSocket.JsonRpc.HttpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider,TouchSocket.Core.IResolver)</parameter>
           </include>
         </markup>
       </param>
@@ -579,15 +580,7 @@
       <summary>
             Rpc调用
             <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
-      <param name="returnType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>returnType</parameter>
-            <parameter>M:TouchSocket.JsonRpc.JsonRpcActionClientBase.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
-          </include>
-        </markup>
-      </param>
+      <param name="returnType">返回值类型</param>
       <param name="invokeKey">调用键</param>
       <param name="parameters">参数</param>
       <param name="invokeOption">Rpc调用设置</param>
@@ -884,7 +877,7 @@
             JsonRpcParser解析器插件
             </summary>
     </member>
-    <member name="M:TouchSocket.JsonRpc.JsonRpcParserPluginBase.#ctor(TouchSocket.Rpc.IRpcServerProvider)">
+    <member name="M:TouchSocket.JsonRpc.JsonRpcParserPluginBase.#ctor(TouchSocket.Rpc.IRpcServerProvider,TouchSocket.Core.IResolver)">
       <summary>
             构造函数
             </summary>
@@ -893,7 +886,16 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>rpcServerProvider</parameter>
-            <parameter>M:TouchSocket.JsonRpc.JsonRpcParserPluginBase.#ctor(TouchSocket.Rpc.IRpcServerProvider)</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcParserPluginBase.#ctor(TouchSocket.Rpc.IRpcServerProvider,TouchSocket.Core.IResolver)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="resolver">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>resolver</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcParserPluginBase.#ctor(TouchSocket.Rpc.IRpcServerProvider,TouchSocket.Core.IResolver)</parameter>
           </include>
         </markup>
       </param>
@@ -1082,16 +1084,25 @@
             JsonRpcUtility
             </summary>
     </member>
-    <member name="M:TouchSocket.JsonRpc.JsonRpcUtility.BuildRequestContext(TouchSocket.Rpc.ActionMap,TouchSocket.JsonRpc.JsonRpcCallContextBase@)">
+    <member name="M:TouchSocket.JsonRpc.JsonRpcUtility.BuildRequestContext(TouchSocket.Core.IResolver,TouchSocket.Rpc.ActionMap,TouchSocket.JsonRpc.JsonRpcCallContextBase@)">
       <summary>
             BuildRequestContext
             </summary>
+      <param name="resolver">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>resolver</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.BuildRequestContext(TouchSocket.Core.IResolver,TouchSocket.Rpc.ActionMap,TouchSocket.JsonRpc.JsonRpcCallContextBase@)</parameter>
+          </include>
+        </markup>
+      </param>
       <param name="actionMap">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>actionMap</parameter>
-            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.BuildRequestContext(TouchSocket.Rpc.ActionMap,TouchSocket.JsonRpc.JsonRpcCallContextBase@)</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.BuildRequestContext(TouchSocket.Core.IResolver,TouchSocket.Rpc.ActionMap,TouchSocket.JsonRpc.JsonRpcCallContextBase@)</parameter>
           </include>
         </markup>
       </param>
@@ -1100,7 +1111,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>callContext</parameter>
-            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.BuildRequestContext(TouchSocket.Rpc.ActionMap,TouchSocket.JsonRpc.JsonRpcCallContextBase@)</parameter>
+            <parameter>M:TouchSocket.JsonRpc.JsonRpcUtility.BuildRequestContext(TouchSocket.Core.IResolver,TouchSocket.Rpc.ActionMap,TouchSocket.JsonRpc.JsonRpcCallContextBase@)</parameter>
           </include>
         </markup>
       </param>
@@ -1447,15 +1458,7 @@
       <summary>
             Rpc调用
             <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
-      <param name="returnType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>returnType</parameter>
-            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
-          </include>
-        </markup>
-      </param>
+      <param name="returnType">返回值类型</param>
       <param name="invokeKey">调用键</param>
       <param name="parameters">参数</param>
       <param name="invokeOption">Rpc调用设置</param>
@@ -1514,7 +1517,7 @@
             基于Tcp协议的JsonRpc功能插件
             </summary>
     </member>
-    <member name="M:TouchSocket.JsonRpc.TcpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider)">
+    <member name="M:TouchSocket.JsonRpc.TcpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider,TouchSocket.Core.IResolver)">
       <summary>
             基于Tcp协议的JsonRpc功能插件
             </summary>
@@ -1523,7 +1526,16 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>rpcServerProvider</parameter>
-            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider)</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider,TouchSocket.Core.IResolver)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="resolver">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>resolver</parameter>
+            <parameter>M:TouchSocket.JsonRpc.TcpJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider,TouchSocket.Core.IResolver)</parameter>
           </include>
         </markup>
       </param>
@@ -1707,15 +1719,7 @@
       <summary>
             Rpc调用
             <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
-      <param name="returnType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>returnType</parameter>
-            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
-          </include>
-        </markup>
-      </param>
+      <param name="returnType">返回值类型</param>
       <param name="invokeKey">调用键</param>
       <param name="parameters">参数</param>
       <param name="invokeOption">Rpc调用设置</param>
@@ -1733,6 +1737,11 @@
       <exception cref="T:TouchSocket.Rpc.RpcInvokeException">Rpc异常</exception>
       <exception cref="T:System.Exception">其他异常</exception>
     </member>
+    <member name="P:TouchSocket.JsonRpc.WebSocketJsonRpcClient.IsHandshaked">
+      <summary>
+            只是当前客户端是否已经完成握手连接。
+            </summary>
+    </member>
     <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.LoadConfig(TouchSocket.Core.TouchSocketConfig)">
       <summary>
             加载配置
@@ -1747,16 +1756,49 @@
         </markup>
       </param>
     </member>
-    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.OnReceivedWSDataFrame(TouchSocket.Http.WebSockets.WSDataFrameEventArgs)">
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)">
       <summary>
-            当收到WS数据时。
-            </summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </summary>
       <param name="e">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>e</parameter>
-            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.OnReceivedWSDataFrame(TouchSocket.Http.WebSockets.WSDataFrameEventArgs)</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.OnDisconnected(TouchSocket.Sockets.DisconnectEventArgs)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.OnReceived(System.Net.WebSockets.WebSocketReceiveResult,TouchSocket.Core.ByteBlock)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.OnReceived(System.Net.WebSockets.WebSocketReceiveResult,TouchSocket.Core.ByteBlock)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="result">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>result</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.OnReceived(System.Net.WebSockets.WebSocketReceiveResult,TouchSocket.Core.ByteBlock)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="byteBlock">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>byteBlock</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.OnReceived(System.Net.WebSockets.WebSocketReceiveResult,TouchSocket.Core.ByteBlock)</parameter>
           </include>
         </markup>
       </param>
@@ -1764,7 +1806,7 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.OnReceivedWSDataFrame(TouchSocket.Http.WebSockets.WSDataFrameEventArgs)</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcClient.OnReceived(System.Net.WebSockets.WebSocketReceiveResult,TouchSocket.Core.ByteBlock)</parameter>
           </include>
         </markup>
       </returns>
@@ -1779,7 +1821,7 @@
             WebSocketJsonRpcParserPlugin
             </summary>
     </member>
-    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider)">
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider,TouchSocket.Core.IResolver)">
       <summary>
             WebSocketJsonRpcParserPlugin
             </summary>
@@ -1788,7 +1830,16 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>rpcServerProvider</parameter>
-            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider)</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider,TouchSocket.Core.IResolver)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="resolver">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>resolver</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.#ctor(TouchSocket.Rpc.IRpcServerProvider,TouchSocket.Core.IResolver)</parameter>
           </include>
         </markup>
       </param>
@@ -1798,7 +1849,7 @@
             经过判断是否标识当前的客户端为JsonRpc
             </summary>
     </member>
-    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.IHttpSocketClient,TouchSocket.Http.HttpContext,System.Boolean})">
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.WebSockets.IWebSocket,TouchSocket.Http.HttpContext,System.Boolean})">
       <summary>
             经过判断是否标识当前的客户端为JsonRpc
             </summary>
@@ -1807,7 +1858,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>allowJsonRpc</parameter>
-            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.IHttpSocketClient,TouchSocket.Http.HttpContext,System.Boolean})</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.WebSockets.IWebSocket,TouchSocket.Http.HttpContext,System.Boolean})</parameter>
           </include>
         </markup>
       </param>
@@ -1815,12 +1866,12 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.IHttpSocketClient,TouchSocket.Http.HttpContext,System.Boolean})</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.WebSockets.IWebSocket,TouchSocket.Http.HttpContext,System.Boolean})</parameter>
           </include>
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.IHttpSocketClient,TouchSocket.Http.HttpContext,System.Threading.Tasks.Task{System.Boolean}})">
+    <member name="M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.WebSockets.IWebSocket,TouchSocket.Http.HttpContext,System.Threading.Tasks.Task{System.Boolean}})">
       <summary>
             经过判断是否标识当前的客户端为JsonRpc
             </summary>
@@ -1829,7 +1880,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>allowJsonRpc</parameter>
-            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.IHttpSocketClient,TouchSocket.Http.HttpContext,System.Threading.Tasks.Task{System.Boolean}})</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.WebSockets.IWebSocket,TouchSocket.Http.HttpContext,System.Threading.Tasks.Task{System.Boolean}})</parameter>
           </include>
         </markup>
       </param>
@@ -1837,7 +1888,7 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.IHttpSocketClient,TouchSocket.Http.HttpContext,System.Threading.Tasks.Task{System.Boolean}})</parameter>
+            <parameter>M:TouchSocket.JsonRpc.WebSocketJsonRpcParserPlugin.SetAllowJsonRpc(System.Func{TouchSocket.Http.WebSockets.IWebSocket,TouchSocket.Http.HttpContext,System.Threading.Tasks.Task{System.Boolean}})</parameter>
           </include>
         </markup>
       </returns>

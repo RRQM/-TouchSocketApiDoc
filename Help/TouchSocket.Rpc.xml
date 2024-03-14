@@ -9,59 +9,6 @@
             RpcPluginManagerExtension
             </summary>
     </member>
-    <member name="M:TouchSocket.Core.RpcPluginManagerExtension.UseGlobalRpcStore(TouchSocket.Core.IPluginManager)">
-      <summary>
-            使用全局Rpc服务注入。
-            </summary>
-      <param name="pluginManager">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>pluginManager</parameter>
-            <parameter>M:TouchSocket.Core.RpcPluginManagerExtension.UseGlobalRpcStore(TouchSocket.Core.IPluginManager)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.RpcPluginManagerExtension.UseGlobalRpcStore(TouchSocket.Core.IPluginManager)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Core.RpcPluginManagerExtension.UseGlobalRpcStore(TouchSocket.Core.IPluginManager,System.Action{TouchSocket.Rpc.RpcStore})">
-      <summary>
-            使用全局Rpc服务注入。
-            </summary>
-      <param name="pluginManager">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>pluginManager</parameter>
-            <parameter>M:TouchSocket.Core.RpcPluginManagerExtension.UseGlobalRpcStore(TouchSocket.Core.IPluginManager,System.Action{TouchSocket.Rpc.RpcStore})</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="action">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>action</parameter>
-            <parameter>M:TouchSocket.Core.RpcPluginManagerExtension.UseGlobalRpcStore(TouchSocket.Core.IPluginManager,System.Action{TouchSocket.Rpc.RpcStore})</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Core.RpcPluginManagerExtension.UseGlobalRpcStore(TouchSocket.Core.IPluginManager,System.Action{TouchSocket.Rpc.RpcStore})</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
     <member name="T:TouchSocket.Resources.TouchSocketRpcResource">
       <summary>
             TouchSocketRpc资源枚举
@@ -108,7 +55,7 @@
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Rpc.ActionMap.TryGetMethodInstance(System.String,TouchSocket.Rpc.MethodInstance@)">
+    <member name="M:TouchSocket.Rpc.ActionMap.TryGetMethodInstance(System.String,TouchSocket.Rpc.RpcMethod@)">
       <summary>
             通过actionKey获取函数实例
             </summary>
@@ -117,7 +64,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>actionKey</parameter>
-            <parameter>M:TouchSocket.Rpc.ActionMap.TryGetMethodInstance(System.String,TouchSocket.Rpc.MethodInstance@)</parameter>
+            <parameter>M:TouchSocket.Rpc.ActionMap.TryGetMethodInstance(System.String,TouchSocket.Rpc.RpcMethod@)</parameter>
           </include>
         </markup>
       </param>
@@ -126,7 +73,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>methodInstance</parameter>
-            <parameter>M:TouchSocket.Rpc.ActionMap.TryGetMethodInstance(System.String,TouchSocket.Rpc.MethodInstance@)</parameter>
+            <parameter>M:TouchSocket.Rpc.ActionMap.TryGetMethodInstance(System.String,TouchSocket.Rpc.RpcMethod@)</parameter>
           </include>
         </markup>
       </param>
@@ -134,7 +81,7 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.ActionMap.TryGetMethodInstance(System.String,TouchSocket.Rpc.MethodInstance@)</parameter>
+            <parameter>M:TouchSocket.Rpc.ActionMap.TryGetMethodInstance(System.String,TouchSocket.Rpc.RpcMethod@)</parameter>
           </include>
         </markup>
       </returns>
@@ -149,7 +96,7 @@
             CallContext
             </summary>
     </member>
-    <member name="M:TouchSocket.Rpc.CallContext.#ctor(System.Object,TouchSocket.Rpc.MethodInstance,TouchSocket.Core.IResolver)">
+    <member name="M:TouchSocket.Rpc.CallContext.#ctor(System.Object,TouchSocket.Rpc.RpcMethod,TouchSocket.Core.IResolver)">
       <summary>
             CallContext
             </summary>
@@ -158,7 +105,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>caller</parameter>
-            <parameter>M:TouchSocket.Rpc.CallContext.#ctor(System.Object,TouchSocket.Rpc.MethodInstance,TouchSocket.Core.IResolver)</parameter>
+            <parameter>M:TouchSocket.Rpc.CallContext.#ctor(System.Object,TouchSocket.Rpc.RpcMethod,TouchSocket.Core.IResolver)</parameter>
           </include>
         </markup>
       </param>
@@ -167,7 +114,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>methodInstance</parameter>
-            <parameter>M:TouchSocket.Rpc.CallContext.#ctor(System.Object,TouchSocket.Rpc.MethodInstance,TouchSocket.Core.IResolver)</parameter>
+            <parameter>M:TouchSocket.Rpc.CallContext.#ctor(System.Object,TouchSocket.Rpc.RpcMethod,TouchSocket.Core.IResolver)</parameter>
           </include>
         </markup>
       </param>
@@ -176,7 +123,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>resolver</parameter>
-            <parameter>M:TouchSocket.Rpc.CallContext.#ctor(System.Object,TouchSocket.Rpc.MethodInstance,TouchSocket.Core.IResolver)</parameter>
+            <parameter>M:TouchSocket.Rpc.CallContext.#ctor(System.Object,TouchSocket.Rpc.RpcMethod,TouchSocket.Core.IResolver)</parameter>
           </include>
         </markup>
       </param>
@@ -204,11 +151,6 @@
     <member name="P:TouchSocket.Rpc.CallContext.Token">
       <summary>
             可取消的调用令箭
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Rpc.CallContext.TokenSource">
-      <summary>
-            TokenSource
             </summary>
     </member>
     <member name="T:TouchSocket.Rpc.ClassCellCode">
@@ -254,7 +196,7 @@
         </markup>
       </param>
     </member>
-    <member name="M:TouchSocket.Rpc.ClassCodeGenerator.AddTypeString(System.Type,System.Int32@)">
+    <member name="M:TouchSocket.Rpc.ClassCodeGenerator.AddTypeString(System.Type)">
       <summary>
             添加类型字符串
             </summary>
@@ -263,16 +205,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>type</parameter>
-            <parameter>M:TouchSocket.Rpc.ClassCodeGenerator.AddTypeString(System.Type,System.Int32@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="deep">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>deep</parameter>
-            <parameter>M:TouchSocket.Rpc.ClassCodeGenerator.AddTypeString(System.Type,System.Int32@)</parameter>
+            <parameter>M:TouchSocket.Rpc.ClassCodeGenerator.AddTypeString(System.Type)</parameter>
           </include>
         </markup>
       </param>
@@ -796,6 +729,20 @@
             等待，直到调用完成
             </summary>
     </member>
+    <member name="T:TouchSocket.Rpc.FromServicesAttribute">
+      <summary>
+            标识Rpc参数来自于IOC服务
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Rpc.FromServicesAttribute.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>TouchSocket.Rpc.FromServicesAttribute</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="T:TouchSocket.Rpc.ICallContext">
       <summary>
             Rpc调用上下文
@@ -819,11 +766,6 @@
     <member name="P:TouchSocket.Rpc.ICallContext.Token">
       <summary>
             可取消的调用令箭
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Rpc.ICallContext.TokenSource">
-      <summary>
-            TokenSource
             </summary>
     </member>
     <member name="T:TouchSocket.Rpc.IInvokeOption">
@@ -860,11 +802,11 @@
       <summary>
             构造函数
             </summary>
-      <param name="timeout">
+      <param name="millisecondsTimeout">
         <markup>
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
-            <parameter>timeout</parameter>
+            <parameter>millisecondsTimeout</parameter>
             <parameter>M:TouchSocket.Rpc.InvokeOption.#ctor(System.Int32)</parameter>
           </include>
         </markup>
@@ -1131,15 +1073,7 @@
       <summary>
             Rpc调用
             <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
-      <param name="returnType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>returnType</parameter>
-            <parameter>M:TouchSocket.Rpc.IRpcClient.InvokeAsync(System.Type,System.String,TouchSocket.Rpc.IInvokeOption,System.Object[])</parameter>
-          </include>
-        </markup>
-      </param>
+      <param name="returnType">返回值类型</param>
       <param name="invokeKey">调用键</param>
       <param name="parameters">参数</param>
       <param name="invokeOption">Rpc调用设置</param>
@@ -1450,192 +1384,6 @@
             方法名
             </summary>
     </member>
-    <member name="T:TouchSocket.Rpc.MethodFlags">
-      <summary>
-            函数标识
-            </summary>
-    </member>
-    <member name="F:TouchSocket.Rpc.MethodFlags.None">
-      <summary>
-            空
-            </summary>
-    </member>
-    <member name="F:TouchSocket.Rpc.MethodFlags.IncludeCallContext">
-      <summary>
-            包含调用上下文
-            </summary>
-    </member>
-    <member name="T:TouchSocket.Rpc.MethodInstance">
-      <summary>
-            Rpc函数实例
-            </summary>
-    </member>
-    <member name="M:TouchSocket.Rpc.MethodInstance.#ctor(System.Reflection.MethodInfo)">
-      <summary>
-            实例化一个Rpc调用函数，并在方法声明的类上操作
-            </summary>
-      <param name="methodInfo">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>methodInfo</parameter>
-            <parameter>M:TouchSocket.Rpc.MethodInstance.#ctor(System.Reflection.MethodInfo)</parameter>
-          </include>
-        </markup>
-      </param>
-    </member>
-    <member name="M:TouchSocket.Rpc.MethodInstance.#ctor(System.Reflection.MethodInfo,System.Type,System.Type)">
-      <summary>
-            实例化一个Rpc调用函数，并在指定类上操作
-            </summary>
-      <param name="method">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>method</parameter>
-            <parameter>M:TouchSocket.Rpc.MethodInstance.#ctor(System.Reflection.MethodInfo,System.Type,System.Type)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="serverFromType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>serverFromType</parameter>
-            <parameter>M:TouchSocket.Rpc.MethodInstance.#ctor(System.Reflection.MethodInfo,System.Type,System.Type)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="serverToType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>serverToType</parameter>
-            <parameter>M:TouchSocket.Rpc.MethodInstance.#ctor(System.Reflection.MethodInfo,System.Type,System.Type)</parameter>
-          </include>
-        </markup>
-      </param>
-    </member>
-    <member name="M:TouchSocket.Rpc.MethodInstance.GetAttribute``1">
-      <summary>
-            获取指定类型属性标签
-            </summary>
-      <typeparam name="T">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>T</parameter>
-            <parameter>M:TouchSocket.Rpc.MethodInstance.GetAttribute``1</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.MethodInstance.GetAttribute``1</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Rpc.MethodInstance.GetAttribute(System.Type)">
-      <summary>
-            获取指定类型属性标签
-            </summary>
-      <param name="attributeType">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>attributeType</parameter>
-            <parameter>M:TouchSocket.Rpc.MethodInstance.GetAttribute(System.Type)</parameter>
-          </include>
-        </markup>
-      </param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.MethodInstance.GetAttribute(System.Type)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Rpc.MethodInstance.GetDescription">
-      <summary>
-            描述属性
-            </summary>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.MethodInstance.GetDescription</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:TouchSocket.Rpc.MethodInstance.GetFilters">
-      <summary>
-            筛选器
-            </summary>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.MethodInstance.GetFilters</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="P:TouchSocket.Rpc.MethodInstance.IncludeCallContext">
-      <summary>
-            是否包含调用上下文
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Rpc.MethodInstance.IsEnable">
-      <summary>
-            是否可用
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Rpc.MethodInstance.ParameterNames">
-      <summary>
-            参数名集合
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Rpc.MethodInstance.Parameters">
-      <summary>
-            参数集合
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Rpc.MethodInstance.ParameterTypes">
-      <summary>
-            参数类型集合，已处理out及ref，无参数时为空集合，
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Rpc.MethodInstance.RpcAttributes">
-      <summary>
-            Rpc属性集合
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Rpc.MethodInstance.ServerFromType">
-      <summary>
-            注册类型
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Rpc.MethodInstance.ServerRpcAttributes">
-      <summary>
-            Rpc服务属性集合
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Rpc.MethodInstance.ServerToType">
-      <summary>
-            实例类型
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Rpc.MethodInstance.ToMethodInfo">
-      <summary>
-            实现方法。
-            </summary>
-    </member>
     <member name="T:TouchSocket.Rpc.RpcActionFilterAttribute">
       <summary>
             RpcActionFilterAttribute
@@ -1736,7 +1484,7 @@
             生成泛型方法的约束
             </summary>
     </member>
-    <member name="M:TouchSocket.Rpc.RpcAttribute.GetDescription(TouchSocket.Rpc.MethodInstance)">
+    <member name="M:TouchSocket.Rpc.RpcAttribute.GetDescription(TouchSocket.Rpc.RpcMethod)">
       <summary>
             获取注释信息
             </summary>
@@ -1745,7 +1493,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>methodInstance</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetDescription(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetDescription(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </param>
@@ -1753,12 +1501,12 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetDescription(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetDescription(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Rpc.RpcAttribute.GetExtensionsMethodProxyCode(TouchSocket.Rpc.MethodInstance)">
+    <member name="M:TouchSocket.Rpc.RpcAttribute.GetExtensionsMethodProxyCode(TouchSocket.Rpc.RpcMethod)">
       <summary>
             获取扩展的代理代码
             </summary>
@@ -1767,7 +1515,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>methodInstance</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetExtensionsMethodProxyCode(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetExtensionsMethodProxyCode(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </param>
@@ -1775,7 +1523,7 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetExtensionsMethodProxyCode(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetExtensionsMethodProxyCode(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </returns>
@@ -1792,7 +1540,7 @@
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Rpc.RpcAttribute.GetInstanceProxyCode(TouchSocket.Rpc.MethodInstance)">
+    <member name="M:TouchSocket.Rpc.RpcAttribute.GetInstanceProxyCode(TouchSocket.Rpc.RpcMethod)">
       <summary>
             获取生成实体类时的代码块
             </summary>
@@ -1801,7 +1549,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>methodInstance</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetInstanceProxyCode(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetInstanceProxyCode(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </param>
@@ -1809,12 +1557,12 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetInstanceProxyCode(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetInstanceProxyCode(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Rpc.RpcAttribute.GetInterfaceProxyCode(TouchSocket.Rpc.MethodInstance)">
+    <member name="M:TouchSocket.Rpc.RpcAttribute.GetInterfaceProxyCode(TouchSocket.Rpc.RpcMethod)">
       <summary>
             获取接口的代理代码
             </summary>
@@ -1823,7 +1571,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>methodInstance</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetInterfaceProxyCode(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetInterfaceProxyCode(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </param>
@@ -1831,12 +1579,12 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetInterfaceProxyCode(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetInterfaceProxyCode(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Rpc.RpcAttribute.GetInvokenKey(TouchSocket.Rpc.MethodInstance)">
+    <member name="M:TouchSocket.Rpc.RpcAttribute.GetInvokenKey(TouchSocket.Rpc.RpcMethod)">
       <summary>
             获取调用键
             </summary>
@@ -1845,7 +1593,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>methodInstance</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetInvokenKey(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetInvokenKey(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </param>
@@ -1853,7 +1601,7 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetInvokenKey(TouchSocket.Rpc.MethodInstance)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetInvokenKey(TouchSocket.Rpc.RpcMethod)</parameter>
           </include>
         </markup>
       </returns>
@@ -1871,7 +1619,7 @@
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Rpc.RpcAttribute.GetMethodName(TouchSocket.Rpc.MethodInstance,System.Boolean)">
+    <member name="M:TouchSocket.Rpc.RpcAttribute.GetMethodName(TouchSocket.Rpc.RpcMethod,System.Boolean)">
       <summary>
             获取生成的函数名称
             </summary>
@@ -1880,7 +1628,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>methodInstance</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetMethodName(TouchSocket.Rpc.MethodInstance,System.Boolean)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetMethodName(TouchSocket.Rpc.RpcMethod,System.Boolean)</parameter>
           </include>
         </markup>
       </param>
@@ -1889,7 +1637,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>isAsync</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetMethodName(TouchSocket.Rpc.MethodInstance,System.Boolean)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetMethodName(TouchSocket.Rpc.RpcMethod,System.Boolean)</parameter>
           </include>
         </markup>
       </param>
@@ -1897,12 +1645,12 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetMethodName(TouchSocket.Rpc.MethodInstance,System.Boolean)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetMethodName(TouchSocket.Rpc.RpcMethod,System.Boolean)</parameter>
           </include>
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Rpc.RpcAttribute.GetParameters(TouchSocket.Rpc.MethodInstance,System.Boolean@,System.Boolean@,System.Reflection.ParameterInfo[]@)">
+    <member name="M:TouchSocket.Rpc.RpcAttribute.GetParameters(TouchSocket.Rpc.RpcMethod,System.Boolean@,System.Boolean@,System.Reflection.ParameterInfo[]@)">
       <summary>
             获取参数生成
             </summary>
@@ -1911,7 +1659,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>methodInstance</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetParameters(TouchSocket.Rpc.MethodInstance,System.Boolean@,System.Boolean@,System.Reflection.ParameterInfo[]@)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetParameters(TouchSocket.Rpc.RpcMethod,System.Boolean@,System.Boolean@,System.Reflection.ParameterInfo[]@)</parameter>
           </include>
         </markup>
       </param>
@@ -1920,7 +1668,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>isOut</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetParameters(TouchSocket.Rpc.MethodInstance,System.Boolean@,System.Boolean@,System.Reflection.ParameterInfo[]@)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetParameters(TouchSocket.Rpc.RpcMethod,System.Boolean@,System.Boolean@,System.Reflection.ParameterInfo[]@)</parameter>
           </include>
         </markup>
       </param>
@@ -1929,7 +1677,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>isRef</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetParameters(TouchSocket.Rpc.MethodInstance,System.Boolean@,System.Boolean@,System.Reflection.ParameterInfo[]@)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetParameters(TouchSocket.Rpc.RpcMethod,System.Boolean@,System.Boolean@,System.Reflection.ParameterInfo[]@)</parameter>
           </include>
         </markup>
       </param>
@@ -1938,7 +1686,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>parameters</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetParameters(TouchSocket.Rpc.MethodInstance,System.Boolean@,System.Boolean@,System.Reflection.ParameterInfo[]@)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetParameters(TouchSocket.Rpc.RpcMethod,System.Boolean@,System.Boolean@,System.Reflection.ParameterInfo[]@)</parameter>
           </include>
         </markup>
       </param>
@@ -1946,7 +1694,7 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetParameters(TouchSocket.Rpc.MethodInstance,System.Boolean@,System.Boolean@,System.Reflection.ParameterInfo[]@)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetParameters(TouchSocket.Rpc.RpcMethod,System.Boolean@,System.Boolean@,System.Reflection.ParameterInfo[]@)</parameter>
           </include>
         </markup>
       </returns>
@@ -1973,7 +1721,7 @@
         </markup>
       </returns>
     </member>
-    <member name="M:TouchSocket.Rpc.RpcAttribute.GetReturn(TouchSocket.Rpc.MethodInstance,System.Boolean)">
+    <member name="M:TouchSocket.Rpc.RpcAttribute.GetReturn(TouchSocket.Rpc.RpcMethod,System.Boolean)">
       <summary>
             获取返回值
             </summary>
@@ -1982,7 +1730,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>methodInstance</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetReturn(TouchSocket.Rpc.MethodInstance,System.Boolean)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetReturn(TouchSocket.Rpc.RpcMethod,System.Boolean)</parameter>
           </include>
         </markup>
       </param>
@@ -1991,7 +1739,7 @@
           <include item="SMCMissingParamTag">
             <parameter>param</parameter>
             <parameter>isAsync</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetReturn(TouchSocket.Rpc.MethodInstance,System.Boolean)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetReturn(TouchSocket.Rpc.RpcMethod,System.Boolean)</parameter>
           </include>
         </markup>
       </param>
@@ -1999,7 +1747,7 @@
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetReturn(TouchSocket.Rpc.MethodInstance,System.Boolean)</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcAttribute.GetReturn(TouchSocket.Rpc.RpcMethod,System.Boolean)</parameter>
           </include>
         </markup>
       </returns>
@@ -2007,11 +1755,6 @@
     <member name="P:TouchSocket.Rpc.RpcAttribute.InvokeKey">
       <summary>
             调用键。
-            </summary>
-    </member>
-    <member name="P:TouchSocket.Rpc.RpcAttribute.MethodFlags">
-      <summary>
-            函数标识
             </summary>
     </member>
     <member name="P:TouchSocket.Rpc.RpcAttribute.MethodInvoke">
@@ -2185,7 +1928,7 @@
       <summary>
             Rpc调用
             <para>如果调用端为客户端，则会调用服务器Rpc服务。</para><para>如果调用端为服务器，则会反向调用客户端Rpc服务。</para></summary>
-      <param name="returnType"></param>
+      <param name="returnType">返回值类型</param>
       <param name="invokeKey">调用键</param>
       <param name="parameters">参数</param>
       <param name="invokeOption">Rpc调用设置</param>
@@ -2586,25 +2329,243 @@
         </markup>
       </param>
     </member>
-    <member name="T:TouchSocket.Rpc.RpcParserExtension">
+    <member name="T:TouchSocket.Rpc.RpcMethod">
       <summary>
-            RpcParserExtension
+            Rpc函数实例
             </summary>
     </member>
-    <member name="M:TouchSocket.Rpc.RpcParserExtension.ConfigureRpcStore``1(``0,System.Action{TouchSocket.Rpc.RpcStore})">
+    <member name="M:TouchSocket.Rpc.RpcMethod.#ctor(System.Reflection.MethodInfo)">
       <summary>
-            配置<see cref="T:TouchSocket.Rpc.RpcStore" /></summary>
-      <param name="parser"></param>
-      <param name="action"></param>
-      <typeparam name="TParser"></typeparam>
+            实例化一个Rpc调用函数，并在方法声明的类上操作
+            </summary>
+      <param name="methodInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>methodInfo</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcMethod.#ctor(System.Reflection.MethodInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Rpc.RpcMethod.#ctor(System.Reflection.MethodInfo,System.Type,System.Type)">
+      <summary>
+            实例化一个Rpc调用函数，并在指定类上操作
+            </summary>
+      <param name="method">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>method</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcMethod.#ctor(System.Reflection.MethodInfo,System.Type,System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="serverFromType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>serverFromType</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcMethod.#ctor(System.Reflection.MethodInfo,System.Type,System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="serverToType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>serverToType</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcMethod.#ctor(System.Reflection.MethodInfo,System.Type,System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:TouchSocket.Rpc.RpcMethod.GetAttribute``1">
+      <summary>
+            获取指定类型属性标签
+            </summary>
+      <typeparam name="T">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>T</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcMethod.GetAttribute``1</parameter>
+          </include>
+        </markup>
+      </typeparam>
       <returns>
         <markup>
           <include item="SMCMissingTag">
             <parameter>returns</parameter>
-            <parameter>M:TouchSocket.Rpc.RpcParserExtension.ConfigureRpcStore``1(``0,System.Action{TouchSocket.Rpc.RpcStore})</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcMethod.GetAttribute``1</parameter>
           </include>
         </markup>
       </returns>
+    </member>
+    <member name="M:TouchSocket.Rpc.RpcMethod.GetAttribute(System.Type)">
+      <summary>
+            获取指定类型属性标签
+            </summary>
+      <param name="attributeType">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>attributeType</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcMethod.GetAttribute(System.Type)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcMethod.GetAttribute(System.Type)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Rpc.RpcMethod.GetDescription">
+      <summary>
+            描述属性
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcMethod.GetDescription</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Rpc.RpcMethod.GetFilters">
+      <summary>
+            筛选器
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcMethod.GetFilters</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:TouchSocket.Rpc.RpcMethod.GetNormalParameters">
+      <summary>
+            获取常规Rpc参数。
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcMethod.GetNormalParameters</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcMethod.HasCallContext">
+      <summary>
+            是否包含调用上下文
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcMethod.IsEnable">
+      <summary>
+            是否可用
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcMethod.ParameterNames">
+      <summary>
+            参数名集合
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcMethod.Parameters">
+      <summary>
+            参数集合
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcMethod.ParameterTypes">
+      <summary>
+            参数类型集合，已处理out及ref，无参数时为空集合，
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcMethod.RpcAttributes">
+      <summary>
+            Rpc属性集合
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcMethod.ServerFromType">
+      <summary>
+            注册类型
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcMethod.ServerRpcAttributes">
+      <summary>
+            Rpc服务属性集合
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcMethod.ServerToType">
+      <summary>
+            实例类型
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcMethod.ToMethodInfo">
+      <summary>
+            实现方法。
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Rpc.RpcParameter">
+      <summary>
+            Rpc参数
+            </summary>
+    </member>
+    <member name="M:TouchSocket.Rpc.RpcParameter.#ctor(System.Reflection.ParameterInfo)">
+      <summary>
+            Rpc参数
+            </summary>
+      <param name="parameterInfo">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>parameterInfo</parameter>
+            <parameter>M:TouchSocket.Rpc.RpcParameter.#ctor(System.Reflection.ParameterInfo)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcParameter.IsByRef">
+      <summary>
+            包含Out或者Ref
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcParameter.IsCallContext">
+      <summary>
+            是否为调用上下文
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcParameter.IsFromServices">
+      <summary>
+            标识参数是否应该来自于服务
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcParameter.Name">
+      <summary>
+            参数名称
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcParameter.ParameterInfo">
+      <summary>
+            参数信息
+            </summary>
+    </member>
+    <member name="P:TouchSocket.Rpc.RpcParameter.Type">
+      <summary>
+            参数类型，已处理out或者ref
+            </summary>
+    </member>
+    <member name="T:TouchSocket.Rpc.RpcParserExtension">
+      <summary>
+            RpcParserExtension
+            </summary>
     </member>
     <member name="T:TouchSocket.Rpc.RpcProxyAttribute">
       <summary>
